@@ -27,11 +27,6 @@ def plot_synth(V_P_S, V_P_R, E_P):
     # Define custom labels with multiple numbers
     # Generate labels iteratively
     labels = {}
-    for node in G.nodes():
-        if node in nodes_nrbs:
-            labels[node] = f'{node}'
-        else:
-            labels[node] = f'{node}'
     
     
     # Define node colors and sizes
@@ -40,7 +35,7 @@ def plot_synth(V_P_S, V_P_R, E_P):
     node_size     = 1000
     border_colors = []
     border_sizes  = []
-    border_size   = 1050
+    border_size   = 500
     
     for node in G.nodes():
         if node in nodes_nrbs:
@@ -49,19 +44,13 @@ def plot_synth(V_P_S, V_P_R, E_P):
         elif node in nodes_ps:
             border_colors.append('black')
             border_sizes.append(border_size)
-        else:
-            border_colors.append('black')
-            border_sizes.append(border_size)
     
     for node in G.nodes():
         if node in nodes_nrbs:
-            node_colors.append('orange')
+            node_colors.append('#FF0000')
             node_sizes.append(node_size)
         elif node in nodes_ps:
             node_colors.append('skyblue')
-            node_sizes.append(node_size)
-        else:
-            node_colors.append('black')
             node_sizes.append(node_size)
     
     # Draw the graph
@@ -91,10 +80,10 @@ def plot_synth(V_P_S, V_P_R, E_P):
     nx.draw_networkx_labels(G, pos, labels, font_size=10, font_color='black', verticalalignment='center', horizontalalignment='center')
     
     # Create custom legend
-    red_patch = mpatches.Patch(color='orange', label='NR-BS Nodes')
-    skyblue_patch = mpatches.Patch(color='skyblue', label='PS Nodes')
+    red_patch = mpatches.Patch(color='#FF0000', label='NR-BS')
+    skyblue_patch = mpatches.Patch(color='skyblue', label='PS')
     
-    plt.legend(handles=[red_patch, skyblue_patch], loc='upper center', fontsize=12)
+    plt.legend(handles=[red_patch, skyblue_patch], loc='center left', fontsize=12)
     
     # Display and save the graph
     plt.savefig("plots/graph.svg", format="svg")
@@ -182,12 +171,8 @@ def plot_brain(V_P_S, V_P_R, E_P):
     red_patch = mpatches.Patch(color='#FF0000', label='NR-BS')
     skyblue_patch = mpatches.Patch(color='skyblue', label='PS')
     
-    plt.legend(handles=[red_patch, skyblue_patch], loc='upper left', fontsize=14)
+    # plt.legend(handles=[red_patch, skyblue_patch], loc='upper left', fontsize=14)
     
     # Display and save the graph
     plt.savefig("plots/graph_large.svg", format="svg", bbox_inches='tight', pad_inches=0)
     plt.show()
-    
-    print(len(nodes_nrbs))
-    print(len(nodes_ps))
-    print(len(edges))
