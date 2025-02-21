@@ -1237,34 +1237,35 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         else:
             m = gp.read(f'saved_model/model_backup_iar_{iter}.mps')
         m.update()
-    
-    if feasible:
-        data = [
-            ["Algorithm", "RNR"],
-            ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
-            ["Profit", profit],
-            ["Allocation Time", time_opt],
-        ]
-        if g_D_opt:
-            data.append(["Delay Cost", g_D_opt])
-        if g_K_opt:
-            data.append(["Radio Violation Cost", g_K_opt])
-        if g_C_opt:
-            data.append(["MIPS Violation Cost", g_C_opt])
-        if g_B_1_opt or g_B_2_opt or g_B_3_opt:
-            data.append(["Bandwidth Violation Costs", f"{g_B_1_opt}, {g_B_2_opt}, {g_B_3_opt}"])
-        if g_mig_opt:
-            data.append(["Migration Cost", g_mig_opt])
-        if g_ovh_opt:
-            data.append(["Overhead Cost", g_ovh_opt])
-    else:
-        data = [
-            ["Request Isolation Level", r_t.gamma],
-            ["Request Isolation Sub-level", r_t.kappa],
-            ["Allocation Time", time_opt],
-            ["Feasible", feasible],
-            ["Timeout", timeout]
-        ]
+
+    if f_fgr == 0:
+        if feasible:
+            data = [
+                ["Algorithm", "IAR"],
+                ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
+                ["Profit", profit],
+                ["Allocation Time", time_opt],
+            ]
+            if g_D_opt:
+                data.append(["Delay Cost", g_D_opt])
+            if g_K_opt:
+                data.append(["Radio Violation Cost", g_K_opt])
+            if g_C_opt:
+                data.append(["MIPS Violation Cost", g_C_opt])
+            if g_B_1_opt or g_B_2_opt or g_B_3_opt:
+                data.append(["Bandwidth Violation Costs", f"{g_B_1_opt}, {g_B_2_opt}, {g_B_3_opt}"])
+            if g_mig_opt:
+                data.append(["Migration Cost", g_mig_opt])
+            if g_ovh_opt:
+                data.append(["Overhead Cost", g_ovh_opt])
+        else:
+            data = [
+                ["Request Isolation Level", r_t.gamma],
+                ["Request Isolation Sub-level", r_t.kappa],
+                ["Allocation Time", time_opt],
+                ["Feasible", feasible],
+                ["Timeout", timeout]
+            ]
     
     print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
 

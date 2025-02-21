@@ -1529,7 +1529,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
     if feasible:
         data = [
-            ["Algorithm", "RNR"],
+            ["Algorithm", "NIS"],
             ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
             ["Profit", profit],
             ["Allocation Time", time_opt],
