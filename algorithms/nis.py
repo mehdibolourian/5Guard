@@ -60,15 +60,12 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     b = []
     
     # Auxiliary Variables
-    a_x1 = []
     a_x2 = []
     a_x3 = []
     a_x4 = []
 
-    a_y1 = []
     a_y2 = []
     
-    a_z1 = []
     a_z2 = []
     a_z3 = []
     a_z4 = []
@@ -76,9 +73,9 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     ############## 5G-INS ##############
     # Create Optimization Model
     if f_fgr:
-        m = gp.read(f'saved_model/model_backup_fgr_opt_{iter}.mps')
+        m = gp.read(f'saved_model/model_backup_fgr_nis_{iter}.mps')
     else:
-        m = gp.read(f'saved_model/model_backup_opt_{iter}.mps')
+        m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
 
     ##  Main Variables
     #   Only append the variable for the incoming SR and reuse the other variables from the last instance of the problem
@@ -119,11 +116,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
          for idx_r in range(len_R)]
     
     # Auxiliary Variables
-    a_x1 = [[m.getVarByName(f"a_x1_{idx_r}_{idx_p}")
-             if m.getVarByName(f"a_x1_{idx_r}_{idx_p}") is not None
-             else m.addVar(name=f"a_x1_{idx_r}_{idx_p}", vtype=gp.GRB.BINARY)
-             for idx_p in range(len_V_P_S)]
-            for idx_r in range(len_R)]
     a_x2 = [[m.getVarByName(f"a_x2_{idx_p}_{chi}")
              for chi in range(sys.CHI_MAX+1)]
             for idx_p in range(len_V_P_S)]
@@ -136,11 +128,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
              for idx_v in range(len_E)]
             for idx_r in range(len_R)]
 
-    a_y1 = [[m.getVarByName(f"a_y1_{idx_r}_{idx_q}")
-             if m.getVarByName(f"a_y1_{idx_r}_{idx_q}") is not None
-             else m.addVar(name=f"a_y1_{idx_r}_{idx_q}", vtype=gp.GRB.BINARY)
-             for idx_q in range(len_V_P_R)]
-            for idx_r in range(len_R)]
     a_y2 = [[[m.getVarByName(f"a_y2_{idx_r}_{idx_v}_{idx_p}")
               if m.getVarByName(f"a_y2_{idx_r}_{idx_v}_{idx_p}") is not None
               else m.addVar(name=f"a_y2_{idx_r}_{idx_v}_{idx_p}", vtype=gp.GRB.BINARY)
@@ -148,11 +135,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
              for idx_v in range(len_E)]
             for idx_r in range(len_R)]
 
-    a_z1 = [[m.getVarByName(f"a_z1_{idx_r}_{idx_l}")
-             if m.getVarByName(f"a_z1_{idx_r}_{idx_l}") is not None
-             else m.addVar(name=f"a_z1_{idx_r}_{idx_l}", vtype=gp.GRB.BINARY)
-             for idx_l in range(len_L)]
-            for idx_r in range(len_R)]
     a_z2 = [[[m.getVarByName(f"a_z2_{idx_r}_{idx_v}_{idx_e}")
               if m.getVarByName(f"a_z2_{idx_r}_{idx_v}_{idx_e}") is not None
               else m.addVar(name=f"a_z2_{idx_r}_{idx_v}_{idx_e}", vtype=gp.GRB.BINARY)
@@ -187,10 +169,10 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     len_V_S  = max(len(r.V_S) for idx_r, r in enumerate(reqs))
     len_V_R  = max(len(r.V_R) for idx_r, r in enumerate(reqs))
 
-    B_REQ_EFF = [[e.B_REQ if r.gamma != 1 else max(e.B_REQ, math.ceil(e.B_REQ * BANDWIDTH_SCALE / sys.B_WSC) * sys.B_WSC)
+    B_REQ_EFF = [[e.B_REQ
                   for e in r.E]
                  for r in reqs]
-    K_REQ_EFF = [[w.K_REQ if r.gamma != 1 else max(w.K_REQ, math.ceil(w.K_REQ / sys.N_FRM) * sys.N_FRM)
+    K_REQ_EFF = [[w.K_REQ
                   for w in r.V_R]
                  for r in reqs]
 
@@ -223,20 +205,14 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
               for idx_e in range(len_E)])
     
     # Auxiliary Variables
-    a_x1.append([m.addVar(name=f"a_x1_{len_R-1}_{idx_p}", vtype=gp.GRB.BINARY)
-                 for idx_p in range(len_V_P_S)])
     a_x4.append([[m.addVar(name=f"a_x4_{len_R-1}_{idx_e}_{idx_p}", vtype=gp.GRB.BINARY)
                   for idx_p in range(len_V_P_S)]
                  for idx_e in range(len_E)])
 
-    a_y1.append([m.addVar(name=f"a_y1_{len_R-1}_{idx_q}", vtype=gp.GRB.BINARY)
-                 for idx_q in range(len_V_P_R)])
     a_y2.append([[m.addVar(name=f"a_y2_{len_R-1}_{idx_e}_{idx_q}", vtype=gp.GRB.BINARY)
                   for idx_q in range(len_V_P_R)]
                  for idx_e in range(len_E)])
 
-    a_z1.append([m.addVar(name=f"a_z1_{len_R-1}_{idx_l}", vtype=gp.GRB.BINARY)
-                 for idx_l in range(len_L)])
     a_z2.append([[m.addVar(name=f"a_z2_{len_R-1}_{idx_e}_{idx_e_p}", vtype=gp.GRB.BINARY)
                   for idx_e_p in range(len_E_P)]
                  for idx_e in range(len_E)])
@@ -271,80 +247,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)) == 1,
                 name=f"ru_unique_mapping_{idx_r}_{idx_w}"
             )
-
-    
-    # # Eq. 4
-    # for idx_p, p in enumerate(V_P_S):
-    #     ## Since Eq. 4 is 
-    #     if len_R >= 2:
-    #         constraint_to_remove = m.getConstrByName(f"nf_max_isolation_limit_{idx_p}")
-    #         if constraint_to_remove is not None:
-    #             m.remove(constraint_to_remove)
-
-    #     m.addConstr(
-    #         gp.quicksum(a_x1[idx_r][idx_p]
-    #                     for idx_r, r in enumerate(reqs)
-    #                     if r.gamma == 2) <= 1,
-    #         name=f"nf_max_isolation_limit_{idx_p}"
-    #     )
-        
-
-    # # Eq. 5
-    # for idx_q, q in enumerate(V_P_R):
-    #     if len_R >= 2:
-    #         constraint_to_remove = m.getConstrByName(f"ru_max_isolation_limit_{idx_q}")
-    #         if constraint_to_remove is not None:
-    #             m.remove(constraint_to_remove)
-        
-    #     m.addConstr(
-    #         gp.quicksum(a_y1[idx_r][idx_q]
-    #                     for idx_r, r in enumerate(reqs)
-    #                     if r.gamma == 2) <= 1,
-    #         name=f"ru_max_isolation_limit_{idx_q}"
-    #     )
-
-    
-    # # Eq. 6
-    # for idx_r, r in enumerate(reqs):
-    #     for idx_v, v in enumerate(r.V_S):
-    #         for idx_p, p in enumerate(V_P_S):
-    #             if len_R >= 2:
-    #                 constraint_to_remove = m.getConstrByName(f"nf_regular_isolation_limit_{idx_r}_{idx_v}_{idx_p}")
-    #                 if constraint_to_remove is not None:
-    #                     m.remove(constraint_to_remove)
-                    
-    #             m.addConstr(
-    #                 x[idx_r][idx_v][idx_p] <= 1 - gp.quicksum(
-    #                     a_x1[idx_r1][idx_p]
-    #                     for idx_r1, r1 in enumerate(reqs)
-    #                     if r1.gamma == 2 and idx_r1 != idx_r
-    #                 ),
-    #                 name=f"nf_regular_isolation_limit_{idx_r}_{idx_v}_{idx_p}"
-    #                 )
-
-    
-    # # Eq. 7
-    # for idx_r, r in enumerate(reqs):
-    #     for idx_w, w in enumerate(r.V_R):
-    #         for idx_q, q in enumerate(V_P_R):
-    #             if len_R >= 2:
-    #                 constraint_to_remove = m.getConstrByName(f"ru_regular_isolation_limit_{idx_r}_{idx_w}_{idx_q}")
-    #                 if constraint_to_remove is not None:
-    #                     m.remove(constraint_to_remove)
-                
-    #             m.addConstr(
-    #                 gp.quicksum(
-    #                     y[idx_r][idx_w][idx_q][f][k]
-    #                     for f in range(len(q.Pi_MAX))
-    #                     for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
-    #                 ) <= 1 - gp.quicksum(
-    #                     a_y1[idx_r1][idx_q]
-    #                     for idx_r1, r1 in enumerate(reqs)
-    #                     if r1.gamma == 2 and idx_r1 != idx_r
-    #                 ),
-    #                 name=f"ru_regular_isolation_limit_{idx_r}_{idx_w}_{idx_q}"
-    #             )
-
     
     # Eq. 8
     for idx_r in R_miss:
@@ -379,15 +281,10 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                               for idx_r, r in enumerate(reqs)
                               for idx_v, v in enumerate(r.V_S)
                               for xi       in range(v.Xi_REQ)
-                              if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
+                              if  (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
                           ) / p.Xi_MAX[0]
                + gp.quicksum(a_x2[idx_p][chi]
                                 for chi in range(sys.CHI_MAX)
-                            ) / p.Xi_MAX[0]
-               + gp.quicksum(v.Xi_REQ * x[idx_r][idx_v][idx_p]
-                                for idx_r, r in enumerate(reqs)
-                                for idx_v, v in enumerate(r.V_S)
-                                if (r.gamma == 0) and (r.kappa == 1)
                             ) / p.Xi_MAX[0] + 1
                ## Plus 1 is the approximation of the ceiling function
                for idx_p, p in enumerate(V_P_S)
@@ -408,11 +305,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                        ) 
             + (sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
             + sys.C_HHO * a_x3[idx_p]
-            + sys.C_GOS * gp.quicksum(v.Xi_REQ * x[idx_r][idx_v][idx_p]
-                                      for idx_r, r in enumerate(reqs)
-                                      if r.gamma == 1
-                                      for idx_v, v in enumerate(r.V_S)
-                                     )
             <= p.C_MAX,
             name=f"mips_max_limit_1_{idx_p}"
         )
@@ -425,13 +317,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 m.remove(constraint_to_remove)
         
         m.addConstr(
-            h_VM_L0[idx_p]
-            # + gp.quicksum(v.Xi_REQ * x[idx_r][idx_v][idx_p]
-            #               for idx_r, r in enumerate(reqs)
-            #               if r.gamma == 1
-            #               for idx_v, v in enumerate(r.V_S)
-            #              )
-            <= p.Xi_MAX[1],
+            h_VM_L0[idx_p] <= p.Xi_MAX[1],
             name=f"mips_max_limit_2_{idx_p}"
         )
 
@@ -449,12 +335,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             for idx_w, w in enumerate(r.V_R)
                             for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                            ) * sys.Pi_PRB
-                # + gp.quicksum(y[idx_r][idx_w][idx_q][f][k]
-                #               for idx_r, r in enumerate(reqs)
-                #               if  r.gamma == 1
-                #               for idx_w, w in enumerate(r.V_R)
-                #               for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
-                #              ) * sys.Pi_FGB
                 <= q.Pi_MAX[f],
                 name=f"radio_max_limit_{idx_q}_{f}"
             )
@@ -470,38 +350,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 ) <= 1,
                 name=f"vp_unique_mapping_{idx_r}_{idx_e}"
             )
-    
-    
-    # # Eq. 21
-    # for idx_l, l in enumerate(L):
-    #     if len_R >= 2:
-    #         constraint_to_remove = m.getConstrByName(f"link_max_isolation_limit_{idx_l}")
-    #         if constraint_to_remove is not None:
-    #             m.remove(constraint_to_remove)
-        
-    #     m.addConstr(
-    #         gp.quicksum(a_z1[idx_r][idx_l]
-    #                     for idx_r, r in enumerate(reqs)
-    #                     if r.gamma == 2
-    #                    ) <= 1,
-    #         name=f"link_max_isolation_limit_{idx_l}"
-    #     )
-
-        
-    # # Eq. 22
-    # for idx_r in R_miss:
-    #     for idx_e, e in enumerate(reqs[idx_r].E):
-    #         for idx_l, l in enumerate(L):
-    #             m.addConstr(
-    #                 gp.quicksum(z[idx_r][idx_e][idx_l][s]
-    #                     for s in range(S_MAX)
-    #                 )
-    #                 <= 1 - gp.quicksum(a_z1[idx_r1][idx_l]
-    #                                 for idx_r1, r1 in enumerate(reqs)
-    #                                 if (r1.gamma == 2) and (idx_r1 != idx_r)
-    #                                 ),
-    #                 name=f"link_regular_isolation_limit_{idx_r}_{idx_e}_{idx_l}"
-    #             )
 
             
     # Eq. 23
@@ -522,7 +370,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             for idx_l, l in enumerate(L):
                 for s in range(len(l.B_MAX)):
                     m.addConstr(
-                        (1 - sys.Psi_HDR * (reqs[idx_r].gamma == 0))
+                        (1 - sys.Psi_HDR)
                         * gp.quicksum(b[idx_r][idx_e][idx_e_p][L_pqi[idx_e_p].index(l)][s]
                                     for idx_e_p, e_p in enumerate(E_P)
                                     if e_p in E_P_l[idx_l]
@@ -556,7 +404,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             if e.v in reqs[idx_r].V_S:
                 for idx_p, p in enumerate(V_P_S):
                     m.addConstr(
-                        (1 - sys.Psi_HDR * (reqs[idx_r].gamma == 0))
+                        (1 - sys.Psi_HDR)
                         * gp.quicksum(b[idx_r][idx_e][idx_e_p][0][s]
                             for idx_e_p, e_p in enumerate(E_P)
                             if e_p.p in V_P_S
@@ -569,7 +417,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             if e.w in reqs[idx_r].V_S:
                 for idx_p, p in enumerate(V_P_S):
                     m.addConstr(
-                        (1 - sys.Psi_HDR * (reqs[idx_r].gamma == 0))
+                        (1 - sys.Psi_HDR)
                         * gp.quicksum(b[idx_r][idx_e][idx_e_p][0][s]
                             for idx_e_p, e_p in enumerate(E_P)
                             if e_p.p in V_P_S
@@ -586,7 +434,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             if e.v in reqs[idx_r].V_R:
                 for idx_q, q in enumerate(V_P_R):
                     m.addConstr(
-                        (1 - sys.Psi_HDR * (reqs[idx_r].gamma == 0))
+                        (1 - sys.Psi_HDR)
                         * gp.quicksum(b[idx_r][idx_e][idx_e_p][0][s]
                             for idx_e_p, e_p in enumerate(E_P)
                             if e_p.q in V_P_R
@@ -602,7 +450,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             if e.w in reqs[idx_r].V_R:
                 for idx_q, q in enumerate(V_P_R):
                     m.addConstr(
-                        (1 - sys.Psi_HDR * (reqs[idx_r].gamma == 0))
+                        (1 - sys.Psi_HDR)
                         * gp.quicksum(b[idx_r][idx_e][idx_e_p][0][s]
                             for idx_e_p, e_p in enumerate(E_P)
                             if e_p.q in V_P_R
@@ -635,7 +483,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     h_D_3 = 0
 
     # Eq. 27
-    h_B_h_1 = [[(sys.Psi_HDR * (r.gamma == 0) - 1)
+    h_B_h_1 = [[(sys.Psi_HDR - 1)
                 * gp.quicksum(b[idx_r][idx_e][idx_e_p][0][s]
                               for idx_e_p, e_p in enumerate(E_P)
                               if (e_p.p in V_P_S) and (e_p.q in V_P_S)
@@ -647,7 +495,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                ]
                for idx_r, r in enumerate(reqs)
               ]
-    h_B_h_2 = [[(sys.Psi_HDR * (r.gamma == 0) - 1)
+    h_B_h_2 = [[(sys.Psi_HDR - 1)
                 * gp.quicksum(b[idx_r][idx_e][idx_e_p][0][s]
                               for idx_e_p, e_p in enumerate(E_P)
                               if (e_p.p in V_P_R) and (e_p.q in V_P_R)
@@ -659,7 +507,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                ]
                for idx_r, r in enumerate(reqs)
               ]
-    h_B_h_3 = [[(sys.Psi_HDR*(r.gamma == 0) - 1)
+    h_B_h_3 = [[(sys.Psi_HDR - 1)
                 * gp.quicksum(b[idx_r][idx_e][idx_e_p][0][s]
                               for idx_e_p, e_p in enumerate(E_P)
                               if (e_p.p in V_P_S) and (e_p.q in V_P_R)
@@ -702,13 +550,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.remove(constraint_to_remove)
             
             m.addConstr(
-                # gp.quicksum(z[idx_r][idx_e][idx_l][s] * sys.B_WGB
-                #             for idx_r, r in enumerate(reqs)
-                #             if r.gamma == 1
-                #             for idx_e, e in enumerate(r.E)
-                #             for idx_e_p, e_p in enumerate(E_P)
-                #             if e_p in E_P_l[idx_l]
-                # ) +
                 gp.quicksum(b[idx_r][idx_e][idx_e_p][L_pqi[idx_e_p].index(l)][s]
                               for idx_r, r in enumerate(reqs)
                               for idx_e, e in enumerate(r.E)
@@ -880,7 +721,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         m.addConstr(
             a_x3[idx_p] <= gp.quicksum(x[idx_r][idx_v][idx_p]
                                        for idx_r, r in enumerate(reqs)
-                                       if r.gamma <= 1
                                        for idx_v, v in enumerate(r.V_S)
                                       ),
             name=f"auxiliary_constraints_8_2_{idx_p}"
@@ -908,82 +748,11 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             m.addConstr(
                 a_x2[idx_p][chi] <= gp.quicksum((v.Chi_REQ[xi] == chi) * x[idx_r][idx_v][idx_p]
                                                 for idx_r, r in enumerate(reqs)
-                                                if r.gamma == 0 and r.kappa == 0
                                                 for idx_v, v in enumerate(r.V_S)
                                                 for xi in range(v.Xi_REQ)
                                                ),
                 name=f"auxiliary_constraints_9_2_{idx_p}_{chi}"
             )
-
-    ##################### a_x1 = max_{\gamma=2}(x):
-    # for idx_r in R_miss:
-    #     if reqs[idx_r].gamma == 2:
-    #         for idx_v, v in enumerate(reqs[idx_r].V_S):
-    #             for idx_p, p in enumerate(V_P_S):
-    #                 m.addConstr(
-    #                     a_x1[idx_r][idx_p] >= x[idx_r][idx_v][idx_p],
-    #                     name=f"auxiliary_constraints_10_1_{idx_r}_{idx_p}_{idx_v}"
-    #                 )
-    # for idx_r in R_miss:
-    #     if reqs[idx_r].gamma == 2:
-    #         for idx_p, p in enumerate(V_P_S):      
-    #             m.addConstr(
-    #                 a_x1[idx_r][idx_p] <= gp.quicksum(x[idx_r][idx_v][idx_p]
-    #                                                   for idx_v, v in enumerate(reqs[idx_r].V_S)
-    #                                                  ),
-    #                 name=f"auxiliary_constraints_10_2_{idx_r}_{idx_p}"
-    #             )
-
-    ##################### a_y1 = max_{\gamma=2}(sum(sum(y))):
-    # for idx_r in R_miss:
-    #     if reqs[idx_r].gamma == 2:
-    #         for idx_w, w in enumerate(reqs[idx_r].V_R):
-    #             for idx_q, q in enumerate(V_P_R):
-    #                 for f in range(len(q.Pi_MAX)):
-    #                     for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1):
-    #                         m.addConstr(
-    #                             a_y1[idx_r][idx_q] >= y[idx_r][idx_w][idx_q][f][k],
-    #                             name=f"auxiliary_constraints_11_1_{idx_r}_{idx_q}_{idx_w}_{f}_{k}"
-    #                         )
-    # for idx_r in R_miss:
-    #     if reqs[idx_r].gamma == 2:
-    #         for idx_q, q in enumerate(V_P_R):
-    #             m.addConstr(
-    #                 a_y1[idx_r][idx_q] <= gp.quicksum(y[idx_r][idx_w][idx_q][f][k]
-    #                                                   for idx_w, w in enumerate(reqs[idx_r].V_R)
-    #                                                   for f in range(len(q.Pi_MAX))
-    #                                                   for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
-    #                                                  ),
-    #                 name=f"auxiliary_constraints_11_2_{idx_r}_{idx_q}"
-    #             )
-
-    ##################### a_z1 = max_{\gamma=2}(sum(z))):
-    # for idx_r in R_miss:
-    #     if reqs[idx_r].gamma == 2:
-    #         for idx_e, e in enumerate(reqs[idx_r].E):
-    #             for idx_l, l in enumerate(L):
-    #                 m.addConstr(
-    #                     a_z1[idx_r][idx_l] >= gp.quicksum(z[idx_r][idx_e][idx_l][s]
-    #                                                       for s in range(S_MAX)
-    #                                                      ),
-    #                     name=f"auxiliary_constraints_12_1_{idx_r}_{idx_l}_{idx_e}_{s}"
-    #                 )
-
-    # for idx_r, r in enumerate(reqs):
-    #     if r.gamma == 2:
-    #         for idx_l, l in enumerate(L):
-    #             if len_R >= 2:
-    #                 constraint_to_remove = m.getConstrByName(f"auxiliary_constraints_11_2_{idx_r}_{idx_l}")
-    #                 if constraint_to_remove is not None:
-    #                     m.remove(constraint_to_remove)
-                
-    #             m.addConstr(
-    #                 a_z1[idx_r][idx_l] <= gp.quicksum(z[idx_r][idx_e][idx_l][s]
-    #                                                   for idx_e, e in enumerate(r.E)
-    #                                                   for s in range(S_MAX)
-    #                                                  ),
-    #                 name=f"auxiliary_constraints_12_2_{idx_r}_{idx_l}"
-    #             )
 
     ###################################### Profit Constraints ######################################
 
@@ -1037,7 +806,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     # Deployment Costs
     g_dep = ( sys.Theta * gp.quicksum(b[idx_r][idx_e][idx_e_p][idx_l][s]
                                       for idx_r, r     in enumerate(reqs)
-                                      if  r.gamma < 2
                                       for idx_e, e     in enumerate(r.E)
                                       for idx_e_p, e_p in enumerate(E_P)
                                       for idx_l, l     in enumerate(L_pqi[idx_e_p])
@@ -1045,59 +813,22 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                      )
             + sys.Omega * gp.quicksum(c[idx_r][idx_v][idx_p]
                                       for idx_r, r in enumerate(reqs)
-                                      if  r.gamma < 2
                                       for idx_v, v in enumerate(r.V_S)
                                       for idx_p, p in enumerate(V_P_S)
                                      )
             + sys.Phi   * gp.quicksum(k * y[idx_r][idx_w][idx_q][f][k]
                                       for idx_r, r in enumerate(reqs)
-                                      if  r.gamma < 2
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
                                       for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
-            + sys.Theta * gp.quicksum(l.B_MAX[0] * a_z1[idx_r][idx_l]
-                                      for idx_r, r     in enumerate(reqs)
-                                      if  r.gamma == 2
-                                      for idx_l, l     in enumerate(L)
-                                     )
-            + sys.Omega * gp.quicksum(p.C_MAX * a_x1[idx_r][idx_p]
-                                      for idx_r, r in enumerate(reqs)
-                                      if  r.gamma == 2
-                                      for idx_p, p in enumerate(V_P_S)
-                                     )
-            + sys.Phi * gp.quicksum(q.Pi_MAX[0] / sys.Pi_PRB * a_y1[idx_r][idx_q]
-                                    for idx_r, r in enumerate(reqs)
-                                    if  r.gamma == 2
-                                    for idx_q, q in enumerate(V_P_R)
-                                   )
             )
 
     # Overhead Cost
-    g_ovh = ( sys.Theta * gp.quicksum(z[idx_r][idx_e][idx_l][s] * sys.B_WGB
-                                      for idx_r, r in enumerate(reqs)
-                                      if r.gamma == 1
-                                      for idx_e, e in enumerate(r.E)
-                                      for idx_l, l in enumerate(L)
-                                      for s in range(S_MAX)
-                                     )
-            + sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * (h_VM_L0[idx_p] - 1)
+    g_ovh = ( sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * (h_VM_L0[idx_p] - 1)
                                        + sys.C_HHO * a_x3[idx_p]
-                                       + sys.C_GOS * gp.quicksum(v.Xi_REQ * x[idx_r][idx_v][idx_p]
-                                                                 for idx_r, r in enumerate(reqs)
-                                                                 if r.gamma == 1
-                                                                 for idx_v, v in enumerate(r.V_S)
-                                                                )
                                       for idx_p, p in enumerate(V_P_S)
-                                     )
-            + sys.Phi   * gp.quicksum(sys.Pi_FGB * y[idx_r][idx_w][idx_q][f][k]
-                                      for idx_r, r in enumerate(reqs)
-                                      if  r.gamma == 1
-                                      for idx_w, w in enumerate(r.V_R)
-                                      for idx_q, q in enumerate(V_P_R)
-                                      for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
             )
 
@@ -1134,18 +865,17 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         # Eq. 32
         m.addConstr(
             (
-                (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
+                (sum(500 for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
             ), name="minimum_profit"
         )
     else:
         m.addConstr(
             (
-                sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh >= P_min
+                sum(500 for r in reqs) - g_dep - g_vio - g_mig - g_ovh >= P_min
             ), name="minimum_profit"
         )
     
-    m.setObjective(sum(r.R for r in reqs)- g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
-    #m.setObjective(sum(r.R for r in reqs), GRB.MAXIMIZE)
+    m.setObjective(sum(500 for r in reqs)- g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
 
     # Start the timer
     start_time = time.time()
@@ -1167,56 +897,36 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         ############################## Deployment Costs ##############################
         g_dep_K_opt = (sys.Phi   * sum(k * vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                       for idx_r, r in enumerate(reqs)
-                                      if  r.gamma < 2
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
                                       for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
-                    # + sys.Phi   * sum(q.Pi_MAX[0] / sys.Pi_PRB * vars_opt["a_y1_{}_{}".format(idx_r,idx_q)]
-                    #                   for idx_r, r in enumerate(reqs)
-                    #                   if  r.gamma == 2
-                    #                   for idx_q, q in enumerate(V_P_R)
-                    #                  )
                     )
 
         g_dep_B_opt = ( sys.Theta * sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,idx_l,s)]
                                       for idx_r, r     in enumerate(reqs)
-                                      if  r.gamma < 2
                                       for idx_e, e     in enumerate(r.E)
                                       for idx_e_p, e_p in enumerate(E_P)
                                       for idx_l, l     in enumerate(L_pqi[idx_e_p])
                                       for s            in range(len(l.B_MAX))
                                      )
-                    # + sys.Theta * sum(l.B_MAX[0] * vars_opt["a_z1_{}_{}".format(idx_r,idx_l)]
-                    #                   for idx_r, r in enumerate(reqs)
-                    #                   if  r.gamma == 2
-                    #                   for idx_l, l in enumerate(L)
-                    #                  )
                     )
 
         g_dep_C_opt = (sys.Omega * sum(vars_opt["c_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                                       for idx_r, r in enumerate(reqs)
-                                      if  r.gamma < 2
                                       for idx_v, v in enumerate(r.V_S)
                                       for idx_p, p in enumerate(V_P_S)
                                      )
-                    # + sys.Omega * sum(p.C_MAX * vars_opt["a_x1_{}_{}".format(idx_r,idx_p)]
-                    #                   for idx_r, r in enumerate(reqs)
-                    #                   if  r.gamma == 2
-                    #                   for idx_p, p in enumerate(V_P_S)
-                    #                  )
-                    )
+                      )
 
         mips_cons = sum(vars_opt["c_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                       for idx_r, r in enumerate(reqs)
-                      if  r.gamma < 2
                       for idx_v, v in enumerate(r.V_S)
                       for idx_p, p in enumerate(V_P_S)
                    )
         mips_reqs = sum(v.C_REQ
                       for idx_r, r in enumerate(reqs)
-                      if  r.gamma < 2
                       for idx_v, v in enumerate(r.V_S)
                    )
         
@@ -1260,7 +970,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                   ]
         h_D_3 = 0
 
-        h_B_h_1 = [[(sys.Psi_HDR * (r.gamma == 0) - 1) * sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
+        h_B_h_1 = [[(sys.Psi_HDR - 1) * sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
                                                              for idx_e_p, e_p in enumerate(E_P)
                                                              if  (e_p.p in V_P_S) and (e_p.q in V_P_S)
                                                              for s            in range(S_MAX)
@@ -1270,7 +980,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                    ]
                    for idx_r, r in enumerate(reqs)
                   ]
-        h_B_h_2 = [[(sys.Psi_HDR*(r.gamma == 0) - 1) * sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
+        h_B_h_2 = [[(sys.Psi_HDR - 1) * sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
                                                            for idx_e_p, e_p in enumerate(E_P)
                                                            if  (e_p.p in V_P_R) and (e_p.q in V_P_R)
                                                            for s            in range(S_MAX)
@@ -1280,7 +990,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                    ]
                    for idx_r, r in enumerate(reqs)
                   ]
-        h_B_h_3 = [[(sys.Psi_HDR*(r.gamma == 0) - 1) * sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
+        h_B_h_3 = [[(sys.Psi_HDR - 1) * sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
                                                            for idx_e_p, e_p in enumerate(E_P)
                                                            if  (e_p.p in V_P_S) and (e_p.q in V_P_R)
                                                            for s            in range(S_MAX)
@@ -1336,46 +1046,21 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                        for idx_r, r in enumerate(reqs)
                        for idx_v, v in enumerate(r.V_S)
                        for xi       in range(v.Xi_REQ)
-                       if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
+                       if  (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
                       ) / p.Xi_MAX[0]
                  + sum(vars_opt["a_x2_{}_{}".format(idx_p,chi)]
                        for chi in range(sys.CHI_MAX)
-                      ) / p.Xi_MAX[0]
-                 + sum(v.Xi_REQ * vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
-                       for idx_r, r in enumerate(reqs)
-                       for idx_v, v in enumerate(r.V_S)
-                       if (r.gamma == 0) and (r.kappa == 1)
                       ) / p.Xi_MAX[0] + 1
                   ## Plus 1 is the approximation of the ceiling function
                   for idx_p, p in enumerate(V_P_S)
                  ]
 
-        g_ovh_K_opt = (sys.Phi   * sum(sys.Pi_FGB * vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
-                                      for idx_r, r in enumerate(reqs)
-                                      if  r.gamma == 1
-                                      for idx_w, w in enumerate(r.V_R)
-                                      for idx_q, q in enumerate(V_P_R)
-                                      for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
-                                     )
-                    )
+        g_ovh_K_opt = 0
 
-        g_ovh_B_opt = ( sys.Theta * sum(vars_opt["z_{}_{}_{}_{}".format(idx_r,idx_e,idx_l,s)] * sys.B_WGB
-                                      for idx_r, r in enumerate(reqs)
-                                      if  r.gamma == 1
-                                      for idx_e, e in enumerate(r.E)
-                                      for idx_l, l in enumerate(L)
-                                      for s in range(S_MAX)
-                                     )
-                    )
+        g_ovh_B_opt = 0
 
         g_ovh_C_opt = sum( sys.Omega * ((sys.C_K8S + sys.C_GOS) * (h_VM_L0[idx_p] - 1)
                                            + sys.C_HHO * vars_opt["a_x3_{}".format(idx_p)]
-                                           + sys.C_GOS * sum(v.Xi_REQ * vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
-                                                             for idx_r, r in enumerate(reqs)
-                                                             if  r.gamma == 1
-                                                             for idx_v, v in enumerate(r.V_S)
-                                                            )
                                           )
                              for idx_p, p in enumerate(V_P_S)
                             )
@@ -1437,7 +1122,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         
         g_res_opt = (g_res_K_opt + g_res_B_opt + g_res_C_opt) / 3
         
-        profit = sum(r.R for r in reqs) - g_dep_opt - g_vio_opt - g_mig_opt - g_ovh_opt #m.objVal
+        profit = sum(500 for r in reqs) - g_dep_opt - g_vio_opt - g_mig_opt - g_ovh_opt #m.objVal
 
         n_mig_opt = sum(sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                             for idx_p, p in enumerate(V_P_S)
@@ -1504,9 +1189,9 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         len_R = len(reqs)
 
         if f_fgr:
-            m = gp.read(f'saved_model/model_backup_fgr_opt_{iter}.mps')
+            m = gp.read(f'saved_model/model_backup_fgr_nis_{iter}.mps')
         else:
-            m = gp.read(f'saved_model/model_backup_opt_{iter}.mps')
+            m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
         m.update()
 
     # Stop the timer
@@ -1522,9 +1207,9 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         len_R = len(reqs)
         
         if f_fgr:
-            m = gp.read(f'saved_model/model_backup_fgr_opt_{iter}.mps')
+            m = gp.read(f'saved_model/model_backup_fgr_nis_{iter}.mps')
         else:
-            m = gp.read(f'saved_model/model_backup_opt_{iter}.mps')
+            m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
         m.update()
 
     if feasible:
@@ -1559,8 +1244,8 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
     m.update()
     if f_fgr:
-        m.write(f'saved_model/model_backup_fgr_opt_{iter}.mps')
+        m.write(f'saved_model/model_backup_fgr_nis_{iter}.mps')
     else:
-        m.write(f'saved_model/model_backup_opt_{iter}.mps')
+        m.write(f'saved_model/model_backup_nis_{iter}.mps')
 
     return profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs

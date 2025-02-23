@@ -31,3 +31,4 @@ from algorithms.iar import *
 from algorithms.opt import *
 from algorithms.rnr import *
 from algorithms.fgr import *
+from algorithms.nis import *
