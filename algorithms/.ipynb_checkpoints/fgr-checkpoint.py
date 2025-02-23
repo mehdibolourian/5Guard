@@ -42,40 +42,29 @@ def fgr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
         if remaining_time > 0:
             thread.join(timeout=remaining_time)  # Wait for each thread up to the deadline
 
-    # # Create processes for each function
-    # processes = [
-    #     multiprocessing.Process(target=run_in_process, args=(run_opt, result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi)),
-    #     multiprocessing.Process(target=run_in_process, args=(run_iar, result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi)),
-    #     multiprocessing.Process(target=run_in_process, args=(run_dtr, result, LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi)),
-    #     multiprocessing.Process(target=run_in_process, args=(run_rnr, result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi)),
-    # ]
-
-    # # Start all processes
-    # for process in processes:
-    #     process.start()
-
-    # # Wait for processes to finish, checking time elapsed
-    # start_time = time.time()
-    # while time.time() - start_time < r_t.timeout:
-    #     if all(not process.is_alive() for process in processes):
-    #         break  # If all processes have finished
-    #     time.sleep(0.1)  # Check every 0.1 seconds
-
-    # # Force terminate any remaining processes after the deadline
-    # for process in processes:
-    #     if process.is_alive():
-    #         print(f"Terminating {process.name} as it exceeded the deadline.")
-    #         process.terminate()
-    #         process.join()  # Ensure process cleanup
-
-    # print(result)
+#     run_opt(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi)
+#     run_iar(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi)
+#     run_dtr(result, LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi)
+#     run_rnr(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi)
         
     ## Profit * Feasibility
-    arr     = np.array([result["opt"][0] * result["opt"][9],
-                        result["iar"][0] * result["iar"][9],
-                        result["dtr"][0] * result["dtr"][9],
-                        result["rnr"][0] * result["rnr"][9]])
-    alg_idx = np.argmax(arr)  # Returns the index of the max value
-    alg     = algs[alg_idx]
+    arr = np.array([result["opt"][0] * result["opt"][9],
+                    result["iar"][0] * result["iar"][9],
+                    result["dtr"][0] * result["dtr"][9],
+                    result["rnr"][0] * result["rnr"][9]])
+
+    arr = np.round(arr, 4)  # Round each element to 4 decimal places to avoid numerical errors
+
+    # Define preference order (0: opt, 1: iar, 2: dtr, 3: rnr)
+    preference_order = [0, 1, 2, 3]  # Adjust this based on your priority
+
+    max_value = np.max(arr)
+    max_indices = np.where(arr == max_value)[0]  # Find all indices with max value
+
+    # Select the preferred index based on the predefined order
+    alg_idx = min(max_indices, key=preference_order.index)
+    alg = algs[alg_idx]
+    print(f"arr:{arr}")
+    print(f"alg:{alg}")
 
     return result[alg]

@@ -1130,19 +1130,13 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         constraint_to_remove = m.getConstrByName(f"minimum_profit")
         if constraint_to_remove is not None:
             m.remove(constraint_to_remove)
-    if t >= 1:
-        # Eq. 32
-        m.addConstr(
-            (
-                (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
-            ), name="minimum_profit"
-        )
-    else:
-        m.addConstr(
-            (
-                sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh >= P_min
-            ), name="minimum_profit"
-        )
+            
+    # Eq. 32
+    m.addConstr(
+        (
+            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
+        ), name="minimum_profit"
+    )
 
     m.update()
     
@@ -1164,7 +1158,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     if (status == gp.GRB.OPTIMAL) and (timeout == 0):
         # Get the optimal values of variables
         vars_opt       = {var.varName: var.x for var in m.getVars()}
-        vars_opt_relax = vars_opt
+        vars_opt_relax = copy.deepcopy(vars_opt)
 
         ################################## Randomized Rounding ##################################
         x_opt_lp = [[[vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
@@ -1188,15 +1182,20 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 idx_p_sel = random.choices(range(len(x_opt_lp[idx_r][idx_v])), weights=x_opt_lp[idx_r][idx_v], k=1)[0]
                 x_opt[idx_r][idx_v][idx_p_sel] = 1
                 c_opt[idx_r][idx_v][idx_p_sel] = c_opt_lp[idx_r][idx_v][idx_p_sel]/x_opt_lp[idx_r][idx_v][idx_p_sel]
+                
+        for idx_r,r in enumerate(reqs):
+            for idx_v, v in enumerate(r.V_S):
+                for idx_p, p in enumerate(V_P_S):
+                    vars_opt["c_{}_{}_{}".format(idx_r,idx_v,idx_p)] = c_opt[idx_r][idx_v][idx_p]
         
         y_opt_lp = [[[[[vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
-                        for k in range(K_MAX)]
-                       for f in range(F_MAX)]
+                        for k in range(K_REQ_EFF[idx_r][idx_w] + 1)]
+                       for f in range(len(q.Pi_MAX))]
                       for idx_q, q in enumerate(V_P_R)]
                      for idx_w, w in enumerate(r.V_R)]
                     for idx_r,r in enumerate(reqs)]
-        y_opt    = [[[[[0 for k in range(K_MAX)]
-                       for f in range(F_MAX)]
+        y_opt    = [[[[[0 for k in range(K_REQ_EFF[idx_r][idx_w] + 1)]
+                       for f in range(len(q.Pi_MAX))]
                       for idx_q, q in enumerate(V_P_R)]
                      for idx_w, w in enumerate(r.V_R)]
                     for idx_r,r in enumerate(reqs)]
@@ -1205,12 +1204,19 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             for idx_w, w in enumerate(r.V_R):
                 list_tmp = [item for sublist1 in y_opt_lp[idx_r][idx_w] for sublist2 in sublist1 for item in sublist2]
                 qfk_sel  = random.choices(range(len(list_tmp)), weights=list_tmp, k=1)[0]
-                q_sel    = int(qfk_sel / K_MAX // F_MAX)
-                fk_sel   = int(qfk_sel - q_sel * K_MAX * F_MAX)
+                q_sel    = int(qfk_sel / (K_REQ_EFF[idx_r][idx_w]+1) // F_MAX)
+                fk_sel   = int(qfk_sel - q_sel * (K_REQ_EFF[idx_r][idx_w]+1) * F_MAX)
                 f_sel    = int(fk_sel // K_MAX)
-                k_sel    = w.K_REQ if r.beta >= 1e6 else fk_sel - int(f_sel*K_MAX)
+                k_sel    = w.K_REQ if r.beta >= 1e6 else fk_sel - int(f_sel*(K_REQ_EFF[idx_r][idx_w]+1))
                 
-                y_opt[idx_r][idx_w][q_sel][f_sel][k_sel] = 1   
+                y_opt[idx_r][idx_w][q_sel][f_sel][k_sel] = 1
+                
+        for idx_r, r in enumerate(reqs):
+            for idx_w, w in enumerate(r.V_R):
+                for idx_q, q in enumerate(V_P_R):
+                    for f in range(len(q.Pi_MAX)):
+                        for k in range(K_REQ_EFF[idx_r][idx_w] + 1):
+                            vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)] = y_opt[idx_r][idx_w][idx_q][f][k]
         
         z_opt_lp = [[[[vars_opt["z_{}_{}_{}_{}".format(idx_r,idx_e,idx_l,s)]
                        for s in range(S_MAX)]
@@ -1251,130 +1257,145 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         for s in range(S_MAX):
                             if z_opt[idx_r][idx_e][L.index(l)][s] == 1:
                                 b_opt[idx_r][idx_e][idx_e_p][idx_l][s] = b_opt_lp[idx_r][idx_e][idx_e_p][idx_l][s] / z_opt_lp[idx_r][idx_e][L.index(l)][s]
+                               
+        for idx_r,r in enumerate(reqs):
+            for idx_e, e in enumerate(r.E):
+                for idx_e_p, e_p in enumerate(E_P):
+                    for idx_l, l in enumerate(L_pqi[idx_e_p]):
+                        for s in range(S_MAX):
+                            vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,idx_l,s)] = b_opt[idx_r][idx_e][idx_e_p][idx_l][s]
+                        
         
-        a_x1_opt_lp = [[vars_opt["a_x1_{}_{}".format(idx_r,idx_p)]
-                        for idx_p, p in enumerate(V_P_S)]
-                       for idx_r,r in enumerate(reqs)]
         a_x1_opt    = [[0 for idx_p, p in enumerate(V_P_S)]
                         for idx_r,r in enumerate(reqs)]
         for idx_r,r in enumerate(reqs):
             for idx_p, p in enumerate(V_P_S):
-                opt_value = (random.random() < a_x1_opt_lp[idx_r][idx_p])
-                a_x1_opt[idx_r][idx_p] = opt_value
-                vars_opt["a_x1_{}_{}".format(idx_r,idx_p)] = opt_value
-        
-        a_x2_opt_lp = [[vars_opt["a_x2_{}_{}".format(idx_p,chi)]
-                        for chi in range(sys.CHI_MAX+1)]
-                       for idx_p, p in enumerate(V_P_S)]
-                       
+                a_x1_opt[idx_r][idx_p] = max(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
+                                             for idx_v, v in enumerate(r.V_S)
+                                            )
+                vars_opt["a_x1_{}_{}".format(idx_r,idx_p)] = a_x1_opt[idx_r][idx_p]
+                           
         a_x2_opt    = [[0 for chi in range(sys.CHI_MAX+1)]
                        for idx_p, p in enumerate(V_P_S)]
         
         for idx_p, p in enumerate(V_P_S):
             for chi in range(sys.CHI_MAX+1):
-                opt_value = (random.random() < a_x2_opt_lp[idx_p][chi])
-                a_x2_opt[idx_p][chi] = opt_value
-                vars_opt["a_x2_{}_{}".format(idx_p,chi)] = opt_value
+                a_x2_opt[idx_p][chi] = max(((v.Chi_REQ[xi] == chi) * vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
+                                            for idx_r, r in enumerate(reqs)
+                                            if (r.gamma == 0) and (r.kappa == 0)
+                                            for idx_v, v in enumerate(r.V_S)
+                                            for xi in range(v.Xi_REQ))
+                                           , default=0)
+                vars_opt["a_x2_{}_{}".format(idx_p,chi)] = a_x2_opt[idx_p][chi]
         
-        a_x3_opt_lp = [vars_opt["a_x3_{}".format(idx_p)]
-                       for idx_p, p in enumerate(V_P_S)]
         a_x3_opt    = [0 for idx_p, p in enumerate(V_P_S)]
         
         for idx_p, p in enumerate(V_P_S):
-            opt_value = (random.random() < a_x3_opt_lp[idx_p])
-            a_x3_opt[idx_p] = opt_value
-            vars_opt["a_x3_{}".format(idx_p)] = opt_value
+            a_x3_opt[idx_p] = max((vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)] * (r.gamma <= 1)
+                                  for idx_r, r in enumerate(reqs)
+                                  for idx_v, v in enumerate(r.V_S))
+                                 , default=0)
+            vars_opt["a_x3_{}".format(idx_p)] = a_x3_opt[idx_p]
         
-        a_x4_opt_lp = [[[vars_opt["a_x4_{}_{}_{}".format(idx_r,idx_v,idx_p)]
-                         for idx_p, p in enumerate(V_P_S)]
-                        for idx_v, v in enumerate(r.V_S)]
-                       for idx_r,r in enumerate(reqs)]
         a_x4_opt    = [[[0 for idx_p, p in enumerate(V_P_S)]
-                         for idx_v, v in enumerate(r.V_S)]
+                         for idx_e, e in enumerate(r.E)]
                         for idx_r,r in enumerate(reqs)]
         for idx_r,r in enumerate(reqs):
-            for idx_v, v in enumerate(r.V_S):
-                for idx_p, p in enumerate(V_P_S):
-                    opt_value = (random.random() < a_x4_opt_lp[idx_r][idx_v][idx_p])
-                    a_x4_opt[idx_r][idx_v][idx_p] = opt_value
-                    vars_opt["a_x4_{}_{}_{}".format(idx_r,idx_v,idx_p)] = opt_value
+            for idx_e, e in enumerate(r.E):
+                if e.v in r.V_S and e.w in r.V_S:
+                    for idx_p, p in enumerate(V_P_S):
+                        a_x4_opt[idx_r][idx_e][idx_p] = min(vars_opt["x_{}_{}_{}".format(idx_r,(r.V_S).index(e.v),idx_p)], vars_opt["x_{}_{}_{}".format(idx_r,(r.V_S).index(e.w),idx_p)])
+                        vars_opt["a_x4_{}_{}_{}".format(idx_r,idx_e,idx_p)] = a_x4_opt[idx_r][idx_e][idx_p]
         
-        a_y1_opt_lp = [[vars_opt["a_y1_{}_{}".format(idx_r,idx_q)]
-                        for idx_q, q in enumerate(V_P_R)]
-                       for idx_r,r in enumerate(reqs)]
         a_y1_opt    = [[0 for idx_q, q in enumerate(V_P_R)]
                         for idx_r,r in enumerate(reqs)]
         for idx_r,r in enumerate(reqs):
             for idx_q, q in enumerate(V_P_R):
-                opt_value = (random.random() < a_y1_opt_lp[idx_r][idx_q])
-                a_y1_opt[idx_r][idx_q] = opt_value
-                vars_opt["a_y1_{}_{}".format(idx_r,idx_q)] = opt_value
+                a_y1_opt[idx_r][idx_q] = max(sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
+                                                 for f in range(len(q.Pi_MAX))
+                                                 for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                )
+                                             for idx_w, w in enumerate(r.V_R)
+                                            )
+                vars_opt["a_y1_{}_{}".format(idx_r,idx_q)] = a_y1_opt[idx_r][idx_q]
         
-        a_y2_opt_lp = [[[vars_opt["a_y2_{}_{}_{}".format(idx_r,idx_e,idx_q)]
-                         for idx_q, q in enumerate(V_P_R)]
-                        for idx_e, e in enumerate(r.E)]
-                       for idx_r,r in enumerate(reqs)]
         a_y2_opt    = [[[0 for idx_q, q in enumerate(V_P_R)]
                          for idx_e, e in enumerate(r.E)]
                         for idx_r,r in enumerate(reqs)]
         for idx_r,r in enumerate(reqs):
             for idx_e, e in enumerate(r.E):
-                for idx_q, q in enumerate(V_P_R):
-                    opt_value = (random.random() < a_y2_opt_lp[idx_r][idx_e][idx_q])
-                    a_y2_opt[idx_r][idx_e][idx_q] = opt_value
-                    vars_opt["a_y2_{}_{}_{}".format(idx_r,idx_e,idx_q)] = opt_value
+                if e.v in r.V_R and e.w in r.V_R:
+                    for idx_q, q in enumerate(V_P_R):
+                        a_y2_opt[idx_r][idx_e][idx_q] = min(sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,(r.V_R).index(e.v),idx_q,f,k)]
+                                                                for f in range(len(q.Pi_MAX))
+                                                                for k in range(K_REQ_EFF[idx_r][r.V_R.index(e.v)] + 1)
+                                                               ),
+                                                            sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,(r.V_R).index(e.w),idx_q,f,k)]
+                                                                for f in range(len(q.Pi_MAX))
+                                                                for k in range(1,K_REQ_EFF[idx_r][r.V_R.index(e.w)] + 1)
+                                                               )
+                                                           )
+                        vars_opt["a_y2_{}_{}_{}".format(idx_r,idx_e,idx_q)] = a_y2_opt[idx_r][idx_e][idx_q]
         
-        a_z1_opt_lp = [[vars_opt["a_z1_{}_{}".format(idx_r,idx_l)]
-                        for idx_l, l in enumerate(L)]
-                       for idx_r,r in enumerate(reqs)]
         a_z1_opt    = [[0 for idx_l, l in enumerate(L)]
                         for idx_r,r in enumerate(reqs)]
         for idx_r,r in enumerate(reqs):
             for idx_l, l in enumerate(L):
-                opt_value = (random.random() < a_z1_opt_lp[idx_r][idx_l])
-                a_z1_opt[idx_r][idx_l] = opt_value
-                vars_opt["a_z1_{}_{}".format(idx_r,idx_l)] = opt_value
+                a_z1_opt[idx_r][idx_l] = max(sum(vars_opt["z_{}_{}_{}_{}".format(idx_r,idx_e,idx_l,s)]
+                                                 for s in range(S_MAX)
+                                                )
+                                             for idx_e, e in enumerate(r.E)
+                                            )
+                vars_opt["a_z1_{}_{}".format(idx_r,idx_l)] = a_z1_opt[idx_r][idx_l]
+
+        h_REV_1 = [[1 - sum(vars_opt["a_x4_{}_{}_{}".format(idx_r,idx_e,idx_p)]
+                            for idx_p, p in enumerate(V_P_S)
+                           )
+                    for idx_e, e in enumerate(r.E)
+                   ]
+                   for idx_r, r in enumerate(reqs)
+                  ]
+        h_REV_2 = [[1 - sum(vars_opt["a_y2_{}_{}_{}".format(idx_r,idx_e,idx_q)]
+                            for idx_q, q in enumerate(V_P_R)
+                           )
+                    for idx_e, e in enumerate(r.E)
+                   ]
+                   for idx_r, r in enumerate(reqs)
+                  ]
         
-        a_z2_opt_lp = [[[vars_opt["a_z2_{}_{}_{}".format(idx_r,idx_e,idx_e_p)]
-                         for idx_e_p, e_p in enumerate(E_P)]
-                        for idx_e, e in enumerate(r.E)]
-                       for idx_r,r in enumerate(reqs)]
-        a_z2_opt    = [[[0 for idx_e_p, e_p in enumerate(E_P)]
-                         for idx_e, e in enumerate(r.E)]
-                        for idx_r,r in enumerate(reqs)]
-        for idx_r,r in enumerate(reqs):
-            for idx_e, e in enumerate(r.E):
-                for idx_e_p, e_p in enumerate(E_P):
-                    opt_value = (random.random() < a_z2_opt_lp[idx_r][idx_e][idx_e_p])
-                    a_z2_opt[idx_r][idx_e][idx_e_p] = opt_value
-                    vars_opt["a_z2_{}_{}_{}".format(idx_r,idx_e,idx_e_p)] = opt_value
-        
-        
-        a_z3_opt_lp = [[vars_opt["a_z3_{}_{}".format(idx_r,idx_e)]
-                        for idx_e, e in enumerate(r.E)]
-                       for idx_r,r in enumerate(reqs)]
         a_z3_opt    = [[0 for idx_e, e in enumerate(r.E)]
                         for idx_r,r in enumerate(reqs)]
         for idx_r,r in enumerate(reqs):
             for idx_e, e in enumerate(r.E):
-                opt_value = (random.random() < a_z3_opt_lp[idx_r][idx_e])
-                a_z3_opt[idx_r][idx_e] = opt_value
-                vars_opt["a_z3_{}_{}".format(idx_r,idx_e)] = opt_value
-        
-        a_z4_opt_lp = [[vars_opt["a_z4_{}_{}".format(idx_r,idx_e)]
-                        for idx_e, e in enumerate(r.E)]
-                       for idx_r,r in enumerate(reqs)]
-        a_z4_opt    = [[0 for idx_e, e in enumerate(r.E)]
-                        for idx_r,r in enumerate(reqs)]
-        for idx_r,r in enumerate(reqs):
-            for idx_e, e in enumerate(r.E):
-                opt_value = (random.random() < a_z4_opt_lp[idx_r][idx_e])
-                a_z4_opt[idx_r][idx_e] = opt_value
-                vars_opt["a_z4_{}_{}".format(idx_r,idx_e)] = opt_value
+                if (e.v in r.V_S) and (e.w in r.V_S):
+                    a_z3_opt[idx_r][idx_e] = max(max(min(e_p.D_RTT * sum(vars_opt["z_{}_{}_{}_{}".format(idx_r,idx_e,idx_l,s)]
+                                                                        for s in range(len(l.B_MAX))
+                                                                       ) - e.D_REQ - M * h_REV_1[idx_r][idx_e]
+                                                          for idx_l, l in enumerate(L)
+                                                         )
+                                                      for idx_e_p, e_p in enumerate(E_P)
+                                                     ), 0)
+                elif (e.v in r.V_R) and (e.w in r.V_R):
+                    a_z3_opt[idx_r][idx_e] = max(max(min(e_p.D_RTT * sum(vars_opt["z_{}_{}_{}_{}".format(idx_r,idx_e,idx_l,s)]
+                                                                        for s in range(len(l.B_MAX))
+                                                                       ) - e.D_REQ - M * h_REV_2[idx_r][idx_e]
+                                                          for idx_l, l in enumerate(L)
+                                                         )
+                                                      for idx_e_p, e_p in enumerate(E_P)
+                                                     ), 0)
+                else:
+                    a_z3_opt[idx_r][idx_e] = max(max(min(e_p.D_RTT * sum(vars_opt["z_{}_{}_{}_{}".format(idx_r,idx_e,idx_l,s)]
+                                                                        for s in range(len(l.B_MAX))
+                                                                       ) - e.D_REQ
+                                                          for idx_l, l in enumerate(L)
+                                                         )
+                                                      for idx_e_p, e_p in enumerate(E_P)
+                                                     ), 0)
+                vars_opt["a_z3_{}_{}".format(idx_r,idx_e)] = a_z3_opt[idx_r][idx_e]
         ##############################################################################
 
         ############################## Rechecking constraints ########################
-        constr  = np.zeros(10)
+        constr  = np.zeros(12)
         constr[0] = all(sum(vars_opt["a_x1_{}_{}".format(idx_r,idx_p)]
                             for idx_r, r in enumerate(reqs)
                             if r.gamma == 2) <= 1
@@ -1505,6 +1526,18 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         for s in range(len(l.B_MAX))
                        )
         
+        constr[10] = all(sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)] for idx_p in range(len(V_P_S))) == 1
+                         for idx_r, r in enumerate(reqs)
+                         for idx_v, v in enumerate(r.V_S)
+                        ) 
+        
+        constr[11] = all(sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
+                             for idx_q, q in enumerate(V_P_R)
+                             for f in range(len(q.Pi_MAX))
+                             for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)) == 1
+                         for idx_r, r in enumerate(reqs)
+                         for idx_w, w in enumerate(r.V_R)
+                        )
 
         if np.any(constr == 0): ## Infeasible rounding
             inf_constr = np.where(constr == 0)[0]
@@ -1604,23 +1637,6 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                           for idx_r, r in enumerate(reqs)
                           for idx_w, w in enumerate(r.V_R)
                          )
-    
-    
-            h_REV_1 = [[1 - sum(vars_opt["a_x4_{}_{}_{}".format(idx_r,idx_e,idx_p)]
-                                for idx_p, p in enumerate(V_P_S)
-                               )
-                        for idx_e, e in enumerate(r.E)
-                       ]
-                       for idx_r, r in enumerate(reqs)
-                      ]
-            h_REV_2 = [[1 - sum(vars_opt["a_y2_{}_{}_{}".format(idx_r,idx_e,idx_q)]
-                                for idx_q, q in enumerate(V_P_R)
-                               )
-                        for idx_e, e in enumerate(r.E)
-                       ]
-                       for idx_r, r in enumerate(reqs)
-                      ]
-            h_D_3 = 0
     
             h_B_h_1 = [[(sys.Psi_HDR * (r.gamma == 0) - 1) * sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
                                                                  for idx_e_p, e_p in enumerate(E_P)
@@ -1772,10 +1788,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                               for idx_r, r in enumerate(reqs)
                               for idx_e, e in enumerate(r.E)
                              )
-    
-            #print(f"vars_opt:{vars_opt}")
-            #print(f"vars_opt_relax:{vars_opt_relax}")
-    
+
             ############################## Resource Efficiency ##############################
             sum_K_REQ = sum(K_REQ_EFF[idx_r][idx_w]
                             for idx_r, r in enumerate(reqs)
@@ -1837,30 +1850,43 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     for idx_w, w in enumerate(r.V_R)]
                    for idx_r, r in enumerate(reqs)]
             
-            profit_opt    = profit
-            
-            violat_opt[0] = g_vio_opt
-            violat_opt[1] = g_K_opt
-            violat_opt[2] = g_B_1_opt + g_B_2_opt + g_B_3_opt
-            violat_opt[3] = g_C_opt
-            violat_opt[4] = g_D_opt
-            
-            migrat_opt    = n_mig_opt
-            
-            deploy_opt[0] = g_dep_opt
-            deploy_opt[1] = g_dep_K_opt
-            deploy_opt[2] = g_dep_B_opt
-            deploy_opt[3] = g_dep_C_opt
-            
-            overhe_opt[0] = g_ovh_opt
-            overhe_opt[1] = g_ovh_K_opt
-            overhe_opt[2] = g_ovh_B_opt
-            overhe_opt[3] = g_ovh_C_opt
-            
-            reseff_opt[0] = g_res_opt
-            reseff_opt[1] = g_res_K_opt
-            reseff_opt[2] = g_res_B_opt
-            reseff_opt[3] = g_res_C_opt
+            if profit - profit_prev < P_min:
+                feasible = 0
+                reject_opt[r_t.gamma] = 1
+
+                reqs.pop()
+                len_R = len(reqs)
+
+                if f_fgr:
+                    m = gp.read(f'saved_model/model_backup_fgr_rnr_{iter}.mps')
+                else:
+                    m = gp.read(f'saved_model/model_backup_rnr_{iter}.mps')
+                m.update()
+            else:
+                profit_opt    = profit
+
+                violat_opt[0] = g_vio_opt
+                violat_opt[1] = g_K_opt
+                violat_opt[2] = g_B_1_opt + g_B_2_opt + g_B_3_opt
+                violat_opt[3] = g_C_opt
+                violat_opt[4] = g_D_opt
+
+                migrat_opt    = n_mig_opt
+
+                deploy_opt[0] = g_dep_opt
+                deploy_opt[1] = g_dep_K_opt
+                deploy_opt[2] = g_dep_B_opt
+                deploy_opt[3] = g_dep_C_opt
+
+                overhe_opt[0] = g_ovh_opt
+                overhe_opt[1] = g_ovh_K_opt
+                overhe_opt[2] = g_ovh_B_opt
+                overhe_opt[3] = g_ovh_C_opt
+
+                reseff_opt[0] = g_res_opt
+                reseff_opt[1] = g_res_K_opt
+                reseff_opt[2] = g_res_B_opt
+                reseff_opt[3] = g_res_C_opt
     else:
         feasible = 0
         reject_opt[r_t.gamma] = 1
@@ -1924,7 +1950,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 ["Timeout", timeout]
             ]
     
-    print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
+        print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
 
     m.update()
     if f_fgr:

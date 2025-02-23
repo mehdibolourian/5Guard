@@ -443,7 +443,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                   for f in range(len(q.Pi_MAX))
                                   for k in range(K_REQ_EFF[idx_r][r.V_R.index(e.v)] + 1)
                                  ),
-                              sum(y[idx_r][r.V_R.index(e.w)][idx_q] 
+                              sum(y[idx_r][r.V_R.index(e.w)][idx_q][f][k]
                                   for f in range(len(q.Pi_MAX))
                                   for k in range(1,K_REQ_EFF[idx_r][r.V_R.index(e.w)] + 1)
                                  )
@@ -840,19 +840,13 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             constraint_to_remove = m.getConstrByName(f"minimum_profit")
             if constraint_to_remove is not None:
                 m.remove(constraint_to_remove)
-        if t >= 1:
-            # Eq. 32
-            m.addConstr(
-                (
-                    (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
-                ), name="minimum_profit"
-            )
-        else:
-            m.addConstr(
-                (
-                    sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh >= P_min
-                ), name="minimum_profit"
-            )
+
+        # Eq. 32
+        m.addConstr(
+            (
+                (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
+            ), name="minimum_profit"
+        )
     
         m.update()
 
@@ -1267,7 +1261,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 ["Timeout", timeout]
             ]
     
-    print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
+        print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
 
     m.update()
     if f_fgr:

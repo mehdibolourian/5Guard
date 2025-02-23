@@ -1132,19 +1132,13 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         constraint_to_remove = m.getConstrByName(f"minimum_profit")
         if constraint_to_remove is not None:
             m.remove(constraint_to_remove)
-    if t >= 1:
-        # Eq. 32
-        m.addConstr(
-            (
-                (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
-            ), name="minimum_profit"
-        )
-    else:
-        m.addConstr(
-            (
-                sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh >= P_min
-            ), name="minimum_profit"
-        )
+
+    # Eq. 32
+    m.addConstr(
+        (
+            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
+        ), name="minimum_profit"
+    )
     
     m.setObjective(sum(r.R for r in reqs)- g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
     #m.setObjective(sum(r.R for r in reqs), GRB.MAXIMIZE)
@@ -1165,6 +1159,14 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     if (status == gp.GRB.OPTIMAL) and (timeout == 0):
         # Get the optimal values of variables
         vars_opt = {var.varName: var.x for var in m.getVars()}
+        
+#         for idx_r, r in enumerate(reqs):
+#             for idx_w, w in enumerate(r.V_R):
+#                 for idx_q, q in enumerate(V_P_R):
+#                     for f in range(len(q.Pi_MAX)):
+#                         for k in range(K_REQ_EFF[idx_r][idx_w] + 1):
+#                             print(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)])
+                                      
 
         ############################## Deployment Costs ##############################
         g_dep_K_opt = (sys.Phi   * sum(k * vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
@@ -1558,7 +1560,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 ["Timeout", timeout]
             ]
     
-    print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
+        print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
 
     m.update()
     if f_fgr:
