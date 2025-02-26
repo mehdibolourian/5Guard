@@ -220,10 +220,9 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                  for idx_e in range(len_E)])
     a_z4.append([m.addVar(name=f"a_z4_{len_R-1}_{idx_e}", vtype=gp.GRB.BINARY)
                  for idx_e in range(len_E)])
-    
-    # Using 16 threads by the solver
-    m.setParam('Threads', 16)
 
+    m.setParam('Threads', 4)
+    
     m.update()
     
     ## Constraints
@@ -704,13 +703,12 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
     ##################### a_x3 = max_{\gamma<=1}(x):
     for idx_r in R_miss:
-        if reqs[idx_r].gamma <= 1:
-            for idx_p, p in enumerate(V_P_S):
-                for idx_v, v in enumerate(reqs[idx_r].V_S):
-                    m.addConstr(
-                        a_x3[idx_p] >= x[idx_r][idx_v][idx_p],
-                        name=f"auxiliary_constraints_8_1_{idx_r}_{idx_v}_{idx_p}"
-                    )
+        for idx_p, p in enumerate(V_P_S):
+            for idx_v, v in enumerate(reqs[idx_r].V_S):
+                m.addConstr(
+                    a_x3[idx_p] >= x[idx_r][idx_v][idx_p],
+                    name=f"auxiliary_constraints_8_1_{idx_r}_{idx_v}_{idx_p}"
+                )
 
     for idx_p, p in enumerate(V_P_S):
         if len_R >= 2:
@@ -728,15 +726,14 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
     ##################### a_x2 = max_{\gamma=\kappa=0}(x):
     for idx_r in R_miss:
-        if reqs[idx_r].gamma == 0 and reqs[idx_r].kappa == 0:
-            for idx_p, p in enumerate(V_P_S):
-                for chi in range(sys.CHI_MAX + 1):
-                    for idx_v, v in enumerate(reqs[idx_r].V_S):
-                        for xi in range(v.Xi_REQ):
-                            m.addConstr(
-                                a_x2[idx_p][chi] >= (v.Chi_REQ[xi] == chi) * x[idx_r][idx_v][idx_p],
-                                name=f"auxiliary_constraints_9_1_{idx_p}_{chi}_{idx_r}_{idx_v}_{xi}"
-                            )
+        for idx_p, p in enumerate(V_P_S):
+            for chi in range(sys.CHI_MAX + 1):
+                for idx_v, v in enumerate(reqs[idx_r].V_S):
+                    for xi in range(v.Xi_REQ):
+                        m.addConstr(
+                            a_x2[idx_p][chi] >= (v.Chi_REQ[xi] == chi) * x[idx_r][idx_v][idx_p],
+                            name=f"auxiliary_constraints_9_1_{idx_p}_{chi}_{idx_r}_{idx_v}_{xi}"
+                        )
 
     for idx_p, p in enumerate(V_P_S):
         for chi in range(sys.CHI_MAX + 1):
@@ -1183,7 +1180,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         reseff_opt[3] = g_res_C_opt
     else:
         feasible = 0
-        reject_opt[r_t.gamma] = 1
+        reject_opt[0] = 1
 
         reqs.pop()
         len_R = len(reqs)
@@ -1201,7 +1198,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     if time_opt > r_t.timeout:
         timeout  = 1
         feasible = 0
-        reject_opt[r_t.gamma] = 1
+        reject_opt[0] = 1
 
         reqs.pop()
         len_R = len(reqs)
@@ -1215,7 +1212,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     if feasible:
         data = [
             ["Algorithm", "NIS"],
-            ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
+            ["Request Isolation Level", f"({0}, {0})"],
             ["Profit", profit],
             ["Allocation Time", time_opt],
         ]
@@ -1233,8 +1230,8 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             data.append(["Overhead Cost", g_ovh_opt])
     else:
         data = [
-            ["Request Isolation Level", r_t.gamma],
-            ["Request Isolation Sub-level", r_t.kappa],
+            ["Request Isolation Level", 0],
+            ["Request Isolation Sub-level", 0],
             ["Allocation Time", time_opt],
             ["Feasible", feasible],
             ["Timeout", timeout]

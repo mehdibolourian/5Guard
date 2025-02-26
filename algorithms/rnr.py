@@ -244,10 +244,8 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                  for idx_e in range(len_E)])
     a_z4.append([m.addVar(name=f"a_z4_{len_R-1}_{idx_e}", vtype=gp.GRB.CONTINUOUS, ub=1)
                  for idx_e in range(len_E)])
-    
-    # Using 16 threads by the solver
-    m.setParam('Threads', 16)
 
+    m.setParam('Threads', 4)
     m.update()
     
     ## Constraints

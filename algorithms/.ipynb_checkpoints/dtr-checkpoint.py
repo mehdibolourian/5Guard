@@ -244,10 +244,9 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                  for idx_e in range(len_E)])
     a_z4.append([m.addVar(name=f"a_z4_{len_R-1}_{idx_e}", vtype=gp.GRB.CONTINUOUS, ub=1)
                  for idx_e in range(len_E)])
-    
-    # Using 16 threads by the solver
-    m.setParam('Threads', 16)
 
+    m.setParam('Threads', 4)
+    
     m.update()
     
     ## Constraints
@@ -1899,8 +1898,6 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                 reseff_opt[1] = g_res_K_opt
                 reseff_opt[2] = g_res_B_opt
                 reseff_opt[3] = g_res_C_opt
-
-                print(f"m.objVal:{m.objVal}, profit_opt: {profit_opt}")
     else:
         feasible = 0
         reject_opt[r_t.gamma] = 1

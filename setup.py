@@ -146,7 +146,7 @@ def create_sr_resources():
     r_mmtc = sr(
         V_S_mmtc, V_R_mmtc, E_mmtc, 0, 0, 500,
         1e-2 / BANDWIDTH_SCALE, 10 / LATENCY_SCALE, 1e-1 / MIPS_SCALE, 10,
-        10, 4*200
+        10, 10*0.1
     )
 
     V_S_embb = [nf(6000 * MIPS_SCALE, 3, [0, 1, 2])]
@@ -155,7 +155,7 @@ def create_sr_resources():
     r_embb = sr(
         V_S_embb, V_R_embb, E_embb, 0, 1, 500,
         1e-7 / BANDWIDTH_SCALE, 10 / LATENCY_SCALE, 1e-2 / MIPS_SCALE, 0.1,
-        10, 3*200
+        10, 6*0.1
     )
 
     ######## Isolation Level 1:
@@ -165,7 +165,7 @@ def create_sr_resources():
     r_urll = sr(
         V_S_urll, V_R_urll, E_urll, 1, 0, 2000,
         1e-6 / BANDWIDTH_SCALE, 100 / LATENCY_SCALE, 1 / MIPS_SCALE, 100,
-        100, 1*200
+        100, 2*0.1
     )
 
     ######## Isolation Level 2:
@@ -176,7 +176,7 @@ def create_sr_resources():
         V_S_mcri, V_R_mcri, E_mcri, 2, 0, 10000,
         #1e6, 1e6, 1e6, 1e6,
         1e4, 1e4, 1e4, 1e4,
-        1e6, 0.5*200
+        1e6, 1*0.1
     )
 
     sr_types = [r_embb, r_urll, r_mmtc, r_mcri] # L01, L1, L00, L2
