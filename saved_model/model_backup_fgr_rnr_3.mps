@@ -358,38 +358,16 @@ ROWS
  G  auxiliary_constraints_8_1_4_0_1
  G  auxiliary_constraints_8_1_4_0_2
  E  nf_unique_mapping_5_0
- E  nf_unique_mapping_6_0
- E  nf_unique_mapping_7_0
  E  ru_unique_mapping_5_0
- E  ru_unique_mapping_6_0
- E  ru_unique_mapping_7_0
  L  mips_limit_1_5_0_0
  L  mips_limit_2_5_0_0
  L  mips_limit_1_5_0_1
  L  mips_limit_2_5_0_1
  L  mips_limit_1_5_0_2
  L  mips_limit_2_5_0_2
- L  mips_limit_1_6_0_0
- L  mips_limit_2_6_0_0
- L  mips_limit_1_6_0_1
- L  mips_limit_2_6_0_1
- L  mips_limit_1_6_0_2
- L  mips_limit_2_6_0_2
- L  mips_limit_1_7_0_0
- L  mips_limit_2_7_0_0
- L  mips_limit_1_7_0_1
- L  mips_limit_2_7_0_1
- L  mips_limit_1_7_0_2
- L  mips_limit_2_7_0_2
  L  radio_overprovision_5_0_0
  L  radio_overprovision_5_0_1
- L  radio_overprovision_6_0_0
- L  radio_overprovision_6_0_1
- L  radio_overprovision_7_0_0
- L  radio_overprovision_7_0_1
  L  vp_unique_mapping_5_0
- L  vp_unique_mapping_6_0
- L  vp_unique_mapping_7_0
  L  link_regular_isolation_limit_5_0_0
  L  link_regular_isolation_limit_5_0_1
  L  link_regular_isolation_limit_5_0_2
@@ -398,22 +376,6 @@ ROWS
  L  link_regular_isolation_limit_5_0_5
  L  link_regular_isolation_limit_5_0_6
  L  link_regular_isolation_limit_5_0_7
- L  link_regular_isolation_limit_6_0_0
- L  link_regular_isolation_limit_6_0_1
- L  link_regular_isolation_limit_6_0_2
- L  link_regular_isolation_limit_6_0_3
- L  link_regular_isolation_limit_6_0_4
- L  link_regular_isolation_limit_6_0_5
- L  link_regular_isolation_limit_6_0_6
- L  link_regular_isolation_limit_6_0_7
- L  link_regular_isolation_limit_7_0_0
- L  link_regular_isolation_limit_7_0_1
- L  link_regular_isolation_limit_7_0_2
- L  link_regular_isolation_limit_7_0_3
- L  link_regular_isolation_limit_7_0_4
- L  link_regular_isolation_limit_7_0_5
- L  link_regular_isolation_limit_7_0_6
- L  link_regular_isolation_limit_7_0_7
  L  link_path_mapping_coordination_1_5_0_0_0
  L  link_path_mapping_coordination_1_5_0_1_0
  L  link_path_mapping_coordination_1_5_0_2_0
@@ -422,22 +384,6 @@ ROWS
  L  link_path_mapping_coordination_1_5_0_5_0
  L  link_path_mapping_coordination_1_5_0_6_0
  L  link_path_mapping_coordination_1_5_0_7_0
- L  link_path_mapping_coordination_1_6_0_0_0
- L  link_path_mapping_coordination_1_6_0_1_0
- L  link_path_mapping_coordination_1_6_0_2_0
- L  link_path_mapping_coordination_1_6_0_3_0
- L  link_path_mapping_coordination_1_6_0_4_0
- L  link_path_mapping_coordination_1_6_0_5_0
- L  link_path_mapping_coordination_1_6_0_6_0
- L  link_path_mapping_coordination_1_6_0_7_0
- L  link_path_mapping_coordination_1_7_0_0_0
- L  link_path_mapping_coordination_1_7_0_1_0
- L  link_path_mapping_coordination_1_7_0_2_0
- L  link_path_mapping_coordination_1_7_0_3_0
- L  link_path_mapping_coordination_1_7_0_4_0
- L  link_path_mapping_coordination_1_7_0_5_0
- L  link_path_mapping_coordination_1_7_0_6_0
- L  link_path_mapping_coordination_1_7_0_7_0
  L  link_path_mapping_coordination_2_5_0_0_0
  L  link_path_mapping_coordination_2_5_0_1_0
  L  link_path_mapping_coordination_2_5_0_2_0
@@ -446,40 +392,12 @@ ROWS
  L  link_path_mapping_coordination_2_5_0_5_0
  L  link_path_mapping_coordination_2_5_0_6_0
  L  link_path_mapping_coordination_2_5_0_7_0
- L  link_path_mapping_coordination_2_6_0_0_0
- L  link_path_mapping_coordination_2_6_0_1_0
- L  link_path_mapping_coordination_2_6_0_2_0
- L  link_path_mapping_coordination_2_6_0_3_0
- L  link_path_mapping_coordination_2_6_0_4_0
- L  link_path_mapping_coordination_2_6_0_5_0
- L  link_path_mapping_coordination_2_6_0_6_0
- L  link_path_mapping_coordination_2_6_0_7_0
- L  link_path_mapping_coordination_2_7_0_0_0
- L  link_path_mapping_coordination_2_7_0_1_0
- L  link_path_mapping_coordination_2_7_0_2_0
- L  link_path_mapping_coordination_2_7_0_3_0
- L  link_path_mapping_coordination_2_7_0_4_0
- L  link_path_mapping_coordination_2_7_0_5_0
- L  link_path_mapping_coordination_2_7_0_6_0
- L  link_path_mapping_coordination_2_7_0_7_0
  L  node_path_mapping_coordination_1_5_0_0
  L  node_path_mapping_coordination_1_5_0_1
  L  node_path_mapping_coordination_1_5_0_2
- L  node_path_mapping_coordination_1_6_0_0
- L  node_path_mapping_coordination_1_6_0_1
- L  node_path_mapping_coordination_1_6_0_2
- L  node_path_mapping_coordination_1_7_0_0
- L  node_path_mapping_coordination_1_7_0_1
- L  node_path_mapping_coordination_1_7_0_2
  L  node_path_mapping_coordination_2_5_0_0
  L  node_path_mapping_coordination_2_5_0_1
- L  node_path_mapping_coordination_2_6_0_0
- L  node_path_mapping_coordination_2_6_0_1
- L  node_path_mapping_coordination_2_7_0_0
- L  node_path_mapping_coordination_2_7_0_1
  G  bandwidth_overprovisioning_3_5_0
- G  bandwidth_overprovisioning_3_6_0
- G  bandwidth_overprovisioning_3_7_0
  L  auxiliary_constraints_3_1_5_0_0_0
  L  auxiliary_constraints_3_1_5_0_1_0
  L  auxiliary_constraints_3_1_5_0_2_0
@@ -496,6 +414,61 @@ ROWS
  G  auxiliary_constraints_3_2_5_0_5
  G  auxiliary_constraints_3_2_5_0_6
  G  auxiliary_constraints_3_2_5_0_7
+ G  auxiliary_constraints_6_3_5_0_7
+ G  auxiliary_constraints_7_5_0
+ L  auxiliary_constraints_8_1_5_0
+ L  auxiliary_constraints_8_4_5_0_0
+ L  auxiliary_constraints_8_4_5_0_1
+ L  auxiliary_constraints_8_4_5_0_2
+ L  auxiliary_constraints_8_4_5_0_3
+ L  auxiliary_constraints_8_4_5_0_4
+ L  auxiliary_constraints_8_4_5_0_5
+ L  auxiliary_constraints_8_4_5_0_6
+ L  auxiliary_constraints_8_4_5_0_7
+ G  auxiliary_constraints_8_1_5_0_0
+ G  auxiliary_constraints_8_1_5_0_1
+ G  auxiliary_constraints_8_1_5_0_2
+ E  nf_unique_mapping_6_0
+ E  ru_unique_mapping_6_0
+ L  mips_limit_1_6_0_0
+ L  mips_limit_2_6_0_0
+ L  mips_limit_1_6_0_1
+ L  mips_limit_2_6_0_1
+ L  mips_limit_1_6_0_2
+ L  mips_limit_2_6_0_2
+ L  radio_overprovision_6_0_0
+ L  radio_overprovision_6_0_1
+ L  vp_unique_mapping_6_0
+ L  link_regular_isolation_limit_6_0_0
+ L  link_regular_isolation_limit_6_0_1
+ L  link_regular_isolation_limit_6_0_2
+ L  link_regular_isolation_limit_6_0_3
+ L  link_regular_isolation_limit_6_0_4
+ L  link_regular_isolation_limit_6_0_5
+ L  link_regular_isolation_limit_6_0_6
+ L  link_regular_isolation_limit_6_0_7
+ L  link_path_mapping_coordination_1_6_0_0_0
+ L  link_path_mapping_coordination_1_6_0_1_0
+ L  link_path_mapping_coordination_1_6_0_2_0
+ L  link_path_mapping_coordination_1_6_0_3_0
+ L  link_path_mapping_coordination_1_6_0_4_0
+ L  link_path_mapping_coordination_1_6_0_5_0
+ L  link_path_mapping_coordination_1_6_0_6_0
+ L  link_path_mapping_coordination_1_6_0_7_0
+ L  link_path_mapping_coordination_2_6_0_0_0
+ L  link_path_mapping_coordination_2_6_0_1_0
+ L  link_path_mapping_coordination_2_6_0_2_0
+ L  link_path_mapping_coordination_2_6_0_3_0
+ L  link_path_mapping_coordination_2_6_0_4_0
+ L  link_path_mapping_coordination_2_6_0_5_0
+ L  link_path_mapping_coordination_2_6_0_6_0
+ L  link_path_mapping_coordination_2_6_0_7_0
+ L  node_path_mapping_coordination_1_6_0_0
+ L  node_path_mapping_coordination_1_6_0_1
+ L  node_path_mapping_coordination_1_6_0_2
+ L  node_path_mapping_coordination_2_6_0_0
+ L  node_path_mapping_coordination_2_6_0_1
+ G  bandwidth_overprovisioning_3_6_0
  L  auxiliary_constraints_3_1_6_0_0_0
  L  auxiliary_constraints_3_1_6_0_1_0
  L  auxiliary_constraints_3_1_6_0_2_0
@@ -512,6 +485,61 @@ ROWS
  G  auxiliary_constraints_3_2_6_0_5
  G  auxiliary_constraints_3_2_6_0_6
  G  auxiliary_constraints_3_2_6_0_7
+ G  auxiliary_constraints_6_3_6_0_7
+ G  auxiliary_constraints_7_6_0
+ L  auxiliary_constraints_8_1_6_0
+ L  auxiliary_constraints_8_4_6_0_0
+ L  auxiliary_constraints_8_4_6_0_1
+ L  auxiliary_constraints_8_4_6_0_2
+ L  auxiliary_constraints_8_4_6_0_3
+ L  auxiliary_constraints_8_4_6_0_4
+ L  auxiliary_constraints_8_4_6_0_5
+ L  auxiliary_constraints_8_4_6_0_6
+ L  auxiliary_constraints_8_4_6_0_7
+ G  auxiliary_constraints_8_1_6_0_0
+ G  auxiliary_constraints_8_1_6_0_1
+ G  auxiliary_constraints_8_1_6_0_2
+ E  nf_unique_mapping_7_0
+ E  ru_unique_mapping_7_0
+ L  mips_limit_1_7_0_0
+ L  mips_limit_2_7_0_0
+ L  mips_limit_1_7_0_1
+ L  mips_limit_2_7_0_1
+ L  mips_limit_1_7_0_2
+ L  mips_limit_2_7_0_2
+ L  radio_overprovision_7_0_0
+ L  radio_overprovision_7_0_1
+ L  vp_unique_mapping_7_0
+ L  link_regular_isolation_limit_7_0_0
+ L  link_regular_isolation_limit_7_0_1
+ L  link_regular_isolation_limit_7_0_2
+ L  link_regular_isolation_limit_7_0_3
+ L  link_regular_isolation_limit_7_0_4
+ L  link_regular_isolation_limit_7_0_5
+ L  link_regular_isolation_limit_7_0_6
+ L  link_regular_isolation_limit_7_0_7
+ L  link_path_mapping_coordination_1_7_0_0_0
+ L  link_path_mapping_coordination_1_7_0_1_0
+ L  link_path_mapping_coordination_1_7_0_2_0
+ L  link_path_mapping_coordination_1_7_0_3_0
+ L  link_path_mapping_coordination_1_7_0_4_0
+ L  link_path_mapping_coordination_1_7_0_5_0
+ L  link_path_mapping_coordination_1_7_0_6_0
+ L  link_path_mapping_coordination_1_7_0_7_0
+ L  link_path_mapping_coordination_2_7_0_0_0
+ L  link_path_mapping_coordination_2_7_0_1_0
+ L  link_path_mapping_coordination_2_7_0_2_0
+ L  link_path_mapping_coordination_2_7_0_3_0
+ L  link_path_mapping_coordination_2_7_0_4_0
+ L  link_path_mapping_coordination_2_7_0_5_0
+ L  link_path_mapping_coordination_2_7_0_6_0
+ L  link_path_mapping_coordination_2_7_0_7_0
+ L  node_path_mapping_coordination_1_7_0_0
+ L  node_path_mapping_coordination_1_7_0_1
+ L  node_path_mapping_coordination_1_7_0_2
+ L  node_path_mapping_coordination_2_7_0_0
+ L  node_path_mapping_coordination_2_7_0_1
+ G  bandwidth_overprovisioning_3_7_0
  L  auxiliary_constraints_3_1_7_0_0_0
  L  auxiliary_constraints_3_1_7_0_1_0
  L  auxiliary_constraints_3_1_7_0_2_0
@@ -528,28 +556,6 @@ ROWS
  G  auxiliary_constraints_3_2_7_0_5
  G  auxiliary_constraints_3_2_7_0_6
  G  auxiliary_constraints_3_2_7_0_7
- G  auxiliary_constraints_6_3_5_0_7
- G  auxiliary_constraints_7_5_0
- L  auxiliary_constraints_8_1_5_0
- L  auxiliary_constraints_8_4_5_0_0
- L  auxiliary_constraints_8_4_5_0_1
- L  auxiliary_constraints_8_4_5_0_2
- L  auxiliary_constraints_8_4_5_0_3
- L  auxiliary_constraints_8_4_5_0_4
- L  auxiliary_constraints_8_4_5_0_5
- L  auxiliary_constraints_8_4_5_0_6
- L  auxiliary_constraints_8_4_5_0_7
- G  auxiliary_constraints_6_3_6_0_7
- G  auxiliary_constraints_7_6_0
- L  auxiliary_constraints_8_1_6_0
- L  auxiliary_constraints_8_4_6_0_0
- L  auxiliary_constraints_8_4_6_0_1
- L  auxiliary_constraints_8_4_6_0_2
- L  auxiliary_constraints_8_4_6_0_3
- L  auxiliary_constraints_8_4_6_0_4
- L  auxiliary_constraints_8_4_6_0_5
- L  auxiliary_constraints_8_4_6_0_6
- L  auxiliary_constraints_8_4_6_0_7
  G  auxiliary_constraints_6_3_7_0_7
  G  auxiliary_constraints_7_7_0
  L  auxiliary_constraints_8_1_7_0
@@ -561,23 +567,508 @@ ROWS
  L  auxiliary_constraints_8_4_7_0_5
  L  auxiliary_constraints_8_4_7_0_6
  L  auxiliary_constraints_8_4_7_0_7
- G  auxiliary_constraints_8_1_5_0_0
- G  auxiliary_constraints_8_1_5_0_1
- G  auxiliary_constraints_8_1_5_0_2
- G  auxiliary_constraints_8_1_6_0_0
- G  auxiliary_constraints_8_1_6_0_1
- G  auxiliary_constraints_8_1_6_0_2
  G  auxiliary_constraints_8_1_7_0_0
  G  auxiliary_constraints_8_1_7_0_1
  G  auxiliary_constraints_8_1_7_0_2
  E  nf_unique_mapping_8_0
- E  nf_unique_mapping_9_0
- E  nf_unique_mapping_10_0
- E  nf_unique_mapping_11_0
  E  ru_unique_mapping_8_0
+ L  mips_limit_1_8_0_0
+ L  mips_limit_2_8_0_0
+ L  mips_limit_1_8_0_1
+ L  mips_limit_2_8_0_1
+ L  mips_limit_1_8_0_2
+ L  mips_limit_2_8_0_2
+ L  radio_overprovision_8_0_0
+ L  radio_overprovision_8_0_1
+ L  vp_unique_mapping_8_0
+ L  link_regular_isolation_limit_8_0_0
+ L  link_regular_isolation_limit_8_0_1
+ L  link_regular_isolation_limit_8_0_2
+ L  link_regular_isolation_limit_8_0_3
+ L  link_regular_isolation_limit_8_0_4
+ L  link_regular_isolation_limit_8_0_5
+ L  link_regular_isolation_limit_8_0_6
+ L  link_regular_isolation_limit_8_0_7
+ L  link_path_mapping_coordination_1_8_0_0_0
+ L  link_path_mapping_coordination_1_8_0_1_0
+ L  link_path_mapping_coordination_1_8_0_2_0
+ L  link_path_mapping_coordination_1_8_0_3_0
+ L  link_path_mapping_coordination_1_8_0_4_0
+ L  link_path_mapping_coordination_1_8_0_5_0
+ L  link_path_mapping_coordination_1_8_0_6_0
+ L  link_path_mapping_coordination_1_8_0_7_0
+ L  link_path_mapping_coordination_2_8_0_0_0
+ L  link_path_mapping_coordination_2_8_0_1_0
+ L  link_path_mapping_coordination_2_8_0_2_0
+ L  link_path_mapping_coordination_2_8_0_3_0
+ L  link_path_mapping_coordination_2_8_0_4_0
+ L  link_path_mapping_coordination_2_8_0_5_0
+ L  link_path_mapping_coordination_2_8_0_6_0
+ L  link_path_mapping_coordination_2_8_0_7_0
+ L  node_path_mapping_coordination_1_8_0_0
+ L  node_path_mapping_coordination_1_8_0_1
+ L  node_path_mapping_coordination_1_8_0_2
+ L  node_path_mapping_coordination_2_8_0_0
+ L  node_path_mapping_coordination_2_8_0_1
+ G  bandwidth_overprovisioning_3_8_0
+ L  auxiliary_constraints_3_1_8_0_0_0
+ L  auxiliary_constraints_3_1_8_0_1_0
+ L  auxiliary_constraints_3_1_8_0_2_0
+ L  auxiliary_constraints_3_1_8_0_3_0
+ L  auxiliary_constraints_3_1_8_0_4_0
+ L  auxiliary_constraints_3_1_8_0_5_0
+ L  auxiliary_constraints_3_1_8_0_6_0
+ L  auxiliary_constraints_3_1_8_0_7_0
+ G  auxiliary_constraints_3_2_8_0_0
+ G  auxiliary_constraints_3_2_8_0_1
+ G  auxiliary_constraints_3_2_8_0_2
+ G  auxiliary_constraints_3_2_8_0_3
+ G  auxiliary_constraints_3_2_8_0_4
+ G  auxiliary_constraints_3_2_8_0_5
+ G  auxiliary_constraints_3_2_8_0_6
+ G  auxiliary_constraints_3_2_8_0_7
+ G  auxiliary_constraints_6_3_8_0_7
+ G  auxiliary_constraints_7_8_0
+ L  auxiliary_constraints_8_1_8_0
+ L  auxiliary_constraints_8_4_8_0_0
+ L  auxiliary_constraints_8_4_8_0_1
+ L  auxiliary_constraints_8_4_8_0_2
+ L  auxiliary_constraints_8_4_8_0_3
+ L  auxiliary_constraints_8_4_8_0_4
+ L  auxiliary_constraints_8_4_8_0_5
+ L  auxiliary_constraints_8_4_8_0_6
+ L  auxiliary_constraints_8_4_8_0_7
+ G  auxiliary_constraints_8_1_8_0_0
+ G  auxiliary_constraints_8_1_8_0_1
+ G  auxiliary_constraints_8_1_8_0_2
+ E  nf_unique_mapping_9_0
  E  ru_unique_mapping_9_0
+ L  mips_limit_1_9_0_0
+ L  mips_limit_2_9_0_0
+ L  mips_limit_1_9_0_1
+ L  mips_limit_2_9_0_1
+ L  mips_limit_1_9_0_2
+ L  mips_limit_2_9_0_2
+ L  radio_overprovision_9_0_0
+ L  radio_overprovision_9_0_1
+ L  vp_unique_mapping_9_0
+ L  link_regular_isolation_limit_9_0_0
+ L  link_regular_isolation_limit_9_0_1
+ L  link_regular_isolation_limit_9_0_2
+ L  link_regular_isolation_limit_9_0_3
+ L  link_regular_isolation_limit_9_0_4
+ L  link_regular_isolation_limit_9_0_5
+ L  link_regular_isolation_limit_9_0_6
+ L  link_regular_isolation_limit_9_0_7
+ L  link_path_mapping_coordination_1_9_0_0_0
+ L  link_path_mapping_coordination_1_9_0_1_0
+ L  link_path_mapping_coordination_1_9_0_2_0
+ L  link_path_mapping_coordination_1_9_0_3_0
+ L  link_path_mapping_coordination_1_9_0_4_0
+ L  link_path_mapping_coordination_1_9_0_5_0
+ L  link_path_mapping_coordination_1_9_0_6_0
+ L  link_path_mapping_coordination_1_9_0_7_0
+ L  link_path_mapping_coordination_2_9_0_0_0
+ L  link_path_mapping_coordination_2_9_0_1_0
+ L  link_path_mapping_coordination_2_9_0_2_0
+ L  link_path_mapping_coordination_2_9_0_3_0
+ L  link_path_mapping_coordination_2_9_0_4_0
+ L  link_path_mapping_coordination_2_9_0_5_0
+ L  link_path_mapping_coordination_2_9_0_6_0
+ L  link_path_mapping_coordination_2_9_0_7_0
+ L  node_path_mapping_coordination_1_9_0_0
+ L  node_path_mapping_coordination_1_9_0_1
+ L  node_path_mapping_coordination_1_9_0_2
+ L  node_path_mapping_coordination_2_9_0_0
+ L  node_path_mapping_coordination_2_9_0_1
+ G  bandwidth_overprovisioning_3_9_0
+ L  auxiliary_constraints_3_1_9_0_0_0
+ L  auxiliary_constraints_3_1_9_0_1_0
+ L  auxiliary_constraints_3_1_9_0_2_0
+ L  auxiliary_constraints_3_1_9_0_3_0
+ L  auxiliary_constraints_3_1_9_0_4_0
+ L  auxiliary_constraints_3_1_9_0_5_0
+ L  auxiliary_constraints_3_1_9_0_6_0
+ L  auxiliary_constraints_3_1_9_0_7_0
+ G  auxiliary_constraints_3_2_9_0_0
+ G  auxiliary_constraints_3_2_9_0_1
+ G  auxiliary_constraints_3_2_9_0_2
+ G  auxiliary_constraints_3_2_9_0_3
+ G  auxiliary_constraints_3_2_9_0_4
+ G  auxiliary_constraints_3_2_9_0_5
+ G  auxiliary_constraints_3_2_9_0_6
+ G  auxiliary_constraints_3_2_9_0_7
+ G  auxiliary_constraints_6_3_9_0_7
+ G  auxiliary_constraints_7_9_0
+ L  auxiliary_constraints_8_1_9_0
+ L  auxiliary_constraints_8_4_9_0_0
+ L  auxiliary_constraints_8_4_9_0_1
+ L  auxiliary_constraints_8_4_9_0_2
+ L  auxiliary_constraints_8_4_9_0_3
+ L  auxiliary_constraints_8_4_9_0_4
+ L  auxiliary_constraints_8_4_9_0_5
+ L  auxiliary_constraints_8_4_9_0_6
+ L  auxiliary_constraints_8_4_9_0_7
+ G  auxiliary_constraints_8_1_9_0_0
+ G  auxiliary_constraints_8_1_9_0_1
+ G  auxiliary_constraints_8_1_9_0_2
+ E  nf_unique_mapping_10_0
  E  ru_unique_mapping_10_0
+ L  mips_limit_1_10_0_0
+ L  mips_limit_2_10_0_0
+ L  mips_limit_1_10_0_1
+ L  mips_limit_2_10_0_1
+ L  mips_limit_1_10_0_2
+ L  mips_limit_2_10_0_2
+ L  radio_overprovision_10_0_0
+ L  radio_overprovision_10_0_1
+ L  vp_unique_mapping_10_0
+ L  link_regular_isolation_limit_10_0_0
+ L  link_regular_isolation_limit_10_0_1
+ L  link_regular_isolation_limit_10_0_2
+ L  link_regular_isolation_limit_10_0_3
+ L  link_regular_isolation_limit_10_0_4
+ L  link_regular_isolation_limit_10_0_5
+ L  link_regular_isolation_limit_10_0_6
+ L  link_regular_isolation_limit_10_0_7
+ L  link_path_mapping_coordination_1_10_0_0_0
+ L  link_path_mapping_coordination_1_10_0_1_0
+ L  link_path_mapping_coordination_1_10_0_2_0
+ L  link_path_mapping_coordination_1_10_0_3_0
+ L  link_path_mapping_coordination_1_10_0_4_0
+ L  link_path_mapping_coordination_1_10_0_5_0
+ L  link_path_mapping_coordination_1_10_0_6_0
+ L  link_path_mapping_coordination_1_10_0_7_0
+ L  link_path_mapping_coordination_2_10_0_0_0
+ L  link_path_mapping_coordination_2_10_0_1_0
+ L  link_path_mapping_coordination_2_10_0_2_0
+ L  link_path_mapping_coordination_2_10_0_3_0
+ L  link_path_mapping_coordination_2_10_0_4_0
+ L  link_path_mapping_coordination_2_10_0_5_0
+ L  link_path_mapping_coordination_2_10_0_6_0
+ L  link_path_mapping_coordination_2_10_0_7_0
+ L  node_path_mapping_coordination_1_10_0_0
+ L  node_path_mapping_coordination_1_10_0_1
+ L  node_path_mapping_coordination_1_10_0_2
+ L  node_path_mapping_coordination_2_10_0_0
+ L  node_path_mapping_coordination_2_10_0_1
+ G  bandwidth_overprovisioning_3_10_0
+ L  auxiliary_constraints_3_1_10_0_0_0
+ L  auxiliary_constraints_3_1_10_0_1_0
+ L  auxiliary_constraints_3_1_10_0_2_0
+ L  auxiliary_constraints_3_1_10_0_3_0
+ L  auxiliary_constraints_3_1_10_0_4_0
+ L  auxiliary_constraints_3_1_10_0_5_0
+ L  auxiliary_constraints_3_1_10_0_6_0
+ L  auxiliary_constraints_3_1_10_0_7_0
+ G  auxiliary_constraints_3_2_10_0_0
+ G  auxiliary_constraints_3_2_10_0_1
+ G  auxiliary_constraints_3_2_10_0_2
+ G  auxiliary_constraints_3_2_10_0_3
+ G  auxiliary_constraints_3_2_10_0_4
+ G  auxiliary_constraints_3_2_10_0_5
+ G  auxiliary_constraints_3_2_10_0_6
+ G  auxiliary_constraints_3_2_10_0_7
+ G  auxiliary_constraints_6_3_10_0_7
+ G  auxiliary_constraints_7_10_0
+ L  auxiliary_constraints_8_1_10_0
+ L  auxiliary_constraints_8_4_10_0_0
+ L  auxiliary_constraints_8_4_10_0_1
+ L  auxiliary_constraints_8_4_10_0_2
+ L  auxiliary_constraints_8_4_10_0_3
+ L  auxiliary_constraints_8_4_10_0_4
+ L  auxiliary_constraints_8_4_10_0_5
+ L  auxiliary_constraints_8_4_10_0_6
+ L  auxiliary_constraints_8_4_10_0_7
+ G  auxiliary_constraints_8_1_10_0_0
+ G  auxiliary_constraints_8_1_10_0_1
+ G  auxiliary_constraints_8_1_10_0_2
+ E  nf_unique_mapping_11_0
  E  ru_unique_mapping_11_0
+ L  mips_limit_1_11_0_0
+ L  mips_limit_2_11_0_0
+ L  mips_limit_1_11_0_1
+ L  mips_limit_2_11_0_1
+ L  mips_limit_1_11_0_2
+ L  mips_limit_2_11_0_2
+ L  radio_overprovision_11_0_0
+ L  radio_overprovision_11_0_1
+ L  vp_unique_mapping_11_0
+ L  link_regular_isolation_limit_11_0_0
+ L  link_regular_isolation_limit_11_0_1
+ L  link_regular_isolation_limit_11_0_2
+ L  link_regular_isolation_limit_11_0_3
+ L  link_regular_isolation_limit_11_0_4
+ L  link_regular_isolation_limit_11_0_5
+ L  link_regular_isolation_limit_11_0_6
+ L  link_regular_isolation_limit_11_0_7
+ L  link_path_mapping_coordination_1_11_0_0_0
+ L  link_path_mapping_coordination_1_11_0_1_0
+ L  link_path_mapping_coordination_1_11_0_2_0
+ L  link_path_mapping_coordination_1_11_0_3_0
+ L  link_path_mapping_coordination_1_11_0_4_0
+ L  link_path_mapping_coordination_1_11_0_5_0
+ L  link_path_mapping_coordination_1_11_0_6_0
+ L  link_path_mapping_coordination_1_11_0_7_0
+ L  link_path_mapping_coordination_2_11_0_0_0
+ L  link_path_mapping_coordination_2_11_0_1_0
+ L  link_path_mapping_coordination_2_11_0_2_0
+ L  link_path_mapping_coordination_2_11_0_3_0
+ L  link_path_mapping_coordination_2_11_0_4_0
+ L  link_path_mapping_coordination_2_11_0_5_0
+ L  link_path_mapping_coordination_2_11_0_6_0
+ L  link_path_mapping_coordination_2_11_0_7_0
+ L  node_path_mapping_coordination_1_11_0_0
+ L  node_path_mapping_coordination_1_11_0_1
+ L  node_path_mapping_coordination_1_11_0_2
+ L  node_path_mapping_coordination_2_11_0_0
+ L  node_path_mapping_coordination_2_11_0_1
+ G  bandwidth_overprovisioning_3_11_0
+ L  auxiliary_constraints_3_1_11_0_0_0
+ L  auxiliary_constraints_3_1_11_0_1_0
+ L  auxiliary_constraints_3_1_11_0_2_0
+ L  auxiliary_constraints_3_1_11_0_3_0
+ L  auxiliary_constraints_3_1_11_0_4_0
+ L  auxiliary_constraints_3_1_11_0_5_0
+ L  auxiliary_constraints_3_1_11_0_6_0
+ L  auxiliary_constraints_3_1_11_0_7_0
+ G  auxiliary_constraints_3_2_11_0_0
+ G  auxiliary_constraints_3_2_11_0_1
+ G  auxiliary_constraints_3_2_11_0_2
+ G  auxiliary_constraints_3_2_11_0_3
+ G  auxiliary_constraints_3_2_11_0_4
+ G  auxiliary_constraints_3_2_11_0_5
+ G  auxiliary_constraints_3_2_11_0_6
+ G  auxiliary_constraints_3_2_11_0_7
+ G  auxiliary_constraints_6_3_11_0_7
+ G  auxiliary_constraints_7_11_0
+ L  auxiliary_constraints_8_1_11_0
+ L  auxiliary_constraints_8_4_11_0_0
+ L  auxiliary_constraints_8_4_11_0_1
+ L  auxiliary_constraints_8_4_11_0_2
+ L  auxiliary_constraints_8_4_11_0_3
+ L  auxiliary_constraints_8_4_11_0_4
+ L  auxiliary_constraints_8_4_11_0_5
+ L  auxiliary_constraints_8_4_11_0_6
+ L  auxiliary_constraints_8_4_11_0_7
+ G  auxiliary_constraints_8_1_11_0_0
+ G  auxiliary_constraints_8_1_11_0_1
+ G  auxiliary_constraints_8_1_11_0_2
+ E  nf_unique_mapping_12_0
+ E  ru_unique_mapping_12_0
+ L  mips_limit_1_12_0_0
+ L  mips_limit_2_12_0_0
+ L  mips_limit_1_12_0_1
+ L  mips_limit_2_12_0_1
+ L  mips_limit_1_12_0_2
+ L  mips_limit_2_12_0_2
+ L  radio_overprovision_12_0_0
+ L  radio_overprovision_12_0_1
+ L  vp_unique_mapping_12_0
+ L  link_regular_isolation_limit_12_0_0
+ L  link_regular_isolation_limit_12_0_1
+ L  link_regular_isolation_limit_12_0_2
+ L  link_regular_isolation_limit_12_0_3
+ L  link_regular_isolation_limit_12_0_4
+ L  link_regular_isolation_limit_12_0_5
+ L  link_regular_isolation_limit_12_0_6
+ L  link_regular_isolation_limit_12_0_7
+ L  link_path_mapping_coordination_1_12_0_0_0
+ L  link_path_mapping_coordination_1_12_0_1_0
+ L  link_path_mapping_coordination_1_12_0_2_0
+ L  link_path_mapping_coordination_1_12_0_3_0
+ L  link_path_mapping_coordination_1_12_0_4_0
+ L  link_path_mapping_coordination_1_12_0_5_0
+ L  link_path_mapping_coordination_1_12_0_6_0
+ L  link_path_mapping_coordination_1_12_0_7_0
+ L  link_path_mapping_coordination_2_12_0_0_0
+ L  link_path_mapping_coordination_2_12_0_1_0
+ L  link_path_mapping_coordination_2_12_0_2_0
+ L  link_path_mapping_coordination_2_12_0_3_0
+ L  link_path_mapping_coordination_2_12_0_4_0
+ L  link_path_mapping_coordination_2_12_0_5_0
+ L  link_path_mapping_coordination_2_12_0_6_0
+ L  link_path_mapping_coordination_2_12_0_7_0
+ L  node_path_mapping_coordination_1_12_0_0
+ L  node_path_mapping_coordination_1_12_0_1
+ L  node_path_mapping_coordination_1_12_0_2
+ L  node_path_mapping_coordination_2_12_0_0
+ L  node_path_mapping_coordination_2_12_0_1
+ G  bandwidth_overprovisioning_3_12_0
+ L  auxiliary_constraints_3_1_12_0_0_0
+ L  auxiliary_constraints_3_1_12_0_1_0
+ L  auxiliary_constraints_3_1_12_0_2_0
+ L  auxiliary_constraints_3_1_12_0_3_0
+ L  auxiliary_constraints_3_1_12_0_4_0
+ L  auxiliary_constraints_3_1_12_0_5_0
+ L  auxiliary_constraints_3_1_12_0_6_0
+ L  auxiliary_constraints_3_1_12_0_7_0
+ G  auxiliary_constraints_3_2_12_0_0
+ G  auxiliary_constraints_3_2_12_0_1
+ G  auxiliary_constraints_3_2_12_0_2
+ G  auxiliary_constraints_3_2_12_0_3
+ G  auxiliary_constraints_3_2_12_0_4
+ G  auxiliary_constraints_3_2_12_0_5
+ G  auxiliary_constraints_3_2_12_0_6
+ G  auxiliary_constraints_3_2_12_0_7
+ G  auxiliary_constraints_6_3_12_0_7
+ G  auxiliary_constraints_7_12_0
+ L  auxiliary_constraints_8_1_12_0
+ L  auxiliary_constraints_8_4_12_0_0
+ L  auxiliary_constraints_8_4_12_0_1
+ L  auxiliary_constraints_8_4_12_0_2
+ L  auxiliary_constraints_8_4_12_0_3
+ L  auxiliary_constraints_8_4_12_0_4
+ L  auxiliary_constraints_8_4_12_0_5
+ L  auxiliary_constraints_8_4_12_0_6
+ L  auxiliary_constraints_8_4_12_0_7
+ G  auxiliary_constraints_8_1_12_0_0
+ G  auxiliary_constraints_8_1_12_0_1
+ G  auxiliary_constraints_8_1_12_0_2
+ E  nf_unique_mapping_13_0
+ E  ru_unique_mapping_13_0
+ L  mips_limit_1_13_0_0
+ L  mips_limit_2_13_0_0
+ L  mips_limit_1_13_0_1
+ L  mips_limit_2_13_0_1
+ L  mips_limit_1_13_0_2
+ L  mips_limit_2_13_0_2
+ L  radio_overprovision_13_0_0
+ L  radio_overprovision_13_0_1
+ L  vp_unique_mapping_13_0
+ L  link_regular_isolation_limit_13_0_0
+ L  link_regular_isolation_limit_13_0_1
+ L  link_regular_isolation_limit_13_0_2
+ L  link_regular_isolation_limit_13_0_3
+ L  link_regular_isolation_limit_13_0_4
+ L  link_regular_isolation_limit_13_0_5
+ L  link_regular_isolation_limit_13_0_6
+ L  link_regular_isolation_limit_13_0_7
+ L  link_path_mapping_coordination_1_13_0_0_0
+ L  link_path_mapping_coordination_1_13_0_1_0
+ L  link_path_mapping_coordination_1_13_0_2_0
+ L  link_path_mapping_coordination_1_13_0_3_0
+ L  link_path_mapping_coordination_1_13_0_4_0
+ L  link_path_mapping_coordination_1_13_0_5_0
+ L  link_path_mapping_coordination_1_13_0_6_0
+ L  link_path_mapping_coordination_1_13_0_7_0
+ L  link_path_mapping_coordination_2_13_0_0_0
+ L  link_path_mapping_coordination_2_13_0_1_0
+ L  link_path_mapping_coordination_2_13_0_2_0
+ L  link_path_mapping_coordination_2_13_0_3_0
+ L  link_path_mapping_coordination_2_13_0_4_0
+ L  link_path_mapping_coordination_2_13_0_5_0
+ L  link_path_mapping_coordination_2_13_0_6_0
+ L  link_path_mapping_coordination_2_13_0_7_0
+ L  node_path_mapping_coordination_1_13_0_0
+ L  node_path_mapping_coordination_1_13_0_1
+ L  node_path_mapping_coordination_1_13_0_2
+ L  node_path_mapping_coordination_2_13_0_0
+ L  node_path_mapping_coordination_2_13_0_1
+ G  bandwidth_overprovisioning_3_13_0
+ L  auxiliary_constraints_3_1_13_0_0_0
+ L  auxiliary_constraints_3_1_13_0_1_0
+ L  auxiliary_constraints_3_1_13_0_2_0
+ L  auxiliary_constraints_3_1_13_0_3_0
+ L  auxiliary_constraints_3_1_13_0_4_0
+ L  auxiliary_constraints_3_1_13_0_5_0
+ L  auxiliary_constraints_3_1_13_0_6_0
+ L  auxiliary_constraints_3_1_13_0_7_0
+ G  auxiliary_constraints_3_2_13_0_0
+ G  auxiliary_constraints_3_2_13_0_1
+ G  auxiliary_constraints_3_2_13_0_2
+ G  auxiliary_constraints_3_2_13_0_3
+ G  auxiliary_constraints_3_2_13_0_4
+ G  auxiliary_constraints_3_2_13_0_5
+ G  auxiliary_constraints_3_2_13_0_6
+ G  auxiliary_constraints_3_2_13_0_7
+ G  auxiliary_constraints_6_3_13_0_7
+ G  auxiliary_constraints_7_13_0
+ L  auxiliary_constraints_8_1_13_0
+ L  auxiliary_constraints_8_4_13_0_0
+ L  auxiliary_constraints_8_4_13_0_1
+ L  auxiliary_constraints_8_4_13_0_2
+ L  auxiliary_constraints_8_4_13_0_3
+ L  auxiliary_constraints_8_4_13_0_4
+ L  auxiliary_constraints_8_4_13_0_5
+ L  auxiliary_constraints_8_4_13_0_6
+ L  auxiliary_constraints_8_4_13_0_7
+ G  auxiliary_constraints_8_1_13_0_0
+ G  auxiliary_constraints_8_1_13_0_1
+ G  auxiliary_constraints_8_1_13_0_2
+ E  nf_unique_mapping_14_0
+ E  ru_unique_mapping_14_0
+ L  mips_limit_1_14_0_0
+ L  mips_limit_2_14_0_0
+ L  mips_limit_1_14_0_1
+ L  mips_limit_2_14_0_1
+ L  mips_limit_1_14_0_2
+ L  mips_limit_2_14_0_2
+ L  radio_overprovision_14_0_0
+ L  radio_overprovision_14_0_1
+ L  vp_unique_mapping_14_0
+ L  link_regular_isolation_limit_14_0_0
+ L  link_regular_isolation_limit_14_0_1
+ L  link_regular_isolation_limit_14_0_2
+ L  link_regular_isolation_limit_14_0_3
+ L  link_regular_isolation_limit_14_0_4
+ L  link_regular_isolation_limit_14_0_5
+ L  link_regular_isolation_limit_14_0_6
+ L  link_regular_isolation_limit_14_0_7
+ L  link_path_mapping_coordination_1_14_0_0_0
+ L  link_path_mapping_coordination_1_14_0_1_0
+ L  link_path_mapping_coordination_1_14_0_2_0
+ L  link_path_mapping_coordination_1_14_0_3_0
+ L  link_path_mapping_coordination_1_14_0_4_0
+ L  link_path_mapping_coordination_1_14_0_5_0
+ L  link_path_mapping_coordination_1_14_0_6_0
+ L  link_path_mapping_coordination_1_14_0_7_0
+ L  link_path_mapping_coordination_2_14_0_0_0
+ L  link_path_mapping_coordination_2_14_0_1_0
+ L  link_path_mapping_coordination_2_14_0_2_0
+ L  link_path_mapping_coordination_2_14_0_3_0
+ L  link_path_mapping_coordination_2_14_0_4_0
+ L  link_path_mapping_coordination_2_14_0_5_0
+ L  link_path_mapping_coordination_2_14_0_6_0
+ L  link_path_mapping_coordination_2_14_0_7_0
+ L  node_path_mapping_coordination_1_14_0_0
+ L  node_path_mapping_coordination_1_14_0_1
+ L  node_path_mapping_coordination_1_14_0_2
+ L  node_path_mapping_coordination_2_14_0_0
+ L  node_path_mapping_coordination_2_14_0_1
+ G  bandwidth_overprovisioning_3_14_0
+ L  auxiliary_constraints_3_1_14_0_0_0
+ L  auxiliary_constraints_3_1_14_0_1_0
+ L  auxiliary_constraints_3_1_14_0_2_0
+ L  auxiliary_constraints_3_1_14_0_3_0
+ L  auxiliary_constraints_3_1_14_0_4_0
+ L  auxiliary_constraints_3_1_14_0_5_0
+ L  auxiliary_constraints_3_1_14_0_6_0
+ L  auxiliary_constraints_3_1_14_0_7_0
+ G  auxiliary_constraints_3_2_14_0_0
+ G  auxiliary_constraints_3_2_14_0_1
+ G  auxiliary_constraints_3_2_14_0_2
+ G  auxiliary_constraints_3_2_14_0_3
+ G  auxiliary_constraints_3_2_14_0_4
+ G  auxiliary_constraints_3_2_14_0_5
+ G  auxiliary_constraints_3_2_14_0_6
+ G  auxiliary_constraints_3_2_14_0_7
+ G  auxiliary_constraints_6_3_14_0_7
+ G  auxiliary_constraints_7_14_0
+ L  auxiliary_constraints_8_1_14_0
+ L  auxiliary_constraints_8_4_14_0_0
+ L  auxiliary_constraints_8_4_14_0_1
+ L  auxiliary_constraints_8_4_14_0_2
+ L  auxiliary_constraints_8_4_14_0_3
+ L  auxiliary_constraints_8_4_14_0_4
+ L  auxiliary_constraints_8_4_14_0_5
+ L  auxiliary_constraints_8_4_14_0_6
+ L  auxiliary_constraints_8_4_14_0_7
+ G  auxiliary_constraints_8_1_14_0_0
+ G  auxiliary_constraints_8_1_14_0_1
+ G  auxiliary_constraints_8_1_14_0_2
+ E  nf_unique_mapping_15_0
+ E  ru_unique_mapping_15_0
  L  nf_max_isolation_limit_0
  L  nf_max_isolation_limit_1
  L  nf_max_isolation_limit_2
@@ -619,6 +1110,18 @@ ROWS
  L  nf_regular_isolation_limit_11_0_0
  L  nf_regular_isolation_limit_11_0_1
  L  nf_regular_isolation_limit_11_0_2
+ L  nf_regular_isolation_limit_12_0_0
+ L  nf_regular_isolation_limit_12_0_1
+ L  nf_regular_isolation_limit_12_0_2
+ L  nf_regular_isolation_limit_13_0_0
+ L  nf_regular_isolation_limit_13_0_1
+ L  nf_regular_isolation_limit_13_0_2
+ L  nf_regular_isolation_limit_14_0_0
+ L  nf_regular_isolation_limit_14_0_1
+ L  nf_regular_isolation_limit_14_0_2
+ L  nf_regular_isolation_limit_15_0_0
+ L  nf_regular_isolation_limit_15_0_1
+ L  nf_regular_isolation_limit_15_0_2
  L  ru_regular_isolation_limit_0_0_0
  L  ru_regular_isolation_limit_0_0_1
  L  ru_regular_isolation_limit_1_0_0
@@ -643,38 +1146,22 @@ ROWS
  L  ru_regular_isolation_limit_10_0_1
  L  ru_regular_isolation_limit_11_0_0
  L  ru_regular_isolation_limit_11_0_1
- L  mips_limit_1_8_0_0
- L  mips_limit_2_8_0_0
- L  mips_limit_1_8_0_1
- L  mips_limit_2_8_0_1
- L  mips_limit_1_8_0_2
- L  mips_limit_2_8_0_2
- L  mips_limit_1_9_0_0
- L  mips_limit_2_9_0_0
- L  mips_limit_1_9_0_1
- L  mips_limit_2_9_0_1
- L  mips_limit_1_9_0_2
- L  mips_limit_2_9_0_2
- L  mips_limit_1_10_0_0
- L  mips_limit_2_10_0_0
- L  mips_limit_1_10_0_1
- L  mips_limit_2_10_0_1
- L  mips_limit_1_10_0_2
- L  mips_limit_2_10_0_2
- L  mips_limit_1_11_0_0
- L  mips_limit_2_11_0_0
- L  mips_limit_1_11_0_1
- L  mips_limit_2_11_0_1
- L  mips_limit_1_11_0_2
- L  mips_limit_2_11_0_2
- L  radio_overprovision_8_0_0
- L  radio_overprovision_8_0_1
- L  radio_overprovision_9_0_0
- L  radio_overprovision_9_0_1
- L  radio_overprovision_10_0_0
- L  radio_overprovision_10_0_1
- L  radio_overprovision_11_0_0
- L  radio_overprovision_11_0_1
+ L  ru_regular_isolation_limit_12_0_0
+ L  ru_regular_isolation_limit_12_0_1
+ L  ru_regular_isolation_limit_13_0_0
+ L  ru_regular_isolation_limit_13_0_1
+ L  ru_regular_isolation_limit_14_0_0
+ L  ru_regular_isolation_limit_14_0_1
+ L  ru_regular_isolation_limit_15_0_0
+ L  ru_regular_isolation_limit_15_0_1
+ L  mips_limit_1_15_0_0
+ L  mips_limit_2_15_0_0
+ L  mips_limit_1_15_0_1
+ L  mips_limit_2_15_0_1
+ L  mips_limit_1_15_0_2
+ L  mips_limit_2_15_0_2
+ L  radio_overprovision_15_0_0
+ L  radio_overprovision_15_0_1
  L  mips_max_limit_1_0
  L  mips_max_limit_1_1
  L  mips_max_limit_1_2
@@ -683,10 +1170,7 @@ ROWS
  L  mips_max_limit_2_2
  L  radio_max_limit_0_0
  L  radio_max_limit_1_0
- L  vp_unique_mapping_8_0
- L  vp_unique_mapping_9_0
- L  vp_unique_mapping_10_0
- L  vp_unique_mapping_11_0
+ L  vp_unique_mapping_15_0
  L  link_max_isolation_limit_0
  L  link_max_isolation_limit_1
  L  link_max_isolation_limit_2
@@ -695,126 +1179,36 @@ ROWS
  L  link_max_isolation_limit_5
  L  link_max_isolation_limit_6
  L  link_max_isolation_limit_7
- L  link_regular_isolation_limit_8_0_0
- L  link_regular_isolation_limit_8_0_1
- L  link_regular_isolation_limit_8_0_2
- L  link_regular_isolation_limit_8_0_3
- L  link_regular_isolation_limit_8_0_4
- L  link_regular_isolation_limit_8_0_5
- L  link_regular_isolation_limit_8_0_6
- L  link_regular_isolation_limit_8_0_7
- L  link_regular_isolation_limit_9_0_0
- L  link_regular_isolation_limit_9_0_1
- L  link_regular_isolation_limit_9_0_2
- L  link_regular_isolation_limit_9_0_3
- L  link_regular_isolation_limit_9_0_4
- L  link_regular_isolation_limit_9_0_5
- L  link_regular_isolation_limit_9_0_6
- L  link_regular_isolation_limit_9_0_7
- L  link_regular_isolation_limit_10_0_0
- L  link_regular_isolation_limit_10_0_1
- L  link_regular_isolation_limit_10_0_2
- L  link_regular_isolation_limit_10_0_3
- L  link_regular_isolation_limit_10_0_4
- L  link_regular_isolation_limit_10_0_5
- L  link_regular_isolation_limit_10_0_6
- L  link_regular_isolation_limit_10_0_7
- L  link_regular_isolation_limit_11_0_0
- L  link_regular_isolation_limit_11_0_1
- L  link_regular_isolation_limit_11_0_2
- L  link_regular_isolation_limit_11_0_3
- L  link_regular_isolation_limit_11_0_4
- L  link_regular_isolation_limit_11_0_5
- L  link_regular_isolation_limit_11_0_6
- L  link_regular_isolation_limit_11_0_7
- L  link_path_mapping_coordination_1_8_0_0_0
- L  link_path_mapping_coordination_1_8_0_1_0
- L  link_path_mapping_coordination_1_8_0_2_0
- L  link_path_mapping_coordination_1_8_0_3_0
- L  link_path_mapping_coordination_1_8_0_4_0
- L  link_path_mapping_coordination_1_8_0_5_0
- L  link_path_mapping_coordination_1_8_0_6_0
- L  link_path_mapping_coordination_1_8_0_7_0
- L  link_path_mapping_coordination_1_9_0_0_0
- L  link_path_mapping_coordination_1_9_0_1_0
- L  link_path_mapping_coordination_1_9_0_2_0
- L  link_path_mapping_coordination_1_9_0_3_0
- L  link_path_mapping_coordination_1_9_0_4_0
- L  link_path_mapping_coordination_1_9_0_5_0
- L  link_path_mapping_coordination_1_9_0_6_0
- L  link_path_mapping_coordination_1_9_0_7_0
- L  link_path_mapping_coordination_1_10_0_0_0
- L  link_path_mapping_coordination_1_10_0_1_0
- L  link_path_mapping_coordination_1_10_0_2_0
- L  link_path_mapping_coordination_1_10_0_3_0
- L  link_path_mapping_coordination_1_10_0_4_0
- L  link_path_mapping_coordination_1_10_0_5_0
- L  link_path_mapping_coordination_1_10_0_6_0
- L  link_path_mapping_coordination_1_10_0_7_0
- L  link_path_mapping_coordination_1_11_0_0_0
- L  link_path_mapping_coordination_1_11_0_1_0
- L  link_path_mapping_coordination_1_11_0_2_0
- L  link_path_mapping_coordination_1_11_0_3_0
- L  link_path_mapping_coordination_1_11_0_4_0
- L  link_path_mapping_coordination_1_11_0_5_0
- L  link_path_mapping_coordination_1_11_0_6_0
- L  link_path_mapping_coordination_1_11_0_7_0
- L  link_path_mapping_coordination_2_8_0_0_0
- L  link_path_mapping_coordination_2_8_0_1_0
- L  link_path_mapping_coordination_2_8_0_2_0
- L  link_path_mapping_coordination_2_8_0_3_0
- L  link_path_mapping_coordination_2_8_0_4_0
- L  link_path_mapping_coordination_2_8_0_5_0
- L  link_path_mapping_coordination_2_8_0_6_0
- L  link_path_mapping_coordination_2_8_0_7_0
- L  link_path_mapping_coordination_2_9_0_0_0
- L  link_path_mapping_coordination_2_9_0_1_0
- L  link_path_mapping_coordination_2_9_0_2_0
- L  link_path_mapping_coordination_2_9_0_3_0
- L  link_path_mapping_coordination_2_9_0_4_0
- L  link_path_mapping_coordination_2_9_0_5_0
- L  link_path_mapping_coordination_2_9_0_6_0
- L  link_path_mapping_coordination_2_9_0_7_0
- L  link_path_mapping_coordination_2_10_0_0_0
- L  link_path_mapping_coordination_2_10_0_1_0
- L  link_path_mapping_coordination_2_10_0_2_0
- L  link_path_mapping_coordination_2_10_0_3_0
- L  link_path_mapping_coordination_2_10_0_4_0
- L  link_path_mapping_coordination_2_10_0_5_0
- L  link_path_mapping_coordination_2_10_0_6_0
- L  link_path_mapping_coordination_2_10_0_7_0
- L  link_path_mapping_coordination_2_11_0_0_0
- L  link_path_mapping_coordination_2_11_0_1_0
- L  link_path_mapping_coordination_2_11_0_2_0
- L  link_path_mapping_coordination_2_11_0_3_0
- L  link_path_mapping_coordination_2_11_0_4_0
- L  link_path_mapping_coordination_2_11_0_5_0
- L  link_path_mapping_coordination_2_11_0_6_0
- L  link_path_mapping_coordination_2_11_0_7_0
- L  node_path_mapping_coordination_1_8_0_0
- L  node_path_mapping_coordination_1_8_0_1
- L  node_path_mapping_coordination_1_8_0_2
- L  node_path_mapping_coordination_1_9_0_0
- L  node_path_mapping_coordination_1_9_0_1
- L  node_path_mapping_coordination_1_9_0_2
- L  node_path_mapping_coordination_1_10_0_0
- L  node_path_mapping_coordination_1_10_0_1
- L  node_path_mapping_coordination_1_10_0_2
- L  node_path_mapping_coordination_1_11_0_0
- L  node_path_mapping_coordination_1_11_0_1
- L  node_path_mapping_coordination_1_11_0_2
- L  node_path_mapping_coordination_2_8_0_0
- L  node_path_mapping_coordination_2_8_0_1
- L  node_path_mapping_coordination_2_9_0_0
- L  node_path_mapping_coordination_2_9_0_1
- L  node_path_mapping_coordination_2_10_0_0
- L  node_path_mapping_coordination_2_10_0_1
- L  node_path_mapping_coordination_2_11_0_0
- L  node_path_mapping_coordination_2_11_0_1
- G  bandwidth_overprovisioning_3_8_0
- G  bandwidth_overprovisioning_3_9_0
- G  bandwidth_overprovisioning_3_10_0
- G  bandwidth_overprovisioning_3_11_0
+ L  link_regular_isolation_limit_15_0_0
+ L  link_regular_isolation_limit_15_0_1
+ L  link_regular_isolation_limit_15_0_2
+ L  link_regular_isolation_limit_15_0_3
+ L  link_regular_isolation_limit_15_0_4
+ L  link_regular_isolation_limit_15_0_5
+ L  link_regular_isolation_limit_15_0_6
+ L  link_regular_isolation_limit_15_0_7
+ L  link_path_mapping_coordination_1_15_0_0_0
+ L  link_path_mapping_coordination_1_15_0_1_0
+ L  link_path_mapping_coordination_1_15_0_2_0
+ L  link_path_mapping_coordination_1_15_0_3_0
+ L  link_path_mapping_coordination_1_15_0_4_0
+ L  link_path_mapping_coordination_1_15_0_5_0
+ L  link_path_mapping_coordination_1_15_0_6_0
+ L  link_path_mapping_coordination_1_15_0_7_0
+ L  link_path_mapping_coordination_2_15_0_0_0
+ L  link_path_mapping_coordination_2_15_0_1_0
+ L  link_path_mapping_coordination_2_15_0_2_0
+ L  link_path_mapping_coordination_2_15_0_3_0
+ L  link_path_mapping_coordination_2_15_0_4_0
+ L  link_path_mapping_coordination_2_15_0_5_0
+ L  link_path_mapping_coordination_2_15_0_6_0
+ L  link_path_mapping_coordination_2_15_0_7_0
+ L  node_path_mapping_coordination_1_15_0_0
+ L  node_path_mapping_coordination_1_15_0_1
+ L  node_path_mapping_coordination_1_15_0_2
+ L  node_path_mapping_coordination_2_15_0_0
+ L  node_path_mapping_coordination_2_15_0_1
+ G  bandwidth_overprovisioning_3_15_0
  L  bandwidth_max_limit_0_0
  L  bandwidth_max_limit_1_0
  L  bandwidth_max_limit_2_0
@@ -823,126 +1217,36 @@ ROWS
  L  bandwidth_max_limit_5_0
  L  bandwidth_max_limit_6_0
  L  bandwidth_max_limit_7_0
- L  auxiliary_constraints_3_1_8_0_0_0
- L  auxiliary_constraints_3_1_8_0_1_0
- L  auxiliary_constraints_3_1_8_0_2_0
- L  auxiliary_constraints_3_1_8_0_3_0
- L  auxiliary_constraints_3_1_8_0_4_0
- L  auxiliary_constraints_3_1_8_0_5_0
- L  auxiliary_constraints_3_1_8_0_6_0
- L  auxiliary_constraints_3_1_8_0_7_0
- G  auxiliary_constraints_3_2_8_0_0
- G  auxiliary_constraints_3_2_8_0_1
- G  auxiliary_constraints_3_2_8_0_2
- G  auxiliary_constraints_3_2_8_0_3
- G  auxiliary_constraints_3_2_8_0_4
- G  auxiliary_constraints_3_2_8_0_5
- G  auxiliary_constraints_3_2_8_0_6
- G  auxiliary_constraints_3_2_8_0_7
- L  auxiliary_constraints_3_1_9_0_0_0
- L  auxiliary_constraints_3_1_9_0_1_0
- L  auxiliary_constraints_3_1_9_0_2_0
- L  auxiliary_constraints_3_1_9_0_3_0
- L  auxiliary_constraints_3_1_9_0_4_0
- L  auxiliary_constraints_3_1_9_0_5_0
- L  auxiliary_constraints_3_1_9_0_6_0
- L  auxiliary_constraints_3_1_9_0_7_0
- G  auxiliary_constraints_3_2_9_0_0
- G  auxiliary_constraints_3_2_9_0_1
- G  auxiliary_constraints_3_2_9_0_2
- G  auxiliary_constraints_3_2_9_0_3
- G  auxiliary_constraints_3_2_9_0_4
- G  auxiliary_constraints_3_2_9_0_5
- G  auxiliary_constraints_3_2_9_0_6
- G  auxiliary_constraints_3_2_9_0_7
- L  auxiliary_constraints_3_1_10_0_0_0
- L  auxiliary_constraints_3_1_10_0_1_0
- L  auxiliary_constraints_3_1_10_0_2_0
- L  auxiliary_constraints_3_1_10_0_3_0
- L  auxiliary_constraints_3_1_10_0_4_0
- L  auxiliary_constraints_3_1_10_0_5_0
- L  auxiliary_constraints_3_1_10_0_6_0
- L  auxiliary_constraints_3_1_10_0_7_0
- G  auxiliary_constraints_3_2_10_0_0
- G  auxiliary_constraints_3_2_10_0_1
- G  auxiliary_constraints_3_2_10_0_2
- G  auxiliary_constraints_3_2_10_0_3
- G  auxiliary_constraints_3_2_10_0_4
- G  auxiliary_constraints_3_2_10_0_5
- G  auxiliary_constraints_3_2_10_0_6
- G  auxiliary_constraints_3_2_10_0_7
- L  auxiliary_constraints_3_1_11_0_0_0
- L  auxiliary_constraints_3_1_11_0_1_0
- L  auxiliary_constraints_3_1_11_0_2_0
- L  auxiliary_constraints_3_1_11_0_3_0
- L  auxiliary_constraints_3_1_11_0_4_0
- L  auxiliary_constraints_3_1_11_0_5_0
- L  auxiliary_constraints_3_1_11_0_6_0
- L  auxiliary_constraints_3_1_11_0_7_0
- G  auxiliary_constraints_3_2_11_0_0
- G  auxiliary_constraints_3_2_11_0_1
- G  auxiliary_constraints_3_2_11_0_2
- G  auxiliary_constraints_3_2_11_0_3
- G  auxiliary_constraints_3_2_11_0_4
- G  auxiliary_constraints_3_2_11_0_5
- G  auxiliary_constraints_3_2_11_0_6
- G  auxiliary_constraints_3_2_11_0_7
- G  auxiliary_constraints_6_3_8_0_7
- G  auxiliary_constraints_7_8_0
- L  auxiliary_constraints_8_1_8_0
- L  auxiliary_constraints_8_4_8_0_0
- L  auxiliary_constraints_8_4_8_0_1
- L  auxiliary_constraints_8_4_8_0_2
- L  auxiliary_constraints_8_4_8_0_3
- L  auxiliary_constraints_8_4_8_0_4
- L  auxiliary_constraints_8_4_8_0_5
- L  auxiliary_constraints_8_4_8_0_6
- L  auxiliary_constraints_8_4_8_0_7
- G  auxiliary_constraints_6_3_9_0_7
- G  auxiliary_constraints_7_9_0
- L  auxiliary_constraints_8_1_9_0
- L  auxiliary_constraints_8_4_9_0_0
- L  auxiliary_constraints_8_4_9_0_1
- L  auxiliary_constraints_8_4_9_0_2
- L  auxiliary_constraints_8_4_9_0_3
- L  auxiliary_constraints_8_4_9_0_4
- L  auxiliary_constraints_8_4_9_0_5
- L  auxiliary_constraints_8_4_9_0_6
- L  auxiliary_constraints_8_4_9_0_7
- G  auxiliary_constraints_6_3_10_0_7
- G  auxiliary_constraints_7_10_0
- L  auxiliary_constraints_8_1_10_0
- L  auxiliary_constraints_8_4_10_0_0
- L  auxiliary_constraints_8_4_10_0_1
- L  auxiliary_constraints_8_4_10_0_2
- L  auxiliary_constraints_8_4_10_0_3
- L  auxiliary_constraints_8_4_10_0_4
- L  auxiliary_constraints_8_4_10_0_5
- L  auxiliary_constraints_8_4_10_0_6
- L  auxiliary_constraints_8_4_10_0_7
- G  auxiliary_constraints_6_3_11_0_7
- G  auxiliary_constraints_7_11_0
- L  auxiliary_constraints_8_1_11_0
- L  auxiliary_constraints_8_4_11_0_0
- L  auxiliary_constraints_8_4_11_0_1
- L  auxiliary_constraints_8_4_11_0_2
- L  auxiliary_constraints_8_4_11_0_3
- L  auxiliary_constraints_8_4_11_0_4
- L  auxiliary_constraints_8_4_11_0_5
- L  auxiliary_constraints_8_4_11_0_6
- L  auxiliary_constraints_8_4_11_0_7
- G  auxiliary_constraints_8_1_8_0_0
- G  auxiliary_constraints_8_1_8_0_1
- G  auxiliary_constraints_8_1_8_0_2
- G  auxiliary_constraints_8_1_9_0_0
- G  auxiliary_constraints_8_1_9_0_1
- G  auxiliary_constraints_8_1_9_0_2
- G  auxiliary_constraints_8_1_10_0_0
- G  auxiliary_constraints_8_1_10_0_1
- G  auxiliary_constraints_8_1_10_0_2
- G  auxiliary_constraints_8_1_11_0_0
- G  auxiliary_constraints_8_1_11_0_1
- G  auxiliary_constraints_8_1_11_0_2
+ L  auxiliary_constraints_3_1_15_0_0_0
+ L  auxiliary_constraints_3_1_15_0_1_0
+ L  auxiliary_constraints_3_1_15_0_2_0
+ L  auxiliary_constraints_3_1_15_0_3_0
+ L  auxiliary_constraints_3_1_15_0_4_0
+ L  auxiliary_constraints_3_1_15_0_5_0
+ L  auxiliary_constraints_3_1_15_0_6_0
+ L  auxiliary_constraints_3_1_15_0_7_0
+ G  auxiliary_constraints_3_2_15_0_0
+ G  auxiliary_constraints_3_2_15_0_1
+ G  auxiliary_constraints_3_2_15_0_2
+ G  auxiliary_constraints_3_2_15_0_3
+ G  auxiliary_constraints_3_2_15_0_4
+ G  auxiliary_constraints_3_2_15_0_5
+ G  auxiliary_constraints_3_2_15_0_6
+ G  auxiliary_constraints_3_2_15_0_7
+ G  auxiliary_constraints_6_3_15_0_7
+ G  auxiliary_constraints_7_15_0
+ L  auxiliary_constraints_8_1_15_0
+ L  auxiliary_constraints_8_4_15_0_0
+ L  auxiliary_constraints_8_4_15_0_1
+ L  auxiliary_constraints_8_4_15_0_2
+ L  auxiliary_constraints_8_4_15_0_3
+ L  auxiliary_constraints_8_4_15_0_4
+ L  auxiliary_constraints_8_4_15_0_5
+ L  auxiliary_constraints_8_4_15_0_6
+ L  auxiliary_constraints_8_4_15_0_7
+ G  auxiliary_constraints_8_1_15_0_0
+ G  auxiliary_constraints_8_1_15_0_1
+ G  auxiliary_constraints_8_1_15_0_2
  L  auxiliary_constraints_8_2_0
  L  auxiliary_constraints_8_2_1
  L  auxiliary_constraints_8_2_2
@@ -1071,11 +1375,15 @@ COLUMNS
     a_x3_0    auxiliary_constraints_8_1_5_0_0  1
     a_x3_0    auxiliary_constraints_8_1_6_0_0  1
     a_x3_0    auxiliary_constraints_8_1_7_0_0  1
-    a_x3_0    mips_max_limit_1_0  10
     a_x3_0    auxiliary_constraints_8_1_8_0_0  1
     a_x3_0    auxiliary_constraints_8_1_9_0_0  1
     a_x3_0    auxiliary_constraints_8_1_10_0_0  1
     a_x3_0    auxiliary_constraints_8_1_11_0_0  1
+    a_x3_0    auxiliary_constraints_8_1_12_0_0  1
+    a_x3_0    auxiliary_constraints_8_1_13_0_0  1
+    a_x3_0    auxiliary_constraints_8_1_14_0_0  1
+    a_x3_0    mips_max_limit_1_0  10
+    a_x3_0    auxiliary_constraints_8_1_15_0_0  1
     a_x3_0    auxiliary_constraints_8_2_0  1
     a_x3_0    minimum_profit  -100
     a_x3_1    OBJ       -100
@@ -1087,11 +1395,15 @@ COLUMNS
     a_x3_1    auxiliary_constraints_8_1_5_0_1  1
     a_x3_1    auxiliary_constraints_8_1_6_0_1  1
     a_x3_1    auxiliary_constraints_8_1_7_0_1  1
-    a_x3_1    mips_max_limit_1_1  10
     a_x3_1    auxiliary_constraints_8_1_8_0_1  1
     a_x3_1    auxiliary_constraints_8_1_9_0_1  1
     a_x3_1    auxiliary_constraints_8_1_10_0_1  1
     a_x3_1    auxiliary_constraints_8_1_11_0_1  1
+    a_x3_1    auxiliary_constraints_8_1_12_0_1  1
+    a_x3_1    auxiliary_constraints_8_1_13_0_1  1
+    a_x3_1    auxiliary_constraints_8_1_14_0_1  1
+    a_x3_1    mips_max_limit_1_1  10
+    a_x3_1    auxiliary_constraints_8_1_15_0_1  1
     a_x3_1    auxiliary_constraints_8_2_1  1
     a_x3_1    minimum_profit  -100
     a_x3_2    OBJ       -100
@@ -1103,11 +1415,15 @@ COLUMNS
     a_x3_2    auxiliary_constraints_8_1_5_0_2  1
     a_x3_2    auxiliary_constraints_8_1_6_0_2  1
     a_x3_2    auxiliary_constraints_8_1_7_0_2  1
-    a_x3_2    mips_max_limit_1_2  10
     a_x3_2    auxiliary_constraints_8_1_8_0_2  1
     a_x3_2    auxiliary_constraints_8_1_9_0_2  1
     a_x3_2    auxiliary_constraints_8_1_10_0_2  1
     a_x3_2    auxiliary_constraints_8_1_11_0_2  1
+    a_x3_2    auxiliary_constraints_8_1_12_0_2  1
+    a_x3_2    auxiliary_constraints_8_1_13_0_2  1
+    a_x3_2    auxiliary_constraints_8_1_14_0_2  1
+    a_x3_2    mips_max_limit_1_2  10
+    a_x3_2    auxiliary_constraints_8_1_15_0_2  1
     a_x3_2    auxiliary_constraints_8_2_2  1
     a_x3_2    minimum_profit  -100
     x_0_0_0   OBJ       -1.3636363636363635e+00
@@ -1121,7 +1437,7 @@ COLUMNS
     x_0_0_0   mips_max_limit_2_0  2.7272727272727271e-02
     x_0_0_0   auxiliary_constraints_8_2_0  -1
     x_0_0_0   minimum_profit  -1.3636363636363635e+00
-    x_0_0_1   OBJ       -1.3636363636363635e+00
+    x_0_0_1   OBJ       -2.3636363636363633e+00
     x_0_0_1   nf_unique_mapping_0_0  1
     x_0_0_1   mips_limit_1_0_0_1  0.01
     x_0_0_1   mips_limit_2_0_0_1  -0.6
@@ -1131,8 +1447,8 @@ COLUMNS
     x_0_0_1   mips_max_limit_1_1  1.3636363636363635e-01
     x_0_0_1   mips_max_limit_2_1  2.7272727272727271e-02
     x_0_0_1   auxiliary_constraints_8_2_1  -1
-    x_0_0_1   minimum_profit  -1.3636363636363635e+00
-    x_0_0_2   OBJ       -1.3636363636363638e-01
+    x_0_0_1   minimum_profit  -2.3636363636363633e+00
+    x_0_0_2   OBJ       -1.1363636363636365e+00
     x_0_0_2   nf_unique_mapping_0_0  1
     x_0_0_2   mips_limit_1_0_0_2  0.01
     x_0_0_2   mips_limit_2_0_0_2  -0.6
@@ -1142,7 +1458,7 @@ COLUMNS
     x_0_0_2   mips_max_limit_1_2  1.3636363636363637e-02
     x_0_0_2   mips_max_limit_2_2  2.7272727272727275e-03
     x_0_0_2   auxiliary_constraints_8_2_2  -1
-    x_0_0_2   minimum_profit  -1.3636363636363638e-01
+    x_0_0_2   minimum_profit  -1.1363636363636365e+00
     y_0_0_0_0_0  OBJ       0
     y_0_0_0_0_1  OBJ       -0.9
     y_0_0_0_0_1  ru_unique_mapping_0_0  1
@@ -1251,13 +1567,13 @@ COLUMNS
     y_0_0_0_0_99  node_path_mapping_coordination_2_0_0_0  -10000
     y_0_0_0_0_100  node_path_mapping_coordination_2_0_0_0  -10000
     y_0_0_1_0_0  OBJ       0
-    y_0_0_1_0_1  OBJ       -0.9
+    y_0_0_1_0_1  OBJ       -1.9
     y_0_0_1_0_1  ru_unique_mapping_0_0  1
     y_0_0_1_0_1  radio_overprovision_0_0_1  1
     y_0_0_1_0_1  node_path_mapping_coordination_2_0_0_1  -10000
     y_0_0_1_0_1  ru_regular_isolation_limit_0_0_1  1
     y_0_0_1_0_1  radio_max_limit_1_0  180
-    y_0_0_1_0_1  minimum_profit  -0.9
+    y_0_0_1_0_1  minimum_profit  -1.9
     y_0_0_1_0_2  node_path_mapping_coordination_2_0_0_1  -10000
     y_0_0_1_0_3  node_path_mapping_coordination_2_0_0_1  -10000
     y_0_0_1_0_4  node_path_mapping_coordination_2_0_0_1  -10000
@@ -1608,496 +1924,366 @@ COLUMNS
     b_0_0_7_5_0  OBJ       0
     b_0_0_7_6_0  OBJ       0
     b_0_0_7_7_0  OBJ       0
-    x_1_0_0   OBJ       -125
+    x_1_0_0   OBJ       -1.3636363636363635e+00
     x_1_0_0   nf_unique_mapping_1_0  1
     x_1_0_0   mips_limit_1_1_0_0  0.01
-    x_1_0_0   mips_limit_2_1_0_0  -1
-    x_1_0_0   node_path_mapping_coordination_1_1_0_0  -12500
+    x_1_0_0   mips_limit_2_1_0_0  -0.6
+    x_1_0_0   node_path_mapping_coordination_1_1_0_0  -10000
     x_1_0_0   auxiliary_constraints_8_1_1_0_0  -1
     x_1_0_0   nf_regular_isolation_limit_1_0_0  1
-    x_1_0_0   mips_max_limit_1_0  12.5
-    x_1_0_0   mips_max_limit_2_0  5
+    x_1_0_0   mips_max_limit_1_0  1.3636363636363635e-01
+    x_1_0_0   mips_max_limit_2_0  2.7272727272727271e-02
     x_1_0_0   auxiliary_constraints_8_2_0  -1
-    x_1_0_0   minimum_profit  -125
-    x_1_0_1   OBJ       -125
+    x_1_0_0   minimum_profit  -1.3636363636363635e+00
+    x_1_0_1   OBJ       -2.3636363636363633e+00
     x_1_0_1   nf_unique_mapping_1_0  1
     x_1_0_1   mips_limit_1_1_0_1  0.01
-    x_1_0_1   mips_limit_2_1_0_1  -1
-    x_1_0_1   node_path_mapping_coordination_1_1_0_1  -12500
+    x_1_0_1   mips_limit_2_1_0_1  -0.6
+    x_1_0_1   node_path_mapping_coordination_1_1_0_1  -10000
     x_1_0_1   auxiliary_constraints_8_1_1_0_1  -1
     x_1_0_1   nf_regular_isolation_limit_1_0_1  1
-    x_1_0_1   mips_max_limit_1_1  12.5
-    x_1_0_1   mips_max_limit_2_1  5
+    x_1_0_1   mips_max_limit_1_1  1.3636363636363635e-01
+    x_1_0_1   mips_max_limit_2_1  2.7272727272727271e-02
     x_1_0_1   auxiliary_constraints_8_2_1  -1
-    x_1_0_1   minimum_profit  -125
-    x_1_0_2   OBJ       -125
+    x_1_0_1   minimum_profit  -2.3636363636363633e+00
+    x_1_0_2   OBJ       -1.1363636363636365e+00
     x_1_0_2   nf_unique_mapping_1_0  1
     x_1_0_2   mips_limit_1_1_0_2  0.01
-    x_1_0_2   mips_limit_2_1_0_2  -1
-    x_1_0_2   node_path_mapping_coordination_1_1_0_2  -12500
+    x_1_0_2   mips_limit_2_1_0_2  -0.6
+    x_1_0_2   node_path_mapping_coordination_1_1_0_2  -10000
     x_1_0_2   auxiliary_constraints_8_1_1_0_2  -1
     x_1_0_2   nf_regular_isolation_limit_1_0_2  1
-    x_1_0_2   mips_max_limit_1_2  12.5
-    x_1_0_2   mips_max_limit_2_2  5
+    x_1_0_2   mips_max_limit_1_2  1.3636363636363637e-02
+    x_1_0_2   mips_max_limit_2_2  2.7272727272727275e-03
     x_1_0_2   auxiliary_constraints_8_2_2  -1
-    x_1_0_2   minimum_profit  -125
-    y_1_0_0_0_0  OBJ       -693
-    y_1_0_0_0_0  minimum_profit  -693
-    y_1_0_0_0_1  OBJ       -594
+    x_1_0_2   minimum_profit  -1.1363636363636365e+00
+    y_1_0_0_0_0  OBJ       0
+    y_1_0_0_0_1  OBJ       -0.9
     y_1_0_0_0_1  ru_unique_mapping_1_0  1
     y_1_0_0_0_1  radio_overprovision_1_0_0  1
-    y_1_0_0_0_1  node_path_mapping_coordination_2_1_0_0  -12500
+    y_1_0_0_0_1  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_1  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_1  radio_max_limit_0_0  873
-    y_1_0_0_0_1  minimum_profit  -594
-    y_1_0_0_0_2  OBJ       -495
-    y_1_0_0_0_2  ru_unique_mapping_1_0  1
-    y_1_0_0_0_2  radio_overprovision_1_0_0  2
-    y_1_0_0_0_2  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_2  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_2  radio_max_limit_0_0  1053
-    y_1_0_0_0_2  minimum_profit  -495
-    y_1_0_0_0_3  OBJ       -396
-    y_1_0_0_0_3  ru_unique_mapping_1_0  1
-    y_1_0_0_0_3  radio_overprovision_1_0_0  3
-    y_1_0_0_0_3  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_3  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_3  radio_max_limit_0_0  1233
-    y_1_0_0_0_3  minimum_profit  -396
-    y_1_0_0_0_4  OBJ       -297
-    y_1_0_0_0_4  ru_unique_mapping_1_0  1
-    y_1_0_0_0_4  radio_overprovision_1_0_0  4
-    y_1_0_0_0_4  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_4  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_4  radio_max_limit_0_0  1413
-    y_1_0_0_0_4  minimum_profit  -297
-    y_1_0_0_0_5  OBJ       -198
-    y_1_0_0_0_5  ru_unique_mapping_1_0  1
-    y_1_0_0_0_5  radio_overprovision_1_0_0  5
-    y_1_0_0_0_5  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_5  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_5  radio_max_limit_0_0  1593
-    y_1_0_0_0_5  minimum_profit  -198
-    y_1_0_0_0_6  OBJ       -99
-    y_1_0_0_0_6  ru_unique_mapping_1_0  1
-    y_1_0_0_0_6  radio_overprovision_1_0_0  6
-    y_1_0_0_0_6  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_6  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_6  radio_max_limit_0_0  1773
-    y_1_0_0_0_6  minimum_profit  -99
-    y_1_0_0_0_7  ru_unique_mapping_1_0  1
-    y_1_0_0_0_7  radio_overprovision_1_0_0  7
-    y_1_0_0_0_7  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_7  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_7  radio_max_limit_0_0  1953
-    y_1_0_0_0_8  OBJ       99
-    y_1_0_0_0_8  ru_unique_mapping_1_0  1
-    y_1_0_0_0_8  radio_overprovision_1_0_0  8
-    y_1_0_0_0_8  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_8  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_8  radio_max_limit_0_0  2133
-    y_1_0_0_0_8  minimum_profit  99
-    y_1_0_0_0_9  OBJ       198
-    y_1_0_0_0_9  ru_unique_mapping_1_0  1
-    y_1_0_0_0_9  radio_overprovision_1_0_0  9
-    y_1_0_0_0_9  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_9  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_9  radio_max_limit_0_0  2313
-    y_1_0_0_0_9  minimum_profit  198
-    y_1_0_0_0_10  OBJ       297
-    y_1_0_0_0_10  ru_unique_mapping_1_0  1
-    y_1_0_0_0_10  radio_overprovision_1_0_0  10
-    y_1_0_0_0_10  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_10  ru_regular_isolation_limit_1_0_0  1
-    y_1_0_0_0_10  radio_max_limit_0_0  2493
-    y_1_0_0_0_10  minimum_profit  297
-    y_1_0_0_0_11  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_12  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_13  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_14  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_15  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_16  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_17  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_18  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_19  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_20  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_21  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_22  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_23  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_24  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_25  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_26  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_27  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_28  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_29  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_30  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_31  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_32  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_33  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_34  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_35  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_36  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_37  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_38  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_39  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_40  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_41  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_42  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_43  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_44  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_45  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_46  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_47  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_48  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_49  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_50  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_51  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_52  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_53  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_54  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_55  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_56  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_57  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_58  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_59  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_60  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_61  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_62  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_63  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_64  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_65  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_66  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_67  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_68  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_69  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_70  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_71  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_72  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_73  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_74  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_75  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_76  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_77  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_78  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_79  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_80  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_81  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_82  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_83  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_84  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_85  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_86  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_87  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_88  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_89  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_90  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_91  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_92  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_93  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_94  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_95  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_96  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_97  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_98  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_99  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_0_0_100  node_path_mapping_coordination_2_1_0_0  -12500
-    y_1_0_1_0_0  OBJ       -693
-    y_1_0_1_0_0  minimum_profit  -693
-    y_1_0_1_0_1  OBJ       -594
+    y_1_0_0_0_1  radio_max_limit_0_0  180
+    y_1_0_0_0_1  minimum_profit  -0.9
+    y_1_0_0_0_2  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_3  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_4  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_5  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_6  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_7  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_8  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_9  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_10  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_11  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_12  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_13  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_14  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_15  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_16  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_17  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_18  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_19  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_20  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_21  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_22  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_23  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_24  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_25  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_26  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_27  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_28  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_29  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_30  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_31  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_32  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_33  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_34  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_35  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_36  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_37  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_38  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_39  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_40  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_41  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_42  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_43  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_44  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_45  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_46  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_47  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_48  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_49  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_50  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_51  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_52  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_53  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_54  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_55  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_56  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_57  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_58  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_59  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_60  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_61  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_62  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_63  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_64  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_65  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_66  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_67  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_68  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_69  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_70  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_71  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_72  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_73  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_74  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_75  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_76  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_77  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_78  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_79  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_80  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_81  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_82  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_83  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_84  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_85  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_86  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_87  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_88  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_89  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_90  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_91  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_92  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_93  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_94  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_95  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_96  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_97  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_98  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_99  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_0_0_100  node_path_mapping_coordination_2_1_0_0  -10000
+    y_1_0_1_0_0  OBJ       0
+    y_1_0_1_0_1  OBJ       -1.9
     y_1_0_1_0_1  ru_unique_mapping_1_0  1
     y_1_0_1_0_1  radio_overprovision_1_0_1  1
-    y_1_0_1_0_1  node_path_mapping_coordination_2_1_0_1  -12500
+    y_1_0_1_0_1  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_1  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_1  radio_max_limit_1_0  873
-    y_1_0_1_0_1  minimum_profit  -594
-    y_1_0_1_0_2  OBJ       -495
-    y_1_0_1_0_2  ru_unique_mapping_1_0  1
-    y_1_0_1_0_2  radio_overprovision_1_0_1  2
-    y_1_0_1_0_2  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_2  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_2  radio_max_limit_1_0  1053
-    y_1_0_1_0_2  minimum_profit  -495
-    y_1_0_1_0_3  OBJ       -396
-    y_1_0_1_0_3  ru_unique_mapping_1_0  1
-    y_1_0_1_0_3  radio_overprovision_1_0_1  3
-    y_1_0_1_0_3  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_3  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_3  radio_max_limit_1_0  1233
-    y_1_0_1_0_3  minimum_profit  -396
-    y_1_0_1_0_4  OBJ       -297
-    y_1_0_1_0_4  ru_unique_mapping_1_0  1
-    y_1_0_1_0_4  radio_overprovision_1_0_1  4
-    y_1_0_1_0_4  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_4  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_4  radio_max_limit_1_0  1413
-    y_1_0_1_0_4  minimum_profit  -297
-    y_1_0_1_0_5  OBJ       -198
-    y_1_0_1_0_5  ru_unique_mapping_1_0  1
-    y_1_0_1_0_5  radio_overprovision_1_0_1  5
-    y_1_0_1_0_5  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_5  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_5  radio_max_limit_1_0  1593
-    y_1_0_1_0_5  minimum_profit  -198
-    y_1_0_1_0_6  OBJ       -99
-    y_1_0_1_0_6  ru_unique_mapping_1_0  1
-    y_1_0_1_0_6  radio_overprovision_1_0_1  6
-    y_1_0_1_0_6  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_6  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_6  radio_max_limit_1_0  1773
-    y_1_0_1_0_6  minimum_profit  -99
-    y_1_0_1_0_7  ru_unique_mapping_1_0  1
-    y_1_0_1_0_7  radio_overprovision_1_0_1  7
-    y_1_0_1_0_7  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_7  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_7  radio_max_limit_1_0  1953
-    y_1_0_1_0_8  OBJ       99
-    y_1_0_1_0_8  ru_unique_mapping_1_0  1
-    y_1_0_1_0_8  radio_overprovision_1_0_1  8
-    y_1_0_1_0_8  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_8  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_8  radio_max_limit_1_0  2133
-    y_1_0_1_0_8  minimum_profit  99
-    y_1_0_1_0_9  OBJ       198
-    y_1_0_1_0_9  ru_unique_mapping_1_0  1
-    y_1_0_1_0_9  radio_overprovision_1_0_1  9
-    y_1_0_1_0_9  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_9  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_9  radio_max_limit_1_0  2313
-    y_1_0_1_0_9  minimum_profit  198
-    y_1_0_1_0_10  OBJ       297
-    y_1_0_1_0_10  ru_unique_mapping_1_0  1
-    y_1_0_1_0_10  radio_overprovision_1_0_1  10
-    y_1_0_1_0_10  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_10  ru_regular_isolation_limit_1_0_1  1
-    y_1_0_1_0_10  radio_max_limit_1_0  2493
-    y_1_0_1_0_10  minimum_profit  297
-    y_1_0_1_0_11  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_12  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_13  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_14  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_15  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_16  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_17  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_18  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_19  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_20  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_21  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_22  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_23  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_24  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_25  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_26  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_27  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_28  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_29  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_30  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_31  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_32  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_33  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_34  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_35  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_36  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_37  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_38  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_39  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_40  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_41  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_42  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_43  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_44  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_45  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_46  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_47  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_48  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_49  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_50  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_51  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_52  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_53  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_54  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_55  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_56  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_57  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_58  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_59  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_60  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_61  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_62  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_63  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_64  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_65  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_66  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_67  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_68  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_69  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_70  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_71  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_72  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_73  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_74  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_75  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_76  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_77  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_78  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_79  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_80  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_81  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_82  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_83  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_84  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_85  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_86  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_87  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_88  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_89  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_90  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_91  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_92  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_93  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_94  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_95  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_96  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_97  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_98  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_99  node_path_mapping_coordination_2_1_0_1  -12500
-    y_1_0_1_0_100  node_path_mapping_coordination_2_1_0_1  -12500
-    z_1_0_0_0  OBJ       -12.5
+    y_1_0_1_0_1  radio_max_limit_1_0  180
+    y_1_0_1_0_1  minimum_profit  -1.9
+    y_1_0_1_0_2  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_3  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_4  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_5  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_6  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_7  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_8  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_9  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_10  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_11  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_12  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_13  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_14  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_15  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_16  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_17  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_18  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_19  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_20  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_21  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_22  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_23  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_24  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_25  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_26  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_27  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_28  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_29  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_30  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_31  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_32  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_33  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_34  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_35  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_36  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_37  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_38  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_39  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_40  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_41  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_42  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_43  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_44  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_45  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_46  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_47  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_48  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_49  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_50  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_51  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_52  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_53  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_54  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_55  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_56  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_57  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_58  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_59  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_60  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_61  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_62  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_63  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_64  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_65  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_66  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_67  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_68  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_69  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_70  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_71  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_72  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_73  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_74  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_75  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_76  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_77  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_78  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_79  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_80  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_81  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_82  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_83  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_84  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_85  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_86  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_87  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_88  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_89  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_90  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_91  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_92  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_93  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_94  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_95  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_96  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_97  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_98  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_99  node_path_mapping_coordination_2_1_0_1  -10000
+    y_1_0_1_0_100  node_path_mapping_coordination_2_1_0_1  -10000
     z_1_0_0_0  link_regular_isolation_limit_1_0_0  1
     z_1_0_0_0  link_path_mapping_coordination_1_1_0_0_0  0.01
-    z_1_0_0_0  link_path_mapping_coordination_2_1_0_0_0  -12500
+    z_1_0_0_0  link_path_mapping_coordination_2_1_0_0_0  -10000
     z_1_0_0_0  auxiliary_constraints_3_1_1_0_0_0  -1
     z_1_0_0_0  auxiliary_constraints_3_2_1_0_0  -1
-    z_1_0_0_0  bandwidth_max_limit_0_0  12500
-    z_1_0_0_0  minimum_profit  -12.5
-    z_1_0_1_0  OBJ       -12.5
     z_1_0_1_0  link_regular_isolation_limit_1_0_1  1
     z_1_0_1_0  link_path_mapping_coordination_1_1_0_1_0  0.01
-    z_1_0_1_0  link_path_mapping_coordination_2_1_0_1_0  -12500
+    z_1_0_1_0  link_path_mapping_coordination_2_1_0_1_0  -10000
     z_1_0_1_0  auxiliary_constraints_3_1_1_0_1_0  -1
     z_1_0_1_0  auxiliary_constraints_3_2_1_0_1  -1
-    z_1_0_1_0  bandwidth_max_limit_1_0  12500
-    z_1_0_1_0  minimum_profit  -12.5
-    z_1_0_2_0  OBJ       -12.5
     z_1_0_2_0  link_regular_isolation_limit_1_0_2  1
     z_1_0_2_0  link_path_mapping_coordination_1_1_0_2_0  0.01
-    z_1_0_2_0  link_path_mapping_coordination_2_1_0_2_0  -12500
+    z_1_0_2_0  link_path_mapping_coordination_2_1_0_2_0  -10000
     z_1_0_2_0  auxiliary_constraints_3_1_1_0_2_0  -1
     z_1_0_2_0  auxiliary_constraints_3_2_1_0_2  -1
-    z_1_0_2_0  bandwidth_max_limit_2_0  12500
-    z_1_0_2_0  minimum_profit  -12.5
-    z_1_0_3_0  OBJ       -12.5
     z_1_0_3_0  link_regular_isolation_limit_1_0_3  1
     z_1_0_3_0  link_path_mapping_coordination_1_1_0_3_0  0.01
-    z_1_0_3_0  link_path_mapping_coordination_2_1_0_3_0  -12500
+    z_1_0_3_0  link_path_mapping_coordination_2_1_0_3_0  -10000
     z_1_0_3_0  auxiliary_constraints_3_1_1_0_3_0  -1
     z_1_0_3_0  auxiliary_constraints_3_2_1_0_3  -1
-    z_1_0_3_0  bandwidth_max_limit_3_0  12500
-    z_1_0_3_0  minimum_profit  -12.5
-    z_1_0_4_0  OBJ       -12.5
     z_1_0_4_0  link_regular_isolation_limit_1_0_4  1
     z_1_0_4_0  link_path_mapping_coordination_1_1_0_4_0  0.01
-    z_1_0_4_0  link_path_mapping_coordination_2_1_0_4_0  -12500
+    z_1_0_4_0  link_path_mapping_coordination_2_1_0_4_0  -10000
     z_1_0_4_0  auxiliary_constraints_3_1_1_0_4_0  -1
     z_1_0_4_0  auxiliary_constraints_3_2_1_0_4  -1
-    z_1_0_4_0  bandwidth_max_limit_4_0  12500
-    z_1_0_4_0  minimum_profit  -12.5
-    z_1_0_5_0  OBJ       -12.5
     z_1_0_5_0  link_regular_isolation_limit_1_0_5  1
     z_1_0_5_0  link_path_mapping_coordination_1_1_0_5_0  0.01
-    z_1_0_5_0  link_path_mapping_coordination_2_1_0_5_0  -12500
+    z_1_0_5_0  link_path_mapping_coordination_2_1_0_5_0  -10000
     z_1_0_5_0  auxiliary_constraints_3_1_1_0_5_0  -1
     z_1_0_5_0  auxiliary_constraints_3_2_1_0_5  -1
-    z_1_0_5_0  bandwidth_max_limit_5_0  12500
-    z_1_0_5_0  minimum_profit  -12.5
-    z_1_0_6_0  OBJ       -12.5
     z_1_0_6_0  link_regular_isolation_limit_1_0_6  1
     z_1_0_6_0  link_path_mapping_coordination_1_1_0_6_0  0.01
-    z_1_0_6_0  link_path_mapping_coordination_2_1_0_6_0  -12500
+    z_1_0_6_0  link_path_mapping_coordination_2_1_0_6_0  -10000
     z_1_0_6_0  auxiliary_constraints_3_1_1_0_6_0  -1
     z_1_0_6_0  auxiliary_constraints_3_2_1_0_6  -1
-    z_1_0_6_0  bandwidth_max_limit_6_0  12500
-    z_1_0_6_0  minimum_profit  -12.5
-    z_1_0_7_0  OBJ       -12.5
     z_1_0_7_0  link_regular_isolation_limit_1_0_7  1
     z_1_0_7_0  link_path_mapping_coordination_1_1_0_7_0  0.01
-    z_1_0_7_0  link_path_mapping_coordination_2_1_0_7_0  -12500
+    z_1_0_7_0  link_path_mapping_coordination_2_1_0_7_0  -10000
     z_1_0_7_0  auxiliary_constraints_3_1_1_0_7_0  -1
     z_1_0_7_0  auxiliary_constraints_3_2_1_0_7  -1
-    z_1_0_7_0  bandwidth_max_limit_7_0  12500
-    z_1_0_7_0  minimum_profit  -12.5
-    c_1_0_0   OBJ       9990
+    c_1_0_0   OBJ       90
     c_1_0_0   mips_limit_1_1_0_0  -1
     c_1_0_0   mips_limit_2_1_0_0  1
     c_1_0_0   mips_max_limit_1_0  1
-    c_1_0_0   minimum_profit  9990
-    c_1_0_1   OBJ       9990
+    c_1_0_0   minimum_profit  90
+    c_1_0_1   OBJ       90
     c_1_0_1   mips_limit_1_1_0_1  -1
     c_1_0_1   mips_limit_2_1_0_1  1
     c_1_0_1   mips_max_limit_1_1  1
-    c_1_0_1   minimum_profit  9990
-    c_1_0_2   OBJ       9990
+    c_1_0_1   minimum_profit  90
+    c_1_0_2   OBJ       90
     c_1_0_2   mips_limit_1_1_0_2  -1
     c_1_0_2   mips_limit_2_1_0_2  1
     c_1_0_2   mips_max_limit_1_2  1
-    c_1_0_2   minimum_profit  9990
-    b_1_0_0_0_0  OBJ       0.999
+    c_1_0_2   minimum_profit  90
+    b_1_0_0_0_0  OBJ       0.0985
     b_1_0_0_0_0  link_path_mapping_coordination_1_1_0_0_0  -1
-    b_1_0_0_0_0  link_path_mapping_coordination_2_1_0_0_0  1
-    b_1_0_0_0_0  node_path_mapping_coordination_1_1_0_0  1
-    b_1_0_0_0_0  node_path_mapping_coordination_2_1_0_0  1
-    b_1_0_0_0_0  bandwidth_overprovisioning_3_1_0  -1
+    b_1_0_0_0_0  link_path_mapping_coordination_2_1_0_0_0  0.995
+    b_1_0_0_0_0  node_path_mapping_coordination_1_1_0_0  0.995
+    b_1_0_0_0_0  node_path_mapping_coordination_2_1_0_0  0.995
+    b_1_0_0_0_0  bandwidth_overprovisioning_3_1_0  -0.995
     b_1_0_0_0_0  bandwidth_max_limit_0_0  1
-    b_1_0_0_0_0  minimum_profit  0.999
-    b_1_0_1_0_0  OBJ       0.999
+    b_1_0_0_0_0  minimum_profit  0.0985
+    b_1_0_1_0_0  OBJ       0.0985
     b_1_0_1_0_0  link_path_mapping_coordination_1_1_0_1_0  -1
-    b_1_0_1_0_0  link_path_mapping_coordination_2_1_0_1_0  1
-    b_1_0_1_0_0  node_path_mapping_coordination_1_1_0_0  1
-    b_1_0_1_0_0  node_path_mapping_coordination_2_1_0_1  1
-    b_1_0_1_0_0  bandwidth_overprovisioning_3_1_0  -1
+    b_1_0_1_0_0  link_path_mapping_coordination_2_1_0_1_0  0.995
+    b_1_0_1_0_0  node_path_mapping_coordination_1_1_0_0  0.995
+    b_1_0_1_0_0  node_path_mapping_coordination_2_1_0_1  0.995
+    b_1_0_1_0_0  bandwidth_overprovisioning_3_1_0  -0.995
     b_1_0_1_0_0  bandwidth_max_limit_1_0  1
-    b_1_0_1_0_0  minimum_profit  0.999
-    b_1_0_2_0_0  OBJ       0.999
+    b_1_0_1_0_0  minimum_profit  0.0985
+    b_1_0_2_0_0  OBJ       0.0985
     b_1_0_2_0_0  link_path_mapping_coordination_1_1_0_2_0  -1
-    b_1_0_2_0_0  link_path_mapping_coordination_2_1_0_2_0  1
-    b_1_0_2_0_0  node_path_mapping_coordination_1_1_0_1  1
-    b_1_0_2_0_0  node_path_mapping_coordination_2_1_0_0  1
-    b_1_0_2_0_0  bandwidth_overprovisioning_3_1_0  -1
+    b_1_0_2_0_0  link_path_mapping_coordination_2_1_0_2_0  0.995
+    b_1_0_2_0_0  node_path_mapping_coordination_1_1_0_1  0.995
+    b_1_0_2_0_0  node_path_mapping_coordination_2_1_0_0  0.995
+    b_1_0_2_0_0  bandwidth_overprovisioning_3_1_0  -0.995
     b_1_0_2_0_0  bandwidth_max_limit_2_0  1
-    b_1_0_2_0_0  minimum_profit  0.999
-    b_1_0_3_0_0  OBJ       0.999
+    b_1_0_2_0_0  minimum_profit  0.0985
+    b_1_0_3_0_0  OBJ       0.0985
     b_1_0_3_0_0  link_path_mapping_coordination_1_1_0_3_0  -1
-    b_1_0_3_0_0  link_path_mapping_coordination_2_1_0_3_0  1
-    b_1_0_3_0_0  node_path_mapping_coordination_1_1_0_1  1
-    b_1_0_3_0_0  node_path_mapping_coordination_2_1_0_1  1
-    b_1_0_3_0_0  bandwidth_overprovisioning_3_1_0  -1
+    b_1_0_3_0_0  link_path_mapping_coordination_2_1_0_3_0  0.995
+    b_1_0_3_0_0  node_path_mapping_coordination_1_1_0_1  0.995
+    b_1_0_3_0_0  node_path_mapping_coordination_2_1_0_1  0.995
+    b_1_0_3_0_0  bandwidth_overprovisioning_3_1_0  -0.995
     b_1_0_3_0_0  bandwidth_max_limit_3_0  1
-    b_1_0_3_0_0  minimum_profit  0.999
-    b_1_0_4_0_0  OBJ       0.999
+    b_1_0_3_0_0  minimum_profit  0.0985
+    b_1_0_4_0_0  OBJ       0.0985
     b_1_0_4_0_0  link_path_mapping_coordination_1_1_0_4_0  -1
-    b_1_0_4_0_0  link_path_mapping_coordination_2_1_0_4_0  1
-    b_1_0_4_0_0  node_path_mapping_coordination_1_1_0_2  1
-    b_1_0_4_0_0  node_path_mapping_coordination_2_1_0_0  1
-    b_1_0_4_0_0  bandwidth_overprovisioning_3_1_0  -1
+    b_1_0_4_0_0  link_path_mapping_coordination_2_1_0_4_0  0.995
+    b_1_0_4_0_0  node_path_mapping_coordination_1_1_0_2  0.995
+    b_1_0_4_0_0  node_path_mapping_coordination_2_1_0_0  0.995
+    b_1_0_4_0_0  bandwidth_overprovisioning_3_1_0  -0.995
     b_1_0_4_0_0  bandwidth_max_limit_4_0  1
-    b_1_0_4_0_0  minimum_profit  0.999
-    b_1_0_5_0_0  OBJ       0.999
+    b_1_0_4_0_0  minimum_profit  0.0985
+    b_1_0_5_0_0  OBJ       0.0985
     b_1_0_5_0_0  link_path_mapping_coordination_1_1_0_5_0  -1
-    b_1_0_5_0_0  link_path_mapping_coordination_2_1_0_5_0  1
-    b_1_0_5_0_0  node_path_mapping_coordination_1_1_0_2  1
-    b_1_0_5_0_0  node_path_mapping_coordination_2_1_0_1  1
-    b_1_0_5_0_0  bandwidth_overprovisioning_3_1_0  -1
+    b_1_0_5_0_0  link_path_mapping_coordination_2_1_0_5_0  0.995
+    b_1_0_5_0_0  node_path_mapping_coordination_1_1_0_2  0.995
+    b_1_0_5_0_0  node_path_mapping_coordination_2_1_0_1  0.995
+    b_1_0_5_0_0  bandwidth_overprovisioning_3_1_0  -0.995
     b_1_0_5_0_0  bandwidth_max_limit_5_0  1
-    b_1_0_5_0_0  minimum_profit  0.999
+    b_1_0_5_0_0  minimum_profit  0.0985
     b_1_0_6_0_0  OBJ       -0.001
     b_1_0_6_0_0  link_path_mapping_coordination_1_1_0_6_0  -1
-    b_1_0_6_0_0  link_path_mapping_coordination_2_1_0_6_0  1
-    b_1_0_6_0_0  node_path_mapping_coordination_1_1_0_0  1
+    b_1_0_6_0_0  link_path_mapping_coordination_2_1_0_6_0  0.995
+    b_1_0_6_0_0  node_path_mapping_coordination_1_1_0_0  0.995
     b_1_0_6_0_0  bandwidth_max_limit_6_0  1
     b_1_0_6_0_0  minimum_profit  -0.001
     b_1_0_7_0_0  OBJ       -0.001
     b_1_0_7_0_0  link_path_mapping_coordination_1_1_0_7_0  -1
-    b_1_0_7_0_0  link_path_mapping_coordination_2_1_0_7_0  1
-    b_1_0_7_0_0  node_path_mapping_coordination_1_1_0_1  1
+    b_1_0_7_0_0  link_path_mapping_coordination_2_1_0_7_0  0.995
+    b_1_0_7_0_0  node_path_mapping_coordination_1_1_0_1  0.995
     b_1_0_7_0_0  bandwidth_max_limit_7_0  1
     b_1_0_7_0_0  minimum_profit  -0.001
     a_x1_1_0  OBJ       0
@@ -2158,7 +2344,7 @@ COLUMNS
     a_z2_1_0_7  auxiliary_constraints_3_2_1_0_7  1
     a_z2_1_0_7  auxiliary_constraints_6_3_1_0_7  -10
     a_z2_1_0_7  auxiliary_constraints_8_4_1_0_7  -10
-    a_z3_1_0  OBJ       -0.01
+    a_z3_1_0  OBJ       -0.001
     a_z3_1_0  auxiliary_constraints_6_3_1_0_7  1
     a_z3_1_0  auxiliary_constraints_7_1_0  1
     a_z3_1_0  auxiliary_constraints_8_1_1_0  1
@@ -2170,7 +2356,7 @@ COLUMNS
     a_z3_1_0  auxiliary_constraints_8_4_1_0_5  1
     a_z3_1_0  auxiliary_constraints_8_4_1_0_6  1
     a_z3_1_0  auxiliary_constraints_8_4_1_0_7  1
-    a_z3_1_0  minimum_profit  -0.01
+    a_z3_1_0  minimum_profit  -0.001
     a_z4_1_0  auxiliary_constraints_8_1_1_0  -1000
     a_z4_1_0  auxiliary_constraints_8_4_1_0_0  1000
     a_z4_1_0  auxiliary_constraints_8_4_1_0_1  1000
@@ -2236,496 +2422,366 @@ COLUMNS
     b_1_0_7_5_0  OBJ       0
     b_1_0_7_6_0  OBJ       0
     b_1_0_7_7_0  OBJ       0
-    x_2_0_0   OBJ       -125
+    x_2_0_0   OBJ       -1.3636363636363635e+00
     x_2_0_0   nf_unique_mapping_2_0  1
     x_2_0_0   mips_limit_1_2_0_0  0.01
-    x_2_0_0   mips_limit_2_2_0_0  -1
-    x_2_0_0   node_path_mapping_coordination_1_2_0_0  -12500
+    x_2_0_0   mips_limit_2_2_0_0  -0.6
+    x_2_0_0   node_path_mapping_coordination_1_2_0_0  -10000
     x_2_0_0   auxiliary_constraints_8_1_2_0_0  -1
     x_2_0_0   nf_regular_isolation_limit_2_0_0  1
-    x_2_0_0   mips_max_limit_1_0  12.5
-    x_2_0_0   mips_max_limit_2_0  5
+    x_2_0_0   mips_max_limit_1_0  1.3636363636363635e-01
+    x_2_0_0   mips_max_limit_2_0  2.7272727272727271e-02
     x_2_0_0   auxiliary_constraints_8_2_0  -1
-    x_2_0_0   minimum_profit  -125
-    x_2_0_1   OBJ       -125
+    x_2_0_0   minimum_profit  -1.3636363636363635e+00
+    x_2_0_1   OBJ       -2.3636363636363633e+00
     x_2_0_1   nf_unique_mapping_2_0  1
     x_2_0_1   mips_limit_1_2_0_1  0.01
-    x_2_0_1   mips_limit_2_2_0_1  -1
-    x_2_0_1   node_path_mapping_coordination_1_2_0_1  -12500
+    x_2_0_1   mips_limit_2_2_0_1  -0.6
+    x_2_0_1   node_path_mapping_coordination_1_2_0_1  -10000
     x_2_0_1   auxiliary_constraints_8_1_2_0_1  -1
     x_2_0_1   nf_regular_isolation_limit_2_0_1  1
-    x_2_0_1   mips_max_limit_1_1  12.5
-    x_2_0_1   mips_max_limit_2_1  5
+    x_2_0_1   mips_max_limit_1_1  1.3636363636363635e-01
+    x_2_0_1   mips_max_limit_2_1  2.7272727272727271e-02
     x_2_0_1   auxiliary_constraints_8_2_1  -1
-    x_2_0_1   minimum_profit  -125
-    x_2_0_2   OBJ       -125
+    x_2_0_1   minimum_profit  -2.3636363636363633e+00
+    x_2_0_2   OBJ       -1.1363636363636365e+00
     x_2_0_2   nf_unique_mapping_2_0  1
     x_2_0_2   mips_limit_1_2_0_2  0.01
-    x_2_0_2   mips_limit_2_2_0_2  -1
-    x_2_0_2   node_path_mapping_coordination_1_2_0_2  -12500
+    x_2_0_2   mips_limit_2_2_0_2  -0.6
+    x_2_0_2   node_path_mapping_coordination_1_2_0_2  -10000
     x_2_0_2   auxiliary_constraints_8_1_2_0_2  -1
     x_2_0_2   nf_regular_isolation_limit_2_0_2  1
-    x_2_0_2   mips_max_limit_1_2  12.5
-    x_2_0_2   mips_max_limit_2_2  5
+    x_2_0_2   mips_max_limit_1_2  1.3636363636363637e-02
+    x_2_0_2   mips_max_limit_2_2  2.7272727272727275e-03
     x_2_0_2   auxiliary_constraints_8_2_2  -1
-    x_2_0_2   minimum_profit  -125
-    y_2_0_0_0_0  OBJ       -693
-    y_2_0_0_0_0  minimum_profit  -693
-    y_2_0_0_0_1  OBJ       -594
+    x_2_0_2   minimum_profit  -1.1363636363636365e+00
+    y_2_0_0_0_0  OBJ       0
+    y_2_0_0_0_1  OBJ       -0.9
     y_2_0_0_0_1  ru_unique_mapping_2_0  1
     y_2_0_0_0_1  radio_overprovision_2_0_0  1
-    y_2_0_0_0_1  node_path_mapping_coordination_2_2_0_0  -12500
+    y_2_0_0_0_1  node_path_mapping_coordination_2_2_0_0  -10000
     y_2_0_0_0_1  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_1  radio_max_limit_0_0  873
-    y_2_0_0_0_1  minimum_profit  -594
-    y_2_0_0_0_2  OBJ       -495
-    y_2_0_0_0_2  ru_unique_mapping_2_0  1
-    y_2_0_0_0_2  radio_overprovision_2_0_0  2
-    y_2_0_0_0_2  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_2  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_2  radio_max_limit_0_0  1053
-    y_2_0_0_0_2  minimum_profit  -495
-    y_2_0_0_0_3  OBJ       -396
-    y_2_0_0_0_3  ru_unique_mapping_2_0  1
-    y_2_0_0_0_3  radio_overprovision_2_0_0  3
-    y_2_0_0_0_3  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_3  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_3  radio_max_limit_0_0  1233
-    y_2_0_0_0_3  minimum_profit  -396
-    y_2_0_0_0_4  OBJ       -297
-    y_2_0_0_0_4  ru_unique_mapping_2_0  1
-    y_2_0_0_0_4  radio_overprovision_2_0_0  4
-    y_2_0_0_0_4  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_4  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_4  radio_max_limit_0_0  1413
-    y_2_0_0_0_4  minimum_profit  -297
-    y_2_0_0_0_5  OBJ       -198
-    y_2_0_0_0_5  ru_unique_mapping_2_0  1
-    y_2_0_0_0_5  radio_overprovision_2_0_0  5
-    y_2_0_0_0_5  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_5  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_5  radio_max_limit_0_0  1593
-    y_2_0_0_0_5  minimum_profit  -198
-    y_2_0_0_0_6  OBJ       -99
-    y_2_0_0_0_6  ru_unique_mapping_2_0  1
-    y_2_0_0_0_6  radio_overprovision_2_0_0  6
-    y_2_0_0_0_6  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_6  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_6  radio_max_limit_0_0  1773
-    y_2_0_0_0_6  minimum_profit  -99
-    y_2_0_0_0_7  ru_unique_mapping_2_0  1
-    y_2_0_0_0_7  radio_overprovision_2_0_0  7
-    y_2_0_0_0_7  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_7  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_7  radio_max_limit_0_0  1953
-    y_2_0_0_0_8  OBJ       99
-    y_2_0_0_0_8  ru_unique_mapping_2_0  1
-    y_2_0_0_0_8  radio_overprovision_2_0_0  8
-    y_2_0_0_0_8  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_8  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_8  radio_max_limit_0_0  2133
-    y_2_0_0_0_8  minimum_profit  99
-    y_2_0_0_0_9  OBJ       198
-    y_2_0_0_0_9  ru_unique_mapping_2_0  1
-    y_2_0_0_0_9  radio_overprovision_2_0_0  9
-    y_2_0_0_0_9  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_9  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_9  radio_max_limit_0_0  2313
-    y_2_0_0_0_9  minimum_profit  198
-    y_2_0_0_0_10  OBJ       297
-    y_2_0_0_0_10  ru_unique_mapping_2_0  1
-    y_2_0_0_0_10  radio_overprovision_2_0_0  10
-    y_2_0_0_0_10  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_10  ru_regular_isolation_limit_2_0_0  1
-    y_2_0_0_0_10  radio_max_limit_0_0  2493
-    y_2_0_0_0_10  minimum_profit  297
-    y_2_0_0_0_11  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_12  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_13  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_14  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_15  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_16  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_17  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_18  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_19  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_20  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_21  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_22  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_23  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_24  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_25  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_26  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_27  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_28  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_29  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_30  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_31  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_32  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_33  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_34  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_35  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_36  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_37  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_38  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_39  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_40  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_41  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_42  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_43  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_44  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_45  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_46  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_47  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_48  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_49  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_50  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_51  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_52  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_53  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_54  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_55  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_56  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_57  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_58  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_59  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_60  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_61  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_62  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_63  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_64  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_65  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_66  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_67  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_68  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_69  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_70  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_71  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_72  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_73  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_74  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_75  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_76  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_77  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_78  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_79  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_80  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_81  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_82  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_83  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_84  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_85  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_86  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_87  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_88  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_89  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_90  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_91  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_92  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_93  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_94  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_95  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_96  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_97  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_98  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_99  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_0_0_100  node_path_mapping_coordination_2_2_0_0  -12500
-    y_2_0_1_0_0  OBJ       -693
-    y_2_0_1_0_0  minimum_profit  -693
-    y_2_0_1_0_1  OBJ       -594
+    y_2_0_0_0_1  radio_max_limit_0_0  180
+    y_2_0_0_0_1  minimum_profit  -0.9
+    y_2_0_0_0_2  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_3  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_4  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_5  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_6  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_7  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_8  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_9  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_10  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_11  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_12  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_13  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_14  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_15  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_16  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_17  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_18  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_19  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_20  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_21  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_22  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_23  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_24  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_25  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_26  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_27  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_28  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_29  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_30  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_31  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_32  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_33  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_34  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_35  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_36  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_37  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_38  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_39  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_40  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_41  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_42  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_43  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_44  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_45  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_46  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_47  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_48  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_49  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_50  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_51  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_52  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_53  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_54  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_55  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_56  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_57  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_58  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_59  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_60  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_61  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_62  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_63  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_64  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_65  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_66  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_67  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_68  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_69  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_70  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_71  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_72  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_73  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_74  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_75  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_76  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_77  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_78  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_79  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_80  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_81  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_82  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_83  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_84  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_85  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_86  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_87  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_88  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_89  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_90  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_91  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_92  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_93  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_94  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_95  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_96  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_97  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_98  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_99  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_0_0_100  node_path_mapping_coordination_2_2_0_0  -10000
+    y_2_0_1_0_0  OBJ       0
+    y_2_0_1_0_1  OBJ       -1.9
     y_2_0_1_0_1  ru_unique_mapping_2_0  1
     y_2_0_1_0_1  radio_overprovision_2_0_1  1
-    y_2_0_1_0_1  node_path_mapping_coordination_2_2_0_1  -12500
+    y_2_0_1_0_1  node_path_mapping_coordination_2_2_0_1  -10000
     y_2_0_1_0_1  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_1  radio_max_limit_1_0  873
-    y_2_0_1_0_1  minimum_profit  -594
-    y_2_0_1_0_2  OBJ       -495
-    y_2_0_1_0_2  ru_unique_mapping_2_0  1
-    y_2_0_1_0_2  radio_overprovision_2_0_1  2
-    y_2_0_1_0_2  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_2  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_2  radio_max_limit_1_0  1053
-    y_2_0_1_0_2  minimum_profit  -495
-    y_2_0_1_0_3  OBJ       -396
-    y_2_0_1_0_3  ru_unique_mapping_2_0  1
-    y_2_0_1_0_3  radio_overprovision_2_0_1  3
-    y_2_0_1_0_3  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_3  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_3  radio_max_limit_1_0  1233
-    y_2_0_1_0_3  minimum_profit  -396
-    y_2_0_1_0_4  OBJ       -297
-    y_2_0_1_0_4  ru_unique_mapping_2_0  1
-    y_2_0_1_0_4  radio_overprovision_2_0_1  4
-    y_2_0_1_0_4  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_4  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_4  radio_max_limit_1_0  1413
-    y_2_0_1_0_4  minimum_profit  -297
-    y_2_0_1_0_5  OBJ       -198
-    y_2_0_1_0_5  ru_unique_mapping_2_0  1
-    y_2_0_1_0_5  radio_overprovision_2_0_1  5
-    y_2_0_1_0_5  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_5  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_5  radio_max_limit_1_0  1593
-    y_2_0_1_0_5  minimum_profit  -198
-    y_2_0_1_0_6  OBJ       -99
-    y_2_0_1_0_6  ru_unique_mapping_2_0  1
-    y_2_0_1_0_6  radio_overprovision_2_0_1  6
-    y_2_0_1_0_6  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_6  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_6  radio_max_limit_1_0  1773
-    y_2_0_1_0_6  minimum_profit  -99
-    y_2_0_1_0_7  ru_unique_mapping_2_0  1
-    y_2_0_1_0_7  radio_overprovision_2_0_1  7
-    y_2_0_1_0_7  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_7  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_7  radio_max_limit_1_0  1953
-    y_2_0_1_0_8  OBJ       99
-    y_2_0_1_0_8  ru_unique_mapping_2_0  1
-    y_2_0_1_0_8  radio_overprovision_2_0_1  8
-    y_2_0_1_0_8  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_8  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_8  radio_max_limit_1_0  2133
-    y_2_0_1_0_8  minimum_profit  99
-    y_2_0_1_0_9  OBJ       198
-    y_2_0_1_0_9  ru_unique_mapping_2_0  1
-    y_2_0_1_0_9  radio_overprovision_2_0_1  9
-    y_2_0_1_0_9  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_9  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_9  radio_max_limit_1_0  2313
-    y_2_0_1_0_9  minimum_profit  198
-    y_2_0_1_0_10  OBJ       297
-    y_2_0_1_0_10  ru_unique_mapping_2_0  1
-    y_2_0_1_0_10  radio_overprovision_2_0_1  10
-    y_2_0_1_0_10  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_10  ru_regular_isolation_limit_2_0_1  1
-    y_2_0_1_0_10  radio_max_limit_1_0  2493
-    y_2_0_1_0_10  minimum_profit  297
-    y_2_0_1_0_11  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_12  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_13  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_14  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_15  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_16  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_17  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_18  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_19  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_20  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_21  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_22  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_23  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_24  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_25  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_26  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_27  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_28  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_29  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_30  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_31  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_32  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_33  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_34  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_35  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_36  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_37  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_38  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_39  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_40  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_41  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_42  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_43  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_44  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_45  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_46  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_47  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_48  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_49  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_50  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_51  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_52  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_53  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_54  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_55  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_56  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_57  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_58  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_59  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_60  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_61  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_62  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_63  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_64  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_65  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_66  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_67  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_68  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_69  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_70  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_71  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_72  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_73  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_74  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_75  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_76  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_77  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_78  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_79  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_80  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_81  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_82  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_83  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_84  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_85  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_86  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_87  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_88  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_89  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_90  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_91  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_92  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_93  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_94  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_95  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_96  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_97  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_98  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_99  node_path_mapping_coordination_2_2_0_1  -12500
-    y_2_0_1_0_100  node_path_mapping_coordination_2_2_0_1  -12500
-    z_2_0_0_0  OBJ       -12.5
+    y_2_0_1_0_1  radio_max_limit_1_0  180
+    y_2_0_1_0_1  minimum_profit  -1.9
+    y_2_0_1_0_2  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_3  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_4  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_5  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_6  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_7  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_8  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_9  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_10  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_11  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_12  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_13  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_14  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_15  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_16  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_17  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_18  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_19  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_20  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_21  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_22  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_23  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_24  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_25  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_26  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_27  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_28  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_29  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_30  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_31  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_32  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_33  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_34  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_35  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_36  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_37  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_38  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_39  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_40  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_41  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_42  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_43  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_44  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_45  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_46  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_47  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_48  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_49  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_50  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_51  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_52  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_53  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_54  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_55  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_56  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_57  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_58  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_59  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_60  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_61  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_62  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_63  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_64  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_65  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_66  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_67  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_68  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_69  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_70  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_71  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_72  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_73  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_74  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_75  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_76  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_77  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_78  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_79  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_80  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_81  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_82  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_83  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_84  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_85  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_86  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_87  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_88  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_89  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_90  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_91  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_92  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_93  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_94  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_95  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_96  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_97  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_98  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_99  node_path_mapping_coordination_2_2_0_1  -10000
+    y_2_0_1_0_100  node_path_mapping_coordination_2_2_0_1  -10000
     z_2_0_0_0  link_regular_isolation_limit_2_0_0  1
     z_2_0_0_0  link_path_mapping_coordination_1_2_0_0_0  0.01
-    z_2_0_0_0  link_path_mapping_coordination_2_2_0_0_0  -12500
+    z_2_0_0_0  link_path_mapping_coordination_2_2_0_0_0  -10000
     z_2_0_0_0  auxiliary_constraints_3_1_2_0_0_0  -1
     z_2_0_0_0  auxiliary_constraints_3_2_2_0_0  -1
-    z_2_0_0_0  bandwidth_max_limit_0_0  12500
-    z_2_0_0_0  minimum_profit  -12.5
-    z_2_0_1_0  OBJ       -12.5
     z_2_0_1_0  link_regular_isolation_limit_2_0_1  1
     z_2_0_1_0  link_path_mapping_coordination_1_2_0_1_0  0.01
-    z_2_0_1_0  link_path_mapping_coordination_2_2_0_1_0  -12500
+    z_2_0_1_0  link_path_mapping_coordination_2_2_0_1_0  -10000
     z_2_0_1_0  auxiliary_constraints_3_1_2_0_1_0  -1
     z_2_0_1_0  auxiliary_constraints_3_2_2_0_1  -1
-    z_2_0_1_0  bandwidth_max_limit_1_0  12500
-    z_2_0_1_0  minimum_profit  -12.5
-    z_2_0_2_0  OBJ       -12.5
     z_2_0_2_0  link_regular_isolation_limit_2_0_2  1
     z_2_0_2_0  link_path_mapping_coordination_1_2_0_2_0  0.01
-    z_2_0_2_0  link_path_mapping_coordination_2_2_0_2_0  -12500
+    z_2_0_2_0  link_path_mapping_coordination_2_2_0_2_0  -10000
     z_2_0_2_0  auxiliary_constraints_3_1_2_0_2_0  -1
     z_2_0_2_0  auxiliary_constraints_3_2_2_0_2  -1
-    z_2_0_2_0  bandwidth_max_limit_2_0  12500
-    z_2_0_2_0  minimum_profit  -12.5
-    z_2_0_3_0  OBJ       -12.5
     z_2_0_3_0  link_regular_isolation_limit_2_0_3  1
     z_2_0_3_0  link_path_mapping_coordination_1_2_0_3_0  0.01
-    z_2_0_3_0  link_path_mapping_coordination_2_2_0_3_0  -12500
+    z_2_0_3_0  link_path_mapping_coordination_2_2_0_3_0  -10000
     z_2_0_3_0  auxiliary_constraints_3_1_2_0_3_0  -1
     z_2_0_3_0  auxiliary_constraints_3_2_2_0_3  -1
-    z_2_0_3_0  bandwidth_max_limit_3_0  12500
-    z_2_0_3_0  minimum_profit  -12.5
-    z_2_0_4_0  OBJ       -12.5
     z_2_0_4_0  link_regular_isolation_limit_2_0_4  1
     z_2_0_4_0  link_path_mapping_coordination_1_2_0_4_0  0.01
-    z_2_0_4_0  link_path_mapping_coordination_2_2_0_4_0  -12500
+    z_2_0_4_0  link_path_mapping_coordination_2_2_0_4_0  -10000
     z_2_0_4_0  auxiliary_constraints_3_1_2_0_4_0  -1
     z_2_0_4_0  auxiliary_constraints_3_2_2_0_4  -1
-    z_2_0_4_0  bandwidth_max_limit_4_0  12500
-    z_2_0_4_0  minimum_profit  -12.5
-    z_2_0_5_0  OBJ       -12.5
     z_2_0_5_0  link_regular_isolation_limit_2_0_5  1
     z_2_0_5_0  link_path_mapping_coordination_1_2_0_5_0  0.01
-    z_2_0_5_0  link_path_mapping_coordination_2_2_0_5_0  -12500
+    z_2_0_5_0  link_path_mapping_coordination_2_2_0_5_0  -10000
     z_2_0_5_0  auxiliary_constraints_3_1_2_0_5_0  -1
     z_2_0_5_0  auxiliary_constraints_3_2_2_0_5  -1
-    z_2_0_5_0  bandwidth_max_limit_5_0  12500
-    z_2_0_5_0  minimum_profit  -12.5
-    z_2_0_6_0  OBJ       -12.5
     z_2_0_6_0  link_regular_isolation_limit_2_0_6  1
     z_2_0_6_0  link_path_mapping_coordination_1_2_0_6_0  0.01
-    z_2_0_6_0  link_path_mapping_coordination_2_2_0_6_0  -12500
+    z_2_0_6_0  link_path_mapping_coordination_2_2_0_6_0  -10000
     z_2_0_6_0  auxiliary_constraints_3_1_2_0_6_0  -1
     z_2_0_6_0  auxiliary_constraints_3_2_2_0_6  -1
-    z_2_0_6_0  bandwidth_max_limit_6_0  12500
-    z_2_0_6_0  minimum_profit  -12.5
-    z_2_0_7_0  OBJ       -12.5
     z_2_0_7_0  link_regular_isolation_limit_2_0_7  1
     z_2_0_7_0  link_path_mapping_coordination_1_2_0_7_0  0.01
-    z_2_0_7_0  link_path_mapping_coordination_2_2_0_7_0  -12500
+    z_2_0_7_0  link_path_mapping_coordination_2_2_0_7_0  -10000
     z_2_0_7_0  auxiliary_constraints_3_1_2_0_7_0  -1
     z_2_0_7_0  auxiliary_constraints_3_2_2_0_7  -1
-    z_2_0_7_0  bandwidth_max_limit_7_0  12500
-    z_2_0_7_0  minimum_profit  -12.5
-    c_2_0_0   OBJ       9990
+    c_2_0_0   OBJ       90
     c_2_0_0   mips_limit_1_2_0_0  -1
     c_2_0_0   mips_limit_2_2_0_0  1
     c_2_0_0   mips_max_limit_1_0  1
-    c_2_0_0   minimum_profit  9990
-    c_2_0_1   OBJ       9990
+    c_2_0_0   minimum_profit  90
+    c_2_0_1   OBJ       90
     c_2_0_1   mips_limit_1_2_0_1  -1
     c_2_0_1   mips_limit_2_2_0_1  1
     c_2_0_1   mips_max_limit_1_1  1
-    c_2_0_1   minimum_profit  9990
-    c_2_0_2   OBJ       9990
+    c_2_0_1   minimum_profit  90
+    c_2_0_2   OBJ       90
     c_2_0_2   mips_limit_1_2_0_2  -1
     c_2_0_2   mips_limit_2_2_0_2  1
     c_2_0_2   mips_max_limit_1_2  1
-    c_2_0_2   minimum_profit  9990
-    b_2_0_0_0_0  OBJ       0.999
+    c_2_0_2   minimum_profit  90
+    b_2_0_0_0_0  OBJ       0.0985
     b_2_0_0_0_0  link_path_mapping_coordination_1_2_0_0_0  -1
-    b_2_0_0_0_0  link_path_mapping_coordination_2_2_0_0_0  1
-    b_2_0_0_0_0  node_path_mapping_coordination_1_2_0_0  1
-    b_2_0_0_0_0  node_path_mapping_coordination_2_2_0_0  1
-    b_2_0_0_0_0  bandwidth_overprovisioning_3_2_0  -1
+    b_2_0_0_0_0  link_path_mapping_coordination_2_2_0_0_0  0.995
+    b_2_0_0_0_0  node_path_mapping_coordination_1_2_0_0  0.995
+    b_2_0_0_0_0  node_path_mapping_coordination_2_2_0_0  0.995
+    b_2_0_0_0_0  bandwidth_overprovisioning_3_2_0  -0.995
     b_2_0_0_0_0  bandwidth_max_limit_0_0  1
-    b_2_0_0_0_0  minimum_profit  0.999
-    b_2_0_1_0_0  OBJ       0.999
+    b_2_0_0_0_0  minimum_profit  0.0985
+    b_2_0_1_0_0  OBJ       0.0985
     b_2_0_1_0_0  link_path_mapping_coordination_1_2_0_1_0  -1
-    b_2_0_1_0_0  link_path_mapping_coordination_2_2_0_1_0  1
-    b_2_0_1_0_0  node_path_mapping_coordination_1_2_0_0  1
-    b_2_0_1_0_0  node_path_mapping_coordination_2_2_0_1  1
-    b_2_0_1_0_0  bandwidth_overprovisioning_3_2_0  -1
+    b_2_0_1_0_0  link_path_mapping_coordination_2_2_0_1_0  0.995
+    b_2_0_1_0_0  node_path_mapping_coordination_1_2_0_0  0.995
+    b_2_0_1_0_0  node_path_mapping_coordination_2_2_0_1  0.995
+    b_2_0_1_0_0  bandwidth_overprovisioning_3_2_0  -0.995
     b_2_0_1_0_0  bandwidth_max_limit_1_0  1
-    b_2_0_1_0_0  minimum_profit  0.999
-    b_2_0_2_0_0  OBJ       0.999
+    b_2_0_1_0_0  minimum_profit  0.0985
+    b_2_0_2_0_0  OBJ       0.0985
     b_2_0_2_0_0  link_path_mapping_coordination_1_2_0_2_0  -1
-    b_2_0_2_0_0  link_path_mapping_coordination_2_2_0_2_0  1
-    b_2_0_2_0_0  node_path_mapping_coordination_1_2_0_1  1
-    b_2_0_2_0_0  node_path_mapping_coordination_2_2_0_0  1
-    b_2_0_2_0_0  bandwidth_overprovisioning_3_2_0  -1
+    b_2_0_2_0_0  link_path_mapping_coordination_2_2_0_2_0  0.995
+    b_2_0_2_0_0  node_path_mapping_coordination_1_2_0_1  0.995
+    b_2_0_2_0_0  node_path_mapping_coordination_2_2_0_0  0.995
+    b_2_0_2_0_0  bandwidth_overprovisioning_3_2_0  -0.995
     b_2_0_2_0_0  bandwidth_max_limit_2_0  1
-    b_2_0_2_0_0  minimum_profit  0.999
-    b_2_0_3_0_0  OBJ       0.999
+    b_2_0_2_0_0  minimum_profit  0.0985
+    b_2_0_3_0_0  OBJ       0.0985
     b_2_0_3_0_0  link_path_mapping_coordination_1_2_0_3_0  -1
-    b_2_0_3_0_0  link_path_mapping_coordination_2_2_0_3_0  1
-    b_2_0_3_0_0  node_path_mapping_coordination_1_2_0_1  1
-    b_2_0_3_0_0  node_path_mapping_coordination_2_2_0_1  1
-    b_2_0_3_0_0  bandwidth_overprovisioning_3_2_0  -1
+    b_2_0_3_0_0  link_path_mapping_coordination_2_2_0_3_0  0.995
+    b_2_0_3_0_0  node_path_mapping_coordination_1_2_0_1  0.995
+    b_2_0_3_0_0  node_path_mapping_coordination_2_2_0_1  0.995
+    b_2_0_3_0_0  bandwidth_overprovisioning_3_2_0  -0.995
     b_2_0_3_0_0  bandwidth_max_limit_3_0  1
-    b_2_0_3_0_0  minimum_profit  0.999
-    b_2_0_4_0_0  OBJ       0.999
+    b_2_0_3_0_0  minimum_profit  0.0985
+    b_2_0_4_0_0  OBJ       0.0985
     b_2_0_4_0_0  link_path_mapping_coordination_1_2_0_4_0  -1
-    b_2_0_4_0_0  link_path_mapping_coordination_2_2_0_4_0  1
-    b_2_0_4_0_0  node_path_mapping_coordination_1_2_0_2  1
-    b_2_0_4_0_0  node_path_mapping_coordination_2_2_0_0  1
-    b_2_0_4_0_0  bandwidth_overprovisioning_3_2_0  -1
+    b_2_0_4_0_0  link_path_mapping_coordination_2_2_0_4_0  0.995
+    b_2_0_4_0_0  node_path_mapping_coordination_1_2_0_2  0.995
+    b_2_0_4_0_0  node_path_mapping_coordination_2_2_0_0  0.995
+    b_2_0_4_0_0  bandwidth_overprovisioning_3_2_0  -0.995
     b_2_0_4_0_0  bandwidth_max_limit_4_0  1
-    b_2_0_4_0_0  minimum_profit  0.999
-    b_2_0_5_0_0  OBJ       0.999
+    b_2_0_4_0_0  minimum_profit  0.0985
+    b_2_0_5_0_0  OBJ       0.0985
     b_2_0_5_0_0  link_path_mapping_coordination_1_2_0_5_0  -1
-    b_2_0_5_0_0  link_path_mapping_coordination_2_2_0_5_0  1
-    b_2_0_5_0_0  node_path_mapping_coordination_1_2_0_2  1
-    b_2_0_5_0_0  node_path_mapping_coordination_2_2_0_1  1
-    b_2_0_5_0_0  bandwidth_overprovisioning_3_2_0  -1
+    b_2_0_5_0_0  link_path_mapping_coordination_2_2_0_5_0  0.995
+    b_2_0_5_0_0  node_path_mapping_coordination_1_2_0_2  0.995
+    b_2_0_5_0_0  node_path_mapping_coordination_2_2_0_1  0.995
+    b_2_0_5_0_0  bandwidth_overprovisioning_3_2_0  -0.995
     b_2_0_5_0_0  bandwidth_max_limit_5_0  1
-    b_2_0_5_0_0  minimum_profit  0.999
+    b_2_0_5_0_0  minimum_profit  0.0985
     b_2_0_6_0_0  OBJ       -0.001
     b_2_0_6_0_0  link_path_mapping_coordination_1_2_0_6_0  -1
-    b_2_0_6_0_0  link_path_mapping_coordination_2_2_0_6_0  1
-    b_2_0_6_0_0  node_path_mapping_coordination_1_2_0_0  1
+    b_2_0_6_0_0  link_path_mapping_coordination_2_2_0_6_0  0.995
+    b_2_0_6_0_0  node_path_mapping_coordination_1_2_0_0  0.995
     b_2_0_6_0_0  bandwidth_max_limit_6_0  1
     b_2_0_6_0_0  minimum_profit  -0.001
     b_2_0_7_0_0  OBJ       -0.001
     b_2_0_7_0_0  link_path_mapping_coordination_1_2_0_7_0  -1
-    b_2_0_7_0_0  link_path_mapping_coordination_2_2_0_7_0  1
-    b_2_0_7_0_0  node_path_mapping_coordination_1_2_0_1  1
+    b_2_0_7_0_0  link_path_mapping_coordination_2_2_0_7_0  0.995
+    b_2_0_7_0_0  node_path_mapping_coordination_1_2_0_1  0.995
     b_2_0_7_0_0  bandwidth_max_limit_7_0  1
     b_2_0_7_0_0  minimum_profit  -0.001
     a_x1_2_0  OBJ       0
@@ -2786,7 +2842,7 @@ COLUMNS
     a_z2_2_0_7  auxiliary_constraints_3_2_2_0_7  1
     a_z2_2_0_7  auxiliary_constraints_6_3_2_0_7  -10
     a_z2_2_0_7  auxiliary_constraints_8_4_2_0_7  -10
-    a_z3_2_0  OBJ       -0.01
+    a_z3_2_0  OBJ       -0.001
     a_z3_2_0  auxiliary_constraints_6_3_2_0_7  1
     a_z3_2_0  auxiliary_constraints_7_2_0  1
     a_z3_2_0  auxiliary_constraints_8_1_2_0  1
@@ -2798,7 +2854,7 @@ COLUMNS
     a_z3_2_0  auxiliary_constraints_8_4_2_0_5  1
     a_z3_2_0  auxiliary_constraints_8_4_2_0_6  1
     a_z3_2_0  auxiliary_constraints_8_4_2_0_7  1
-    a_z3_2_0  minimum_profit  -0.01
+    a_z3_2_0  minimum_profit  -0.001
     a_z4_2_0  auxiliary_constraints_8_1_2_0  -1000
     a_z4_2_0  auxiliary_constraints_8_4_2_0_0  1000
     a_z4_2_0  auxiliary_constraints_8_4_2_0_1  1000
@@ -2875,7 +2931,7 @@ COLUMNS
     x_3_0_0   mips_max_limit_2_0  2.7272727272727271e-02
     x_3_0_0   auxiliary_constraints_8_2_0  -1
     x_3_0_0   minimum_profit  -1.3636363636363635e+00
-    x_3_0_1   OBJ       -1.3636363636363635e+00
+    x_3_0_1   OBJ       -2.3636363636363633e+00
     x_3_0_1   nf_unique_mapping_3_0  1
     x_3_0_1   mips_limit_1_3_0_1  0.01
     x_3_0_1   mips_limit_2_3_0_1  -0.6
@@ -2885,8 +2941,8 @@ COLUMNS
     x_3_0_1   mips_max_limit_1_1  1.3636363636363635e-01
     x_3_0_1   mips_max_limit_2_1  2.7272727272727271e-02
     x_3_0_1   auxiliary_constraints_8_2_1  -1
-    x_3_0_1   minimum_profit  -1.3636363636363635e+00
-    x_3_0_2   OBJ       -1.3636363636363638e-01
+    x_3_0_1   minimum_profit  -2.3636363636363633e+00
+    x_3_0_2   OBJ       -1.1363636363636365e+00
     x_3_0_2   nf_unique_mapping_3_0  1
     x_3_0_2   mips_limit_1_3_0_2  0.01
     x_3_0_2   mips_limit_2_3_0_2  -0.6
@@ -2896,7 +2952,7 @@ COLUMNS
     x_3_0_2   mips_max_limit_1_2  1.3636363636363637e-02
     x_3_0_2   mips_max_limit_2_2  2.7272727272727275e-03
     x_3_0_2   auxiliary_constraints_8_2_2  -1
-    x_3_0_2   minimum_profit  -1.3636363636363638e-01
+    x_3_0_2   minimum_profit  -1.1363636363636365e+00
     y_3_0_0_0_0  OBJ       0
     y_3_0_0_0_1  OBJ       -0.9
     y_3_0_0_0_1  ru_unique_mapping_3_0  1
@@ -3005,13 +3061,13 @@ COLUMNS
     y_3_0_0_0_99  node_path_mapping_coordination_2_3_0_0  -10000
     y_3_0_0_0_100  node_path_mapping_coordination_2_3_0_0  -10000
     y_3_0_1_0_0  OBJ       0
-    y_3_0_1_0_1  OBJ       -0.9
+    y_3_0_1_0_1  OBJ       -1.9
     y_3_0_1_0_1  ru_unique_mapping_3_0  1
     y_3_0_1_0_1  radio_overprovision_3_0_1  1
     y_3_0_1_0_1  node_path_mapping_coordination_2_3_0_1  -10000
     y_3_0_1_0_1  ru_regular_isolation_limit_3_0_1  1
     y_3_0_1_0_1  radio_max_limit_1_0  180
-    y_3_0_1_0_1  minimum_profit  -0.9
+    y_3_0_1_0_1  minimum_profit  -1.9
     y_3_0_1_0_2  node_path_mapping_coordination_2_3_0_1  -10000
     y_3_0_1_0_3  node_path_mapping_coordination_2_3_0_1  -10000
     y_3_0_1_0_4  node_path_mapping_coordination_2_3_0_1  -10000
@@ -3373,7 +3429,7 @@ COLUMNS
     x_4_0_0   mips_max_limit_2_0  5
     x_4_0_0   auxiliary_constraints_8_2_0  -1
     x_4_0_0   minimum_profit  -125
-    x_4_0_1   OBJ       -125
+    x_4_0_1   OBJ       -225
     x_4_0_1   nf_unique_mapping_4_0  1
     x_4_0_1   mips_limit_1_4_0_1  0.01
     x_4_0_1   mips_limit_2_4_0_1  -1
@@ -3383,8 +3439,8 @@ COLUMNS
     x_4_0_1   mips_max_limit_1_1  12.5
     x_4_0_1   mips_max_limit_2_1  5
     x_4_0_1   auxiliary_constraints_8_2_1  -1
-    x_4_0_1   minimum_profit  -125
-    x_4_0_2   OBJ       -125
+    x_4_0_1   minimum_profit  -225
+    x_4_0_2   OBJ       -225
     x_4_0_2   nf_unique_mapping_4_0  1
     x_4_0_2   mips_limit_1_4_0_2  0.01
     x_4_0_2   mips_limit_2_4_0_2  -1
@@ -3394,7 +3450,7 @@ COLUMNS
     x_4_0_2   mips_max_limit_1_2  12.5
     x_4_0_2   mips_max_limit_2_2  5
     x_4_0_2   auxiliary_constraints_8_2_2  -1
-    x_4_0_2   minimum_profit  -125
+    x_4_0_2   minimum_profit  -225
     y_4_0_0_0_0  OBJ       -693
     y_4_0_0_0_0  minimum_profit  -693
     y_4_0_0_0_1  OBJ       -594
@@ -3557,74 +3613,76 @@ COLUMNS
     y_4_0_0_0_100  node_path_mapping_coordination_2_4_0_0  -12500
     y_4_0_1_0_0  OBJ       -693
     y_4_0_1_0_0  minimum_profit  -693
-    y_4_0_1_0_1  OBJ       -594
+    y_4_0_1_0_1  OBJ       -694
     y_4_0_1_0_1  ru_unique_mapping_4_0  1
     y_4_0_1_0_1  radio_overprovision_4_0_1  1
     y_4_0_1_0_1  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_1  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_1  radio_max_limit_1_0  873
-    y_4_0_1_0_1  minimum_profit  -594
-    y_4_0_1_0_2  OBJ       -495
+    y_4_0_1_0_1  minimum_profit  -694
+    y_4_0_1_0_2  OBJ       -595
     y_4_0_1_0_2  ru_unique_mapping_4_0  1
     y_4_0_1_0_2  radio_overprovision_4_0_1  2
     y_4_0_1_0_2  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_2  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_2  radio_max_limit_1_0  1053
-    y_4_0_1_0_2  minimum_profit  -495
-    y_4_0_1_0_3  OBJ       -396
+    y_4_0_1_0_2  minimum_profit  -595
+    y_4_0_1_0_3  OBJ       -496
     y_4_0_1_0_3  ru_unique_mapping_4_0  1
     y_4_0_1_0_3  radio_overprovision_4_0_1  3
     y_4_0_1_0_3  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_3  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_3  radio_max_limit_1_0  1233
-    y_4_0_1_0_3  minimum_profit  -396
-    y_4_0_1_0_4  OBJ       -297
+    y_4_0_1_0_3  minimum_profit  -496
+    y_4_0_1_0_4  OBJ       -397
     y_4_0_1_0_4  ru_unique_mapping_4_0  1
     y_4_0_1_0_4  radio_overprovision_4_0_1  4
     y_4_0_1_0_4  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_4  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_4  radio_max_limit_1_0  1413
-    y_4_0_1_0_4  minimum_profit  -297
-    y_4_0_1_0_5  OBJ       -198
+    y_4_0_1_0_4  minimum_profit  -397
+    y_4_0_1_0_5  OBJ       -298
     y_4_0_1_0_5  ru_unique_mapping_4_0  1
     y_4_0_1_0_5  radio_overprovision_4_0_1  5
     y_4_0_1_0_5  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_5  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_5  radio_max_limit_1_0  1593
-    y_4_0_1_0_5  minimum_profit  -198
-    y_4_0_1_0_6  OBJ       -99
+    y_4_0_1_0_5  minimum_profit  -298
+    y_4_0_1_0_6  OBJ       -199
     y_4_0_1_0_6  ru_unique_mapping_4_0  1
     y_4_0_1_0_6  radio_overprovision_4_0_1  6
     y_4_0_1_0_6  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_6  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_6  radio_max_limit_1_0  1773
-    y_4_0_1_0_6  minimum_profit  -99
+    y_4_0_1_0_6  minimum_profit  -199
+    y_4_0_1_0_7  OBJ       -100
     y_4_0_1_0_7  ru_unique_mapping_4_0  1
     y_4_0_1_0_7  radio_overprovision_4_0_1  7
     y_4_0_1_0_7  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_7  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_7  radio_max_limit_1_0  1953
-    y_4_0_1_0_8  OBJ       99
+    y_4_0_1_0_7  minimum_profit  -100
+    y_4_0_1_0_8  OBJ       -1
     y_4_0_1_0_8  ru_unique_mapping_4_0  1
     y_4_0_1_0_8  radio_overprovision_4_0_1  8
     y_4_0_1_0_8  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_8  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_8  radio_max_limit_1_0  2133
-    y_4_0_1_0_8  minimum_profit  99
-    y_4_0_1_0_9  OBJ       198
+    y_4_0_1_0_8  minimum_profit  -1
+    y_4_0_1_0_9  OBJ       98
     y_4_0_1_0_9  ru_unique_mapping_4_0  1
     y_4_0_1_0_9  radio_overprovision_4_0_1  9
     y_4_0_1_0_9  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_9  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_9  radio_max_limit_1_0  2313
-    y_4_0_1_0_9  minimum_profit  198
-    y_4_0_1_0_10  OBJ       297
+    y_4_0_1_0_9  minimum_profit  98
+    y_4_0_1_0_10  OBJ       197
     y_4_0_1_0_10  ru_unique_mapping_4_0  1
     y_4_0_1_0_10  radio_overprovision_4_0_1  10
     y_4_0_1_0_10  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_10  ru_regular_isolation_limit_4_0_1  1
     y_4_0_1_0_10  radio_max_limit_1_0  2493
-    y_4_0_1_0_10  minimum_profit  297
+    y_4_0_1_0_10  minimum_profit  197
     y_4_0_1_0_11  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_12  node_path_mapping_coordination_2_4_0_1  -12500
     y_4_0_1_0_13  node_path_mapping_coordination_2_4_0_1  -12500
@@ -3934,6 +3992,62 @@ COLUMNS
     a_z4_4_0  auxiliary_constraints_8_4_4_0_5  1000
     a_z4_4_0  auxiliary_constraints_8_4_4_0_6  1000
     a_z4_4_0  auxiliary_constraints_8_4_4_0_7  1000
+    b_4_0_0_1_0  OBJ       0
+    b_4_0_0_2_0  OBJ       0
+    b_4_0_0_3_0  OBJ       0
+    b_4_0_0_4_0  OBJ       0
+    b_4_0_0_5_0  OBJ       0
+    b_4_0_0_6_0  OBJ       0
+    b_4_0_0_7_0  OBJ       0
+    b_4_0_1_1_0  OBJ       0
+    b_4_0_1_2_0  OBJ       0
+    b_4_0_1_3_0  OBJ       0
+    b_4_0_1_4_0  OBJ       0
+    b_4_0_1_5_0  OBJ       0
+    b_4_0_1_6_0  OBJ       0
+    b_4_0_1_7_0  OBJ       0
+    b_4_0_2_1_0  OBJ       0
+    b_4_0_2_2_0  OBJ       0
+    b_4_0_2_3_0  OBJ       0
+    b_4_0_2_4_0  OBJ       0
+    b_4_0_2_5_0  OBJ       0
+    b_4_0_2_6_0  OBJ       0
+    b_4_0_2_7_0  OBJ       0
+    b_4_0_3_1_0  OBJ       0
+    b_4_0_3_2_0  OBJ       0
+    b_4_0_3_3_0  OBJ       0
+    b_4_0_3_4_0  OBJ       0
+    b_4_0_3_5_0  OBJ       0
+    b_4_0_3_6_0  OBJ       0
+    b_4_0_3_7_0  OBJ       0
+    b_4_0_4_1_0  OBJ       0
+    b_4_0_4_2_0  OBJ       0
+    b_4_0_4_3_0  OBJ       0
+    b_4_0_4_4_0  OBJ       0
+    b_4_0_4_5_0  OBJ       0
+    b_4_0_4_6_0  OBJ       0
+    b_4_0_4_7_0  OBJ       0
+    b_4_0_5_1_0  OBJ       0
+    b_4_0_5_2_0  OBJ       0
+    b_4_0_5_3_0  OBJ       0
+    b_4_0_5_4_0  OBJ       0
+    b_4_0_5_5_0  OBJ       0
+    b_4_0_5_6_0  OBJ       0
+    b_4_0_5_7_0  OBJ       0
+    b_4_0_6_1_0  OBJ       0
+    b_4_0_6_2_0  OBJ       0
+    b_4_0_6_3_0  OBJ       0
+    b_4_0_6_4_0  OBJ       0
+    b_4_0_6_5_0  OBJ       0
+    b_4_0_6_6_0  OBJ       0
+    b_4_0_6_7_0  OBJ       0
+    b_4_0_7_1_0  OBJ       0
+    b_4_0_7_2_0  OBJ       0
+    b_4_0_7_3_0  OBJ       0
+    b_4_0_7_4_0  OBJ       0
+    b_4_0_7_5_0  OBJ       0
+    b_4_0_7_6_0  OBJ       0
+    b_4_0_7_7_0  OBJ       0
     x_5_0_0   OBJ       -1.3636363636363635e+00
     x_5_0_0   nf_unique_mapping_5_0  1
     x_5_0_0   mips_limit_1_5_0_0  0.01
@@ -3945,7 +4059,7 @@ COLUMNS
     x_5_0_0   mips_max_limit_2_0  2.7272727272727271e-02
     x_5_0_0   auxiliary_constraints_8_2_0  -1
     x_5_0_0   minimum_profit  -1.3636363636363635e+00
-    x_5_0_1   OBJ       -1.3636363636363635e+00
+    x_5_0_1   OBJ       -2.3636363636363633e+00
     x_5_0_1   nf_unique_mapping_5_0  1
     x_5_0_1   mips_limit_1_5_0_1  0.01
     x_5_0_1   mips_limit_2_5_0_1  -0.6
@@ -3955,8 +4069,8 @@ COLUMNS
     x_5_0_1   mips_max_limit_1_1  1.3636363636363635e-01
     x_5_0_1   mips_max_limit_2_1  2.7272727272727271e-02
     x_5_0_1   auxiliary_constraints_8_2_1  -1
-    x_5_0_1   minimum_profit  -1.3636363636363635e+00
-    x_5_0_2   OBJ       -1.3636363636363638e-01
+    x_5_0_1   minimum_profit  -2.3636363636363633e+00
+    x_5_0_2   OBJ       -1.1363636363636365e+00
     x_5_0_2   nf_unique_mapping_5_0  1
     x_5_0_2   mips_limit_1_5_0_2  0.01
     x_5_0_2   mips_limit_2_5_0_2  -0.6
@@ -3966,40 +4080,7 @@ COLUMNS
     x_5_0_2   mips_max_limit_1_2  1.3636363636363637e-02
     x_5_0_2   mips_max_limit_2_2  2.7272727272727275e-03
     x_5_0_2   auxiliary_constraints_8_2_2  -1
-    x_5_0_2   minimum_profit  -1.3636363636363638e-01
-    x_6_0_0   OBJ       -1.3636363636363635e+00
-    x_6_0_0   nf_unique_mapping_6_0  1
-    x_6_0_0   mips_limit_1_6_0_0  0.01
-    x_6_0_0   mips_limit_2_6_0_0  -0.6
-    x_6_0_0   node_path_mapping_coordination_1_6_0_0  -10000
-    x_6_0_0   auxiliary_constraints_8_1_6_0_0  -1
-    x_6_0_0   nf_regular_isolation_limit_6_0_0  1
-    x_6_0_0   mips_max_limit_1_0  1.3636363636363635e-01
-    x_6_0_0   mips_max_limit_2_0  2.7272727272727271e-02
-    x_6_0_0   auxiliary_constraints_8_2_0  -1
-    x_6_0_0   minimum_profit  -1.3636363636363635e+00
-    x_6_0_1   OBJ       -1.3636363636363635e+00
-    x_6_0_1   nf_unique_mapping_6_0  1
-    x_6_0_1   mips_limit_1_6_0_1  0.01
-    x_6_0_1   mips_limit_2_6_0_1  -0.6
-    x_6_0_1   node_path_mapping_coordination_1_6_0_1  -10000
-    x_6_0_1   auxiliary_constraints_8_1_6_0_1  -1
-    x_6_0_1   nf_regular_isolation_limit_6_0_1  1
-    x_6_0_1   mips_max_limit_1_1  1.3636363636363635e-01
-    x_6_0_1   mips_max_limit_2_1  2.7272727272727271e-02
-    x_6_0_1   auxiliary_constraints_8_2_1  -1
-    x_6_0_1   minimum_profit  -1.3636363636363635e+00
-    x_6_0_2   OBJ       -1.3636363636363638e-01
-    x_6_0_2   nf_unique_mapping_6_0  1
-    x_6_0_2   mips_limit_1_6_0_2  0.01
-    x_6_0_2   mips_limit_2_6_0_2  -0.6
-    x_6_0_2   node_path_mapping_coordination_1_6_0_2  -10000
-    x_6_0_2   auxiliary_constraints_8_1_6_0_2  -1
-    x_6_0_2   nf_regular_isolation_limit_6_0_2  1
-    x_6_0_2   mips_max_limit_1_2  1.3636363636363637e-02
-    x_6_0_2   mips_max_limit_2_2  2.7272727272727275e-03
-    x_6_0_2   auxiliary_constraints_8_2_2  -1
-    x_6_0_2   minimum_profit  -1.3636363636363638e-01
+    x_5_0_2   minimum_profit  -1.1363636363636365e+00
     y_5_0_0_0_0  OBJ       0
     y_5_0_0_0_1  OBJ       -0.9
     y_5_0_0_0_1  ru_unique_mapping_5_0  1
@@ -4108,13 +4189,13 @@ COLUMNS
     y_5_0_0_0_99  node_path_mapping_coordination_2_5_0_0  -10000
     y_5_0_0_0_100  node_path_mapping_coordination_2_5_0_0  -10000
     y_5_0_1_0_0  OBJ       0
-    y_5_0_1_0_1  OBJ       -0.9
+    y_5_0_1_0_1  OBJ       -1.9
     y_5_0_1_0_1  ru_unique_mapping_5_0  1
     y_5_0_1_0_1  radio_overprovision_5_0_1  1
     y_5_0_1_0_1  node_path_mapping_coordination_2_5_0_1  -10000
     y_5_0_1_0_1  ru_regular_isolation_limit_5_0_1  1
     y_5_0_1_0_1  radio_max_limit_1_0  180
-    y_5_0_1_0_1  minimum_profit  -0.9
+    y_5_0_1_0_1  minimum_profit  -1.9
     y_5_0_1_0_2  node_path_mapping_coordination_2_5_0_1  -10000
     y_5_0_1_0_3  node_path_mapping_coordination_2_5_0_1  -10000
     y_5_0_1_0_4  node_path_mapping_coordination_2_5_0_1  -10000
@@ -4214,6 +4295,290 @@ COLUMNS
     y_5_0_1_0_98  node_path_mapping_coordination_2_5_0_1  -10000
     y_5_0_1_0_99  node_path_mapping_coordination_2_5_0_1  -10000
     y_5_0_1_0_100  node_path_mapping_coordination_2_5_0_1  -10000
+    z_5_0_0_0  link_regular_isolation_limit_5_0_0  1
+    z_5_0_0_0  link_path_mapping_coordination_1_5_0_0_0  0.01
+    z_5_0_0_0  link_path_mapping_coordination_2_5_0_0_0  -10000
+    z_5_0_0_0  auxiliary_constraints_3_1_5_0_0_0  -1
+    z_5_0_0_0  auxiliary_constraints_3_2_5_0_0  -1
+    z_5_0_1_0  link_regular_isolation_limit_5_0_1  1
+    z_5_0_1_0  link_path_mapping_coordination_1_5_0_1_0  0.01
+    z_5_0_1_0  link_path_mapping_coordination_2_5_0_1_0  -10000
+    z_5_0_1_0  auxiliary_constraints_3_1_5_0_1_0  -1
+    z_5_0_1_0  auxiliary_constraints_3_2_5_0_1  -1
+    z_5_0_2_0  link_regular_isolation_limit_5_0_2  1
+    z_5_0_2_0  link_path_mapping_coordination_1_5_0_2_0  0.01
+    z_5_0_2_0  link_path_mapping_coordination_2_5_0_2_0  -10000
+    z_5_0_2_0  auxiliary_constraints_3_1_5_0_2_0  -1
+    z_5_0_2_0  auxiliary_constraints_3_2_5_0_2  -1
+    z_5_0_3_0  link_regular_isolation_limit_5_0_3  1
+    z_5_0_3_0  link_path_mapping_coordination_1_5_0_3_0  0.01
+    z_5_0_3_0  link_path_mapping_coordination_2_5_0_3_0  -10000
+    z_5_0_3_0  auxiliary_constraints_3_1_5_0_3_0  -1
+    z_5_0_3_0  auxiliary_constraints_3_2_5_0_3  -1
+    z_5_0_4_0  link_regular_isolation_limit_5_0_4  1
+    z_5_0_4_0  link_path_mapping_coordination_1_5_0_4_0  0.01
+    z_5_0_4_0  link_path_mapping_coordination_2_5_0_4_0  -10000
+    z_5_0_4_0  auxiliary_constraints_3_1_5_0_4_0  -1
+    z_5_0_4_0  auxiliary_constraints_3_2_5_0_4  -1
+    z_5_0_5_0  link_regular_isolation_limit_5_0_5  1
+    z_5_0_5_0  link_path_mapping_coordination_1_5_0_5_0  0.01
+    z_5_0_5_0  link_path_mapping_coordination_2_5_0_5_0  -10000
+    z_5_0_5_0  auxiliary_constraints_3_1_5_0_5_0  -1
+    z_5_0_5_0  auxiliary_constraints_3_2_5_0_5  -1
+    z_5_0_6_0  link_regular_isolation_limit_5_0_6  1
+    z_5_0_6_0  link_path_mapping_coordination_1_5_0_6_0  0.01
+    z_5_0_6_0  link_path_mapping_coordination_2_5_0_6_0  -10000
+    z_5_0_6_0  auxiliary_constraints_3_1_5_0_6_0  -1
+    z_5_0_6_0  auxiliary_constraints_3_2_5_0_6  -1
+    z_5_0_7_0  link_regular_isolation_limit_5_0_7  1
+    z_5_0_7_0  link_path_mapping_coordination_1_5_0_7_0  0.01
+    z_5_0_7_0  link_path_mapping_coordination_2_5_0_7_0  -10000
+    z_5_0_7_0  auxiliary_constraints_3_1_5_0_7_0  -1
+    z_5_0_7_0  auxiliary_constraints_3_2_5_0_7  -1
+    c_5_0_0   OBJ       90
+    c_5_0_0   mips_limit_1_5_0_0  -1
+    c_5_0_0   mips_limit_2_5_0_0  1
+    c_5_0_0   mips_max_limit_1_0  1
+    c_5_0_0   minimum_profit  90
+    c_5_0_1   OBJ       90
+    c_5_0_1   mips_limit_1_5_0_1  -1
+    c_5_0_1   mips_limit_2_5_0_1  1
+    c_5_0_1   mips_max_limit_1_1  1
+    c_5_0_1   minimum_profit  90
+    c_5_0_2   OBJ       90
+    c_5_0_2   mips_limit_1_5_0_2  -1
+    c_5_0_2   mips_limit_2_5_0_2  1
+    c_5_0_2   mips_max_limit_1_2  1
+    c_5_0_2   minimum_profit  90
+    b_5_0_0_0_0  OBJ       0.0985
+    b_5_0_0_0_0  link_path_mapping_coordination_1_5_0_0_0  -1
+    b_5_0_0_0_0  link_path_mapping_coordination_2_5_0_0_0  0.995
+    b_5_0_0_0_0  node_path_mapping_coordination_1_5_0_0  0.995
+    b_5_0_0_0_0  node_path_mapping_coordination_2_5_0_0  0.995
+    b_5_0_0_0_0  bandwidth_overprovisioning_3_5_0  -0.995
+    b_5_0_0_0_0  bandwidth_max_limit_0_0  1
+    b_5_0_0_0_0  minimum_profit  0.0985
+    b_5_0_1_0_0  OBJ       0.0985
+    b_5_0_1_0_0  link_path_mapping_coordination_1_5_0_1_0  -1
+    b_5_0_1_0_0  link_path_mapping_coordination_2_5_0_1_0  0.995
+    b_5_0_1_0_0  node_path_mapping_coordination_1_5_0_0  0.995
+    b_5_0_1_0_0  node_path_mapping_coordination_2_5_0_1  0.995
+    b_5_0_1_0_0  bandwidth_overprovisioning_3_5_0  -0.995
+    b_5_0_1_0_0  bandwidth_max_limit_1_0  1
+    b_5_0_1_0_0  minimum_profit  0.0985
+    b_5_0_2_0_0  OBJ       0.0985
+    b_5_0_2_0_0  link_path_mapping_coordination_1_5_0_2_0  -1
+    b_5_0_2_0_0  link_path_mapping_coordination_2_5_0_2_0  0.995
+    b_5_0_2_0_0  node_path_mapping_coordination_1_5_0_1  0.995
+    b_5_0_2_0_0  node_path_mapping_coordination_2_5_0_0  0.995
+    b_5_0_2_0_0  bandwidth_overprovisioning_3_5_0  -0.995
+    b_5_0_2_0_0  bandwidth_max_limit_2_0  1
+    b_5_0_2_0_0  minimum_profit  0.0985
+    b_5_0_3_0_0  OBJ       0.0985
+    b_5_0_3_0_0  link_path_mapping_coordination_1_5_0_3_0  -1
+    b_5_0_3_0_0  link_path_mapping_coordination_2_5_0_3_0  0.995
+    b_5_0_3_0_0  node_path_mapping_coordination_1_5_0_1  0.995
+    b_5_0_3_0_0  node_path_mapping_coordination_2_5_0_1  0.995
+    b_5_0_3_0_0  bandwidth_overprovisioning_3_5_0  -0.995
+    b_5_0_3_0_0  bandwidth_max_limit_3_0  1
+    b_5_0_3_0_0  minimum_profit  0.0985
+    b_5_0_4_0_0  OBJ       0.0985
+    b_5_0_4_0_0  link_path_mapping_coordination_1_5_0_4_0  -1
+    b_5_0_4_0_0  link_path_mapping_coordination_2_5_0_4_0  0.995
+    b_5_0_4_0_0  node_path_mapping_coordination_1_5_0_2  0.995
+    b_5_0_4_0_0  node_path_mapping_coordination_2_5_0_0  0.995
+    b_5_0_4_0_0  bandwidth_overprovisioning_3_5_0  -0.995
+    b_5_0_4_0_0  bandwidth_max_limit_4_0  1
+    b_5_0_4_0_0  minimum_profit  0.0985
+    b_5_0_5_0_0  OBJ       0.0985
+    b_5_0_5_0_0  link_path_mapping_coordination_1_5_0_5_0  -1
+    b_5_0_5_0_0  link_path_mapping_coordination_2_5_0_5_0  0.995
+    b_5_0_5_0_0  node_path_mapping_coordination_1_5_0_2  0.995
+    b_5_0_5_0_0  node_path_mapping_coordination_2_5_0_1  0.995
+    b_5_0_5_0_0  bandwidth_overprovisioning_3_5_0  -0.995
+    b_5_0_5_0_0  bandwidth_max_limit_5_0  1
+    b_5_0_5_0_0  minimum_profit  0.0985
+    b_5_0_6_0_0  OBJ       -0.001
+    b_5_0_6_0_0  link_path_mapping_coordination_1_5_0_6_0  -1
+    b_5_0_6_0_0  link_path_mapping_coordination_2_5_0_6_0  0.995
+    b_5_0_6_0_0  node_path_mapping_coordination_1_5_0_0  0.995
+    b_5_0_6_0_0  bandwidth_max_limit_6_0  1
+    b_5_0_6_0_0  minimum_profit  -0.001
+    b_5_0_7_0_0  OBJ       -0.001
+    b_5_0_7_0_0  link_path_mapping_coordination_1_5_0_7_0  -1
+    b_5_0_7_0_0  link_path_mapping_coordination_2_5_0_7_0  0.995
+    b_5_0_7_0_0  node_path_mapping_coordination_1_5_0_1  0.995
+    b_5_0_7_0_0  bandwidth_max_limit_7_0  1
+    b_5_0_7_0_0  minimum_profit  -0.001
+    a_x1_5_0  OBJ       0
+    a_x1_5_1  OBJ       0
+    a_x1_5_2  OBJ       0
+    a_x4_5_0_0  OBJ       0
+    a_x4_5_0_1  OBJ       0
+    a_x4_5_0_2  OBJ       0
+    a_y1_5_0  OBJ       0
+    a_y1_5_1  OBJ       0
+    a_y2_5_0_0  OBJ       0
+    a_y2_5_0_1  OBJ       0
+    a_z1_5_0  OBJ       0
+    a_z1_5_1  OBJ       0
+    a_z1_5_2  OBJ       0
+    a_z1_5_3  OBJ       0
+    a_z1_5_4  OBJ       0
+    a_z1_5_5  OBJ       0
+    a_z1_5_6  OBJ       0
+    a_z1_5_7  OBJ       0
+    a_z2_5_0_0  vp_unique_mapping_5_0  1
+    a_z2_5_0_0  auxiliary_constraints_3_1_5_0_0_0  1
+    a_z2_5_0_0  auxiliary_constraints_3_2_5_0_0  1
+    a_z2_5_0_0  auxiliary_constraints_6_3_5_0_7  -1
+    a_z2_5_0_0  auxiliary_constraints_8_4_5_0_0  -1
+    a_z2_5_0_1  vp_unique_mapping_5_0  1
+    a_z2_5_0_1  auxiliary_constraints_3_1_5_0_1_0  1
+    a_z2_5_0_1  auxiliary_constraints_3_2_5_0_1  1
+    a_z2_5_0_1  auxiliary_constraints_6_3_5_0_7  -1
+    a_z2_5_0_1  auxiliary_constraints_8_4_5_0_1  -1
+    a_z2_5_0_2  vp_unique_mapping_5_0  1
+    a_z2_5_0_2  auxiliary_constraints_3_1_5_0_2_0  1
+    a_z2_5_0_2  auxiliary_constraints_3_2_5_0_2  1
+    a_z2_5_0_2  auxiliary_constraints_6_3_5_0_7  -0.02
+    a_z2_5_0_2  auxiliary_constraints_8_4_5_0_2  -0.02
+    a_z2_5_0_3  vp_unique_mapping_5_0  1
+    a_z2_5_0_3  auxiliary_constraints_3_1_5_0_3_0  1
+    a_z2_5_0_3  auxiliary_constraints_3_2_5_0_3  1
+    a_z2_5_0_3  auxiliary_constraints_6_3_5_0_7  -0.02
+    a_z2_5_0_3  auxiliary_constraints_8_4_5_0_3  -0.02
+    a_z2_5_0_4  vp_unique_mapping_5_0  1
+    a_z2_5_0_4  auxiliary_constraints_3_1_5_0_4_0  1
+    a_z2_5_0_4  auxiliary_constraints_3_2_5_0_4  1
+    a_z2_5_0_4  auxiliary_constraints_6_3_5_0_7  -10
+    a_z2_5_0_4  auxiliary_constraints_8_4_5_0_4  -10
+    a_z2_5_0_5  vp_unique_mapping_5_0  1
+    a_z2_5_0_5  auxiliary_constraints_3_1_5_0_5_0  1
+    a_z2_5_0_5  auxiliary_constraints_3_2_5_0_5  1
+    a_z2_5_0_5  auxiliary_constraints_6_3_5_0_7  -10
+    a_z2_5_0_5  auxiliary_constraints_8_4_5_0_5  -10
+    a_z2_5_0_6  vp_unique_mapping_5_0  1
+    a_z2_5_0_6  auxiliary_constraints_3_1_5_0_6_0  1
+    a_z2_5_0_6  auxiliary_constraints_3_2_5_0_6  1
+    a_z2_5_0_6  auxiliary_constraints_6_3_5_0_7  -10
+    a_z2_5_0_6  auxiliary_constraints_8_4_5_0_6  -10
+    a_z2_5_0_7  vp_unique_mapping_5_0  1
+    a_z2_5_0_7  auxiliary_constraints_3_1_5_0_7_0  1
+    a_z2_5_0_7  auxiliary_constraints_3_2_5_0_7  1
+    a_z2_5_0_7  auxiliary_constraints_6_3_5_0_7  -10
+    a_z2_5_0_7  auxiliary_constraints_8_4_5_0_7  -10
+    a_z3_5_0  OBJ       -0.001
+    a_z3_5_0  auxiliary_constraints_6_3_5_0_7  1
+    a_z3_5_0  auxiliary_constraints_7_5_0  1
+    a_z3_5_0  auxiliary_constraints_8_1_5_0  1
+    a_z3_5_0  auxiliary_constraints_8_4_5_0_0  1
+    a_z3_5_0  auxiliary_constraints_8_4_5_0_1  1
+    a_z3_5_0  auxiliary_constraints_8_4_5_0_2  1
+    a_z3_5_0  auxiliary_constraints_8_4_5_0_3  1
+    a_z3_5_0  auxiliary_constraints_8_4_5_0_4  1
+    a_z3_5_0  auxiliary_constraints_8_4_5_0_5  1
+    a_z3_5_0  auxiliary_constraints_8_4_5_0_6  1
+    a_z3_5_0  auxiliary_constraints_8_4_5_0_7  1
+    a_z3_5_0  minimum_profit  -0.001
+    a_z4_5_0  auxiliary_constraints_8_1_5_0  -1000
+    a_z4_5_0  auxiliary_constraints_8_4_5_0_0  1000
+    a_z4_5_0  auxiliary_constraints_8_4_5_0_1  1000
+    a_z4_5_0  auxiliary_constraints_8_4_5_0_2  1000
+    a_z4_5_0  auxiliary_constraints_8_4_5_0_3  1000
+    a_z4_5_0  auxiliary_constraints_8_4_5_0_4  1000
+    a_z4_5_0  auxiliary_constraints_8_4_5_0_5  1000
+    a_z4_5_0  auxiliary_constraints_8_4_5_0_6  1000
+    a_z4_5_0  auxiliary_constraints_8_4_5_0_7  1000
+    b_5_0_0_1_0  OBJ       0
+    b_5_0_0_2_0  OBJ       0
+    b_5_0_0_3_0  OBJ       0
+    b_5_0_0_4_0  OBJ       0
+    b_5_0_0_5_0  OBJ       0
+    b_5_0_0_6_0  OBJ       0
+    b_5_0_0_7_0  OBJ       0
+    b_5_0_1_1_0  OBJ       0
+    b_5_0_1_2_0  OBJ       0
+    b_5_0_1_3_0  OBJ       0
+    b_5_0_1_4_0  OBJ       0
+    b_5_0_1_5_0  OBJ       0
+    b_5_0_1_6_0  OBJ       0
+    b_5_0_1_7_0  OBJ       0
+    b_5_0_2_1_0  OBJ       0
+    b_5_0_2_2_0  OBJ       0
+    b_5_0_2_3_0  OBJ       0
+    b_5_0_2_4_0  OBJ       0
+    b_5_0_2_5_0  OBJ       0
+    b_5_0_2_6_0  OBJ       0
+    b_5_0_2_7_0  OBJ       0
+    b_5_0_3_1_0  OBJ       0
+    b_5_0_3_2_0  OBJ       0
+    b_5_0_3_3_0  OBJ       0
+    b_5_0_3_4_0  OBJ       0
+    b_5_0_3_5_0  OBJ       0
+    b_5_0_3_6_0  OBJ       0
+    b_5_0_3_7_0  OBJ       0
+    b_5_0_4_1_0  OBJ       0
+    b_5_0_4_2_0  OBJ       0
+    b_5_0_4_3_0  OBJ       0
+    b_5_0_4_4_0  OBJ       0
+    b_5_0_4_5_0  OBJ       0
+    b_5_0_4_6_0  OBJ       0
+    b_5_0_4_7_0  OBJ       0
+    b_5_0_5_1_0  OBJ       0
+    b_5_0_5_2_0  OBJ       0
+    b_5_0_5_3_0  OBJ       0
+    b_5_0_5_4_0  OBJ       0
+    b_5_0_5_5_0  OBJ       0
+    b_5_0_5_6_0  OBJ       0
+    b_5_0_5_7_0  OBJ       0
+    b_5_0_6_1_0  OBJ       0
+    b_5_0_6_2_0  OBJ       0
+    b_5_0_6_3_0  OBJ       0
+    b_5_0_6_4_0  OBJ       0
+    b_5_0_6_5_0  OBJ       0
+    b_5_0_6_6_0  OBJ       0
+    b_5_0_6_7_0  OBJ       0
+    b_5_0_7_1_0  OBJ       0
+    b_5_0_7_2_0  OBJ       0
+    b_5_0_7_3_0  OBJ       0
+    b_5_0_7_4_0  OBJ       0
+    b_5_0_7_5_0  OBJ       0
+    b_5_0_7_6_0  OBJ       0
+    b_5_0_7_7_0  OBJ       0
+    x_6_0_0   OBJ       -1.3636363636363635e+00
+    x_6_0_0   nf_unique_mapping_6_0  1
+    x_6_0_0   mips_limit_1_6_0_0  0.01
+    x_6_0_0   mips_limit_2_6_0_0  -0.6
+    x_6_0_0   node_path_mapping_coordination_1_6_0_0  -10000
+    x_6_0_0   auxiliary_constraints_8_1_6_0_0  -1
+    x_6_0_0   nf_regular_isolation_limit_6_0_0  1
+    x_6_0_0   mips_max_limit_1_0  1.3636363636363635e-01
+    x_6_0_0   mips_max_limit_2_0  2.7272727272727271e-02
+    x_6_0_0   auxiliary_constraints_8_2_0  -1
+    x_6_0_0   minimum_profit  -1.3636363636363635e+00
+    x_6_0_1   OBJ       -2.3636363636363633e+00
+    x_6_0_1   nf_unique_mapping_6_0  1
+    x_6_0_1   mips_limit_1_6_0_1  0.01
+    x_6_0_1   mips_limit_2_6_0_1  -0.6
+    x_6_0_1   node_path_mapping_coordination_1_6_0_1  -10000
+    x_6_0_1   auxiliary_constraints_8_1_6_0_1  -1
+    x_6_0_1   nf_regular_isolation_limit_6_0_1  1
+    x_6_0_1   mips_max_limit_1_1  1.3636363636363635e-01
+    x_6_0_1   mips_max_limit_2_1  2.7272727272727271e-02
+    x_6_0_1   auxiliary_constraints_8_2_1  -1
+    x_6_0_1   minimum_profit  -2.3636363636363633e+00
+    x_6_0_2   OBJ       -1.1363636363636365e+00
+    x_6_0_2   nf_unique_mapping_6_0  1
+    x_6_0_2   mips_limit_1_6_0_2  0.01
+    x_6_0_2   mips_limit_2_6_0_2  -0.6
+    x_6_0_2   node_path_mapping_coordination_1_6_0_2  -10000
+    x_6_0_2   auxiliary_constraints_8_1_6_0_2  -1
+    x_6_0_2   nf_regular_isolation_limit_6_0_2  1
+    x_6_0_2   mips_max_limit_1_2  1.3636363636363637e-02
+    x_6_0_2   mips_max_limit_2_2  2.7272727272727275e-03
+    x_6_0_2   auxiliary_constraints_8_2_2  -1
+    x_6_0_2   minimum_profit  -1.1363636363636365e+00
     y_6_0_0_0_0  OBJ       0
     y_6_0_0_0_1  OBJ       -0.9
     y_6_0_0_0_1  ru_unique_mapping_6_0  1
@@ -4322,13 +4687,13 @@ COLUMNS
     y_6_0_0_0_99  node_path_mapping_coordination_2_6_0_0  -10000
     y_6_0_0_0_100  node_path_mapping_coordination_2_6_0_0  -10000
     y_6_0_1_0_0  OBJ       0
-    y_6_0_1_0_1  OBJ       -0.9
+    y_6_0_1_0_1  OBJ       -1.9
     y_6_0_1_0_1  ru_unique_mapping_6_0  1
     y_6_0_1_0_1  radio_overprovision_6_0_1  1
     y_6_0_1_0_1  node_path_mapping_coordination_2_6_0_1  -10000
     y_6_0_1_0_1  ru_regular_isolation_limit_6_0_1  1
     y_6_0_1_0_1  radio_max_limit_1_0  180
-    y_6_0_1_0_1  minimum_profit  -0.9
+    y_6_0_1_0_1  minimum_profit  -1.9
     y_6_0_1_0_2  node_path_mapping_coordination_2_6_0_1  -10000
     y_6_0_1_0_3  node_path_mapping_coordination_2_6_0_1  -10000
     y_6_0_1_0_4  node_path_mapping_coordination_2_6_0_1  -10000
@@ -4428,46 +4793,6 @@ COLUMNS
     y_6_0_1_0_98  node_path_mapping_coordination_2_6_0_1  -10000
     y_6_0_1_0_99  node_path_mapping_coordination_2_6_0_1  -10000
     y_6_0_1_0_100  node_path_mapping_coordination_2_6_0_1  -10000
-    z_5_0_0_0  link_regular_isolation_limit_5_0_0  1
-    z_5_0_0_0  link_path_mapping_coordination_1_5_0_0_0  0.01
-    z_5_0_0_0  link_path_mapping_coordination_2_5_0_0_0  -10000
-    z_5_0_0_0  auxiliary_constraints_3_1_5_0_0_0  -1
-    z_5_0_0_0  auxiliary_constraints_3_2_5_0_0  -1
-    z_5_0_1_0  link_regular_isolation_limit_5_0_1  1
-    z_5_0_1_0  link_path_mapping_coordination_1_5_0_1_0  0.01
-    z_5_0_1_0  link_path_mapping_coordination_2_5_0_1_0  -10000
-    z_5_0_1_0  auxiliary_constraints_3_1_5_0_1_0  -1
-    z_5_0_1_0  auxiliary_constraints_3_2_5_0_1  -1
-    z_5_0_2_0  link_regular_isolation_limit_5_0_2  1
-    z_5_0_2_0  link_path_mapping_coordination_1_5_0_2_0  0.01
-    z_5_0_2_0  link_path_mapping_coordination_2_5_0_2_0  -10000
-    z_5_0_2_0  auxiliary_constraints_3_1_5_0_2_0  -1
-    z_5_0_2_0  auxiliary_constraints_3_2_5_0_2  -1
-    z_5_0_3_0  link_regular_isolation_limit_5_0_3  1
-    z_5_0_3_0  link_path_mapping_coordination_1_5_0_3_0  0.01
-    z_5_0_3_0  link_path_mapping_coordination_2_5_0_3_0  -10000
-    z_5_0_3_0  auxiliary_constraints_3_1_5_0_3_0  -1
-    z_5_0_3_0  auxiliary_constraints_3_2_5_0_3  -1
-    z_5_0_4_0  link_regular_isolation_limit_5_0_4  1
-    z_5_0_4_0  link_path_mapping_coordination_1_5_0_4_0  0.01
-    z_5_0_4_0  link_path_mapping_coordination_2_5_0_4_0  -10000
-    z_5_0_4_0  auxiliary_constraints_3_1_5_0_4_0  -1
-    z_5_0_4_0  auxiliary_constraints_3_2_5_0_4  -1
-    z_5_0_5_0  link_regular_isolation_limit_5_0_5  1
-    z_5_0_5_0  link_path_mapping_coordination_1_5_0_5_0  0.01
-    z_5_0_5_0  link_path_mapping_coordination_2_5_0_5_0  -10000
-    z_5_0_5_0  auxiliary_constraints_3_1_5_0_5_0  -1
-    z_5_0_5_0  auxiliary_constraints_3_2_5_0_5  -1
-    z_5_0_6_0  link_regular_isolation_limit_5_0_6  1
-    z_5_0_6_0  link_path_mapping_coordination_1_5_0_6_0  0.01
-    z_5_0_6_0  link_path_mapping_coordination_2_5_0_6_0  -10000
-    z_5_0_6_0  auxiliary_constraints_3_1_5_0_6_0  -1
-    z_5_0_6_0  auxiliary_constraints_3_2_5_0_6  -1
-    z_5_0_7_0  link_regular_isolation_limit_5_0_7  1
-    z_5_0_7_0  link_path_mapping_coordination_1_5_0_7_0  0.01
-    z_5_0_7_0  link_path_mapping_coordination_2_5_0_7_0  -10000
-    z_5_0_7_0  auxiliary_constraints_3_1_5_0_7_0  -1
-    z_5_0_7_0  auxiliary_constraints_3_2_5_0_7  -1
     z_6_0_0_0  link_regular_isolation_limit_6_0_0  1
     z_6_0_0_0  link_path_mapping_coordination_1_6_0_0_0  0.01
     z_6_0_0_0  link_path_mapping_coordination_2_6_0_0_0  -10000
@@ -4508,21 +4833,6 @@ COLUMNS
     z_6_0_7_0  link_path_mapping_coordination_2_6_0_7_0  -10000
     z_6_0_7_0  auxiliary_constraints_3_1_6_0_7_0  -1
     z_6_0_7_0  auxiliary_constraints_3_2_6_0_7  -1
-    c_5_0_0   OBJ       90
-    c_5_0_0   mips_limit_1_5_0_0  -1
-    c_5_0_0   mips_limit_2_5_0_0  1
-    c_5_0_0   mips_max_limit_1_0  1
-    c_5_0_0   minimum_profit  90
-    c_5_0_1   OBJ       90
-    c_5_0_1   mips_limit_1_5_0_1  -1
-    c_5_0_1   mips_limit_2_5_0_1  1
-    c_5_0_1   mips_max_limit_1_1  1
-    c_5_0_1   minimum_profit  90
-    c_5_0_2   OBJ       90
-    c_5_0_2   mips_limit_1_5_0_2  -1
-    c_5_0_2   mips_limit_2_5_0_2  1
-    c_5_0_2   mips_max_limit_1_2  1
-    c_5_0_2   minimum_profit  90
     c_6_0_0   OBJ       90
     c_6_0_0   mips_limit_1_6_0_0  -1
     c_6_0_0   mips_limit_2_6_0_0  1
@@ -4538,178 +4848,6 @@ COLUMNS
     c_6_0_2   mips_limit_2_6_0_2  1
     c_6_0_2   mips_max_limit_1_2  1
     c_6_0_2   minimum_profit  90
-    b_4_0_0_1_0  OBJ       0
-    b_4_0_0_2_0  OBJ       0
-    b_4_0_0_3_0  OBJ       0
-    b_4_0_0_4_0  OBJ       0
-    b_4_0_0_5_0  OBJ       0
-    b_4_0_0_6_0  OBJ       0
-    b_4_0_0_7_0  OBJ       0
-    b_4_0_1_1_0  OBJ       0
-    b_4_0_1_2_0  OBJ       0
-    b_4_0_1_3_0  OBJ       0
-    b_4_0_1_4_0  OBJ       0
-    b_4_0_1_5_0  OBJ       0
-    b_4_0_1_6_0  OBJ       0
-    b_4_0_1_7_0  OBJ       0
-    b_4_0_2_1_0  OBJ       0
-    b_4_0_2_2_0  OBJ       0
-    b_4_0_2_3_0  OBJ       0
-    b_4_0_2_4_0  OBJ       0
-    b_4_0_2_5_0  OBJ       0
-    b_4_0_2_6_0  OBJ       0
-    b_4_0_2_7_0  OBJ       0
-    b_4_0_3_1_0  OBJ       0
-    b_4_0_3_2_0  OBJ       0
-    b_4_0_3_3_0  OBJ       0
-    b_4_0_3_4_0  OBJ       0
-    b_4_0_3_5_0  OBJ       0
-    b_4_0_3_6_0  OBJ       0
-    b_4_0_3_7_0  OBJ       0
-    b_4_0_4_1_0  OBJ       0
-    b_4_0_4_2_0  OBJ       0
-    b_4_0_4_3_0  OBJ       0
-    b_4_0_4_4_0  OBJ       0
-    b_4_0_4_5_0  OBJ       0
-    b_4_0_4_6_0  OBJ       0
-    b_4_0_4_7_0  OBJ       0
-    b_4_0_5_1_0  OBJ       0
-    b_4_0_5_2_0  OBJ       0
-    b_4_0_5_3_0  OBJ       0
-    b_4_0_5_4_0  OBJ       0
-    b_4_0_5_5_0  OBJ       0
-    b_4_0_5_6_0  OBJ       0
-    b_4_0_5_7_0  OBJ       0
-    b_4_0_6_1_0  OBJ       0
-    b_4_0_6_2_0  OBJ       0
-    b_4_0_6_3_0  OBJ       0
-    b_4_0_6_4_0  OBJ       0
-    b_4_0_6_5_0  OBJ       0
-    b_4_0_6_6_0  OBJ       0
-    b_4_0_6_7_0  OBJ       0
-    b_4_0_7_1_0  OBJ       0
-    b_4_0_7_2_0  OBJ       0
-    b_4_0_7_3_0  OBJ       0
-    b_4_0_7_4_0  OBJ       0
-    b_4_0_7_5_0  OBJ       0
-    b_4_0_7_6_0  OBJ       0
-    b_4_0_7_7_0  OBJ       0
-    b_5_0_0_0_0  OBJ       0.0985
-    b_5_0_0_0_0  link_path_mapping_coordination_1_5_0_0_0  -1
-    b_5_0_0_0_0  link_path_mapping_coordination_2_5_0_0_0  0.995
-    b_5_0_0_0_0  node_path_mapping_coordination_1_5_0_0  0.995
-    b_5_0_0_0_0  node_path_mapping_coordination_2_5_0_0  0.995
-    b_5_0_0_0_0  bandwidth_overprovisioning_3_5_0  -0.995
-    b_5_0_0_0_0  bandwidth_max_limit_0_0  1
-    b_5_0_0_0_0  minimum_profit  0.0985
-    b_5_0_0_1_0  OBJ       0
-    b_5_0_0_2_0  OBJ       0
-    b_5_0_0_3_0  OBJ       0
-    b_5_0_0_4_0  OBJ       0
-    b_5_0_0_5_0  OBJ       0
-    b_5_0_0_6_0  OBJ       0
-    b_5_0_0_7_0  OBJ       0
-    b_5_0_1_0_0  OBJ       0.0985
-    b_5_0_1_0_0  link_path_mapping_coordination_1_5_0_1_0  -1
-    b_5_0_1_0_0  link_path_mapping_coordination_2_5_0_1_0  0.995
-    b_5_0_1_0_0  node_path_mapping_coordination_1_5_0_0  0.995
-    b_5_0_1_0_0  node_path_mapping_coordination_2_5_0_1  0.995
-    b_5_0_1_0_0  bandwidth_overprovisioning_3_5_0  -0.995
-    b_5_0_1_0_0  bandwidth_max_limit_1_0  1
-    b_5_0_1_0_0  minimum_profit  0.0985
-    b_5_0_1_1_0  OBJ       0
-    b_5_0_1_2_0  OBJ       0
-    b_5_0_1_3_0  OBJ       0
-    b_5_0_1_4_0  OBJ       0
-    b_5_0_1_5_0  OBJ       0
-    b_5_0_1_6_0  OBJ       0
-    b_5_0_1_7_0  OBJ       0
-    b_5_0_2_0_0  OBJ       0.0985
-    b_5_0_2_0_0  link_path_mapping_coordination_1_5_0_2_0  -1
-    b_5_0_2_0_0  link_path_mapping_coordination_2_5_0_2_0  0.995
-    b_5_0_2_0_0  node_path_mapping_coordination_1_5_0_1  0.995
-    b_5_0_2_0_0  node_path_mapping_coordination_2_5_0_0  0.995
-    b_5_0_2_0_0  bandwidth_overprovisioning_3_5_0  -0.995
-    b_5_0_2_0_0  bandwidth_max_limit_2_0  1
-    b_5_0_2_0_0  minimum_profit  0.0985
-    b_5_0_2_1_0  OBJ       0
-    b_5_0_2_2_0  OBJ       0
-    b_5_0_2_3_0  OBJ       0
-    b_5_0_2_4_0  OBJ       0
-    b_5_0_2_5_0  OBJ       0
-    b_5_0_2_6_0  OBJ       0
-    b_5_0_2_7_0  OBJ       0
-    b_5_0_3_0_0  OBJ       0.0985
-    b_5_0_3_0_0  link_path_mapping_coordination_1_5_0_3_0  -1
-    b_5_0_3_0_0  link_path_mapping_coordination_2_5_0_3_0  0.995
-    b_5_0_3_0_0  node_path_mapping_coordination_1_5_0_1  0.995
-    b_5_0_3_0_0  node_path_mapping_coordination_2_5_0_1  0.995
-    b_5_0_3_0_0  bandwidth_overprovisioning_3_5_0  -0.995
-    b_5_0_3_0_0  bandwidth_max_limit_3_0  1
-    b_5_0_3_0_0  minimum_profit  0.0985
-    b_5_0_3_1_0  OBJ       0
-    b_5_0_3_2_0  OBJ       0
-    b_5_0_3_3_0  OBJ       0
-    b_5_0_3_4_0  OBJ       0
-    b_5_0_3_5_0  OBJ       0
-    b_5_0_3_6_0  OBJ       0
-    b_5_0_3_7_0  OBJ       0
-    b_5_0_4_0_0  OBJ       0.0985
-    b_5_0_4_0_0  link_path_mapping_coordination_1_5_0_4_0  -1
-    b_5_0_4_0_0  link_path_mapping_coordination_2_5_0_4_0  0.995
-    b_5_0_4_0_0  node_path_mapping_coordination_1_5_0_2  0.995
-    b_5_0_4_0_0  node_path_mapping_coordination_2_5_0_0  0.995
-    b_5_0_4_0_0  bandwidth_overprovisioning_3_5_0  -0.995
-    b_5_0_4_0_0  bandwidth_max_limit_4_0  1
-    b_5_0_4_0_0  minimum_profit  0.0985
-    b_5_0_4_1_0  OBJ       0
-    b_5_0_4_2_0  OBJ       0
-    b_5_0_4_3_0  OBJ       0
-    b_5_0_4_4_0  OBJ       0
-    b_5_0_4_5_0  OBJ       0
-    b_5_0_4_6_0  OBJ       0
-    b_5_0_4_7_0  OBJ       0
-    b_5_0_5_0_0  OBJ       0.0985
-    b_5_0_5_0_0  link_path_mapping_coordination_1_5_0_5_0  -1
-    b_5_0_5_0_0  link_path_mapping_coordination_2_5_0_5_0  0.995
-    b_5_0_5_0_0  node_path_mapping_coordination_1_5_0_2  0.995
-    b_5_0_5_0_0  node_path_mapping_coordination_2_5_0_1  0.995
-    b_5_0_5_0_0  bandwidth_overprovisioning_3_5_0  -0.995
-    b_5_0_5_0_0  bandwidth_max_limit_5_0  1
-    b_5_0_5_0_0  minimum_profit  0.0985
-    b_5_0_5_1_0  OBJ       0
-    b_5_0_5_2_0  OBJ       0
-    b_5_0_5_3_0  OBJ       0
-    b_5_0_5_4_0  OBJ       0
-    b_5_0_5_5_0  OBJ       0
-    b_5_0_5_6_0  OBJ       0
-    b_5_0_5_7_0  OBJ       0
-    b_5_0_6_0_0  OBJ       -0.001
-    b_5_0_6_0_0  link_path_mapping_coordination_1_5_0_6_0  -1
-    b_5_0_6_0_0  link_path_mapping_coordination_2_5_0_6_0  0.995
-    b_5_0_6_0_0  node_path_mapping_coordination_1_5_0_0  0.995
-    b_5_0_6_0_0  bandwidth_max_limit_6_0  1
-    b_5_0_6_0_0  minimum_profit  -0.001
-    b_5_0_6_1_0  OBJ       0
-    b_5_0_6_2_0  OBJ       0
-    b_5_0_6_3_0  OBJ       0
-    b_5_0_6_4_0  OBJ       0
-    b_5_0_6_5_0  OBJ       0
-    b_5_0_6_6_0  OBJ       0
-    b_5_0_6_7_0  OBJ       0
-    b_5_0_7_0_0  OBJ       -0.001
-    b_5_0_7_0_0  link_path_mapping_coordination_1_5_0_7_0  -1
-    b_5_0_7_0_0  link_path_mapping_coordination_2_5_0_7_0  0.995
-    b_5_0_7_0_0  node_path_mapping_coordination_1_5_0_1  0.995
-    b_5_0_7_0_0  bandwidth_max_limit_7_0  1
-    b_5_0_7_0_0  minimum_profit  -0.001
-    b_5_0_7_1_0  OBJ       0
-    b_5_0_7_2_0  OBJ       0
-    b_5_0_7_3_0  OBJ       0
-    b_5_0_7_4_0  OBJ       0
-    b_5_0_7_5_0  OBJ       0
-    b_5_0_7_6_0  OBJ       0
-    b_5_0_7_7_0  OBJ       0
     b_6_0_0_0_0  OBJ       0.0985
     b_6_0_0_0_0  link_path_mapping_coordination_1_6_0_0_0  -1
     b_6_0_0_0_0  link_path_mapping_coordination_2_6_0_0_0  0.995
@@ -4718,13 +4856,6 @@ COLUMNS
     b_6_0_0_0_0  bandwidth_overprovisioning_3_6_0  -0.995
     b_6_0_0_0_0  bandwidth_max_limit_0_0  1
     b_6_0_0_0_0  minimum_profit  0.0985
-    b_6_0_0_1_0  OBJ       0
-    b_6_0_0_2_0  OBJ       0
-    b_6_0_0_3_0  OBJ       0
-    b_6_0_0_4_0  OBJ       0
-    b_6_0_0_5_0  OBJ       0
-    b_6_0_0_6_0  OBJ       0
-    b_6_0_0_7_0  OBJ       0
     b_6_0_1_0_0  OBJ       0.0985
     b_6_0_1_0_0  link_path_mapping_coordination_1_6_0_1_0  -1
     b_6_0_1_0_0  link_path_mapping_coordination_2_6_0_1_0  0.995
@@ -4733,13 +4864,6 @@ COLUMNS
     b_6_0_1_0_0  bandwidth_overprovisioning_3_6_0  -0.995
     b_6_0_1_0_0  bandwidth_max_limit_1_0  1
     b_6_0_1_0_0  minimum_profit  0.0985
-    b_6_0_1_1_0  OBJ       0
-    b_6_0_1_2_0  OBJ       0
-    b_6_0_1_3_0  OBJ       0
-    b_6_0_1_4_0  OBJ       0
-    b_6_0_1_5_0  OBJ       0
-    b_6_0_1_6_0  OBJ       0
-    b_6_0_1_7_0  OBJ       0
     b_6_0_2_0_0  OBJ       0.0985
     b_6_0_2_0_0  link_path_mapping_coordination_1_6_0_2_0  -1
     b_6_0_2_0_0  link_path_mapping_coordination_2_6_0_2_0  0.995
@@ -4748,13 +4872,6 @@ COLUMNS
     b_6_0_2_0_0  bandwidth_overprovisioning_3_6_0  -0.995
     b_6_0_2_0_0  bandwidth_max_limit_2_0  1
     b_6_0_2_0_0  minimum_profit  0.0985
-    b_6_0_2_1_0  OBJ       0
-    b_6_0_2_2_0  OBJ       0
-    b_6_0_2_3_0  OBJ       0
-    b_6_0_2_4_0  OBJ       0
-    b_6_0_2_5_0  OBJ       0
-    b_6_0_2_6_0  OBJ       0
-    b_6_0_2_7_0  OBJ       0
     b_6_0_3_0_0  OBJ       0.0985
     b_6_0_3_0_0  link_path_mapping_coordination_1_6_0_3_0  -1
     b_6_0_3_0_0  link_path_mapping_coordination_2_6_0_3_0  0.995
@@ -4763,13 +4880,6 @@ COLUMNS
     b_6_0_3_0_0  bandwidth_overprovisioning_3_6_0  -0.995
     b_6_0_3_0_0  bandwidth_max_limit_3_0  1
     b_6_0_3_0_0  minimum_profit  0.0985
-    b_6_0_3_1_0  OBJ       0
-    b_6_0_3_2_0  OBJ       0
-    b_6_0_3_3_0  OBJ       0
-    b_6_0_3_4_0  OBJ       0
-    b_6_0_3_5_0  OBJ       0
-    b_6_0_3_6_0  OBJ       0
-    b_6_0_3_7_0  OBJ       0
     b_6_0_4_0_0  OBJ       0.0985
     b_6_0_4_0_0  link_path_mapping_coordination_1_6_0_4_0  -1
     b_6_0_4_0_0  link_path_mapping_coordination_2_6_0_4_0  0.995
@@ -4778,13 +4888,6 @@ COLUMNS
     b_6_0_4_0_0  bandwidth_overprovisioning_3_6_0  -0.995
     b_6_0_4_0_0  bandwidth_max_limit_4_0  1
     b_6_0_4_0_0  minimum_profit  0.0985
-    b_6_0_4_1_0  OBJ       0
-    b_6_0_4_2_0  OBJ       0
-    b_6_0_4_3_0  OBJ       0
-    b_6_0_4_4_0  OBJ       0
-    b_6_0_4_5_0  OBJ       0
-    b_6_0_4_6_0  OBJ       0
-    b_6_0_4_7_0  OBJ       0
     b_6_0_5_0_0  OBJ       0.0985
     b_6_0_5_0_0  link_path_mapping_coordination_1_6_0_5_0  -1
     b_6_0_5_0_0  link_path_mapping_coordination_2_6_0_5_0  0.995
@@ -4793,67 +4896,28 @@ COLUMNS
     b_6_0_5_0_0  bandwidth_overprovisioning_3_6_0  -0.995
     b_6_0_5_0_0  bandwidth_max_limit_5_0  1
     b_6_0_5_0_0  minimum_profit  0.0985
-    b_6_0_5_1_0  OBJ       0
-    b_6_0_5_2_0  OBJ       0
-    b_6_0_5_3_0  OBJ       0
-    b_6_0_5_4_0  OBJ       0
-    b_6_0_5_5_0  OBJ       0
-    b_6_0_5_6_0  OBJ       0
-    b_6_0_5_7_0  OBJ       0
     b_6_0_6_0_0  OBJ       -0.001
     b_6_0_6_0_0  link_path_mapping_coordination_1_6_0_6_0  -1
     b_6_0_6_0_0  link_path_mapping_coordination_2_6_0_6_0  0.995
     b_6_0_6_0_0  node_path_mapping_coordination_1_6_0_0  0.995
     b_6_0_6_0_0  bandwidth_max_limit_6_0  1
     b_6_0_6_0_0  minimum_profit  -0.001
-    b_6_0_6_1_0  OBJ       0
-    b_6_0_6_2_0  OBJ       0
-    b_6_0_6_3_0  OBJ       0
-    b_6_0_6_4_0  OBJ       0
-    b_6_0_6_5_0  OBJ       0
-    b_6_0_6_6_0  OBJ       0
-    b_6_0_6_7_0  OBJ       0
     b_6_0_7_0_0  OBJ       -0.001
     b_6_0_7_0_0  link_path_mapping_coordination_1_6_0_7_0  -1
     b_6_0_7_0_0  link_path_mapping_coordination_2_6_0_7_0  0.995
     b_6_0_7_0_0  node_path_mapping_coordination_1_6_0_1  0.995
     b_6_0_7_0_0  bandwidth_max_limit_7_0  1
     b_6_0_7_0_0  minimum_profit  -0.001
-    b_6_0_7_1_0  OBJ       0
-    b_6_0_7_2_0  OBJ       0
-    b_6_0_7_3_0  OBJ       0
-    b_6_0_7_4_0  OBJ       0
-    b_6_0_7_5_0  OBJ       0
-    b_6_0_7_6_0  OBJ       0
-    b_6_0_7_7_0  OBJ       0
-    a_x1_5_0  OBJ       0
-    a_x1_5_1  OBJ       0
-    a_x1_5_2  OBJ       0
     a_x1_6_0  OBJ       0
     a_x1_6_1  OBJ       0
     a_x1_6_2  OBJ       0
-    a_x4_5_0_0  OBJ       0
-    a_x4_5_0_1  OBJ       0
-    a_x4_5_0_2  OBJ       0
     a_x4_6_0_0  OBJ       0
     a_x4_6_0_1  OBJ       0
     a_x4_6_0_2  OBJ       0
-    a_y1_5_0  OBJ       0
-    a_y1_5_1  OBJ       0
     a_y1_6_0  OBJ       0
     a_y1_6_1  OBJ       0
-    a_y2_5_0_0  OBJ       0
-    a_y2_5_0_1  OBJ       0
     a_y2_6_0_0  OBJ       0
     a_y2_6_0_1  OBJ       0
-    a_z1_5_0  OBJ       0
-    a_z1_5_1  OBJ       0
-    a_z1_5_2  OBJ       0
-    a_z1_5_3  OBJ       0
-    a_z1_5_4  OBJ       0
-    a_z1_5_5  OBJ       0
-    a_z1_5_6  OBJ       0
-    a_z1_5_7  OBJ       0
     a_z1_6_0  OBJ       0
     a_z1_6_1  OBJ       0
     a_z1_6_2  OBJ       0
@@ -4862,46 +4926,6 @@ COLUMNS
     a_z1_6_5  OBJ       0
     a_z1_6_6  OBJ       0
     a_z1_6_7  OBJ       0
-    a_z2_5_0_0  vp_unique_mapping_5_0  1
-    a_z2_5_0_0  auxiliary_constraints_3_1_5_0_0_0  1
-    a_z2_5_0_0  auxiliary_constraints_3_2_5_0_0  1
-    a_z2_5_0_0  auxiliary_constraints_6_3_5_0_7  -1
-    a_z2_5_0_0  auxiliary_constraints_8_4_5_0_0  -1
-    a_z2_5_0_1  vp_unique_mapping_5_0  1
-    a_z2_5_0_1  auxiliary_constraints_3_1_5_0_1_0  1
-    a_z2_5_0_1  auxiliary_constraints_3_2_5_0_1  1
-    a_z2_5_0_1  auxiliary_constraints_6_3_5_0_7  -1
-    a_z2_5_0_1  auxiliary_constraints_8_4_5_0_1  -1
-    a_z2_5_0_2  vp_unique_mapping_5_0  1
-    a_z2_5_0_2  auxiliary_constraints_3_1_5_0_2_0  1
-    a_z2_5_0_2  auxiliary_constraints_3_2_5_0_2  1
-    a_z2_5_0_2  auxiliary_constraints_6_3_5_0_7  -0.02
-    a_z2_5_0_2  auxiliary_constraints_8_4_5_0_2  -0.02
-    a_z2_5_0_3  vp_unique_mapping_5_0  1
-    a_z2_5_0_3  auxiliary_constraints_3_1_5_0_3_0  1
-    a_z2_5_0_3  auxiliary_constraints_3_2_5_0_3  1
-    a_z2_5_0_3  auxiliary_constraints_6_3_5_0_7  -0.02
-    a_z2_5_0_3  auxiliary_constraints_8_4_5_0_3  -0.02
-    a_z2_5_0_4  vp_unique_mapping_5_0  1
-    a_z2_5_0_4  auxiliary_constraints_3_1_5_0_4_0  1
-    a_z2_5_0_4  auxiliary_constraints_3_2_5_0_4  1
-    a_z2_5_0_4  auxiliary_constraints_6_3_5_0_7  -10
-    a_z2_5_0_4  auxiliary_constraints_8_4_5_0_4  -10
-    a_z2_5_0_5  vp_unique_mapping_5_0  1
-    a_z2_5_0_5  auxiliary_constraints_3_1_5_0_5_0  1
-    a_z2_5_0_5  auxiliary_constraints_3_2_5_0_5  1
-    a_z2_5_0_5  auxiliary_constraints_6_3_5_0_7  -10
-    a_z2_5_0_5  auxiliary_constraints_8_4_5_0_5  -10
-    a_z2_5_0_6  vp_unique_mapping_5_0  1
-    a_z2_5_0_6  auxiliary_constraints_3_1_5_0_6_0  1
-    a_z2_5_0_6  auxiliary_constraints_3_2_5_0_6  1
-    a_z2_5_0_6  auxiliary_constraints_6_3_5_0_7  -10
-    a_z2_5_0_6  auxiliary_constraints_8_4_5_0_6  -10
-    a_z2_5_0_7  vp_unique_mapping_5_0  1
-    a_z2_5_0_7  auxiliary_constraints_3_1_5_0_7_0  1
-    a_z2_5_0_7  auxiliary_constraints_3_2_5_0_7  1
-    a_z2_5_0_7  auxiliary_constraints_6_3_5_0_7  -10
-    a_z2_5_0_7  auxiliary_constraints_8_4_5_0_7  -10
     a_z2_6_0_0  vp_unique_mapping_6_0  1
     a_z2_6_0_0  auxiliary_constraints_3_1_6_0_0_0  1
     a_z2_6_0_0  auxiliary_constraints_3_2_6_0_0  1
@@ -4942,19 +4966,6 @@ COLUMNS
     a_z2_6_0_7  auxiliary_constraints_3_2_6_0_7  1
     a_z2_6_0_7  auxiliary_constraints_6_3_6_0_7  -10
     a_z2_6_0_7  auxiliary_constraints_8_4_6_0_7  -10
-    a_z3_5_0  OBJ       -0.001
-    a_z3_5_0  auxiliary_constraints_6_3_5_0_7  1
-    a_z3_5_0  auxiliary_constraints_7_5_0  1
-    a_z3_5_0  auxiliary_constraints_8_1_5_0  1
-    a_z3_5_0  auxiliary_constraints_8_4_5_0_0  1
-    a_z3_5_0  auxiliary_constraints_8_4_5_0_1  1
-    a_z3_5_0  auxiliary_constraints_8_4_5_0_2  1
-    a_z3_5_0  auxiliary_constraints_8_4_5_0_3  1
-    a_z3_5_0  auxiliary_constraints_8_4_5_0_4  1
-    a_z3_5_0  auxiliary_constraints_8_4_5_0_5  1
-    a_z3_5_0  auxiliary_constraints_8_4_5_0_6  1
-    a_z3_5_0  auxiliary_constraints_8_4_5_0_7  1
-    a_z3_5_0  minimum_profit  -0.001
     a_z3_6_0  OBJ       -0.001
     a_z3_6_0  auxiliary_constraints_6_3_6_0_7  1
     a_z3_6_0  auxiliary_constraints_7_6_0  1
@@ -4968,15 +4979,6 @@ COLUMNS
     a_z3_6_0  auxiliary_constraints_8_4_6_0_6  1
     a_z3_6_0  auxiliary_constraints_8_4_6_0_7  1
     a_z3_6_0  minimum_profit  -0.001
-    a_z4_5_0  auxiliary_constraints_8_1_5_0  -1000
-    a_z4_5_0  auxiliary_constraints_8_4_5_0_0  1000
-    a_z4_5_0  auxiliary_constraints_8_4_5_0_1  1000
-    a_z4_5_0  auxiliary_constraints_8_4_5_0_2  1000
-    a_z4_5_0  auxiliary_constraints_8_4_5_0_3  1000
-    a_z4_5_0  auxiliary_constraints_8_4_5_0_4  1000
-    a_z4_5_0  auxiliary_constraints_8_4_5_0_5  1000
-    a_z4_5_0  auxiliary_constraints_8_4_5_0_6  1000
-    a_z4_5_0  auxiliary_constraints_8_4_5_0_7  1000
     a_z4_6_0  auxiliary_constraints_8_1_6_0  -1000
     a_z4_6_0  auxiliary_constraints_8_4_6_0_0  1000
     a_z4_6_0  auxiliary_constraints_8_4_6_0_1  1000
@@ -4986,366 +4988,554 @@ COLUMNS
     a_z4_6_0  auxiliary_constraints_8_4_6_0_5  1000
     a_z4_6_0  auxiliary_constraints_8_4_6_0_6  1000
     a_z4_6_0  auxiliary_constraints_8_4_6_0_7  1000
-    x_7_0_0   OBJ       -1.3636363636363635e+00
+    b_6_0_0_1_0  OBJ       0
+    b_6_0_0_2_0  OBJ       0
+    b_6_0_0_3_0  OBJ       0
+    b_6_0_0_4_0  OBJ       0
+    b_6_0_0_5_0  OBJ       0
+    b_6_0_0_6_0  OBJ       0
+    b_6_0_0_7_0  OBJ       0
+    b_6_0_1_1_0  OBJ       0
+    b_6_0_1_2_0  OBJ       0
+    b_6_0_1_3_0  OBJ       0
+    b_6_0_1_4_0  OBJ       0
+    b_6_0_1_5_0  OBJ       0
+    b_6_0_1_6_0  OBJ       0
+    b_6_0_1_7_0  OBJ       0
+    b_6_0_2_1_0  OBJ       0
+    b_6_0_2_2_0  OBJ       0
+    b_6_0_2_3_0  OBJ       0
+    b_6_0_2_4_0  OBJ       0
+    b_6_0_2_5_0  OBJ       0
+    b_6_0_2_6_0  OBJ       0
+    b_6_0_2_7_0  OBJ       0
+    b_6_0_3_1_0  OBJ       0
+    b_6_0_3_2_0  OBJ       0
+    b_6_0_3_3_0  OBJ       0
+    b_6_0_3_4_0  OBJ       0
+    b_6_0_3_5_0  OBJ       0
+    b_6_0_3_6_0  OBJ       0
+    b_6_0_3_7_0  OBJ       0
+    b_6_0_4_1_0  OBJ       0
+    b_6_0_4_2_0  OBJ       0
+    b_6_0_4_3_0  OBJ       0
+    b_6_0_4_4_0  OBJ       0
+    b_6_0_4_5_0  OBJ       0
+    b_6_0_4_6_0  OBJ       0
+    b_6_0_4_7_0  OBJ       0
+    b_6_0_5_1_0  OBJ       0
+    b_6_0_5_2_0  OBJ       0
+    b_6_0_5_3_0  OBJ       0
+    b_6_0_5_4_0  OBJ       0
+    b_6_0_5_5_0  OBJ       0
+    b_6_0_5_6_0  OBJ       0
+    b_6_0_5_7_0  OBJ       0
+    b_6_0_6_1_0  OBJ       0
+    b_6_0_6_2_0  OBJ       0
+    b_6_0_6_3_0  OBJ       0
+    b_6_0_6_4_0  OBJ       0
+    b_6_0_6_5_0  OBJ       0
+    b_6_0_6_6_0  OBJ       0
+    b_6_0_6_7_0  OBJ       0
+    b_6_0_7_1_0  OBJ       0
+    b_6_0_7_2_0  OBJ       0
+    b_6_0_7_3_0  OBJ       0
+    b_6_0_7_4_0  OBJ       0
+    b_6_0_7_5_0  OBJ       0
+    b_6_0_7_6_0  OBJ       0
+    b_6_0_7_7_0  OBJ       0
+    x_7_0_0   OBJ       -125
     x_7_0_0   nf_unique_mapping_7_0  1
     x_7_0_0   mips_limit_1_7_0_0  0.01
-    x_7_0_0   mips_limit_2_7_0_0  -0.6
-    x_7_0_0   node_path_mapping_coordination_1_7_0_0  -10000
+    x_7_0_0   mips_limit_2_7_0_0  -1
+    x_7_0_0   node_path_mapping_coordination_1_7_0_0  -12500
     x_7_0_0   auxiliary_constraints_8_1_7_0_0  -1
     x_7_0_0   nf_regular_isolation_limit_7_0_0  1
-    x_7_0_0   mips_max_limit_1_0  1.3636363636363635e-01
-    x_7_0_0   mips_max_limit_2_0  2.7272727272727271e-02
+    x_7_0_0   mips_max_limit_1_0  12.5
+    x_7_0_0   mips_max_limit_2_0  5
     x_7_0_0   auxiliary_constraints_8_2_0  -1
-    x_7_0_0   minimum_profit  -1.3636363636363635e+00
-    x_7_0_1   OBJ       -1.3636363636363635e+00
+    x_7_0_0   minimum_profit  -125
+    x_7_0_1   OBJ       -225
     x_7_0_1   nf_unique_mapping_7_0  1
     x_7_0_1   mips_limit_1_7_0_1  0.01
-    x_7_0_1   mips_limit_2_7_0_1  -0.6
-    x_7_0_1   node_path_mapping_coordination_1_7_0_1  -10000
+    x_7_0_1   mips_limit_2_7_0_1  -1
+    x_7_0_1   node_path_mapping_coordination_1_7_0_1  -12500
     x_7_0_1   auxiliary_constraints_8_1_7_0_1  -1
     x_7_0_1   nf_regular_isolation_limit_7_0_1  1
-    x_7_0_1   mips_max_limit_1_1  1.3636363636363635e-01
-    x_7_0_1   mips_max_limit_2_1  2.7272727272727271e-02
+    x_7_0_1   mips_max_limit_1_1  12.5
+    x_7_0_1   mips_max_limit_2_1  5
     x_7_0_1   auxiliary_constraints_8_2_1  -1
-    x_7_0_1   minimum_profit  -1.3636363636363635e+00
-    x_7_0_2   OBJ       -1.3636363636363638e-01
+    x_7_0_1   minimum_profit  -225
+    x_7_0_2   OBJ       -225
     x_7_0_2   nf_unique_mapping_7_0  1
     x_7_0_2   mips_limit_1_7_0_2  0.01
-    x_7_0_2   mips_limit_2_7_0_2  -0.6
-    x_7_0_2   node_path_mapping_coordination_1_7_0_2  -10000
+    x_7_0_2   mips_limit_2_7_0_2  -1
+    x_7_0_2   node_path_mapping_coordination_1_7_0_2  -12500
     x_7_0_2   auxiliary_constraints_8_1_7_0_2  -1
     x_7_0_2   nf_regular_isolation_limit_7_0_2  1
-    x_7_0_2   mips_max_limit_1_2  1.3636363636363637e-02
-    x_7_0_2   mips_max_limit_2_2  2.7272727272727275e-03
+    x_7_0_2   mips_max_limit_1_2  12.5
+    x_7_0_2   mips_max_limit_2_2  5
     x_7_0_2   auxiliary_constraints_8_2_2  -1
-    x_7_0_2   minimum_profit  -1.3636363636363638e-01
-    y_7_0_0_0_0  OBJ       0
-    y_7_0_0_0_1  OBJ       -0.9
+    x_7_0_2   minimum_profit  -225
+    y_7_0_0_0_0  OBJ       -693
+    y_7_0_0_0_0  minimum_profit  -693
+    y_7_0_0_0_1  OBJ       -594
     y_7_0_0_0_1  ru_unique_mapping_7_0  1
     y_7_0_0_0_1  radio_overprovision_7_0_0  1
-    y_7_0_0_0_1  node_path_mapping_coordination_2_7_0_0  -10000
+    y_7_0_0_0_1  node_path_mapping_coordination_2_7_0_0  -12500
     y_7_0_0_0_1  ru_regular_isolation_limit_7_0_0  1
-    y_7_0_0_0_1  radio_max_limit_0_0  180
-    y_7_0_0_0_1  minimum_profit  -0.9
-    y_7_0_0_0_2  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_3  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_4  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_5  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_6  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_7  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_8  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_9  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_10  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_11  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_12  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_13  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_14  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_15  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_16  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_17  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_18  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_19  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_20  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_21  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_22  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_23  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_24  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_25  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_26  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_27  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_28  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_29  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_30  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_31  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_32  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_33  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_34  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_35  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_36  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_37  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_38  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_39  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_40  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_41  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_42  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_43  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_44  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_45  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_46  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_47  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_48  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_49  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_50  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_51  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_52  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_53  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_54  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_55  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_56  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_57  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_58  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_59  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_60  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_61  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_62  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_63  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_64  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_65  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_66  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_67  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_68  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_69  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_70  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_71  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_72  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_73  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_74  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_75  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_76  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_77  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_78  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_79  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_80  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_81  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_82  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_83  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_84  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_85  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_86  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_87  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_88  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_89  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_90  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_91  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_92  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_93  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_94  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_95  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_96  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_97  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_98  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_99  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_0_0_100  node_path_mapping_coordination_2_7_0_0  -10000
-    y_7_0_1_0_0  OBJ       0
-    y_7_0_1_0_1  OBJ       -0.9
+    y_7_0_0_0_1  radio_max_limit_0_0  873
+    y_7_0_0_0_1  minimum_profit  -594
+    y_7_0_0_0_2  OBJ       -495
+    y_7_0_0_0_2  ru_unique_mapping_7_0  1
+    y_7_0_0_0_2  radio_overprovision_7_0_0  2
+    y_7_0_0_0_2  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_2  ru_regular_isolation_limit_7_0_0  1
+    y_7_0_0_0_2  radio_max_limit_0_0  1053
+    y_7_0_0_0_2  minimum_profit  -495
+    y_7_0_0_0_3  OBJ       -396
+    y_7_0_0_0_3  ru_unique_mapping_7_0  1
+    y_7_0_0_0_3  radio_overprovision_7_0_0  3
+    y_7_0_0_0_3  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_3  ru_regular_isolation_limit_7_0_0  1
+    y_7_0_0_0_3  radio_max_limit_0_0  1233
+    y_7_0_0_0_3  minimum_profit  -396
+    y_7_0_0_0_4  OBJ       -297
+    y_7_0_0_0_4  ru_unique_mapping_7_0  1
+    y_7_0_0_0_4  radio_overprovision_7_0_0  4
+    y_7_0_0_0_4  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_4  ru_regular_isolation_limit_7_0_0  1
+    y_7_0_0_0_4  radio_max_limit_0_0  1413
+    y_7_0_0_0_4  minimum_profit  -297
+    y_7_0_0_0_5  OBJ       -198
+    y_7_0_0_0_5  ru_unique_mapping_7_0  1
+    y_7_0_0_0_5  radio_overprovision_7_0_0  5
+    y_7_0_0_0_5  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_5  ru_regular_isolation_limit_7_0_0  1
+    y_7_0_0_0_5  radio_max_limit_0_0  1593
+    y_7_0_0_0_5  minimum_profit  -198
+    y_7_0_0_0_6  OBJ       -99
+    y_7_0_0_0_6  ru_unique_mapping_7_0  1
+    y_7_0_0_0_6  radio_overprovision_7_0_0  6
+    y_7_0_0_0_6  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_6  ru_regular_isolation_limit_7_0_0  1
+    y_7_0_0_0_6  radio_max_limit_0_0  1773
+    y_7_0_0_0_6  minimum_profit  -99
+    y_7_0_0_0_7  ru_unique_mapping_7_0  1
+    y_7_0_0_0_7  radio_overprovision_7_0_0  7
+    y_7_0_0_0_7  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_7  ru_regular_isolation_limit_7_0_0  1
+    y_7_0_0_0_7  radio_max_limit_0_0  1953
+    y_7_0_0_0_8  OBJ       99
+    y_7_0_0_0_8  ru_unique_mapping_7_0  1
+    y_7_0_0_0_8  radio_overprovision_7_0_0  8
+    y_7_0_0_0_8  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_8  ru_regular_isolation_limit_7_0_0  1
+    y_7_0_0_0_8  radio_max_limit_0_0  2133
+    y_7_0_0_0_8  minimum_profit  99
+    y_7_0_0_0_9  OBJ       198
+    y_7_0_0_0_9  ru_unique_mapping_7_0  1
+    y_7_0_0_0_9  radio_overprovision_7_0_0  9
+    y_7_0_0_0_9  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_9  ru_regular_isolation_limit_7_0_0  1
+    y_7_0_0_0_9  radio_max_limit_0_0  2313
+    y_7_0_0_0_9  minimum_profit  198
+    y_7_0_0_0_10  OBJ       297
+    y_7_0_0_0_10  ru_unique_mapping_7_0  1
+    y_7_0_0_0_10  radio_overprovision_7_0_0  10
+    y_7_0_0_0_10  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_10  ru_regular_isolation_limit_7_0_0  1
+    y_7_0_0_0_10  radio_max_limit_0_0  2493
+    y_7_0_0_0_10  minimum_profit  297
+    y_7_0_0_0_11  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_12  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_13  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_14  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_15  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_16  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_17  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_18  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_19  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_20  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_21  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_22  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_23  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_24  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_25  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_26  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_27  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_28  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_29  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_30  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_31  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_32  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_33  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_34  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_35  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_36  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_37  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_38  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_39  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_40  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_41  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_42  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_43  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_44  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_45  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_46  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_47  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_48  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_49  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_50  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_51  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_52  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_53  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_54  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_55  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_56  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_57  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_58  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_59  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_60  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_61  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_62  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_63  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_64  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_65  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_66  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_67  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_68  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_69  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_70  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_71  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_72  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_73  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_74  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_75  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_76  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_77  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_78  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_79  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_80  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_81  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_82  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_83  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_84  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_85  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_86  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_87  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_88  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_89  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_90  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_91  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_92  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_93  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_94  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_95  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_96  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_97  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_98  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_99  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_0_0_100  node_path_mapping_coordination_2_7_0_0  -12500
+    y_7_0_1_0_0  OBJ       -693
+    y_7_0_1_0_0  minimum_profit  -693
+    y_7_0_1_0_1  OBJ       -694
     y_7_0_1_0_1  ru_unique_mapping_7_0  1
     y_7_0_1_0_1  radio_overprovision_7_0_1  1
-    y_7_0_1_0_1  node_path_mapping_coordination_2_7_0_1  -10000
+    y_7_0_1_0_1  node_path_mapping_coordination_2_7_0_1  -12500
     y_7_0_1_0_1  ru_regular_isolation_limit_7_0_1  1
-    y_7_0_1_0_1  radio_max_limit_1_0  180
-    y_7_0_1_0_1  minimum_profit  -0.9
-    y_7_0_1_0_2  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_3  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_4  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_5  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_6  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_7  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_8  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_9  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_10  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_11  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_12  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_13  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_14  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_15  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_16  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_17  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_18  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_19  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_20  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_21  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_22  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_23  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_24  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_25  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_26  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_27  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_28  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_29  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_30  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_31  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_32  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_33  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_34  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_35  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_36  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_37  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_38  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_39  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_40  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_41  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_42  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_43  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_44  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_45  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_46  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_47  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_48  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_49  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_50  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_51  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_52  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_53  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_54  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_55  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_56  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_57  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_58  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_59  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_60  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_61  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_62  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_63  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_64  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_65  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_66  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_67  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_68  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_69  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_70  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_71  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_72  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_73  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_74  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_75  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_76  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_77  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_78  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_79  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_80  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_81  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_82  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_83  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_84  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_85  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_86  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_87  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_88  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_89  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_90  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_91  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_92  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_93  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_94  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_95  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_96  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_97  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_98  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_99  node_path_mapping_coordination_2_7_0_1  -10000
-    y_7_0_1_0_100  node_path_mapping_coordination_2_7_0_1  -10000
+    y_7_0_1_0_1  radio_max_limit_1_0  873
+    y_7_0_1_0_1  minimum_profit  -694
+    y_7_0_1_0_2  OBJ       -595
+    y_7_0_1_0_2  ru_unique_mapping_7_0  1
+    y_7_0_1_0_2  radio_overprovision_7_0_1  2
+    y_7_0_1_0_2  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_2  ru_regular_isolation_limit_7_0_1  1
+    y_7_0_1_0_2  radio_max_limit_1_0  1053
+    y_7_0_1_0_2  minimum_profit  -595
+    y_7_0_1_0_3  OBJ       -496
+    y_7_0_1_0_3  ru_unique_mapping_7_0  1
+    y_7_0_1_0_3  radio_overprovision_7_0_1  3
+    y_7_0_1_0_3  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_3  ru_regular_isolation_limit_7_0_1  1
+    y_7_0_1_0_3  radio_max_limit_1_0  1233
+    y_7_0_1_0_3  minimum_profit  -496
+    y_7_0_1_0_4  OBJ       -397
+    y_7_0_1_0_4  ru_unique_mapping_7_0  1
+    y_7_0_1_0_4  radio_overprovision_7_0_1  4
+    y_7_0_1_0_4  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_4  ru_regular_isolation_limit_7_0_1  1
+    y_7_0_1_0_4  radio_max_limit_1_0  1413
+    y_7_0_1_0_4  minimum_profit  -397
+    y_7_0_1_0_5  OBJ       -298
+    y_7_0_1_0_5  ru_unique_mapping_7_0  1
+    y_7_0_1_0_5  radio_overprovision_7_0_1  5
+    y_7_0_1_0_5  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_5  ru_regular_isolation_limit_7_0_1  1
+    y_7_0_1_0_5  radio_max_limit_1_0  1593
+    y_7_0_1_0_5  minimum_profit  -298
+    y_7_0_1_0_6  OBJ       -199
+    y_7_0_1_0_6  ru_unique_mapping_7_0  1
+    y_7_0_1_0_6  radio_overprovision_7_0_1  6
+    y_7_0_1_0_6  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_6  ru_regular_isolation_limit_7_0_1  1
+    y_7_0_1_0_6  radio_max_limit_1_0  1773
+    y_7_0_1_0_6  minimum_profit  -199
+    y_7_0_1_0_7  OBJ       -100
+    y_7_0_1_0_7  ru_unique_mapping_7_0  1
+    y_7_0_1_0_7  radio_overprovision_7_0_1  7
+    y_7_0_1_0_7  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_7  ru_regular_isolation_limit_7_0_1  1
+    y_7_0_1_0_7  radio_max_limit_1_0  1953
+    y_7_0_1_0_7  minimum_profit  -100
+    y_7_0_1_0_8  OBJ       -1
+    y_7_0_1_0_8  ru_unique_mapping_7_0  1
+    y_7_0_1_0_8  radio_overprovision_7_0_1  8
+    y_7_0_1_0_8  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_8  ru_regular_isolation_limit_7_0_1  1
+    y_7_0_1_0_8  radio_max_limit_1_0  2133
+    y_7_0_1_0_8  minimum_profit  -1
+    y_7_0_1_0_9  OBJ       98
+    y_7_0_1_0_9  ru_unique_mapping_7_0  1
+    y_7_0_1_0_9  radio_overprovision_7_0_1  9
+    y_7_0_1_0_9  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_9  ru_regular_isolation_limit_7_0_1  1
+    y_7_0_1_0_9  radio_max_limit_1_0  2313
+    y_7_0_1_0_9  minimum_profit  98
+    y_7_0_1_0_10  OBJ       197
+    y_7_0_1_0_10  ru_unique_mapping_7_0  1
+    y_7_0_1_0_10  radio_overprovision_7_0_1  10
+    y_7_0_1_0_10  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_10  ru_regular_isolation_limit_7_0_1  1
+    y_7_0_1_0_10  radio_max_limit_1_0  2493
+    y_7_0_1_0_10  minimum_profit  197
+    y_7_0_1_0_11  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_12  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_13  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_14  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_15  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_16  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_17  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_18  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_19  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_20  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_21  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_22  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_23  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_24  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_25  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_26  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_27  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_28  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_29  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_30  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_31  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_32  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_33  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_34  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_35  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_36  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_37  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_38  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_39  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_40  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_41  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_42  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_43  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_44  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_45  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_46  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_47  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_48  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_49  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_50  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_51  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_52  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_53  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_54  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_55  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_56  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_57  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_58  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_59  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_60  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_61  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_62  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_63  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_64  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_65  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_66  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_67  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_68  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_69  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_70  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_71  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_72  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_73  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_74  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_75  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_76  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_77  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_78  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_79  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_80  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_81  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_82  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_83  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_84  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_85  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_86  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_87  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_88  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_89  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_90  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_91  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_92  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_93  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_94  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_95  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_96  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_97  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_98  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_99  node_path_mapping_coordination_2_7_0_1  -12500
+    y_7_0_1_0_100  node_path_mapping_coordination_2_7_0_1  -12500
+    z_7_0_0_0  OBJ       -12.5
     z_7_0_0_0  link_regular_isolation_limit_7_0_0  1
     z_7_0_0_0  link_path_mapping_coordination_1_7_0_0_0  0.01
-    z_7_0_0_0  link_path_mapping_coordination_2_7_0_0_0  -10000
+    z_7_0_0_0  link_path_mapping_coordination_2_7_0_0_0  -12500
     z_7_0_0_0  auxiliary_constraints_3_1_7_0_0_0  -1
     z_7_0_0_0  auxiliary_constraints_3_2_7_0_0  -1
+    z_7_0_0_0  bandwidth_max_limit_0_0  12500
+    z_7_0_0_0  minimum_profit  -12.5
+    z_7_0_1_0  OBJ       -12.5
     z_7_0_1_0  link_regular_isolation_limit_7_0_1  1
     z_7_0_1_0  link_path_mapping_coordination_1_7_0_1_0  0.01
-    z_7_0_1_0  link_path_mapping_coordination_2_7_0_1_0  -10000
+    z_7_0_1_0  link_path_mapping_coordination_2_7_0_1_0  -12500
     z_7_0_1_0  auxiliary_constraints_3_1_7_0_1_0  -1
     z_7_0_1_0  auxiliary_constraints_3_2_7_0_1  -1
+    z_7_0_1_0  bandwidth_max_limit_1_0  12500
+    z_7_0_1_0  minimum_profit  -12.5
+    z_7_0_2_0  OBJ       -12.5
     z_7_0_2_0  link_regular_isolation_limit_7_0_2  1
     z_7_0_2_0  link_path_mapping_coordination_1_7_0_2_0  0.01
-    z_7_0_2_0  link_path_mapping_coordination_2_7_0_2_0  -10000
+    z_7_0_2_0  link_path_mapping_coordination_2_7_0_2_0  -12500
     z_7_0_2_0  auxiliary_constraints_3_1_7_0_2_0  -1
     z_7_0_2_0  auxiliary_constraints_3_2_7_0_2  -1
+    z_7_0_2_0  bandwidth_max_limit_2_0  12500
+    z_7_0_2_0  minimum_profit  -12.5
+    z_7_0_3_0  OBJ       -12.5
     z_7_0_3_0  link_regular_isolation_limit_7_0_3  1
     z_7_0_3_0  link_path_mapping_coordination_1_7_0_3_0  0.01
-    z_7_0_3_0  link_path_mapping_coordination_2_7_0_3_0  -10000
+    z_7_0_3_0  link_path_mapping_coordination_2_7_0_3_0  -12500
     z_7_0_3_0  auxiliary_constraints_3_1_7_0_3_0  -1
     z_7_0_3_0  auxiliary_constraints_3_2_7_0_3  -1
+    z_7_0_3_0  bandwidth_max_limit_3_0  12500
+    z_7_0_3_0  minimum_profit  -12.5
+    z_7_0_4_0  OBJ       -12.5
     z_7_0_4_0  link_regular_isolation_limit_7_0_4  1
     z_7_0_4_0  link_path_mapping_coordination_1_7_0_4_0  0.01
-    z_7_0_4_0  link_path_mapping_coordination_2_7_0_4_0  -10000
+    z_7_0_4_0  link_path_mapping_coordination_2_7_0_4_0  -12500
     z_7_0_4_0  auxiliary_constraints_3_1_7_0_4_0  -1
     z_7_0_4_0  auxiliary_constraints_3_2_7_0_4  -1
+    z_7_0_4_0  bandwidth_max_limit_4_0  12500
+    z_7_0_4_0  minimum_profit  -12.5
+    z_7_0_5_0  OBJ       -12.5
     z_7_0_5_0  link_regular_isolation_limit_7_0_5  1
     z_7_0_5_0  link_path_mapping_coordination_1_7_0_5_0  0.01
-    z_7_0_5_0  link_path_mapping_coordination_2_7_0_5_0  -10000
+    z_7_0_5_0  link_path_mapping_coordination_2_7_0_5_0  -12500
     z_7_0_5_0  auxiliary_constraints_3_1_7_0_5_0  -1
     z_7_0_5_0  auxiliary_constraints_3_2_7_0_5  -1
+    z_7_0_5_0  bandwidth_max_limit_5_0  12500
+    z_7_0_5_0  minimum_profit  -12.5
+    z_7_0_6_0  OBJ       -12.5
     z_7_0_6_0  link_regular_isolation_limit_7_0_6  1
     z_7_0_6_0  link_path_mapping_coordination_1_7_0_6_0  0.01
-    z_7_0_6_0  link_path_mapping_coordination_2_7_0_6_0  -10000
+    z_7_0_6_0  link_path_mapping_coordination_2_7_0_6_0  -12500
     z_7_0_6_0  auxiliary_constraints_3_1_7_0_6_0  -1
     z_7_0_6_0  auxiliary_constraints_3_2_7_0_6  -1
+    z_7_0_6_0  bandwidth_max_limit_6_0  12500
+    z_7_0_6_0  minimum_profit  -12.5
+    z_7_0_7_0  OBJ       -12.5
     z_7_0_7_0  link_regular_isolation_limit_7_0_7  1
     z_7_0_7_0  link_path_mapping_coordination_1_7_0_7_0  0.01
-    z_7_0_7_0  link_path_mapping_coordination_2_7_0_7_0  -10000
+    z_7_0_7_0  link_path_mapping_coordination_2_7_0_7_0  -12500
     z_7_0_7_0  auxiliary_constraints_3_1_7_0_7_0  -1
     z_7_0_7_0  auxiliary_constraints_3_2_7_0_7  -1
-    c_7_0_0   OBJ       90
+    z_7_0_7_0  bandwidth_max_limit_7_0  12500
+    z_7_0_7_0  minimum_profit  -12.5
+    c_7_0_0   OBJ       9990
     c_7_0_0   mips_limit_1_7_0_0  -1
     c_7_0_0   mips_limit_2_7_0_0  1
     c_7_0_0   mips_max_limit_1_0  1
-    c_7_0_0   minimum_profit  90
-    c_7_0_1   OBJ       90
+    c_7_0_0   minimum_profit  9990
+    c_7_0_1   OBJ       9990
     c_7_0_1   mips_limit_1_7_0_1  -1
     c_7_0_1   mips_limit_2_7_0_1  1
     c_7_0_1   mips_max_limit_1_1  1
-    c_7_0_1   minimum_profit  90
-    c_7_0_2   OBJ       90
+    c_7_0_1   minimum_profit  9990
+    c_7_0_2   OBJ       9990
     c_7_0_2   mips_limit_1_7_0_2  -1
     c_7_0_2   mips_limit_2_7_0_2  1
     c_7_0_2   mips_max_limit_1_2  1
-    c_7_0_2   minimum_profit  90
-    b_7_0_0_0_0  OBJ       0.0985
+    c_7_0_2   minimum_profit  9990
+    b_7_0_0_0_0  OBJ       0.999
     b_7_0_0_0_0  link_path_mapping_coordination_1_7_0_0_0  -1
-    b_7_0_0_0_0  link_path_mapping_coordination_2_7_0_0_0  0.995
-    b_7_0_0_0_0  node_path_mapping_coordination_1_7_0_0  0.995
-    b_7_0_0_0_0  node_path_mapping_coordination_2_7_0_0  0.995
-    b_7_0_0_0_0  bandwidth_overprovisioning_3_7_0  -0.995
+    b_7_0_0_0_0  link_path_mapping_coordination_2_7_0_0_0  1
+    b_7_0_0_0_0  node_path_mapping_coordination_1_7_0_0  1
+    b_7_0_0_0_0  node_path_mapping_coordination_2_7_0_0  1
+    b_7_0_0_0_0  bandwidth_overprovisioning_3_7_0  -1
     b_7_0_0_0_0  bandwidth_max_limit_0_0  1
-    b_7_0_0_0_0  minimum_profit  0.0985
-    b_7_0_1_0_0  OBJ       0.0985
+    b_7_0_0_0_0  minimum_profit  0.999
+    b_7_0_1_0_0  OBJ       0.999
     b_7_0_1_0_0  link_path_mapping_coordination_1_7_0_1_0  -1
-    b_7_0_1_0_0  link_path_mapping_coordination_2_7_0_1_0  0.995
-    b_7_0_1_0_0  node_path_mapping_coordination_1_7_0_0  0.995
-    b_7_0_1_0_0  node_path_mapping_coordination_2_7_0_1  0.995
-    b_7_0_1_0_0  bandwidth_overprovisioning_3_7_0  -0.995
+    b_7_0_1_0_0  link_path_mapping_coordination_2_7_0_1_0  1
+    b_7_0_1_0_0  node_path_mapping_coordination_1_7_0_0  1
+    b_7_0_1_0_0  node_path_mapping_coordination_2_7_0_1  1
+    b_7_0_1_0_0  bandwidth_overprovisioning_3_7_0  -1
     b_7_0_1_0_0  bandwidth_max_limit_1_0  1
-    b_7_0_1_0_0  minimum_profit  0.0985
-    b_7_0_2_0_0  OBJ       0.0985
+    b_7_0_1_0_0  minimum_profit  0.999
+    b_7_0_2_0_0  OBJ       0.999
     b_7_0_2_0_0  link_path_mapping_coordination_1_7_0_2_0  -1
-    b_7_0_2_0_0  link_path_mapping_coordination_2_7_0_2_0  0.995
-    b_7_0_2_0_0  node_path_mapping_coordination_1_7_0_1  0.995
-    b_7_0_2_0_0  node_path_mapping_coordination_2_7_0_0  0.995
-    b_7_0_2_0_0  bandwidth_overprovisioning_3_7_0  -0.995
+    b_7_0_2_0_0  link_path_mapping_coordination_2_7_0_2_0  1
+    b_7_0_2_0_0  node_path_mapping_coordination_1_7_0_1  1
+    b_7_0_2_0_0  node_path_mapping_coordination_2_7_0_0  1
+    b_7_0_2_0_0  bandwidth_overprovisioning_3_7_0  -1
     b_7_0_2_0_0  bandwidth_max_limit_2_0  1
-    b_7_0_2_0_0  minimum_profit  0.0985
-    b_7_0_3_0_0  OBJ       0.0985
+    b_7_0_2_0_0  minimum_profit  0.999
+    b_7_0_3_0_0  OBJ       0.999
     b_7_0_3_0_0  link_path_mapping_coordination_1_7_0_3_0  -1
-    b_7_0_3_0_0  link_path_mapping_coordination_2_7_0_3_0  0.995
-    b_7_0_3_0_0  node_path_mapping_coordination_1_7_0_1  0.995
-    b_7_0_3_0_0  node_path_mapping_coordination_2_7_0_1  0.995
-    b_7_0_3_0_0  bandwidth_overprovisioning_3_7_0  -0.995
+    b_7_0_3_0_0  link_path_mapping_coordination_2_7_0_3_0  1
+    b_7_0_3_0_0  node_path_mapping_coordination_1_7_0_1  1
+    b_7_0_3_0_0  node_path_mapping_coordination_2_7_0_1  1
+    b_7_0_3_0_0  bandwidth_overprovisioning_3_7_0  -1
     b_7_0_3_0_0  bandwidth_max_limit_3_0  1
-    b_7_0_3_0_0  minimum_profit  0.0985
-    b_7_0_4_0_0  OBJ       0.0985
+    b_7_0_3_0_0  minimum_profit  0.999
+    b_7_0_4_0_0  OBJ       0.999
     b_7_0_4_0_0  link_path_mapping_coordination_1_7_0_4_0  -1
-    b_7_0_4_0_0  link_path_mapping_coordination_2_7_0_4_0  0.995
-    b_7_0_4_0_0  node_path_mapping_coordination_1_7_0_2  0.995
-    b_7_0_4_0_0  node_path_mapping_coordination_2_7_0_0  0.995
-    b_7_0_4_0_0  bandwidth_overprovisioning_3_7_0  -0.995
+    b_7_0_4_0_0  link_path_mapping_coordination_2_7_0_4_0  1
+    b_7_0_4_0_0  node_path_mapping_coordination_1_7_0_2  1
+    b_7_0_4_0_0  node_path_mapping_coordination_2_7_0_0  1
+    b_7_0_4_0_0  bandwidth_overprovisioning_3_7_0  -1
     b_7_0_4_0_0  bandwidth_max_limit_4_0  1
-    b_7_0_4_0_0  minimum_profit  0.0985
-    b_7_0_5_0_0  OBJ       0.0985
+    b_7_0_4_0_0  minimum_profit  0.999
+    b_7_0_5_0_0  OBJ       0.999
     b_7_0_5_0_0  link_path_mapping_coordination_1_7_0_5_0  -1
-    b_7_0_5_0_0  link_path_mapping_coordination_2_7_0_5_0  0.995
-    b_7_0_5_0_0  node_path_mapping_coordination_1_7_0_2  0.995
-    b_7_0_5_0_0  node_path_mapping_coordination_2_7_0_1  0.995
-    b_7_0_5_0_0  bandwidth_overprovisioning_3_7_0  -0.995
+    b_7_0_5_0_0  link_path_mapping_coordination_2_7_0_5_0  1
+    b_7_0_5_0_0  node_path_mapping_coordination_1_7_0_2  1
+    b_7_0_5_0_0  node_path_mapping_coordination_2_7_0_1  1
+    b_7_0_5_0_0  bandwidth_overprovisioning_3_7_0  -1
     b_7_0_5_0_0  bandwidth_max_limit_5_0  1
-    b_7_0_5_0_0  minimum_profit  0.0985
+    b_7_0_5_0_0  minimum_profit  0.999
     b_7_0_6_0_0  OBJ       -0.001
     b_7_0_6_0_0  link_path_mapping_coordination_1_7_0_6_0  -1
-    b_7_0_6_0_0  link_path_mapping_coordination_2_7_0_6_0  0.995
-    b_7_0_6_0_0  node_path_mapping_coordination_1_7_0_0  0.995
+    b_7_0_6_0_0  link_path_mapping_coordination_2_7_0_6_0  1
+    b_7_0_6_0_0  node_path_mapping_coordination_1_7_0_0  1
     b_7_0_6_0_0  bandwidth_max_limit_6_0  1
     b_7_0_6_0_0  minimum_profit  -0.001
     b_7_0_7_0_0  OBJ       -0.001
     b_7_0_7_0_0  link_path_mapping_coordination_1_7_0_7_0  -1
-    b_7_0_7_0_0  link_path_mapping_coordination_2_7_0_7_0  0.995
-    b_7_0_7_0_0  node_path_mapping_coordination_1_7_0_1  0.995
+    b_7_0_7_0_0  link_path_mapping_coordination_2_7_0_7_0  1
+    b_7_0_7_0_0  node_path_mapping_coordination_1_7_0_1  1
     b_7_0_7_0_0  bandwidth_max_limit_7_0  1
     b_7_0_7_0_0  minimum_profit  -0.001
     a_x1_7_0  OBJ       0
@@ -5406,7 +5596,7 @@ COLUMNS
     a_z2_7_0_7  auxiliary_constraints_3_2_7_0_7  1
     a_z2_7_0_7  auxiliary_constraints_6_3_7_0_7  -10
     a_z2_7_0_7  auxiliary_constraints_8_4_7_0_7  -10
-    a_z3_7_0  OBJ       -0.001
+    a_z3_7_0  OBJ       -0.01
     a_z3_7_0  auxiliary_constraints_6_3_7_0_7  1
     a_z3_7_0  auxiliary_constraints_7_7_0  1
     a_z3_7_0  auxiliary_constraints_8_1_7_0  1
@@ -5418,7 +5608,7 @@ COLUMNS
     a_z3_7_0  auxiliary_constraints_8_4_7_0_5  1
     a_z3_7_0  auxiliary_constraints_8_4_7_0_6  1
     a_z3_7_0  auxiliary_constraints_8_4_7_0_7  1
-    a_z3_7_0  minimum_profit  -0.001
+    a_z3_7_0  minimum_profit  -0.01
     a_z4_7_0  auxiliary_constraints_8_1_7_0  -1000
     a_z4_7_0  auxiliary_constraints_8_4_7_0_0  1000
     a_z4_7_0  auxiliary_constraints_8_4_7_0_1  1000
@@ -5428,112 +5618,102 @@ COLUMNS
     a_z4_7_0  auxiliary_constraints_8_4_7_0_5  1000
     a_z4_7_0  auxiliary_constraints_8_4_7_0_6  1000
     a_z4_7_0  auxiliary_constraints_8_4_7_0_7  1000
+    b_7_0_0_1_0  OBJ       0
+    b_7_0_0_2_0  OBJ       0
+    b_7_0_0_3_0  OBJ       0
+    b_7_0_0_4_0  OBJ       0
+    b_7_0_0_5_0  OBJ       0
+    b_7_0_0_6_0  OBJ       0
+    b_7_0_0_7_0  OBJ       0
+    b_7_0_1_1_0  OBJ       0
+    b_7_0_1_2_0  OBJ       0
+    b_7_0_1_3_0  OBJ       0
+    b_7_0_1_4_0  OBJ       0
+    b_7_0_1_5_0  OBJ       0
+    b_7_0_1_6_0  OBJ       0
+    b_7_0_1_7_0  OBJ       0
+    b_7_0_2_1_0  OBJ       0
+    b_7_0_2_2_0  OBJ       0
+    b_7_0_2_3_0  OBJ       0
+    b_7_0_2_4_0  OBJ       0
+    b_7_0_2_5_0  OBJ       0
+    b_7_0_2_6_0  OBJ       0
+    b_7_0_2_7_0  OBJ       0
+    b_7_0_3_1_0  OBJ       0
+    b_7_0_3_2_0  OBJ       0
+    b_7_0_3_3_0  OBJ       0
+    b_7_0_3_4_0  OBJ       0
+    b_7_0_3_5_0  OBJ       0
+    b_7_0_3_6_0  OBJ       0
+    b_7_0_3_7_0  OBJ       0
+    b_7_0_4_1_0  OBJ       0
+    b_7_0_4_2_0  OBJ       0
+    b_7_0_4_3_0  OBJ       0
+    b_7_0_4_4_0  OBJ       0
+    b_7_0_4_5_0  OBJ       0
+    b_7_0_4_6_0  OBJ       0
+    b_7_0_4_7_0  OBJ       0
+    b_7_0_5_1_0  OBJ       0
+    b_7_0_5_2_0  OBJ       0
+    b_7_0_5_3_0  OBJ       0
+    b_7_0_5_4_0  OBJ       0
+    b_7_0_5_5_0  OBJ       0
+    b_7_0_5_6_0  OBJ       0
+    b_7_0_5_7_0  OBJ       0
+    b_7_0_6_1_0  OBJ       0
+    b_7_0_6_2_0  OBJ       0
+    b_7_0_6_3_0  OBJ       0
+    b_7_0_6_4_0  OBJ       0
+    b_7_0_6_5_0  OBJ       0
+    b_7_0_6_6_0  OBJ       0
+    b_7_0_6_7_0  OBJ       0
+    b_7_0_7_1_0  OBJ       0
+    b_7_0_7_2_0  OBJ       0
+    b_7_0_7_3_0  OBJ       0
+    b_7_0_7_4_0  OBJ       0
+    b_7_0_7_5_0  OBJ       0
+    b_7_0_7_6_0  OBJ       0
+    b_7_0_7_7_0  OBJ       0
     x_8_0_0   OBJ       -1.3636363636363635e+00
     x_8_0_0   nf_unique_mapping_8_0  1
-    x_8_0_0   nf_regular_isolation_limit_8_0_0  1
     x_8_0_0   mips_limit_1_8_0_0  0.01
     x_8_0_0   mips_limit_2_8_0_0  -0.6
-    x_8_0_0   mips_max_limit_1_0  1.3636363636363635e-01
-    x_8_0_0   mips_max_limit_2_0  2.7272727272727271e-02
     x_8_0_0   node_path_mapping_coordination_1_8_0_0  -10000
     x_8_0_0   auxiliary_constraints_8_1_8_0_0  -1
+    x_8_0_0   nf_regular_isolation_limit_8_0_0  1
+    x_8_0_0   mips_max_limit_1_0  1.3636363636363635e-01
+    x_8_0_0   mips_max_limit_2_0  2.7272727272727271e-02
     x_8_0_0   auxiliary_constraints_8_2_0  -1
     x_8_0_0   minimum_profit  -1.3636363636363635e+00
-    x_8_0_1   OBJ       -1.3636363636363635e+00
+    x_8_0_1   OBJ       -2.3636363636363633e+00
     x_8_0_1   nf_unique_mapping_8_0  1
-    x_8_0_1   nf_regular_isolation_limit_8_0_1  1
     x_8_0_1   mips_limit_1_8_0_1  0.01
     x_8_0_1   mips_limit_2_8_0_1  -0.6
-    x_8_0_1   mips_max_limit_1_1  1.3636363636363635e-01
-    x_8_0_1   mips_max_limit_2_1  2.7272727272727271e-02
     x_8_0_1   node_path_mapping_coordination_1_8_0_1  -10000
     x_8_0_1   auxiliary_constraints_8_1_8_0_1  -1
+    x_8_0_1   nf_regular_isolation_limit_8_0_1  1
+    x_8_0_1   mips_max_limit_1_1  1.3636363636363635e-01
+    x_8_0_1   mips_max_limit_2_1  2.7272727272727271e-02
     x_8_0_1   auxiliary_constraints_8_2_1  -1
-    x_8_0_1   minimum_profit  -1.3636363636363635e+00
-    x_8_0_2   OBJ       -1.3636363636363638e-01
+    x_8_0_1   minimum_profit  -2.3636363636363633e+00
+    x_8_0_2   OBJ       -1.1363636363636365e+00
     x_8_0_2   nf_unique_mapping_8_0  1
-    x_8_0_2   nf_regular_isolation_limit_8_0_2  1
     x_8_0_2   mips_limit_1_8_0_2  0.01
     x_8_0_2   mips_limit_2_8_0_2  -0.6
-    x_8_0_2   mips_max_limit_1_2  1.3636363636363637e-02
-    x_8_0_2   mips_max_limit_2_2  2.7272727272727275e-03
     x_8_0_2   node_path_mapping_coordination_1_8_0_2  -10000
     x_8_0_2   auxiliary_constraints_8_1_8_0_2  -1
+    x_8_0_2   nf_regular_isolation_limit_8_0_2  1
+    x_8_0_2   mips_max_limit_1_2  1.3636363636363637e-02
+    x_8_0_2   mips_max_limit_2_2  2.7272727272727275e-03
     x_8_0_2   auxiliary_constraints_8_2_2  -1
-    x_8_0_2   minimum_profit  -1.3636363636363638e-01
-    x_9_0_0   OBJ       -1.3636363636363635e+00
-    x_9_0_0   nf_unique_mapping_9_0  1
-    x_9_0_0   nf_regular_isolation_limit_9_0_0  1
-    x_9_0_0   mips_limit_1_9_0_0  0.01
-    x_9_0_0   mips_limit_2_9_0_0  -0.6
-    x_9_0_0   mips_max_limit_1_0  1.3636363636363635e-01
-    x_9_0_0   mips_max_limit_2_0  2.7272727272727271e-02
-    x_9_0_0   node_path_mapping_coordination_1_9_0_0  -10000
-    x_9_0_0   auxiliary_constraints_8_1_9_0_0  -1
-    x_9_0_0   auxiliary_constraints_8_2_0  -1
-    x_9_0_0   minimum_profit  -1.3636363636363635e+00
-    x_9_0_1   OBJ       -1.3636363636363635e+00
-    x_9_0_1   nf_unique_mapping_9_0  1
-    x_9_0_1   nf_regular_isolation_limit_9_0_1  1
-    x_9_0_1   mips_limit_1_9_0_1  0.01
-    x_9_0_1   mips_limit_2_9_0_1  -0.6
-    x_9_0_1   mips_max_limit_1_1  1.3636363636363635e-01
-    x_9_0_1   mips_max_limit_2_1  2.7272727272727271e-02
-    x_9_0_1   node_path_mapping_coordination_1_9_0_1  -10000
-    x_9_0_1   auxiliary_constraints_8_1_9_0_1  -1
-    x_9_0_1   auxiliary_constraints_8_2_1  -1
-    x_9_0_1   minimum_profit  -1.3636363636363635e+00
-    x_9_0_2   OBJ       -1.3636363636363638e-01
-    x_9_0_2   nf_unique_mapping_9_0  1
-    x_9_0_2   nf_regular_isolation_limit_9_0_2  1
-    x_9_0_2   mips_limit_1_9_0_2  0.01
-    x_9_0_2   mips_limit_2_9_0_2  -0.6
-    x_9_0_2   mips_max_limit_1_2  1.3636363636363637e-02
-    x_9_0_2   mips_max_limit_2_2  2.7272727272727275e-03
-    x_9_0_2   node_path_mapping_coordination_1_9_0_2  -10000
-    x_9_0_2   auxiliary_constraints_8_1_9_0_2  -1
-    x_9_0_2   auxiliary_constraints_8_2_2  -1
-    x_9_0_2   minimum_profit  -1.3636363636363638e-01
-    x_10_0_0  OBJ       -1.3636363636363635e+00
-    x_10_0_0  nf_unique_mapping_10_0  1
-    x_10_0_0  nf_regular_isolation_limit_10_0_0  1
-    x_10_0_0  mips_limit_1_10_0_0  0.01
-    x_10_0_0  mips_limit_2_10_0_0  -0.6
-    x_10_0_0  mips_max_limit_1_0  1.3636363636363635e-01
-    x_10_0_0  mips_max_limit_2_0  2.7272727272727271e-02
-    x_10_0_0  node_path_mapping_coordination_1_10_0_0  -10000
-    x_10_0_0  auxiliary_constraints_8_1_10_0_0  -1
-    x_10_0_0  auxiliary_constraints_8_2_0  -1
-    x_10_0_0  minimum_profit  -1.3636363636363635e+00
-    x_10_0_1  OBJ       -1.3636363636363635e+00
-    x_10_0_1  nf_unique_mapping_10_0  1
-    x_10_0_1  nf_regular_isolation_limit_10_0_1  1
-    x_10_0_1  mips_limit_1_10_0_1  0.01
-    x_10_0_1  mips_limit_2_10_0_1  -0.6
-    x_10_0_1  mips_max_limit_1_1  1.3636363636363635e-01
-    x_10_0_1  mips_max_limit_2_1  2.7272727272727271e-02
-    x_10_0_1  node_path_mapping_coordination_1_10_0_1  -10000
-    x_10_0_1  auxiliary_constraints_8_1_10_0_1  -1
-    x_10_0_1  auxiliary_constraints_8_2_1  -1
-    x_10_0_1  minimum_profit  -1.3636363636363635e+00
-    x_10_0_2  OBJ       -1.3636363636363638e-01
-    x_10_0_2  nf_unique_mapping_10_0  1
-    x_10_0_2  nf_regular_isolation_limit_10_0_2  1
-    x_10_0_2  mips_limit_1_10_0_2  0.01
-    x_10_0_2  mips_limit_2_10_0_2  -0.6
-    x_10_0_2  mips_max_limit_1_2  1.3636363636363637e-02
-    x_10_0_2  mips_max_limit_2_2  2.7272727272727275e-03
-    x_10_0_2  node_path_mapping_coordination_1_10_0_2  -10000
-    x_10_0_2  auxiliary_constraints_8_1_10_0_2  -1
-    x_10_0_2  auxiliary_constraints_8_2_2  -1
-    x_10_0_2  minimum_profit  -1.3636363636363638e-01
+    x_8_0_2   minimum_profit  -1.1363636363636365e+00
     y_8_0_0_0_0  OBJ       0
     y_8_0_0_0_1  OBJ       -0.9
     y_8_0_0_0_1  ru_unique_mapping_8_0  1
-    y_8_0_0_0_1  ru_regular_isolation_limit_8_0_0  1
     y_8_0_0_0_1  radio_overprovision_8_0_0  1
-    y_8_0_0_0_1  radio_max_limit_0_0  180
     y_8_0_0_0_1  node_path_mapping_coordination_2_8_0_0  -10000
+    y_8_0_0_0_1  ru_regular_isolation_limit_8_0_0  1
+    y_8_0_0_0_1  radio_max_limit_0_0  180
     y_8_0_0_0_1  minimum_profit  -0.9
     y_8_0_0_0_2  node_path_mapping_coordination_2_8_0_0  -10000
     y_8_0_0_0_3  node_path_mapping_coordination_2_8_0_0  -10000
@@ -5635,13 +5815,13 @@ COLUMNS
     y_8_0_0_0_99  node_path_mapping_coordination_2_8_0_0  -10000
     y_8_0_0_0_100  node_path_mapping_coordination_2_8_0_0  -10000
     y_8_0_1_0_0  OBJ       0
-    y_8_0_1_0_1  OBJ       -0.9
+    y_8_0_1_0_1  OBJ       -1.9
     y_8_0_1_0_1  ru_unique_mapping_8_0  1
-    y_8_0_1_0_1  ru_regular_isolation_limit_8_0_1  1
     y_8_0_1_0_1  radio_overprovision_8_0_1  1
-    y_8_0_1_0_1  radio_max_limit_1_0  180
     y_8_0_1_0_1  node_path_mapping_coordination_2_8_0_1  -10000
-    y_8_0_1_0_1  minimum_profit  -0.9
+    y_8_0_1_0_1  ru_regular_isolation_limit_8_0_1  1
+    y_8_0_1_0_1  radio_max_limit_1_0  180
+    y_8_0_1_0_1  minimum_profit  -1.9
     y_8_0_1_0_2  node_path_mapping_coordination_2_8_0_1  -10000
     y_8_0_1_0_3  node_path_mapping_coordination_2_8_0_1  -10000
     y_8_0_1_0_4  node_path_mapping_coordination_2_8_0_1  -10000
@@ -5741,13 +5921,297 @@ COLUMNS
     y_8_0_1_0_98  node_path_mapping_coordination_2_8_0_1  -10000
     y_8_0_1_0_99  node_path_mapping_coordination_2_8_0_1  -10000
     y_8_0_1_0_100  node_path_mapping_coordination_2_8_0_1  -10000
+    z_8_0_0_0  link_regular_isolation_limit_8_0_0  1
+    z_8_0_0_0  link_path_mapping_coordination_1_8_0_0_0  0.01
+    z_8_0_0_0  link_path_mapping_coordination_2_8_0_0_0  -10000
+    z_8_0_0_0  auxiliary_constraints_3_1_8_0_0_0  -1
+    z_8_0_0_0  auxiliary_constraints_3_2_8_0_0  -1
+    z_8_0_1_0  link_regular_isolation_limit_8_0_1  1
+    z_8_0_1_0  link_path_mapping_coordination_1_8_0_1_0  0.01
+    z_8_0_1_0  link_path_mapping_coordination_2_8_0_1_0  -10000
+    z_8_0_1_0  auxiliary_constraints_3_1_8_0_1_0  -1
+    z_8_0_1_0  auxiliary_constraints_3_2_8_0_1  -1
+    z_8_0_2_0  link_regular_isolation_limit_8_0_2  1
+    z_8_0_2_0  link_path_mapping_coordination_1_8_0_2_0  0.01
+    z_8_0_2_0  link_path_mapping_coordination_2_8_0_2_0  -10000
+    z_8_0_2_0  auxiliary_constraints_3_1_8_0_2_0  -1
+    z_8_0_2_0  auxiliary_constraints_3_2_8_0_2  -1
+    z_8_0_3_0  link_regular_isolation_limit_8_0_3  1
+    z_8_0_3_0  link_path_mapping_coordination_1_8_0_3_0  0.01
+    z_8_0_3_0  link_path_mapping_coordination_2_8_0_3_0  -10000
+    z_8_0_3_0  auxiliary_constraints_3_1_8_0_3_0  -1
+    z_8_0_3_0  auxiliary_constraints_3_2_8_0_3  -1
+    z_8_0_4_0  link_regular_isolation_limit_8_0_4  1
+    z_8_0_4_0  link_path_mapping_coordination_1_8_0_4_0  0.01
+    z_8_0_4_0  link_path_mapping_coordination_2_8_0_4_0  -10000
+    z_8_0_4_0  auxiliary_constraints_3_1_8_0_4_0  -1
+    z_8_0_4_0  auxiliary_constraints_3_2_8_0_4  -1
+    z_8_0_5_0  link_regular_isolation_limit_8_0_5  1
+    z_8_0_5_0  link_path_mapping_coordination_1_8_0_5_0  0.01
+    z_8_0_5_0  link_path_mapping_coordination_2_8_0_5_0  -10000
+    z_8_0_5_0  auxiliary_constraints_3_1_8_0_5_0  -1
+    z_8_0_5_0  auxiliary_constraints_3_2_8_0_5  -1
+    z_8_0_6_0  link_regular_isolation_limit_8_0_6  1
+    z_8_0_6_0  link_path_mapping_coordination_1_8_0_6_0  0.01
+    z_8_0_6_0  link_path_mapping_coordination_2_8_0_6_0  -10000
+    z_8_0_6_0  auxiliary_constraints_3_1_8_0_6_0  -1
+    z_8_0_6_0  auxiliary_constraints_3_2_8_0_6  -1
+    z_8_0_7_0  link_regular_isolation_limit_8_0_7  1
+    z_8_0_7_0  link_path_mapping_coordination_1_8_0_7_0  0.01
+    z_8_0_7_0  link_path_mapping_coordination_2_8_0_7_0  -10000
+    z_8_0_7_0  auxiliary_constraints_3_1_8_0_7_0  -1
+    z_8_0_7_0  auxiliary_constraints_3_2_8_0_7  -1
+    c_8_0_0   OBJ       90
+    c_8_0_0   mips_limit_1_8_0_0  -1
+    c_8_0_0   mips_limit_2_8_0_0  1
+    c_8_0_0   mips_max_limit_1_0  1
+    c_8_0_0   minimum_profit  90
+    c_8_0_1   OBJ       90
+    c_8_0_1   mips_limit_1_8_0_1  -1
+    c_8_0_1   mips_limit_2_8_0_1  1
+    c_8_0_1   mips_max_limit_1_1  1
+    c_8_0_1   minimum_profit  90
+    c_8_0_2   OBJ       90
+    c_8_0_2   mips_limit_1_8_0_2  -1
+    c_8_0_2   mips_limit_2_8_0_2  1
+    c_8_0_2   mips_max_limit_1_2  1
+    c_8_0_2   minimum_profit  90
+    b_8_0_0_0_0  OBJ       0.0985
+    b_8_0_0_0_0  link_path_mapping_coordination_1_8_0_0_0  -1
+    b_8_0_0_0_0  link_path_mapping_coordination_2_8_0_0_0  0.995
+    b_8_0_0_0_0  node_path_mapping_coordination_1_8_0_0  0.995
+    b_8_0_0_0_0  node_path_mapping_coordination_2_8_0_0  0.995
+    b_8_0_0_0_0  bandwidth_overprovisioning_3_8_0  -0.995
+    b_8_0_0_0_0  bandwidth_max_limit_0_0  1
+    b_8_0_0_0_0  minimum_profit  0.0985
+    b_8_0_1_0_0  OBJ       0.0985
+    b_8_0_1_0_0  link_path_mapping_coordination_1_8_0_1_0  -1
+    b_8_0_1_0_0  link_path_mapping_coordination_2_8_0_1_0  0.995
+    b_8_0_1_0_0  node_path_mapping_coordination_1_8_0_0  0.995
+    b_8_0_1_0_0  node_path_mapping_coordination_2_8_0_1  0.995
+    b_8_0_1_0_0  bandwidth_overprovisioning_3_8_0  -0.995
+    b_8_0_1_0_0  bandwidth_max_limit_1_0  1
+    b_8_0_1_0_0  minimum_profit  0.0985
+    b_8_0_2_0_0  OBJ       0.0985
+    b_8_0_2_0_0  link_path_mapping_coordination_1_8_0_2_0  -1
+    b_8_0_2_0_0  link_path_mapping_coordination_2_8_0_2_0  0.995
+    b_8_0_2_0_0  node_path_mapping_coordination_1_8_0_1  0.995
+    b_8_0_2_0_0  node_path_mapping_coordination_2_8_0_0  0.995
+    b_8_0_2_0_0  bandwidth_overprovisioning_3_8_0  -0.995
+    b_8_0_2_0_0  bandwidth_max_limit_2_0  1
+    b_8_0_2_0_0  minimum_profit  0.0985
+    b_8_0_3_0_0  OBJ       0.0985
+    b_8_0_3_0_0  link_path_mapping_coordination_1_8_0_3_0  -1
+    b_8_0_3_0_0  link_path_mapping_coordination_2_8_0_3_0  0.995
+    b_8_0_3_0_0  node_path_mapping_coordination_1_8_0_1  0.995
+    b_8_0_3_0_0  node_path_mapping_coordination_2_8_0_1  0.995
+    b_8_0_3_0_0  bandwidth_overprovisioning_3_8_0  -0.995
+    b_8_0_3_0_0  bandwidth_max_limit_3_0  1
+    b_8_0_3_0_0  minimum_profit  0.0985
+    b_8_0_4_0_0  OBJ       0.0985
+    b_8_0_4_0_0  link_path_mapping_coordination_1_8_0_4_0  -1
+    b_8_0_4_0_0  link_path_mapping_coordination_2_8_0_4_0  0.995
+    b_8_0_4_0_0  node_path_mapping_coordination_1_8_0_2  0.995
+    b_8_0_4_0_0  node_path_mapping_coordination_2_8_0_0  0.995
+    b_8_0_4_0_0  bandwidth_overprovisioning_3_8_0  -0.995
+    b_8_0_4_0_0  bandwidth_max_limit_4_0  1
+    b_8_0_4_0_0  minimum_profit  0.0985
+    b_8_0_5_0_0  OBJ       0.0985
+    b_8_0_5_0_0  link_path_mapping_coordination_1_8_0_5_0  -1
+    b_8_0_5_0_0  link_path_mapping_coordination_2_8_0_5_0  0.995
+    b_8_0_5_0_0  node_path_mapping_coordination_1_8_0_2  0.995
+    b_8_0_5_0_0  node_path_mapping_coordination_2_8_0_1  0.995
+    b_8_0_5_0_0  bandwidth_overprovisioning_3_8_0  -0.995
+    b_8_0_5_0_0  bandwidth_max_limit_5_0  1
+    b_8_0_5_0_0  minimum_profit  0.0985
+    b_8_0_6_0_0  OBJ       -0.001
+    b_8_0_6_0_0  link_path_mapping_coordination_1_8_0_6_0  -1
+    b_8_0_6_0_0  link_path_mapping_coordination_2_8_0_6_0  0.995
+    b_8_0_6_0_0  node_path_mapping_coordination_1_8_0_0  0.995
+    b_8_0_6_0_0  bandwidth_max_limit_6_0  1
+    b_8_0_6_0_0  minimum_profit  -0.001
+    b_8_0_7_0_0  OBJ       -0.001
+    b_8_0_7_0_0  link_path_mapping_coordination_1_8_0_7_0  -1
+    b_8_0_7_0_0  link_path_mapping_coordination_2_8_0_7_0  0.995
+    b_8_0_7_0_0  node_path_mapping_coordination_1_8_0_1  0.995
+    b_8_0_7_0_0  bandwidth_max_limit_7_0  1
+    b_8_0_7_0_0  minimum_profit  -0.001
+    a_x1_8_0  OBJ       0
+    a_x1_8_1  OBJ       0
+    a_x1_8_2  OBJ       0
+    a_x4_8_0_0  OBJ       0
+    a_x4_8_0_1  OBJ       0
+    a_x4_8_0_2  OBJ       0
+    a_y1_8_0  OBJ       0
+    a_y1_8_1  OBJ       0
+    a_y2_8_0_0  OBJ       0
+    a_y2_8_0_1  OBJ       0
+    a_z1_8_0  OBJ       0
+    a_z1_8_1  OBJ       0
+    a_z1_8_2  OBJ       0
+    a_z1_8_3  OBJ       0
+    a_z1_8_4  OBJ       0
+    a_z1_8_5  OBJ       0
+    a_z1_8_6  OBJ       0
+    a_z1_8_7  OBJ       0
+    a_z2_8_0_0  vp_unique_mapping_8_0  1
+    a_z2_8_0_0  auxiliary_constraints_3_1_8_0_0_0  1
+    a_z2_8_0_0  auxiliary_constraints_3_2_8_0_0  1
+    a_z2_8_0_0  auxiliary_constraints_6_3_8_0_7  -1
+    a_z2_8_0_0  auxiliary_constraints_8_4_8_0_0  -1
+    a_z2_8_0_1  vp_unique_mapping_8_0  1
+    a_z2_8_0_1  auxiliary_constraints_3_1_8_0_1_0  1
+    a_z2_8_0_1  auxiliary_constraints_3_2_8_0_1  1
+    a_z2_8_0_1  auxiliary_constraints_6_3_8_0_7  -1
+    a_z2_8_0_1  auxiliary_constraints_8_4_8_0_1  -1
+    a_z2_8_0_2  vp_unique_mapping_8_0  1
+    a_z2_8_0_2  auxiliary_constraints_3_1_8_0_2_0  1
+    a_z2_8_0_2  auxiliary_constraints_3_2_8_0_2  1
+    a_z2_8_0_2  auxiliary_constraints_6_3_8_0_7  -0.02
+    a_z2_8_0_2  auxiliary_constraints_8_4_8_0_2  -0.02
+    a_z2_8_0_3  vp_unique_mapping_8_0  1
+    a_z2_8_0_3  auxiliary_constraints_3_1_8_0_3_0  1
+    a_z2_8_0_3  auxiliary_constraints_3_2_8_0_3  1
+    a_z2_8_0_3  auxiliary_constraints_6_3_8_0_7  -0.02
+    a_z2_8_0_3  auxiliary_constraints_8_4_8_0_3  -0.02
+    a_z2_8_0_4  vp_unique_mapping_8_0  1
+    a_z2_8_0_4  auxiliary_constraints_3_1_8_0_4_0  1
+    a_z2_8_0_4  auxiliary_constraints_3_2_8_0_4  1
+    a_z2_8_0_4  auxiliary_constraints_6_3_8_0_7  -10
+    a_z2_8_0_4  auxiliary_constraints_8_4_8_0_4  -10
+    a_z2_8_0_5  vp_unique_mapping_8_0  1
+    a_z2_8_0_5  auxiliary_constraints_3_1_8_0_5_0  1
+    a_z2_8_0_5  auxiliary_constraints_3_2_8_0_5  1
+    a_z2_8_0_5  auxiliary_constraints_6_3_8_0_7  -10
+    a_z2_8_0_5  auxiliary_constraints_8_4_8_0_5  -10
+    a_z2_8_0_6  vp_unique_mapping_8_0  1
+    a_z2_8_0_6  auxiliary_constraints_3_1_8_0_6_0  1
+    a_z2_8_0_6  auxiliary_constraints_3_2_8_0_6  1
+    a_z2_8_0_6  auxiliary_constraints_6_3_8_0_7  -10
+    a_z2_8_0_6  auxiliary_constraints_8_4_8_0_6  -10
+    a_z2_8_0_7  vp_unique_mapping_8_0  1
+    a_z2_8_0_7  auxiliary_constraints_3_1_8_0_7_0  1
+    a_z2_8_0_7  auxiliary_constraints_3_2_8_0_7  1
+    a_z2_8_0_7  auxiliary_constraints_6_3_8_0_7  -10
+    a_z2_8_0_7  auxiliary_constraints_8_4_8_0_7  -10
+    a_z3_8_0  OBJ       -0.001
+    a_z3_8_0  auxiliary_constraints_6_3_8_0_7  1
+    a_z3_8_0  auxiliary_constraints_7_8_0  1
+    a_z3_8_0  auxiliary_constraints_8_1_8_0  1
+    a_z3_8_0  auxiliary_constraints_8_4_8_0_0  1
+    a_z3_8_0  auxiliary_constraints_8_4_8_0_1  1
+    a_z3_8_0  auxiliary_constraints_8_4_8_0_2  1
+    a_z3_8_0  auxiliary_constraints_8_4_8_0_3  1
+    a_z3_8_0  auxiliary_constraints_8_4_8_0_4  1
+    a_z3_8_0  auxiliary_constraints_8_4_8_0_5  1
+    a_z3_8_0  auxiliary_constraints_8_4_8_0_6  1
+    a_z3_8_0  auxiliary_constraints_8_4_8_0_7  1
+    a_z3_8_0  minimum_profit  -0.001
+    a_z4_8_0  auxiliary_constraints_8_1_8_0  -1000
+    a_z4_8_0  auxiliary_constraints_8_4_8_0_0  1000
+    a_z4_8_0  auxiliary_constraints_8_4_8_0_1  1000
+    a_z4_8_0  auxiliary_constraints_8_4_8_0_2  1000
+    a_z4_8_0  auxiliary_constraints_8_4_8_0_3  1000
+    a_z4_8_0  auxiliary_constraints_8_4_8_0_4  1000
+    a_z4_8_0  auxiliary_constraints_8_4_8_0_5  1000
+    a_z4_8_0  auxiliary_constraints_8_4_8_0_6  1000
+    a_z4_8_0  auxiliary_constraints_8_4_8_0_7  1000
+    b_8_0_0_1_0  OBJ       0
+    b_8_0_0_2_0  OBJ       0
+    b_8_0_0_3_0  OBJ       0
+    b_8_0_0_4_0  OBJ       0
+    b_8_0_0_5_0  OBJ       0
+    b_8_0_0_6_0  OBJ       0
+    b_8_0_0_7_0  OBJ       0
+    b_8_0_1_1_0  OBJ       0
+    b_8_0_1_2_0  OBJ       0
+    b_8_0_1_3_0  OBJ       0
+    b_8_0_1_4_0  OBJ       0
+    b_8_0_1_5_0  OBJ       0
+    b_8_0_1_6_0  OBJ       0
+    b_8_0_1_7_0  OBJ       0
+    b_8_0_2_1_0  OBJ       0
+    b_8_0_2_2_0  OBJ       0
+    b_8_0_2_3_0  OBJ       0
+    b_8_0_2_4_0  OBJ       0
+    b_8_0_2_5_0  OBJ       0
+    b_8_0_2_6_0  OBJ       0
+    b_8_0_2_7_0  OBJ       0
+    b_8_0_3_1_0  OBJ       0
+    b_8_0_3_2_0  OBJ       0
+    b_8_0_3_3_0  OBJ       0
+    b_8_0_3_4_0  OBJ       0
+    b_8_0_3_5_0  OBJ       0
+    b_8_0_3_6_0  OBJ       0
+    b_8_0_3_7_0  OBJ       0
+    b_8_0_4_1_0  OBJ       0
+    b_8_0_4_2_0  OBJ       0
+    b_8_0_4_3_0  OBJ       0
+    b_8_0_4_4_0  OBJ       0
+    b_8_0_4_5_0  OBJ       0
+    b_8_0_4_6_0  OBJ       0
+    b_8_0_4_7_0  OBJ       0
+    b_8_0_5_1_0  OBJ       0
+    b_8_0_5_2_0  OBJ       0
+    b_8_0_5_3_0  OBJ       0
+    b_8_0_5_4_0  OBJ       0
+    b_8_0_5_5_0  OBJ       0
+    b_8_0_5_6_0  OBJ       0
+    b_8_0_5_7_0  OBJ       0
+    b_8_0_6_1_0  OBJ       0
+    b_8_0_6_2_0  OBJ       0
+    b_8_0_6_3_0  OBJ       0
+    b_8_0_6_4_0  OBJ       0
+    b_8_0_6_5_0  OBJ       0
+    b_8_0_6_6_0  OBJ       0
+    b_8_0_6_7_0  OBJ       0
+    b_8_0_7_1_0  OBJ       0
+    b_8_0_7_2_0  OBJ       0
+    b_8_0_7_3_0  OBJ       0
+    b_8_0_7_4_0  OBJ       0
+    b_8_0_7_5_0  OBJ       0
+    b_8_0_7_6_0  OBJ       0
+    b_8_0_7_7_0  OBJ       0
+    x_9_0_0   OBJ       -1.3636363636363635e+00
+    x_9_0_0   nf_unique_mapping_9_0  1
+    x_9_0_0   mips_limit_1_9_0_0  0.01
+    x_9_0_0   mips_limit_2_9_0_0  -0.6
+    x_9_0_0   node_path_mapping_coordination_1_9_0_0  -10000
+    x_9_0_0   auxiliary_constraints_8_1_9_0_0  -1
+    x_9_0_0   nf_regular_isolation_limit_9_0_0  1
+    x_9_0_0   mips_max_limit_1_0  1.3636363636363635e-01
+    x_9_0_0   mips_max_limit_2_0  2.7272727272727271e-02
+    x_9_0_0   auxiliary_constraints_8_2_0  -1
+    x_9_0_0   minimum_profit  -1.3636363636363635e+00
+    x_9_0_1   OBJ       -2.3636363636363633e+00
+    x_9_0_1   nf_unique_mapping_9_0  1
+    x_9_0_1   mips_limit_1_9_0_1  0.01
+    x_9_0_1   mips_limit_2_9_0_1  -0.6
+    x_9_0_1   node_path_mapping_coordination_1_9_0_1  -10000
+    x_9_0_1   auxiliary_constraints_8_1_9_0_1  -1
+    x_9_0_1   nf_regular_isolation_limit_9_0_1  1
+    x_9_0_1   mips_max_limit_1_1  1.3636363636363635e-01
+    x_9_0_1   mips_max_limit_2_1  2.7272727272727271e-02
+    x_9_0_1   auxiliary_constraints_8_2_1  -1
+    x_9_0_1   minimum_profit  -2.3636363636363633e+00
+    x_9_0_2   OBJ       -1.1363636363636365e+00
+    x_9_0_2   nf_unique_mapping_9_0  1
+    x_9_0_2   mips_limit_1_9_0_2  0.01
+    x_9_0_2   mips_limit_2_9_0_2  -0.6
+    x_9_0_2   node_path_mapping_coordination_1_9_0_2  -10000
+    x_9_0_2   auxiliary_constraints_8_1_9_0_2  -1
+    x_9_0_2   nf_regular_isolation_limit_9_0_2  1
+    x_9_0_2   mips_max_limit_1_2  1.3636363636363637e-02
+    x_9_0_2   mips_max_limit_2_2  2.7272727272727275e-03
+    x_9_0_2   auxiliary_constraints_8_2_2  -1
+    x_9_0_2   minimum_profit  -1.1363636363636365e+00
     y_9_0_0_0_0  OBJ       0
     y_9_0_0_0_1  OBJ       -0.9
     y_9_0_0_0_1  ru_unique_mapping_9_0  1
-    y_9_0_0_0_1  ru_regular_isolation_limit_9_0_0  1
     y_9_0_0_0_1  radio_overprovision_9_0_0  1
-    y_9_0_0_0_1  radio_max_limit_0_0  180
     y_9_0_0_0_1  node_path_mapping_coordination_2_9_0_0  -10000
+    y_9_0_0_0_1  ru_regular_isolation_limit_9_0_0  1
+    y_9_0_0_0_1  radio_max_limit_0_0  180
     y_9_0_0_0_1  minimum_profit  -0.9
     y_9_0_0_0_2  node_path_mapping_coordination_2_9_0_0  -10000
     y_9_0_0_0_3  node_path_mapping_coordination_2_9_0_0  -10000
@@ -5849,13 +6313,13 @@ COLUMNS
     y_9_0_0_0_99  node_path_mapping_coordination_2_9_0_0  -10000
     y_9_0_0_0_100  node_path_mapping_coordination_2_9_0_0  -10000
     y_9_0_1_0_0  OBJ       0
-    y_9_0_1_0_1  OBJ       -0.9
+    y_9_0_1_0_1  OBJ       -1.9
     y_9_0_1_0_1  ru_unique_mapping_9_0  1
-    y_9_0_1_0_1  ru_regular_isolation_limit_9_0_1  1
     y_9_0_1_0_1  radio_overprovision_9_0_1  1
-    y_9_0_1_0_1  radio_max_limit_1_0  180
     y_9_0_1_0_1  node_path_mapping_coordination_2_9_0_1  -10000
-    y_9_0_1_0_1  minimum_profit  -0.9
+    y_9_0_1_0_1  ru_regular_isolation_limit_9_0_1  1
+    y_9_0_1_0_1  radio_max_limit_1_0  180
+    y_9_0_1_0_1  minimum_profit  -1.9
     y_9_0_1_0_2  node_path_mapping_coordination_2_9_0_1  -10000
     y_9_0_1_0_3  node_path_mapping_coordination_2_9_0_1  -10000
     y_9_0_1_0_4  node_path_mapping_coordination_2_9_0_1  -10000
@@ -5955,13 +6419,297 @@ COLUMNS
     y_9_0_1_0_98  node_path_mapping_coordination_2_9_0_1  -10000
     y_9_0_1_0_99  node_path_mapping_coordination_2_9_0_1  -10000
     y_9_0_1_0_100  node_path_mapping_coordination_2_9_0_1  -10000
+    z_9_0_0_0  link_regular_isolation_limit_9_0_0  1
+    z_9_0_0_0  link_path_mapping_coordination_1_9_0_0_0  0.01
+    z_9_0_0_0  link_path_mapping_coordination_2_9_0_0_0  -10000
+    z_9_0_0_0  auxiliary_constraints_3_1_9_0_0_0  -1
+    z_9_0_0_0  auxiliary_constraints_3_2_9_0_0  -1
+    z_9_0_1_0  link_regular_isolation_limit_9_0_1  1
+    z_9_0_1_0  link_path_mapping_coordination_1_9_0_1_0  0.01
+    z_9_0_1_0  link_path_mapping_coordination_2_9_0_1_0  -10000
+    z_9_0_1_0  auxiliary_constraints_3_1_9_0_1_0  -1
+    z_9_0_1_0  auxiliary_constraints_3_2_9_0_1  -1
+    z_9_0_2_0  link_regular_isolation_limit_9_0_2  1
+    z_9_0_2_0  link_path_mapping_coordination_1_9_0_2_0  0.01
+    z_9_0_2_0  link_path_mapping_coordination_2_9_0_2_0  -10000
+    z_9_0_2_0  auxiliary_constraints_3_1_9_0_2_0  -1
+    z_9_0_2_0  auxiliary_constraints_3_2_9_0_2  -1
+    z_9_0_3_0  link_regular_isolation_limit_9_0_3  1
+    z_9_0_3_0  link_path_mapping_coordination_1_9_0_3_0  0.01
+    z_9_0_3_0  link_path_mapping_coordination_2_9_0_3_0  -10000
+    z_9_0_3_0  auxiliary_constraints_3_1_9_0_3_0  -1
+    z_9_0_3_0  auxiliary_constraints_3_2_9_0_3  -1
+    z_9_0_4_0  link_regular_isolation_limit_9_0_4  1
+    z_9_0_4_0  link_path_mapping_coordination_1_9_0_4_0  0.01
+    z_9_0_4_0  link_path_mapping_coordination_2_9_0_4_0  -10000
+    z_9_0_4_0  auxiliary_constraints_3_1_9_0_4_0  -1
+    z_9_0_4_0  auxiliary_constraints_3_2_9_0_4  -1
+    z_9_0_5_0  link_regular_isolation_limit_9_0_5  1
+    z_9_0_5_0  link_path_mapping_coordination_1_9_0_5_0  0.01
+    z_9_0_5_0  link_path_mapping_coordination_2_9_0_5_0  -10000
+    z_9_0_5_0  auxiliary_constraints_3_1_9_0_5_0  -1
+    z_9_0_5_0  auxiliary_constraints_3_2_9_0_5  -1
+    z_9_0_6_0  link_regular_isolation_limit_9_0_6  1
+    z_9_0_6_0  link_path_mapping_coordination_1_9_0_6_0  0.01
+    z_9_0_6_0  link_path_mapping_coordination_2_9_0_6_0  -10000
+    z_9_0_6_0  auxiliary_constraints_3_1_9_0_6_0  -1
+    z_9_0_6_0  auxiliary_constraints_3_2_9_0_6  -1
+    z_9_0_7_0  link_regular_isolation_limit_9_0_7  1
+    z_9_0_7_0  link_path_mapping_coordination_1_9_0_7_0  0.01
+    z_9_0_7_0  link_path_mapping_coordination_2_9_0_7_0  -10000
+    z_9_0_7_0  auxiliary_constraints_3_1_9_0_7_0  -1
+    z_9_0_7_0  auxiliary_constraints_3_2_9_0_7  -1
+    c_9_0_0   OBJ       90
+    c_9_0_0   mips_limit_1_9_0_0  -1
+    c_9_0_0   mips_limit_2_9_0_0  1
+    c_9_0_0   mips_max_limit_1_0  1
+    c_9_0_0   minimum_profit  90
+    c_9_0_1   OBJ       90
+    c_9_0_1   mips_limit_1_9_0_1  -1
+    c_9_0_1   mips_limit_2_9_0_1  1
+    c_9_0_1   mips_max_limit_1_1  1
+    c_9_0_1   minimum_profit  90
+    c_9_0_2   OBJ       90
+    c_9_0_2   mips_limit_1_9_0_2  -1
+    c_9_0_2   mips_limit_2_9_0_2  1
+    c_9_0_2   mips_max_limit_1_2  1
+    c_9_0_2   minimum_profit  90
+    b_9_0_0_0_0  OBJ       0.0985
+    b_9_0_0_0_0  link_path_mapping_coordination_1_9_0_0_0  -1
+    b_9_0_0_0_0  link_path_mapping_coordination_2_9_0_0_0  0.995
+    b_9_0_0_0_0  node_path_mapping_coordination_1_9_0_0  0.995
+    b_9_0_0_0_0  node_path_mapping_coordination_2_9_0_0  0.995
+    b_9_0_0_0_0  bandwidth_overprovisioning_3_9_0  -0.995
+    b_9_0_0_0_0  bandwidth_max_limit_0_0  1
+    b_9_0_0_0_0  minimum_profit  0.0985
+    b_9_0_1_0_0  OBJ       0.0985
+    b_9_0_1_0_0  link_path_mapping_coordination_1_9_0_1_0  -1
+    b_9_0_1_0_0  link_path_mapping_coordination_2_9_0_1_0  0.995
+    b_9_0_1_0_0  node_path_mapping_coordination_1_9_0_0  0.995
+    b_9_0_1_0_0  node_path_mapping_coordination_2_9_0_1  0.995
+    b_9_0_1_0_0  bandwidth_overprovisioning_3_9_0  -0.995
+    b_9_0_1_0_0  bandwidth_max_limit_1_0  1
+    b_9_0_1_0_0  minimum_profit  0.0985
+    b_9_0_2_0_0  OBJ       0.0985
+    b_9_0_2_0_0  link_path_mapping_coordination_1_9_0_2_0  -1
+    b_9_0_2_0_0  link_path_mapping_coordination_2_9_0_2_0  0.995
+    b_9_0_2_0_0  node_path_mapping_coordination_1_9_0_1  0.995
+    b_9_0_2_0_0  node_path_mapping_coordination_2_9_0_0  0.995
+    b_9_0_2_0_0  bandwidth_overprovisioning_3_9_0  -0.995
+    b_9_0_2_0_0  bandwidth_max_limit_2_0  1
+    b_9_0_2_0_0  minimum_profit  0.0985
+    b_9_0_3_0_0  OBJ       0.0985
+    b_9_0_3_0_0  link_path_mapping_coordination_1_9_0_3_0  -1
+    b_9_0_3_0_0  link_path_mapping_coordination_2_9_0_3_0  0.995
+    b_9_0_3_0_0  node_path_mapping_coordination_1_9_0_1  0.995
+    b_9_0_3_0_0  node_path_mapping_coordination_2_9_0_1  0.995
+    b_9_0_3_0_0  bandwidth_overprovisioning_3_9_0  -0.995
+    b_9_0_3_0_0  bandwidth_max_limit_3_0  1
+    b_9_0_3_0_0  minimum_profit  0.0985
+    b_9_0_4_0_0  OBJ       0.0985
+    b_9_0_4_0_0  link_path_mapping_coordination_1_9_0_4_0  -1
+    b_9_0_4_0_0  link_path_mapping_coordination_2_9_0_4_0  0.995
+    b_9_0_4_0_0  node_path_mapping_coordination_1_9_0_2  0.995
+    b_9_0_4_0_0  node_path_mapping_coordination_2_9_0_0  0.995
+    b_9_0_4_0_0  bandwidth_overprovisioning_3_9_0  -0.995
+    b_9_0_4_0_0  bandwidth_max_limit_4_0  1
+    b_9_0_4_0_0  minimum_profit  0.0985
+    b_9_0_5_0_0  OBJ       0.0985
+    b_9_0_5_0_0  link_path_mapping_coordination_1_9_0_5_0  -1
+    b_9_0_5_0_0  link_path_mapping_coordination_2_9_0_5_0  0.995
+    b_9_0_5_0_0  node_path_mapping_coordination_1_9_0_2  0.995
+    b_9_0_5_0_0  node_path_mapping_coordination_2_9_0_1  0.995
+    b_9_0_5_0_0  bandwidth_overprovisioning_3_9_0  -0.995
+    b_9_0_5_0_0  bandwidth_max_limit_5_0  1
+    b_9_0_5_0_0  minimum_profit  0.0985
+    b_9_0_6_0_0  OBJ       -0.001
+    b_9_0_6_0_0  link_path_mapping_coordination_1_9_0_6_0  -1
+    b_9_0_6_0_0  link_path_mapping_coordination_2_9_0_6_0  0.995
+    b_9_0_6_0_0  node_path_mapping_coordination_1_9_0_0  0.995
+    b_9_0_6_0_0  bandwidth_max_limit_6_0  1
+    b_9_0_6_0_0  minimum_profit  -0.001
+    b_9_0_7_0_0  OBJ       -0.001
+    b_9_0_7_0_0  link_path_mapping_coordination_1_9_0_7_0  -1
+    b_9_0_7_0_0  link_path_mapping_coordination_2_9_0_7_0  0.995
+    b_9_0_7_0_0  node_path_mapping_coordination_1_9_0_1  0.995
+    b_9_0_7_0_0  bandwidth_max_limit_7_0  1
+    b_9_0_7_0_0  minimum_profit  -0.001
+    a_x1_9_0  OBJ       0
+    a_x1_9_1  OBJ       0
+    a_x1_9_2  OBJ       0
+    a_x4_9_0_0  OBJ       0
+    a_x4_9_0_1  OBJ       0
+    a_x4_9_0_2  OBJ       0
+    a_y1_9_0  OBJ       0
+    a_y1_9_1  OBJ       0
+    a_y2_9_0_0  OBJ       0
+    a_y2_9_0_1  OBJ       0
+    a_z1_9_0  OBJ       0
+    a_z1_9_1  OBJ       0
+    a_z1_9_2  OBJ       0
+    a_z1_9_3  OBJ       0
+    a_z1_9_4  OBJ       0
+    a_z1_9_5  OBJ       0
+    a_z1_9_6  OBJ       0
+    a_z1_9_7  OBJ       0
+    a_z2_9_0_0  vp_unique_mapping_9_0  1
+    a_z2_9_0_0  auxiliary_constraints_3_1_9_0_0_0  1
+    a_z2_9_0_0  auxiliary_constraints_3_2_9_0_0  1
+    a_z2_9_0_0  auxiliary_constraints_6_3_9_0_7  -1
+    a_z2_9_0_0  auxiliary_constraints_8_4_9_0_0  -1
+    a_z2_9_0_1  vp_unique_mapping_9_0  1
+    a_z2_9_0_1  auxiliary_constraints_3_1_9_0_1_0  1
+    a_z2_9_0_1  auxiliary_constraints_3_2_9_0_1  1
+    a_z2_9_0_1  auxiliary_constraints_6_3_9_0_7  -1
+    a_z2_9_0_1  auxiliary_constraints_8_4_9_0_1  -1
+    a_z2_9_0_2  vp_unique_mapping_9_0  1
+    a_z2_9_0_2  auxiliary_constraints_3_1_9_0_2_0  1
+    a_z2_9_0_2  auxiliary_constraints_3_2_9_0_2  1
+    a_z2_9_0_2  auxiliary_constraints_6_3_9_0_7  -0.02
+    a_z2_9_0_2  auxiliary_constraints_8_4_9_0_2  -0.02
+    a_z2_9_0_3  vp_unique_mapping_9_0  1
+    a_z2_9_0_3  auxiliary_constraints_3_1_9_0_3_0  1
+    a_z2_9_0_3  auxiliary_constraints_3_2_9_0_3  1
+    a_z2_9_0_3  auxiliary_constraints_6_3_9_0_7  -0.02
+    a_z2_9_0_3  auxiliary_constraints_8_4_9_0_3  -0.02
+    a_z2_9_0_4  vp_unique_mapping_9_0  1
+    a_z2_9_0_4  auxiliary_constraints_3_1_9_0_4_0  1
+    a_z2_9_0_4  auxiliary_constraints_3_2_9_0_4  1
+    a_z2_9_0_4  auxiliary_constraints_6_3_9_0_7  -10
+    a_z2_9_0_4  auxiliary_constraints_8_4_9_0_4  -10
+    a_z2_9_0_5  vp_unique_mapping_9_0  1
+    a_z2_9_0_5  auxiliary_constraints_3_1_9_0_5_0  1
+    a_z2_9_0_5  auxiliary_constraints_3_2_9_0_5  1
+    a_z2_9_0_5  auxiliary_constraints_6_3_9_0_7  -10
+    a_z2_9_0_5  auxiliary_constraints_8_4_9_0_5  -10
+    a_z2_9_0_6  vp_unique_mapping_9_0  1
+    a_z2_9_0_6  auxiliary_constraints_3_1_9_0_6_0  1
+    a_z2_9_0_6  auxiliary_constraints_3_2_9_0_6  1
+    a_z2_9_0_6  auxiliary_constraints_6_3_9_0_7  -10
+    a_z2_9_0_6  auxiliary_constraints_8_4_9_0_6  -10
+    a_z2_9_0_7  vp_unique_mapping_9_0  1
+    a_z2_9_0_7  auxiliary_constraints_3_1_9_0_7_0  1
+    a_z2_9_0_7  auxiliary_constraints_3_2_9_0_7  1
+    a_z2_9_0_7  auxiliary_constraints_6_3_9_0_7  -10
+    a_z2_9_0_7  auxiliary_constraints_8_4_9_0_7  -10
+    a_z3_9_0  OBJ       -0.001
+    a_z3_9_0  auxiliary_constraints_6_3_9_0_7  1
+    a_z3_9_0  auxiliary_constraints_7_9_0  1
+    a_z3_9_0  auxiliary_constraints_8_1_9_0  1
+    a_z3_9_0  auxiliary_constraints_8_4_9_0_0  1
+    a_z3_9_0  auxiliary_constraints_8_4_9_0_1  1
+    a_z3_9_0  auxiliary_constraints_8_4_9_0_2  1
+    a_z3_9_0  auxiliary_constraints_8_4_9_0_3  1
+    a_z3_9_0  auxiliary_constraints_8_4_9_0_4  1
+    a_z3_9_0  auxiliary_constraints_8_4_9_0_5  1
+    a_z3_9_0  auxiliary_constraints_8_4_9_0_6  1
+    a_z3_9_0  auxiliary_constraints_8_4_9_0_7  1
+    a_z3_9_0  minimum_profit  -0.001
+    a_z4_9_0  auxiliary_constraints_8_1_9_0  -1000
+    a_z4_9_0  auxiliary_constraints_8_4_9_0_0  1000
+    a_z4_9_0  auxiliary_constraints_8_4_9_0_1  1000
+    a_z4_9_0  auxiliary_constraints_8_4_9_0_2  1000
+    a_z4_9_0  auxiliary_constraints_8_4_9_0_3  1000
+    a_z4_9_0  auxiliary_constraints_8_4_9_0_4  1000
+    a_z4_9_0  auxiliary_constraints_8_4_9_0_5  1000
+    a_z4_9_0  auxiliary_constraints_8_4_9_0_6  1000
+    a_z4_9_0  auxiliary_constraints_8_4_9_0_7  1000
+    b_9_0_0_1_0  OBJ       0
+    b_9_0_0_2_0  OBJ       0
+    b_9_0_0_3_0  OBJ       0
+    b_9_0_0_4_0  OBJ       0
+    b_9_0_0_5_0  OBJ       0
+    b_9_0_0_6_0  OBJ       0
+    b_9_0_0_7_0  OBJ       0
+    b_9_0_1_1_0  OBJ       0
+    b_9_0_1_2_0  OBJ       0
+    b_9_0_1_3_0  OBJ       0
+    b_9_0_1_4_0  OBJ       0
+    b_9_0_1_5_0  OBJ       0
+    b_9_0_1_6_0  OBJ       0
+    b_9_0_1_7_0  OBJ       0
+    b_9_0_2_1_0  OBJ       0
+    b_9_0_2_2_0  OBJ       0
+    b_9_0_2_3_0  OBJ       0
+    b_9_0_2_4_0  OBJ       0
+    b_9_0_2_5_0  OBJ       0
+    b_9_0_2_6_0  OBJ       0
+    b_9_0_2_7_0  OBJ       0
+    b_9_0_3_1_0  OBJ       0
+    b_9_0_3_2_0  OBJ       0
+    b_9_0_3_3_0  OBJ       0
+    b_9_0_3_4_0  OBJ       0
+    b_9_0_3_5_0  OBJ       0
+    b_9_0_3_6_0  OBJ       0
+    b_9_0_3_7_0  OBJ       0
+    b_9_0_4_1_0  OBJ       0
+    b_9_0_4_2_0  OBJ       0
+    b_9_0_4_3_0  OBJ       0
+    b_9_0_4_4_0  OBJ       0
+    b_9_0_4_5_0  OBJ       0
+    b_9_0_4_6_0  OBJ       0
+    b_9_0_4_7_0  OBJ       0
+    b_9_0_5_1_0  OBJ       0
+    b_9_0_5_2_0  OBJ       0
+    b_9_0_5_3_0  OBJ       0
+    b_9_0_5_4_0  OBJ       0
+    b_9_0_5_5_0  OBJ       0
+    b_9_0_5_6_0  OBJ       0
+    b_9_0_5_7_0  OBJ       0
+    b_9_0_6_1_0  OBJ       0
+    b_9_0_6_2_0  OBJ       0
+    b_9_0_6_3_0  OBJ       0
+    b_9_0_6_4_0  OBJ       0
+    b_9_0_6_5_0  OBJ       0
+    b_9_0_6_6_0  OBJ       0
+    b_9_0_6_7_0  OBJ       0
+    b_9_0_7_1_0  OBJ       0
+    b_9_0_7_2_0  OBJ       0
+    b_9_0_7_3_0  OBJ       0
+    b_9_0_7_4_0  OBJ       0
+    b_9_0_7_5_0  OBJ       0
+    b_9_0_7_6_0  OBJ       0
+    b_9_0_7_7_0  OBJ       0
+    x_10_0_0  OBJ       -1.3636363636363635e+00
+    x_10_0_0  nf_unique_mapping_10_0  1
+    x_10_0_0  mips_limit_1_10_0_0  0.01
+    x_10_0_0  mips_limit_2_10_0_0  -0.6
+    x_10_0_0  node_path_mapping_coordination_1_10_0_0  -10000
+    x_10_0_0  auxiliary_constraints_8_1_10_0_0  -1
+    x_10_0_0  nf_regular_isolation_limit_10_0_0  1
+    x_10_0_0  mips_max_limit_1_0  1.3636363636363635e-01
+    x_10_0_0  mips_max_limit_2_0  2.7272727272727271e-02
+    x_10_0_0  auxiliary_constraints_8_2_0  -1
+    x_10_0_0  minimum_profit  -1.3636363636363635e+00
+    x_10_0_1  OBJ       -2.3636363636363633e+00
+    x_10_0_1  nf_unique_mapping_10_0  1
+    x_10_0_1  mips_limit_1_10_0_1  0.01
+    x_10_0_1  mips_limit_2_10_0_1  -0.6
+    x_10_0_1  node_path_mapping_coordination_1_10_0_1  -10000
+    x_10_0_1  auxiliary_constraints_8_1_10_0_1  -1
+    x_10_0_1  nf_regular_isolation_limit_10_0_1  1
+    x_10_0_1  mips_max_limit_1_1  1.3636363636363635e-01
+    x_10_0_1  mips_max_limit_2_1  2.7272727272727271e-02
+    x_10_0_1  auxiliary_constraints_8_2_1  -1
+    x_10_0_1  minimum_profit  -2.3636363636363633e+00
+    x_10_0_2  OBJ       -1.1363636363636365e+00
+    x_10_0_2  nf_unique_mapping_10_0  1
+    x_10_0_2  mips_limit_1_10_0_2  0.01
+    x_10_0_2  mips_limit_2_10_0_2  -0.6
+    x_10_0_2  node_path_mapping_coordination_1_10_0_2  -10000
+    x_10_0_2  auxiliary_constraints_8_1_10_0_2  -1
+    x_10_0_2  nf_regular_isolation_limit_10_0_2  1
+    x_10_0_2  mips_max_limit_1_2  1.3636363636363637e-02
+    x_10_0_2  mips_max_limit_2_2  2.7272727272727275e-03
+    x_10_0_2  auxiliary_constraints_8_2_2  -1
+    x_10_0_2  minimum_profit  -1.1363636363636365e+00
     y_10_0_0_0_0  OBJ       0
     y_10_0_0_0_1  OBJ       -0.9
     y_10_0_0_0_1  ru_unique_mapping_10_0  1
-    y_10_0_0_0_1  ru_regular_isolation_limit_10_0_0  1
     y_10_0_0_0_1  radio_overprovision_10_0_0  1
-    y_10_0_0_0_1  radio_max_limit_0_0  180
     y_10_0_0_0_1  node_path_mapping_coordination_2_10_0_0  -10000
+    y_10_0_0_0_1  ru_regular_isolation_limit_10_0_0  1
+    y_10_0_0_0_1  radio_max_limit_0_0  180
     y_10_0_0_0_1  minimum_profit  -0.9
     y_10_0_0_0_2  node_path_mapping_coordination_2_10_0_0  -10000
     y_10_0_0_0_3  node_path_mapping_coordination_2_10_0_0  -10000
@@ -6063,13 +6811,13 @@ COLUMNS
     y_10_0_0_0_99  node_path_mapping_coordination_2_10_0_0  -10000
     y_10_0_0_0_100  node_path_mapping_coordination_2_10_0_0  -10000
     y_10_0_1_0_0  OBJ       0
-    y_10_0_1_0_1  OBJ       -0.9
+    y_10_0_1_0_1  OBJ       -1.9
     y_10_0_1_0_1  ru_unique_mapping_10_0  1
-    y_10_0_1_0_1  ru_regular_isolation_limit_10_0_1  1
     y_10_0_1_0_1  radio_overprovision_10_0_1  1
-    y_10_0_1_0_1  radio_max_limit_1_0  180
     y_10_0_1_0_1  node_path_mapping_coordination_2_10_0_1  -10000
-    y_10_0_1_0_1  minimum_profit  -0.9
+    y_10_0_1_0_1  ru_regular_isolation_limit_10_0_1  1
+    y_10_0_1_0_1  radio_max_limit_1_0  180
+    y_10_0_1_0_1  minimum_profit  -1.9
     y_10_0_1_0_2  node_path_mapping_coordination_2_10_0_1  -10000
     y_10_0_1_0_3  node_path_mapping_coordination_2_10_0_1  -10000
     y_10_0_1_0_4  node_path_mapping_coordination_2_10_0_1  -10000
@@ -6169,86 +6917,6 @@ COLUMNS
     y_10_0_1_0_98  node_path_mapping_coordination_2_10_0_1  -10000
     y_10_0_1_0_99  node_path_mapping_coordination_2_10_0_1  -10000
     y_10_0_1_0_100  node_path_mapping_coordination_2_10_0_1  -10000
-    z_8_0_0_0  link_regular_isolation_limit_8_0_0  1
-    z_8_0_0_0  link_path_mapping_coordination_1_8_0_0_0  0.01
-    z_8_0_0_0  link_path_mapping_coordination_2_8_0_0_0  -10000
-    z_8_0_0_0  auxiliary_constraints_3_1_8_0_0_0  -1
-    z_8_0_0_0  auxiliary_constraints_3_2_8_0_0  -1
-    z_8_0_1_0  link_regular_isolation_limit_8_0_1  1
-    z_8_0_1_0  link_path_mapping_coordination_1_8_0_1_0  0.01
-    z_8_0_1_0  link_path_mapping_coordination_2_8_0_1_0  -10000
-    z_8_0_1_0  auxiliary_constraints_3_1_8_0_1_0  -1
-    z_8_0_1_0  auxiliary_constraints_3_2_8_0_1  -1
-    z_8_0_2_0  link_regular_isolation_limit_8_0_2  1
-    z_8_0_2_0  link_path_mapping_coordination_1_8_0_2_0  0.01
-    z_8_0_2_0  link_path_mapping_coordination_2_8_0_2_0  -10000
-    z_8_0_2_0  auxiliary_constraints_3_1_8_0_2_0  -1
-    z_8_0_2_0  auxiliary_constraints_3_2_8_0_2  -1
-    z_8_0_3_0  link_regular_isolation_limit_8_0_3  1
-    z_8_0_3_0  link_path_mapping_coordination_1_8_0_3_0  0.01
-    z_8_0_3_0  link_path_mapping_coordination_2_8_0_3_0  -10000
-    z_8_0_3_0  auxiliary_constraints_3_1_8_0_3_0  -1
-    z_8_0_3_0  auxiliary_constraints_3_2_8_0_3  -1
-    z_8_0_4_0  link_regular_isolation_limit_8_0_4  1
-    z_8_0_4_0  link_path_mapping_coordination_1_8_0_4_0  0.01
-    z_8_0_4_0  link_path_mapping_coordination_2_8_0_4_0  -10000
-    z_8_0_4_0  auxiliary_constraints_3_1_8_0_4_0  -1
-    z_8_0_4_0  auxiliary_constraints_3_2_8_0_4  -1
-    z_8_0_5_0  link_regular_isolation_limit_8_0_5  1
-    z_8_0_5_0  link_path_mapping_coordination_1_8_0_5_0  0.01
-    z_8_0_5_0  link_path_mapping_coordination_2_8_0_5_0  -10000
-    z_8_0_5_0  auxiliary_constraints_3_1_8_0_5_0  -1
-    z_8_0_5_0  auxiliary_constraints_3_2_8_0_5  -1
-    z_8_0_6_0  link_regular_isolation_limit_8_0_6  1
-    z_8_0_6_0  link_path_mapping_coordination_1_8_0_6_0  0.01
-    z_8_0_6_0  link_path_mapping_coordination_2_8_0_6_0  -10000
-    z_8_0_6_0  auxiliary_constraints_3_1_8_0_6_0  -1
-    z_8_0_6_0  auxiliary_constraints_3_2_8_0_6  -1
-    z_8_0_7_0  link_regular_isolation_limit_8_0_7  1
-    z_8_0_7_0  link_path_mapping_coordination_1_8_0_7_0  0.01
-    z_8_0_7_0  link_path_mapping_coordination_2_8_0_7_0  -10000
-    z_8_0_7_0  auxiliary_constraints_3_1_8_0_7_0  -1
-    z_8_0_7_0  auxiliary_constraints_3_2_8_0_7  -1
-    z_9_0_0_0  link_regular_isolation_limit_9_0_0  1
-    z_9_0_0_0  link_path_mapping_coordination_1_9_0_0_0  0.01
-    z_9_0_0_0  link_path_mapping_coordination_2_9_0_0_0  -10000
-    z_9_0_0_0  auxiliary_constraints_3_1_9_0_0_0  -1
-    z_9_0_0_0  auxiliary_constraints_3_2_9_0_0  -1
-    z_9_0_1_0  link_regular_isolation_limit_9_0_1  1
-    z_9_0_1_0  link_path_mapping_coordination_1_9_0_1_0  0.01
-    z_9_0_1_0  link_path_mapping_coordination_2_9_0_1_0  -10000
-    z_9_0_1_0  auxiliary_constraints_3_1_9_0_1_0  -1
-    z_9_0_1_0  auxiliary_constraints_3_2_9_0_1  -1
-    z_9_0_2_0  link_regular_isolation_limit_9_0_2  1
-    z_9_0_2_0  link_path_mapping_coordination_1_9_0_2_0  0.01
-    z_9_0_2_0  link_path_mapping_coordination_2_9_0_2_0  -10000
-    z_9_0_2_0  auxiliary_constraints_3_1_9_0_2_0  -1
-    z_9_0_2_0  auxiliary_constraints_3_2_9_0_2  -1
-    z_9_0_3_0  link_regular_isolation_limit_9_0_3  1
-    z_9_0_3_0  link_path_mapping_coordination_1_9_0_3_0  0.01
-    z_9_0_3_0  link_path_mapping_coordination_2_9_0_3_0  -10000
-    z_9_0_3_0  auxiliary_constraints_3_1_9_0_3_0  -1
-    z_9_0_3_0  auxiliary_constraints_3_2_9_0_3  -1
-    z_9_0_4_0  link_regular_isolation_limit_9_0_4  1
-    z_9_0_4_0  link_path_mapping_coordination_1_9_0_4_0  0.01
-    z_9_0_4_0  link_path_mapping_coordination_2_9_0_4_0  -10000
-    z_9_0_4_0  auxiliary_constraints_3_1_9_0_4_0  -1
-    z_9_0_4_0  auxiliary_constraints_3_2_9_0_4  -1
-    z_9_0_5_0  link_regular_isolation_limit_9_0_5  1
-    z_9_0_5_0  link_path_mapping_coordination_1_9_0_5_0  0.01
-    z_9_0_5_0  link_path_mapping_coordination_2_9_0_5_0  -10000
-    z_9_0_5_0  auxiliary_constraints_3_1_9_0_5_0  -1
-    z_9_0_5_0  auxiliary_constraints_3_2_9_0_5  -1
-    z_9_0_6_0  link_regular_isolation_limit_9_0_6  1
-    z_9_0_6_0  link_path_mapping_coordination_1_9_0_6_0  0.01
-    z_9_0_6_0  link_path_mapping_coordination_2_9_0_6_0  -10000
-    z_9_0_6_0  auxiliary_constraints_3_1_9_0_6_0  -1
-    z_9_0_6_0  auxiliary_constraints_3_2_9_0_6  -1
-    z_9_0_7_0  link_regular_isolation_limit_9_0_7  1
-    z_9_0_7_0  link_path_mapping_coordination_1_9_0_7_0  0.01
-    z_9_0_7_0  link_path_mapping_coordination_2_9_0_7_0  -10000
-    z_9_0_7_0  auxiliary_constraints_3_1_9_0_7_0  -1
-    z_9_0_7_0  auxiliary_constraints_3_2_9_0_7  -1
     z_10_0_0_0  link_regular_isolation_limit_10_0_0  1
     z_10_0_0_0  link_path_mapping_coordination_1_10_0_0_0  0.01
     z_10_0_0_0  link_path_mapping_coordination_2_10_0_0_0  -10000
@@ -6289,36 +6957,6 @@ COLUMNS
     z_10_0_7_0  link_path_mapping_coordination_2_10_0_7_0  -10000
     z_10_0_7_0  auxiliary_constraints_3_1_10_0_7_0  -1
     z_10_0_7_0  auxiliary_constraints_3_2_10_0_7  -1
-    c_8_0_0   OBJ       90
-    c_8_0_0   mips_limit_1_8_0_0  -1
-    c_8_0_0   mips_limit_2_8_0_0  1
-    c_8_0_0   mips_max_limit_1_0  1
-    c_8_0_0   minimum_profit  90
-    c_8_0_1   OBJ       90
-    c_8_0_1   mips_limit_1_8_0_1  -1
-    c_8_0_1   mips_limit_2_8_0_1  1
-    c_8_0_1   mips_max_limit_1_1  1
-    c_8_0_1   minimum_profit  90
-    c_8_0_2   OBJ       90
-    c_8_0_2   mips_limit_1_8_0_2  -1
-    c_8_0_2   mips_limit_2_8_0_2  1
-    c_8_0_2   mips_max_limit_1_2  1
-    c_8_0_2   minimum_profit  90
-    c_9_0_0   OBJ       90
-    c_9_0_0   mips_limit_1_9_0_0  -1
-    c_9_0_0   mips_limit_2_9_0_0  1
-    c_9_0_0   mips_max_limit_1_0  1
-    c_9_0_0   minimum_profit  90
-    c_9_0_1   OBJ       90
-    c_9_0_1   mips_limit_1_9_0_1  -1
-    c_9_0_1   mips_limit_2_9_0_1  1
-    c_9_0_1   mips_max_limit_1_1  1
-    c_9_0_1   minimum_profit  90
-    c_9_0_2   OBJ       90
-    c_9_0_2   mips_limit_1_9_0_2  -1
-    c_9_0_2   mips_limit_2_9_0_2  1
-    c_9_0_2   mips_max_limit_1_2  1
-    c_9_0_2   minimum_profit  90
     c_10_0_0  OBJ       90
     c_10_0_0  mips_limit_1_10_0_0  -1
     c_10_0_0  mips_limit_2_10_0_0  1
@@ -6334,294 +6972,6 @@ COLUMNS
     c_10_0_2  mips_limit_2_10_0_2  1
     c_10_0_2  mips_max_limit_1_2  1
     c_10_0_2  minimum_profit  90
-    b_7_0_0_1_0  OBJ       0
-    b_7_0_0_2_0  OBJ       0
-    b_7_0_0_3_0  OBJ       0
-    b_7_0_0_4_0  OBJ       0
-    b_7_0_0_5_0  OBJ       0
-    b_7_0_0_6_0  OBJ       0
-    b_7_0_0_7_0  OBJ       0
-    b_7_0_1_1_0  OBJ       0
-    b_7_0_1_2_0  OBJ       0
-    b_7_0_1_3_0  OBJ       0
-    b_7_0_1_4_0  OBJ       0
-    b_7_0_1_5_0  OBJ       0
-    b_7_0_1_6_0  OBJ       0
-    b_7_0_1_7_0  OBJ       0
-    b_7_0_2_1_0  OBJ       0
-    b_7_0_2_2_0  OBJ       0
-    b_7_0_2_3_0  OBJ       0
-    b_7_0_2_4_0  OBJ       0
-    b_7_0_2_5_0  OBJ       0
-    b_7_0_2_6_0  OBJ       0
-    b_7_0_2_7_0  OBJ       0
-    b_7_0_3_1_0  OBJ       0
-    b_7_0_3_2_0  OBJ       0
-    b_7_0_3_3_0  OBJ       0
-    b_7_0_3_4_0  OBJ       0
-    b_7_0_3_5_0  OBJ       0
-    b_7_0_3_6_0  OBJ       0
-    b_7_0_3_7_0  OBJ       0
-    b_7_0_4_1_0  OBJ       0
-    b_7_0_4_2_0  OBJ       0
-    b_7_0_4_3_0  OBJ       0
-    b_7_0_4_4_0  OBJ       0
-    b_7_0_4_5_0  OBJ       0
-    b_7_0_4_6_0  OBJ       0
-    b_7_0_4_7_0  OBJ       0
-    b_7_0_5_1_0  OBJ       0
-    b_7_0_5_2_0  OBJ       0
-    b_7_0_5_3_0  OBJ       0
-    b_7_0_5_4_0  OBJ       0
-    b_7_0_5_5_0  OBJ       0
-    b_7_0_5_6_0  OBJ       0
-    b_7_0_5_7_0  OBJ       0
-    b_7_0_6_1_0  OBJ       0
-    b_7_0_6_2_0  OBJ       0
-    b_7_0_6_3_0  OBJ       0
-    b_7_0_6_4_0  OBJ       0
-    b_7_0_6_5_0  OBJ       0
-    b_7_0_6_6_0  OBJ       0
-    b_7_0_6_7_0  OBJ       0
-    b_7_0_7_1_0  OBJ       0
-    b_7_0_7_2_0  OBJ       0
-    b_7_0_7_3_0  OBJ       0
-    b_7_0_7_4_0  OBJ       0
-    b_7_0_7_5_0  OBJ       0
-    b_7_0_7_6_0  OBJ       0
-    b_7_0_7_7_0  OBJ       0
-    b_8_0_0_0_0  OBJ       0.0985
-    b_8_0_0_0_0  link_path_mapping_coordination_1_8_0_0_0  -1
-    b_8_0_0_0_0  link_path_mapping_coordination_2_8_0_0_0  0.995
-    b_8_0_0_0_0  node_path_mapping_coordination_1_8_0_0  0.995
-    b_8_0_0_0_0  node_path_mapping_coordination_2_8_0_0  0.995
-    b_8_0_0_0_0  bandwidth_overprovisioning_3_8_0  -0.995
-    b_8_0_0_0_0  bandwidth_max_limit_0_0  1
-    b_8_0_0_0_0  minimum_profit  0.0985
-    b_8_0_0_1_0  OBJ       0
-    b_8_0_0_2_0  OBJ       0
-    b_8_0_0_3_0  OBJ       0
-    b_8_0_0_4_0  OBJ       0
-    b_8_0_0_5_0  OBJ       0
-    b_8_0_0_6_0  OBJ       0
-    b_8_0_0_7_0  OBJ       0
-    b_8_0_1_0_0  OBJ       0.0985
-    b_8_0_1_0_0  link_path_mapping_coordination_1_8_0_1_0  -1
-    b_8_0_1_0_0  link_path_mapping_coordination_2_8_0_1_0  0.995
-    b_8_0_1_0_0  node_path_mapping_coordination_1_8_0_0  0.995
-    b_8_0_1_0_0  node_path_mapping_coordination_2_8_0_1  0.995
-    b_8_0_1_0_0  bandwidth_overprovisioning_3_8_0  -0.995
-    b_8_0_1_0_0  bandwidth_max_limit_1_0  1
-    b_8_0_1_0_0  minimum_profit  0.0985
-    b_8_0_1_1_0  OBJ       0
-    b_8_0_1_2_0  OBJ       0
-    b_8_0_1_3_0  OBJ       0
-    b_8_0_1_4_0  OBJ       0
-    b_8_0_1_5_0  OBJ       0
-    b_8_0_1_6_0  OBJ       0
-    b_8_0_1_7_0  OBJ       0
-    b_8_0_2_0_0  OBJ       0.0985
-    b_8_0_2_0_0  link_path_mapping_coordination_1_8_0_2_0  -1
-    b_8_0_2_0_0  link_path_mapping_coordination_2_8_0_2_0  0.995
-    b_8_0_2_0_0  node_path_mapping_coordination_1_8_0_1  0.995
-    b_8_0_2_0_0  node_path_mapping_coordination_2_8_0_0  0.995
-    b_8_0_2_0_0  bandwidth_overprovisioning_3_8_0  -0.995
-    b_8_0_2_0_0  bandwidth_max_limit_2_0  1
-    b_8_0_2_0_0  minimum_profit  0.0985
-    b_8_0_2_1_0  OBJ       0
-    b_8_0_2_2_0  OBJ       0
-    b_8_0_2_3_0  OBJ       0
-    b_8_0_2_4_0  OBJ       0
-    b_8_0_2_5_0  OBJ       0
-    b_8_0_2_6_0  OBJ       0
-    b_8_0_2_7_0  OBJ       0
-    b_8_0_3_0_0  OBJ       0.0985
-    b_8_0_3_0_0  link_path_mapping_coordination_1_8_0_3_0  -1
-    b_8_0_3_0_0  link_path_mapping_coordination_2_8_0_3_0  0.995
-    b_8_0_3_0_0  node_path_mapping_coordination_1_8_0_1  0.995
-    b_8_0_3_0_0  node_path_mapping_coordination_2_8_0_1  0.995
-    b_8_0_3_0_0  bandwidth_overprovisioning_3_8_0  -0.995
-    b_8_0_3_0_0  bandwidth_max_limit_3_0  1
-    b_8_0_3_0_0  minimum_profit  0.0985
-    b_8_0_3_1_0  OBJ       0
-    b_8_0_3_2_0  OBJ       0
-    b_8_0_3_3_0  OBJ       0
-    b_8_0_3_4_0  OBJ       0
-    b_8_0_3_5_0  OBJ       0
-    b_8_0_3_6_0  OBJ       0
-    b_8_0_3_7_0  OBJ       0
-    b_8_0_4_0_0  OBJ       0.0985
-    b_8_0_4_0_0  link_path_mapping_coordination_1_8_0_4_0  -1
-    b_8_0_4_0_0  link_path_mapping_coordination_2_8_0_4_0  0.995
-    b_8_0_4_0_0  node_path_mapping_coordination_1_8_0_2  0.995
-    b_8_0_4_0_0  node_path_mapping_coordination_2_8_0_0  0.995
-    b_8_0_4_0_0  bandwidth_overprovisioning_3_8_0  -0.995
-    b_8_0_4_0_0  bandwidth_max_limit_4_0  1
-    b_8_0_4_0_0  minimum_profit  0.0985
-    b_8_0_4_1_0  OBJ       0
-    b_8_0_4_2_0  OBJ       0
-    b_8_0_4_3_0  OBJ       0
-    b_8_0_4_4_0  OBJ       0
-    b_8_0_4_5_0  OBJ       0
-    b_8_0_4_6_0  OBJ       0
-    b_8_0_4_7_0  OBJ       0
-    b_8_0_5_0_0  OBJ       0.0985
-    b_8_0_5_0_0  link_path_mapping_coordination_1_8_0_5_0  -1
-    b_8_0_5_0_0  link_path_mapping_coordination_2_8_0_5_0  0.995
-    b_8_0_5_0_0  node_path_mapping_coordination_1_8_0_2  0.995
-    b_8_0_5_0_0  node_path_mapping_coordination_2_8_0_1  0.995
-    b_8_0_5_0_0  bandwidth_overprovisioning_3_8_0  -0.995
-    b_8_0_5_0_0  bandwidth_max_limit_5_0  1
-    b_8_0_5_0_0  minimum_profit  0.0985
-    b_8_0_5_1_0  OBJ       0
-    b_8_0_5_2_0  OBJ       0
-    b_8_0_5_3_0  OBJ       0
-    b_8_0_5_4_0  OBJ       0
-    b_8_0_5_5_0  OBJ       0
-    b_8_0_5_6_0  OBJ       0
-    b_8_0_5_7_0  OBJ       0
-    b_8_0_6_0_0  OBJ       -0.001
-    b_8_0_6_0_0  link_path_mapping_coordination_1_8_0_6_0  -1
-    b_8_0_6_0_0  link_path_mapping_coordination_2_8_0_6_0  0.995
-    b_8_0_6_0_0  node_path_mapping_coordination_1_8_0_0  0.995
-    b_8_0_6_0_0  bandwidth_max_limit_6_0  1
-    b_8_0_6_0_0  minimum_profit  -0.001
-    b_8_0_6_1_0  OBJ       0
-    b_8_0_6_2_0  OBJ       0
-    b_8_0_6_3_0  OBJ       0
-    b_8_0_6_4_0  OBJ       0
-    b_8_0_6_5_0  OBJ       0
-    b_8_0_6_6_0  OBJ       0
-    b_8_0_6_7_0  OBJ       0
-    b_8_0_7_0_0  OBJ       -0.001
-    b_8_0_7_0_0  link_path_mapping_coordination_1_8_0_7_0  -1
-    b_8_0_7_0_0  link_path_mapping_coordination_2_8_0_7_0  0.995
-    b_8_0_7_0_0  node_path_mapping_coordination_1_8_0_1  0.995
-    b_8_0_7_0_0  bandwidth_max_limit_7_0  1
-    b_8_0_7_0_0  minimum_profit  -0.001
-    b_8_0_7_1_0  OBJ       0
-    b_8_0_7_2_0  OBJ       0
-    b_8_0_7_3_0  OBJ       0
-    b_8_0_7_4_0  OBJ       0
-    b_8_0_7_5_0  OBJ       0
-    b_8_0_7_6_0  OBJ       0
-    b_8_0_7_7_0  OBJ       0
-    b_9_0_0_0_0  OBJ       0.0985
-    b_9_0_0_0_0  link_path_mapping_coordination_1_9_0_0_0  -1
-    b_9_0_0_0_0  link_path_mapping_coordination_2_9_0_0_0  0.995
-    b_9_0_0_0_0  node_path_mapping_coordination_1_9_0_0  0.995
-    b_9_0_0_0_0  node_path_mapping_coordination_2_9_0_0  0.995
-    b_9_0_0_0_0  bandwidth_overprovisioning_3_9_0  -0.995
-    b_9_0_0_0_0  bandwidth_max_limit_0_0  1
-    b_9_0_0_0_0  minimum_profit  0.0985
-    b_9_0_0_1_0  OBJ       0
-    b_9_0_0_2_0  OBJ       0
-    b_9_0_0_3_0  OBJ       0
-    b_9_0_0_4_0  OBJ       0
-    b_9_0_0_5_0  OBJ       0
-    b_9_0_0_6_0  OBJ       0
-    b_9_0_0_7_0  OBJ       0
-    b_9_0_1_0_0  OBJ       0.0985
-    b_9_0_1_0_0  link_path_mapping_coordination_1_9_0_1_0  -1
-    b_9_0_1_0_0  link_path_mapping_coordination_2_9_0_1_0  0.995
-    b_9_0_1_0_0  node_path_mapping_coordination_1_9_0_0  0.995
-    b_9_0_1_0_0  node_path_mapping_coordination_2_9_0_1  0.995
-    b_9_0_1_0_0  bandwidth_overprovisioning_3_9_0  -0.995
-    b_9_0_1_0_0  bandwidth_max_limit_1_0  1
-    b_9_0_1_0_0  minimum_profit  0.0985
-    b_9_0_1_1_0  OBJ       0
-    b_9_0_1_2_0  OBJ       0
-    b_9_0_1_3_0  OBJ       0
-    b_9_0_1_4_0  OBJ       0
-    b_9_0_1_5_0  OBJ       0
-    b_9_0_1_6_0  OBJ       0
-    b_9_0_1_7_0  OBJ       0
-    b_9_0_2_0_0  OBJ       0.0985
-    b_9_0_2_0_0  link_path_mapping_coordination_1_9_0_2_0  -1
-    b_9_0_2_0_0  link_path_mapping_coordination_2_9_0_2_0  0.995
-    b_9_0_2_0_0  node_path_mapping_coordination_1_9_0_1  0.995
-    b_9_0_2_0_0  node_path_mapping_coordination_2_9_0_0  0.995
-    b_9_0_2_0_0  bandwidth_overprovisioning_3_9_0  -0.995
-    b_9_0_2_0_0  bandwidth_max_limit_2_0  1
-    b_9_0_2_0_0  minimum_profit  0.0985
-    b_9_0_2_1_0  OBJ       0
-    b_9_0_2_2_0  OBJ       0
-    b_9_0_2_3_0  OBJ       0
-    b_9_0_2_4_0  OBJ       0
-    b_9_0_2_5_0  OBJ       0
-    b_9_0_2_6_0  OBJ       0
-    b_9_0_2_7_0  OBJ       0
-    b_9_0_3_0_0  OBJ       0.0985
-    b_9_0_3_0_0  link_path_mapping_coordination_1_9_0_3_0  -1
-    b_9_0_3_0_0  link_path_mapping_coordination_2_9_0_3_0  0.995
-    b_9_0_3_0_0  node_path_mapping_coordination_1_9_0_1  0.995
-    b_9_0_3_0_0  node_path_mapping_coordination_2_9_0_1  0.995
-    b_9_0_3_0_0  bandwidth_overprovisioning_3_9_0  -0.995
-    b_9_0_3_0_0  bandwidth_max_limit_3_0  1
-    b_9_0_3_0_0  minimum_profit  0.0985
-    b_9_0_3_1_0  OBJ       0
-    b_9_0_3_2_0  OBJ       0
-    b_9_0_3_3_0  OBJ       0
-    b_9_0_3_4_0  OBJ       0
-    b_9_0_3_5_0  OBJ       0
-    b_9_0_3_6_0  OBJ       0
-    b_9_0_3_7_0  OBJ       0
-    b_9_0_4_0_0  OBJ       0.0985
-    b_9_0_4_0_0  link_path_mapping_coordination_1_9_0_4_0  -1
-    b_9_0_4_0_0  link_path_mapping_coordination_2_9_0_4_0  0.995
-    b_9_0_4_0_0  node_path_mapping_coordination_1_9_0_2  0.995
-    b_9_0_4_0_0  node_path_mapping_coordination_2_9_0_0  0.995
-    b_9_0_4_0_0  bandwidth_overprovisioning_3_9_0  -0.995
-    b_9_0_4_0_0  bandwidth_max_limit_4_0  1
-    b_9_0_4_0_0  minimum_profit  0.0985
-    b_9_0_4_1_0  OBJ       0
-    b_9_0_4_2_0  OBJ       0
-    b_9_0_4_3_0  OBJ       0
-    b_9_0_4_4_0  OBJ       0
-    b_9_0_4_5_0  OBJ       0
-    b_9_0_4_6_0  OBJ       0
-    b_9_0_4_7_0  OBJ       0
-    b_9_0_5_0_0  OBJ       0.0985
-    b_9_0_5_0_0  link_path_mapping_coordination_1_9_0_5_0  -1
-    b_9_0_5_0_0  link_path_mapping_coordination_2_9_0_5_0  0.995
-    b_9_0_5_0_0  node_path_mapping_coordination_1_9_0_2  0.995
-    b_9_0_5_0_0  node_path_mapping_coordination_2_9_0_1  0.995
-    b_9_0_5_0_0  bandwidth_overprovisioning_3_9_0  -0.995
-    b_9_0_5_0_0  bandwidth_max_limit_5_0  1
-    b_9_0_5_0_0  minimum_profit  0.0985
-    b_9_0_5_1_0  OBJ       0
-    b_9_0_5_2_0  OBJ       0
-    b_9_0_5_3_0  OBJ       0
-    b_9_0_5_4_0  OBJ       0
-    b_9_0_5_5_0  OBJ       0
-    b_9_0_5_6_0  OBJ       0
-    b_9_0_5_7_0  OBJ       0
-    b_9_0_6_0_0  OBJ       -0.001
-    b_9_0_6_0_0  link_path_mapping_coordination_1_9_0_6_0  -1
-    b_9_0_6_0_0  link_path_mapping_coordination_2_9_0_6_0  0.995
-    b_9_0_6_0_0  node_path_mapping_coordination_1_9_0_0  0.995
-    b_9_0_6_0_0  bandwidth_max_limit_6_0  1
-    b_9_0_6_0_0  minimum_profit  -0.001
-    b_9_0_6_1_0  OBJ       0
-    b_9_0_6_2_0  OBJ       0
-    b_9_0_6_3_0  OBJ       0
-    b_9_0_6_4_0  OBJ       0
-    b_9_0_6_5_0  OBJ       0
-    b_9_0_6_6_0  OBJ       0
-    b_9_0_6_7_0  OBJ       0
-    b_9_0_7_0_0  OBJ       -0.001
-    b_9_0_7_0_0  link_path_mapping_coordination_1_9_0_7_0  -1
-    b_9_0_7_0_0  link_path_mapping_coordination_2_9_0_7_0  0.995
-    b_9_0_7_0_0  node_path_mapping_coordination_1_9_0_1  0.995
-    b_9_0_7_0_0  bandwidth_max_limit_7_0  1
-    b_9_0_7_0_0  minimum_profit  -0.001
-    b_9_0_7_1_0  OBJ       0
-    b_9_0_7_2_0  OBJ       0
-    b_9_0_7_3_0  OBJ       0
-    b_9_0_7_4_0  OBJ       0
-    b_9_0_7_5_0  OBJ       0
-    b_9_0_7_6_0  OBJ       0
-    b_9_0_7_7_0  OBJ       0
     b_10_0_0_0_0  OBJ       0.0985
     b_10_0_0_0_0  link_path_mapping_coordination_1_10_0_0_0  -1
     b_10_0_0_0_0  link_path_mapping_coordination_2_10_0_0_0  0.995
@@ -6630,13 +6980,6 @@ COLUMNS
     b_10_0_0_0_0  bandwidth_overprovisioning_3_10_0  -0.995
     b_10_0_0_0_0  bandwidth_max_limit_0_0  1
     b_10_0_0_0_0  minimum_profit  0.0985
-    b_10_0_0_1_0  OBJ       0
-    b_10_0_0_2_0  OBJ       0
-    b_10_0_0_3_0  OBJ       0
-    b_10_0_0_4_0  OBJ       0
-    b_10_0_0_5_0  OBJ       0
-    b_10_0_0_6_0  OBJ       0
-    b_10_0_0_7_0  OBJ       0
     b_10_0_1_0_0  OBJ       0.0985
     b_10_0_1_0_0  link_path_mapping_coordination_1_10_0_1_0  -1
     b_10_0_1_0_0  link_path_mapping_coordination_2_10_0_1_0  0.995
@@ -6645,13 +6988,6 @@ COLUMNS
     b_10_0_1_0_0  bandwidth_overprovisioning_3_10_0  -0.995
     b_10_0_1_0_0  bandwidth_max_limit_1_0  1
     b_10_0_1_0_0  minimum_profit  0.0985
-    b_10_0_1_1_0  OBJ       0
-    b_10_0_1_2_0  OBJ       0
-    b_10_0_1_3_0  OBJ       0
-    b_10_0_1_4_0  OBJ       0
-    b_10_0_1_5_0  OBJ       0
-    b_10_0_1_6_0  OBJ       0
-    b_10_0_1_7_0  OBJ       0
     b_10_0_2_0_0  OBJ       0.0985
     b_10_0_2_0_0  link_path_mapping_coordination_1_10_0_2_0  -1
     b_10_0_2_0_0  link_path_mapping_coordination_2_10_0_2_0  0.995
@@ -6660,13 +6996,6 @@ COLUMNS
     b_10_0_2_0_0  bandwidth_overprovisioning_3_10_0  -0.995
     b_10_0_2_0_0  bandwidth_max_limit_2_0  1
     b_10_0_2_0_0  minimum_profit  0.0985
-    b_10_0_2_1_0  OBJ       0
-    b_10_0_2_2_0  OBJ       0
-    b_10_0_2_3_0  OBJ       0
-    b_10_0_2_4_0  OBJ       0
-    b_10_0_2_5_0  OBJ       0
-    b_10_0_2_6_0  OBJ       0
-    b_10_0_2_7_0  OBJ       0
     b_10_0_3_0_0  OBJ       0.0985
     b_10_0_3_0_0  link_path_mapping_coordination_1_10_0_3_0  -1
     b_10_0_3_0_0  link_path_mapping_coordination_2_10_0_3_0  0.995
@@ -6675,13 +7004,6 @@ COLUMNS
     b_10_0_3_0_0  bandwidth_overprovisioning_3_10_0  -0.995
     b_10_0_3_0_0  bandwidth_max_limit_3_0  1
     b_10_0_3_0_0  minimum_profit  0.0985
-    b_10_0_3_1_0  OBJ       0
-    b_10_0_3_2_0  OBJ       0
-    b_10_0_3_3_0  OBJ       0
-    b_10_0_3_4_0  OBJ       0
-    b_10_0_3_5_0  OBJ       0
-    b_10_0_3_6_0  OBJ       0
-    b_10_0_3_7_0  OBJ       0
     b_10_0_4_0_0  OBJ       0.0985
     b_10_0_4_0_0  link_path_mapping_coordination_1_10_0_4_0  -1
     b_10_0_4_0_0  link_path_mapping_coordination_2_10_0_4_0  0.995
@@ -6690,13 +7012,6 @@ COLUMNS
     b_10_0_4_0_0  bandwidth_overprovisioning_3_10_0  -0.995
     b_10_0_4_0_0  bandwidth_max_limit_4_0  1
     b_10_0_4_0_0  minimum_profit  0.0985
-    b_10_0_4_1_0  OBJ       0
-    b_10_0_4_2_0  OBJ       0
-    b_10_0_4_3_0  OBJ       0
-    b_10_0_4_4_0  OBJ       0
-    b_10_0_4_5_0  OBJ       0
-    b_10_0_4_6_0  OBJ       0
-    b_10_0_4_7_0  OBJ       0
     b_10_0_5_0_0  OBJ       0.0985
     b_10_0_5_0_0  link_path_mapping_coordination_1_10_0_5_0  -1
     b_10_0_5_0_0  link_path_mapping_coordination_2_10_0_5_0  0.995
@@ -6705,85 +7020,28 @@ COLUMNS
     b_10_0_5_0_0  bandwidth_overprovisioning_3_10_0  -0.995
     b_10_0_5_0_0  bandwidth_max_limit_5_0  1
     b_10_0_5_0_0  minimum_profit  0.0985
-    b_10_0_5_1_0  OBJ       0
-    b_10_0_5_2_0  OBJ       0
-    b_10_0_5_3_0  OBJ       0
-    b_10_0_5_4_0  OBJ       0
-    b_10_0_5_5_0  OBJ       0
-    b_10_0_5_6_0  OBJ       0
-    b_10_0_5_7_0  OBJ       0
     b_10_0_6_0_0  OBJ       -0.001
     b_10_0_6_0_0  link_path_mapping_coordination_1_10_0_6_0  -1
     b_10_0_6_0_0  link_path_mapping_coordination_2_10_0_6_0  0.995
     b_10_0_6_0_0  node_path_mapping_coordination_1_10_0_0  0.995
     b_10_0_6_0_0  bandwidth_max_limit_6_0  1
     b_10_0_6_0_0  minimum_profit  -0.001
-    b_10_0_6_1_0  OBJ       0
-    b_10_0_6_2_0  OBJ       0
-    b_10_0_6_3_0  OBJ       0
-    b_10_0_6_4_0  OBJ       0
-    b_10_0_6_5_0  OBJ       0
-    b_10_0_6_6_0  OBJ       0
-    b_10_0_6_7_0  OBJ       0
     b_10_0_7_0_0  OBJ       -0.001
     b_10_0_7_0_0  link_path_mapping_coordination_1_10_0_7_0  -1
     b_10_0_7_0_0  link_path_mapping_coordination_2_10_0_7_0  0.995
     b_10_0_7_0_0  node_path_mapping_coordination_1_10_0_1  0.995
     b_10_0_7_0_0  bandwidth_max_limit_7_0  1
     b_10_0_7_0_0  minimum_profit  -0.001
-    b_10_0_7_1_0  OBJ       0
-    b_10_0_7_2_0  OBJ       0
-    b_10_0_7_3_0  OBJ       0
-    b_10_0_7_4_0  OBJ       0
-    b_10_0_7_5_0  OBJ       0
-    b_10_0_7_6_0  OBJ       0
-    b_10_0_7_7_0  OBJ       0
-    a_x1_8_0  OBJ       0
-    a_x1_8_1  OBJ       0
-    a_x1_8_2  OBJ       0
-    a_x1_9_0  OBJ       0
-    a_x1_9_1  OBJ       0
-    a_x1_9_2  OBJ       0
     a_x1_10_0  OBJ       0
     a_x1_10_1  OBJ       0
     a_x1_10_2  OBJ       0
-    a_x4_8_0_0  OBJ       0
-    a_x4_8_0_1  OBJ       0
-    a_x4_8_0_2  OBJ       0
-    a_x4_9_0_0  OBJ       0
-    a_x4_9_0_1  OBJ       0
-    a_x4_9_0_2  OBJ       0
     a_x4_10_0_0  OBJ       0
     a_x4_10_0_1  OBJ       0
     a_x4_10_0_2  OBJ       0
-    a_y1_8_0  OBJ       0
-    a_y1_8_1  OBJ       0
-    a_y1_9_0  OBJ       0
-    a_y1_9_1  OBJ       0
     a_y1_10_0  OBJ       0
     a_y1_10_1  OBJ       0
-    a_y2_8_0_0  OBJ       0
-    a_y2_8_0_1  OBJ       0
-    a_y2_9_0_0  OBJ       0
-    a_y2_9_0_1  OBJ       0
     a_y2_10_0_0  OBJ       0
     a_y2_10_0_1  OBJ       0
-    a_z1_8_0  OBJ       0
-    a_z1_8_1  OBJ       0
-    a_z1_8_2  OBJ       0
-    a_z1_8_3  OBJ       0
-    a_z1_8_4  OBJ       0
-    a_z1_8_5  OBJ       0
-    a_z1_8_6  OBJ       0
-    a_z1_8_7  OBJ       0
-    a_z1_9_0  OBJ       0
-    a_z1_9_1  OBJ       0
-    a_z1_9_2  OBJ       0
-    a_z1_9_3  OBJ       0
-    a_z1_9_4  OBJ       0
-    a_z1_9_5  OBJ       0
-    a_z1_9_6  OBJ       0
-    a_z1_9_7  OBJ       0
     a_z1_10_0  OBJ       0
     a_z1_10_1  OBJ       0
     a_z1_10_2  OBJ       0
@@ -6792,86 +7050,6 @@ COLUMNS
     a_z1_10_5  OBJ       0
     a_z1_10_6  OBJ       0
     a_z1_10_7  OBJ       0
-    a_z2_8_0_0  vp_unique_mapping_8_0  1
-    a_z2_8_0_0  auxiliary_constraints_3_1_8_0_0_0  1
-    a_z2_8_0_0  auxiliary_constraints_3_2_8_0_0  1
-    a_z2_8_0_0  auxiliary_constraints_6_3_8_0_7  -1
-    a_z2_8_0_0  auxiliary_constraints_8_4_8_0_0  -1
-    a_z2_8_0_1  vp_unique_mapping_8_0  1
-    a_z2_8_0_1  auxiliary_constraints_3_1_8_0_1_0  1
-    a_z2_8_0_1  auxiliary_constraints_3_2_8_0_1  1
-    a_z2_8_0_1  auxiliary_constraints_6_3_8_0_7  -1
-    a_z2_8_0_1  auxiliary_constraints_8_4_8_0_1  -1
-    a_z2_8_0_2  vp_unique_mapping_8_0  1
-    a_z2_8_0_2  auxiliary_constraints_3_1_8_0_2_0  1
-    a_z2_8_0_2  auxiliary_constraints_3_2_8_0_2  1
-    a_z2_8_0_2  auxiliary_constraints_6_3_8_0_7  -0.02
-    a_z2_8_0_2  auxiliary_constraints_8_4_8_0_2  -0.02
-    a_z2_8_0_3  vp_unique_mapping_8_0  1
-    a_z2_8_0_3  auxiliary_constraints_3_1_8_0_3_0  1
-    a_z2_8_0_3  auxiliary_constraints_3_2_8_0_3  1
-    a_z2_8_0_3  auxiliary_constraints_6_3_8_0_7  -0.02
-    a_z2_8_0_3  auxiliary_constraints_8_4_8_0_3  -0.02
-    a_z2_8_0_4  vp_unique_mapping_8_0  1
-    a_z2_8_0_4  auxiliary_constraints_3_1_8_0_4_0  1
-    a_z2_8_0_4  auxiliary_constraints_3_2_8_0_4  1
-    a_z2_8_0_4  auxiliary_constraints_6_3_8_0_7  -10
-    a_z2_8_0_4  auxiliary_constraints_8_4_8_0_4  -10
-    a_z2_8_0_5  vp_unique_mapping_8_0  1
-    a_z2_8_0_5  auxiliary_constraints_3_1_8_0_5_0  1
-    a_z2_8_0_5  auxiliary_constraints_3_2_8_0_5  1
-    a_z2_8_0_5  auxiliary_constraints_6_3_8_0_7  -10
-    a_z2_8_0_5  auxiliary_constraints_8_4_8_0_5  -10
-    a_z2_8_0_6  vp_unique_mapping_8_0  1
-    a_z2_8_0_6  auxiliary_constraints_3_1_8_0_6_0  1
-    a_z2_8_0_6  auxiliary_constraints_3_2_8_0_6  1
-    a_z2_8_0_6  auxiliary_constraints_6_3_8_0_7  -10
-    a_z2_8_0_6  auxiliary_constraints_8_4_8_0_6  -10
-    a_z2_8_0_7  vp_unique_mapping_8_0  1
-    a_z2_8_0_7  auxiliary_constraints_3_1_8_0_7_0  1
-    a_z2_8_0_7  auxiliary_constraints_3_2_8_0_7  1
-    a_z2_8_0_7  auxiliary_constraints_6_3_8_0_7  -10
-    a_z2_8_0_7  auxiliary_constraints_8_4_8_0_7  -10
-    a_z2_9_0_0  vp_unique_mapping_9_0  1
-    a_z2_9_0_0  auxiliary_constraints_3_1_9_0_0_0  1
-    a_z2_9_0_0  auxiliary_constraints_3_2_9_0_0  1
-    a_z2_9_0_0  auxiliary_constraints_6_3_9_0_7  -1
-    a_z2_9_0_0  auxiliary_constraints_8_4_9_0_0  -1
-    a_z2_9_0_1  vp_unique_mapping_9_0  1
-    a_z2_9_0_1  auxiliary_constraints_3_1_9_0_1_0  1
-    a_z2_9_0_1  auxiliary_constraints_3_2_9_0_1  1
-    a_z2_9_0_1  auxiliary_constraints_6_3_9_0_7  -1
-    a_z2_9_0_1  auxiliary_constraints_8_4_9_0_1  -1
-    a_z2_9_0_2  vp_unique_mapping_9_0  1
-    a_z2_9_0_2  auxiliary_constraints_3_1_9_0_2_0  1
-    a_z2_9_0_2  auxiliary_constraints_3_2_9_0_2  1
-    a_z2_9_0_2  auxiliary_constraints_6_3_9_0_7  -0.02
-    a_z2_9_0_2  auxiliary_constraints_8_4_9_0_2  -0.02
-    a_z2_9_0_3  vp_unique_mapping_9_0  1
-    a_z2_9_0_3  auxiliary_constraints_3_1_9_0_3_0  1
-    a_z2_9_0_3  auxiliary_constraints_3_2_9_0_3  1
-    a_z2_9_0_3  auxiliary_constraints_6_3_9_0_7  -0.02
-    a_z2_9_0_3  auxiliary_constraints_8_4_9_0_3  -0.02
-    a_z2_9_0_4  vp_unique_mapping_9_0  1
-    a_z2_9_0_4  auxiliary_constraints_3_1_9_0_4_0  1
-    a_z2_9_0_4  auxiliary_constraints_3_2_9_0_4  1
-    a_z2_9_0_4  auxiliary_constraints_6_3_9_0_7  -10
-    a_z2_9_0_4  auxiliary_constraints_8_4_9_0_4  -10
-    a_z2_9_0_5  vp_unique_mapping_9_0  1
-    a_z2_9_0_5  auxiliary_constraints_3_1_9_0_5_0  1
-    a_z2_9_0_5  auxiliary_constraints_3_2_9_0_5  1
-    a_z2_9_0_5  auxiliary_constraints_6_3_9_0_7  -10
-    a_z2_9_0_5  auxiliary_constraints_8_4_9_0_5  -10
-    a_z2_9_0_6  vp_unique_mapping_9_0  1
-    a_z2_9_0_6  auxiliary_constraints_3_1_9_0_6_0  1
-    a_z2_9_0_6  auxiliary_constraints_3_2_9_0_6  1
-    a_z2_9_0_6  auxiliary_constraints_6_3_9_0_7  -10
-    a_z2_9_0_6  auxiliary_constraints_8_4_9_0_6  -10
-    a_z2_9_0_7  vp_unique_mapping_9_0  1
-    a_z2_9_0_7  auxiliary_constraints_3_1_9_0_7_0  1
-    a_z2_9_0_7  auxiliary_constraints_3_2_9_0_7  1
-    a_z2_9_0_7  auxiliary_constraints_6_3_9_0_7  -10
-    a_z2_9_0_7  auxiliary_constraints_8_4_9_0_7  -10
     a_z2_10_0_0  vp_unique_mapping_10_0  1
     a_z2_10_0_0  auxiliary_constraints_3_1_10_0_0_0  1
     a_z2_10_0_0  auxiliary_constraints_3_2_10_0_0  1
@@ -6912,32 +7090,6 @@ COLUMNS
     a_z2_10_0_7  auxiliary_constraints_3_2_10_0_7  1
     a_z2_10_0_7  auxiliary_constraints_6_3_10_0_7  -10
     a_z2_10_0_7  auxiliary_constraints_8_4_10_0_7  -10
-    a_z3_8_0  OBJ       -0.001
-    a_z3_8_0  auxiliary_constraints_6_3_8_0_7  1
-    a_z3_8_0  auxiliary_constraints_7_8_0  1
-    a_z3_8_0  auxiliary_constraints_8_1_8_0  1
-    a_z3_8_0  auxiliary_constraints_8_4_8_0_0  1
-    a_z3_8_0  auxiliary_constraints_8_4_8_0_1  1
-    a_z3_8_0  auxiliary_constraints_8_4_8_0_2  1
-    a_z3_8_0  auxiliary_constraints_8_4_8_0_3  1
-    a_z3_8_0  auxiliary_constraints_8_4_8_0_4  1
-    a_z3_8_0  auxiliary_constraints_8_4_8_0_5  1
-    a_z3_8_0  auxiliary_constraints_8_4_8_0_6  1
-    a_z3_8_0  auxiliary_constraints_8_4_8_0_7  1
-    a_z3_8_0  minimum_profit  -0.001
-    a_z3_9_0  OBJ       -0.001
-    a_z3_9_0  auxiliary_constraints_6_3_9_0_7  1
-    a_z3_9_0  auxiliary_constraints_7_9_0  1
-    a_z3_9_0  auxiliary_constraints_8_1_9_0  1
-    a_z3_9_0  auxiliary_constraints_8_4_9_0_0  1
-    a_z3_9_0  auxiliary_constraints_8_4_9_0_1  1
-    a_z3_9_0  auxiliary_constraints_8_4_9_0_2  1
-    a_z3_9_0  auxiliary_constraints_8_4_9_0_3  1
-    a_z3_9_0  auxiliary_constraints_8_4_9_0_4  1
-    a_z3_9_0  auxiliary_constraints_8_4_9_0_5  1
-    a_z3_9_0  auxiliary_constraints_8_4_9_0_6  1
-    a_z3_9_0  auxiliary_constraints_8_4_9_0_7  1
-    a_z3_9_0  minimum_profit  -0.001
     a_z3_10_0  OBJ       -0.001
     a_z3_10_0  auxiliary_constraints_6_3_10_0_7  1
     a_z3_10_0  auxiliary_constraints_7_10_0  1
@@ -6951,24 +7103,6 @@ COLUMNS
     a_z3_10_0  auxiliary_constraints_8_4_10_0_6  1
     a_z3_10_0  auxiliary_constraints_8_4_10_0_7  1
     a_z3_10_0  minimum_profit  -0.001
-    a_z4_8_0  auxiliary_constraints_8_1_8_0  -1000
-    a_z4_8_0  auxiliary_constraints_8_4_8_0_0  1000
-    a_z4_8_0  auxiliary_constraints_8_4_8_0_1  1000
-    a_z4_8_0  auxiliary_constraints_8_4_8_0_2  1000
-    a_z4_8_0  auxiliary_constraints_8_4_8_0_3  1000
-    a_z4_8_0  auxiliary_constraints_8_4_8_0_4  1000
-    a_z4_8_0  auxiliary_constraints_8_4_8_0_5  1000
-    a_z4_8_0  auxiliary_constraints_8_4_8_0_6  1000
-    a_z4_8_0  auxiliary_constraints_8_4_8_0_7  1000
-    a_z4_9_0  auxiliary_constraints_8_1_9_0  -1000
-    a_z4_9_0  auxiliary_constraints_8_4_9_0_0  1000
-    a_z4_9_0  auxiliary_constraints_8_4_9_0_1  1000
-    a_z4_9_0  auxiliary_constraints_8_4_9_0_2  1000
-    a_z4_9_0  auxiliary_constraints_8_4_9_0_3  1000
-    a_z4_9_0  auxiliary_constraints_8_4_9_0_4  1000
-    a_z4_9_0  auxiliary_constraints_8_4_9_0_5  1000
-    a_z4_9_0  auxiliary_constraints_8_4_9_0_6  1000
-    a_z4_9_0  auxiliary_constraints_8_4_9_0_7  1000
     a_z4_10_0  auxiliary_constraints_8_1_10_0  -1000
     a_z4_10_0  auxiliary_constraints_8_4_10_0_0  1000
     a_z4_10_0  auxiliary_constraints_8_4_10_0_1  1000
@@ -6978,46 +7112,102 @@ COLUMNS
     a_z4_10_0  auxiliary_constraints_8_4_10_0_5  1000
     a_z4_10_0  auxiliary_constraints_8_4_10_0_6  1000
     a_z4_10_0  auxiliary_constraints_8_4_10_0_7  1000
+    b_10_0_0_1_0  OBJ       0
+    b_10_0_0_2_0  OBJ       0
+    b_10_0_0_3_0  OBJ       0
+    b_10_0_0_4_0  OBJ       0
+    b_10_0_0_5_0  OBJ       0
+    b_10_0_0_6_0  OBJ       0
+    b_10_0_0_7_0  OBJ       0
+    b_10_0_1_1_0  OBJ       0
+    b_10_0_1_2_0  OBJ       0
+    b_10_0_1_3_0  OBJ       0
+    b_10_0_1_4_0  OBJ       0
+    b_10_0_1_5_0  OBJ       0
+    b_10_0_1_6_0  OBJ       0
+    b_10_0_1_7_0  OBJ       0
+    b_10_0_2_1_0  OBJ       0
+    b_10_0_2_2_0  OBJ       0
+    b_10_0_2_3_0  OBJ       0
+    b_10_0_2_4_0  OBJ       0
+    b_10_0_2_5_0  OBJ       0
+    b_10_0_2_6_0  OBJ       0
+    b_10_0_2_7_0  OBJ       0
+    b_10_0_3_1_0  OBJ       0
+    b_10_0_3_2_0  OBJ       0
+    b_10_0_3_3_0  OBJ       0
+    b_10_0_3_4_0  OBJ       0
+    b_10_0_3_5_0  OBJ       0
+    b_10_0_3_6_0  OBJ       0
+    b_10_0_3_7_0  OBJ       0
+    b_10_0_4_1_0  OBJ       0
+    b_10_0_4_2_0  OBJ       0
+    b_10_0_4_3_0  OBJ       0
+    b_10_0_4_4_0  OBJ       0
+    b_10_0_4_5_0  OBJ       0
+    b_10_0_4_6_0  OBJ       0
+    b_10_0_4_7_0  OBJ       0
+    b_10_0_5_1_0  OBJ       0
+    b_10_0_5_2_0  OBJ       0
+    b_10_0_5_3_0  OBJ       0
+    b_10_0_5_4_0  OBJ       0
+    b_10_0_5_5_0  OBJ       0
+    b_10_0_5_6_0  OBJ       0
+    b_10_0_5_7_0  OBJ       0
+    b_10_0_6_1_0  OBJ       0
+    b_10_0_6_2_0  OBJ       0
+    b_10_0_6_3_0  OBJ       0
+    b_10_0_6_4_0  OBJ       0
+    b_10_0_6_5_0  OBJ       0
+    b_10_0_6_6_0  OBJ       0
+    b_10_0_6_7_0  OBJ       0
+    b_10_0_7_1_0  OBJ       0
+    b_10_0_7_2_0  OBJ       0
+    b_10_0_7_3_0  OBJ       0
+    b_10_0_7_4_0  OBJ       0
+    b_10_0_7_5_0  OBJ       0
+    b_10_0_7_6_0  OBJ       0
+    b_10_0_7_7_0  OBJ       0
     x_11_0_0  OBJ       -1.3636363636363635e+00
     x_11_0_0  nf_unique_mapping_11_0  1
-    x_11_0_0  nf_regular_isolation_limit_11_0_0  1
     x_11_0_0  mips_limit_1_11_0_0  0.01
     x_11_0_0  mips_limit_2_11_0_0  -0.6
-    x_11_0_0  mips_max_limit_1_0  1.3636363636363635e-01
-    x_11_0_0  mips_max_limit_2_0  2.7272727272727271e-02
     x_11_0_0  node_path_mapping_coordination_1_11_0_0  -10000
     x_11_0_0  auxiliary_constraints_8_1_11_0_0  -1
+    x_11_0_0  nf_regular_isolation_limit_11_0_0  1
+    x_11_0_0  mips_max_limit_1_0  1.3636363636363635e-01
+    x_11_0_0  mips_max_limit_2_0  2.7272727272727271e-02
     x_11_0_0  auxiliary_constraints_8_2_0  -1
     x_11_0_0  minimum_profit  -1.3636363636363635e+00
-    x_11_0_1  OBJ       -1.3636363636363635e+00
+    x_11_0_1  OBJ       -2.3636363636363633e+00
     x_11_0_1  nf_unique_mapping_11_0  1
-    x_11_0_1  nf_regular_isolation_limit_11_0_1  1
     x_11_0_1  mips_limit_1_11_0_1  0.01
     x_11_0_1  mips_limit_2_11_0_1  -0.6
-    x_11_0_1  mips_max_limit_1_1  1.3636363636363635e-01
-    x_11_0_1  mips_max_limit_2_1  2.7272727272727271e-02
     x_11_0_1  node_path_mapping_coordination_1_11_0_1  -10000
     x_11_0_1  auxiliary_constraints_8_1_11_0_1  -1
+    x_11_0_1  nf_regular_isolation_limit_11_0_1  1
+    x_11_0_1  mips_max_limit_1_1  1.3636363636363635e-01
+    x_11_0_1  mips_max_limit_2_1  2.7272727272727271e-02
     x_11_0_1  auxiliary_constraints_8_2_1  -1
-    x_11_0_1  minimum_profit  -1.3636363636363635e+00
-    x_11_0_2  OBJ       -1.3636363636363638e-01
+    x_11_0_1  minimum_profit  -2.3636363636363633e+00
+    x_11_0_2  OBJ       -1.1363636363636365e+00
     x_11_0_2  nf_unique_mapping_11_0  1
-    x_11_0_2  nf_regular_isolation_limit_11_0_2  1
     x_11_0_2  mips_limit_1_11_0_2  0.01
     x_11_0_2  mips_limit_2_11_0_2  -0.6
-    x_11_0_2  mips_max_limit_1_2  1.3636363636363637e-02
-    x_11_0_2  mips_max_limit_2_2  2.7272727272727275e-03
     x_11_0_2  node_path_mapping_coordination_1_11_0_2  -10000
     x_11_0_2  auxiliary_constraints_8_1_11_0_2  -1
+    x_11_0_2  nf_regular_isolation_limit_11_0_2  1
+    x_11_0_2  mips_max_limit_1_2  1.3636363636363637e-02
+    x_11_0_2  mips_max_limit_2_2  2.7272727272727275e-03
     x_11_0_2  auxiliary_constraints_8_2_2  -1
-    x_11_0_2  minimum_profit  -1.3636363636363638e-01
+    x_11_0_2  minimum_profit  -1.1363636363636365e+00
     y_11_0_0_0_0  OBJ       0
     y_11_0_0_0_1  OBJ       -0.9
     y_11_0_0_0_1  ru_unique_mapping_11_0  1
-    y_11_0_0_0_1  ru_regular_isolation_limit_11_0_0  1
     y_11_0_0_0_1  radio_overprovision_11_0_0  1
-    y_11_0_0_0_1  radio_max_limit_0_0  180
     y_11_0_0_0_1  node_path_mapping_coordination_2_11_0_0  -10000
+    y_11_0_0_0_1  ru_regular_isolation_limit_11_0_0  1
+    y_11_0_0_0_1  radio_max_limit_0_0  180
     y_11_0_0_0_1  minimum_profit  -0.9
     y_11_0_0_0_2  node_path_mapping_coordination_2_11_0_0  -10000
     y_11_0_0_0_3  node_path_mapping_coordination_2_11_0_0  -10000
@@ -7119,13 +7309,13 @@ COLUMNS
     y_11_0_0_0_99  node_path_mapping_coordination_2_11_0_0  -10000
     y_11_0_0_0_100  node_path_mapping_coordination_2_11_0_0  -10000
     y_11_0_1_0_0  OBJ       0
-    y_11_0_1_0_1  OBJ       -0.9
+    y_11_0_1_0_1  OBJ       -1.9
     y_11_0_1_0_1  ru_unique_mapping_11_0  1
-    y_11_0_1_0_1  ru_regular_isolation_limit_11_0_1  1
     y_11_0_1_0_1  radio_overprovision_11_0_1  1
-    y_11_0_1_0_1  radio_max_limit_1_0  180
     y_11_0_1_0_1  node_path_mapping_coordination_2_11_0_1  -10000
-    y_11_0_1_0_1  minimum_profit  -0.9
+    y_11_0_1_0_1  ru_regular_isolation_limit_11_0_1  1
+    y_11_0_1_0_1  radio_max_limit_1_0  180
+    y_11_0_1_0_1  minimum_profit  -1.9
     y_11_0_1_0_2  node_path_mapping_coordination_2_11_0_1  -10000
     y_11_0_1_0_3  node_path_mapping_coordination_2_11_0_1  -10000
     y_11_0_1_0_4  node_path_mapping_coordination_2_11_0_1  -10000
@@ -7420,8 +7610,2132 @@ COLUMNS
     a_z4_11_0  auxiliary_constraints_8_4_11_0_5  1000
     a_z4_11_0  auxiliary_constraints_8_4_11_0_6  1000
     a_z4_11_0  auxiliary_constraints_8_4_11_0_7  1000
+    b_11_0_0_1_0  OBJ       0
+    b_11_0_0_2_0  OBJ       0
+    b_11_0_0_3_0  OBJ       0
+    b_11_0_0_4_0  OBJ       0
+    b_11_0_0_5_0  OBJ       0
+    b_11_0_0_6_0  OBJ       0
+    b_11_0_0_7_0  OBJ       0
+    b_11_0_1_1_0  OBJ       0
+    b_11_0_1_2_0  OBJ       0
+    b_11_0_1_3_0  OBJ       0
+    b_11_0_1_4_0  OBJ       0
+    b_11_0_1_5_0  OBJ       0
+    b_11_0_1_6_0  OBJ       0
+    b_11_0_1_7_0  OBJ       0
+    b_11_0_2_1_0  OBJ       0
+    b_11_0_2_2_0  OBJ       0
+    b_11_0_2_3_0  OBJ       0
+    b_11_0_2_4_0  OBJ       0
+    b_11_0_2_5_0  OBJ       0
+    b_11_0_2_6_0  OBJ       0
+    b_11_0_2_7_0  OBJ       0
+    b_11_0_3_1_0  OBJ       0
+    b_11_0_3_2_0  OBJ       0
+    b_11_0_3_3_0  OBJ       0
+    b_11_0_3_4_0  OBJ       0
+    b_11_0_3_5_0  OBJ       0
+    b_11_0_3_6_0  OBJ       0
+    b_11_0_3_7_0  OBJ       0
+    b_11_0_4_1_0  OBJ       0
+    b_11_0_4_2_0  OBJ       0
+    b_11_0_4_3_0  OBJ       0
+    b_11_0_4_4_0  OBJ       0
+    b_11_0_4_5_0  OBJ       0
+    b_11_0_4_6_0  OBJ       0
+    b_11_0_4_7_0  OBJ       0
+    b_11_0_5_1_0  OBJ       0
+    b_11_0_5_2_0  OBJ       0
+    b_11_0_5_3_0  OBJ       0
+    b_11_0_5_4_0  OBJ       0
+    b_11_0_5_5_0  OBJ       0
+    b_11_0_5_6_0  OBJ       0
+    b_11_0_5_7_0  OBJ       0
+    b_11_0_6_1_0  OBJ       0
+    b_11_0_6_2_0  OBJ       0
+    b_11_0_6_3_0  OBJ       0
+    b_11_0_6_4_0  OBJ       0
+    b_11_0_6_5_0  OBJ       0
+    b_11_0_6_6_0  OBJ       0
+    b_11_0_6_7_0  OBJ       0
+    b_11_0_7_1_0  OBJ       0
+    b_11_0_7_2_0  OBJ       0
+    b_11_0_7_3_0  OBJ       0
+    b_11_0_7_4_0  OBJ       0
+    b_11_0_7_5_0  OBJ       0
+    b_11_0_7_6_0  OBJ       0
+    b_11_0_7_7_0  OBJ       0
+    x_12_0_0  OBJ       -125
+    x_12_0_0  nf_unique_mapping_12_0  1
+    x_12_0_0  mips_limit_1_12_0_0  0.01
+    x_12_0_0  mips_limit_2_12_0_0  -1
+    x_12_0_0  node_path_mapping_coordination_1_12_0_0  -12500
+    x_12_0_0  auxiliary_constraints_8_1_12_0_0  -1
+    x_12_0_0  nf_regular_isolation_limit_12_0_0  1
+    x_12_0_0  mips_max_limit_1_0  12.5
+    x_12_0_0  mips_max_limit_2_0  5
+    x_12_0_0  auxiliary_constraints_8_2_0  -1
+    x_12_0_0  minimum_profit  -125
+    x_12_0_1  OBJ       -225
+    x_12_0_1  nf_unique_mapping_12_0  1
+    x_12_0_1  mips_limit_1_12_0_1  0.01
+    x_12_0_1  mips_limit_2_12_0_1  -1
+    x_12_0_1  node_path_mapping_coordination_1_12_0_1  -12500
+    x_12_0_1  auxiliary_constraints_8_1_12_0_1  -1
+    x_12_0_1  nf_regular_isolation_limit_12_0_1  1
+    x_12_0_1  mips_max_limit_1_1  12.5
+    x_12_0_1  mips_max_limit_2_1  5
+    x_12_0_1  auxiliary_constraints_8_2_1  -1
+    x_12_0_1  minimum_profit  -225
+    x_12_0_2  OBJ       -225
+    x_12_0_2  nf_unique_mapping_12_0  1
+    x_12_0_2  mips_limit_1_12_0_2  0.01
+    x_12_0_2  mips_limit_2_12_0_2  -1
+    x_12_0_2  node_path_mapping_coordination_1_12_0_2  -12500
+    x_12_0_2  auxiliary_constraints_8_1_12_0_2  -1
+    x_12_0_2  nf_regular_isolation_limit_12_0_2  1
+    x_12_0_2  mips_max_limit_1_2  12.5
+    x_12_0_2  mips_max_limit_2_2  5
+    x_12_0_2  auxiliary_constraints_8_2_2  -1
+    x_12_0_2  minimum_profit  -225
+    y_12_0_0_0_0  OBJ       -693
+    y_12_0_0_0_0  minimum_profit  -693
+    y_12_0_0_0_1  OBJ       -594
+    y_12_0_0_0_1  ru_unique_mapping_12_0  1
+    y_12_0_0_0_1  radio_overprovision_12_0_0  1
+    y_12_0_0_0_1  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_1  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_1  radio_max_limit_0_0  873
+    y_12_0_0_0_1  minimum_profit  -594
+    y_12_0_0_0_2  OBJ       -495
+    y_12_0_0_0_2  ru_unique_mapping_12_0  1
+    y_12_0_0_0_2  radio_overprovision_12_0_0  2
+    y_12_0_0_0_2  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_2  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_2  radio_max_limit_0_0  1053
+    y_12_0_0_0_2  minimum_profit  -495
+    y_12_0_0_0_3  OBJ       -396
+    y_12_0_0_0_3  ru_unique_mapping_12_0  1
+    y_12_0_0_0_3  radio_overprovision_12_0_0  3
+    y_12_0_0_0_3  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_3  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_3  radio_max_limit_0_0  1233
+    y_12_0_0_0_3  minimum_profit  -396
+    y_12_0_0_0_4  OBJ       -297
+    y_12_0_0_0_4  ru_unique_mapping_12_0  1
+    y_12_0_0_0_4  radio_overprovision_12_0_0  4
+    y_12_0_0_0_4  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_4  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_4  radio_max_limit_0_0  1413
+    y_12_0_0_0_4  minimum_profit  -297
+    y_12_0_0_0_5  OBJ       -198
+    y_12_0_0_0_5  ru_unique_mapping_12_0  1
+    y_12_0_0_0_5  radio_overprovision_12_0_0  5
+    y_12_0_0_0_5  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_5  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_5  radio_max_limit_0_0  1593
+    y_12_0_0_0_5  minimum_profit  -198
+    y_12_0_0_0_6  OBJ       -99
+    y_12_0_0_0_6  ru_unique_mapping_12_0  1
+    y_12_0_0_0_6  radio_overprovision_12_0_0  6
+    y_12_0_0_0_6  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_6  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_6  radio_max_limit_0_0  1773
+    y_12_0_0_0_6  minimum_profit  -99
+    y_12_0_0_0_7  ru_unique_mapping_12_0  1
+    y_12_0_0_0_7  radio_overprovision_12_0_0  7
+    y_12_0_0_0_7  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_7  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_7  radio_max_limit_0_0  1953
+    y_12_0_0_0_8  OBJ       99
+    y_12_0_0_0_8  ru_unique_mapping_12_0  1
+    y_12_0_0_0_8  radio_overprovision_12_0_0  8
+    y_12_0_0_0_8  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_8  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_8  radio_max_limit_0_0  2133
+    y_12_0_0_0_8  minimum_profit  99
+    y_12_0_0_0_9  OBJ       198
+    y_12_0_0_0_9  ru_unique_mapping_12_0  1
+    y_12_0_0_0_9  radio_overprovision_12_0_0  9
+    y_12_0_0_0_9  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_9  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_9  radio_max_limit_0_0  2313
+    y_12_0_0_0_9  minimum_profit  198
+    y_12_0_0_0_10  OBJ       297
+    y_12_0_0_0_10  ru_unique_mapping_12_0  1
+    y_12_0_0_0_10  radio_overprovision_12_0_0  10
+    y_12_0_0_0_10  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_10  ru_regular_isolation_limit_12_0_0  1
+    y_12_0_0_0_10  radio_max_limit_0_0  2493
+    y_12_0_0_0_10  minimum_profit  297
+    y_12_0_0_0_11  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_12  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_13  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_14  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_15  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_16  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_17  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_18  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_19  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_20  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_21  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_22  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_23  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_24  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_25  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_26  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_27  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_28  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_29  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_30  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_31  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_32  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_33  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_34  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_35  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_36  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_37  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_38  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_39  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_40  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_41  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_42  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_43  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_44  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_45  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_46  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_47  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_48  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_49  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_50  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_51  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_52  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_53  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_54  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_55  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_56  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_57  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_58  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_59  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_60  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_61  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_62  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_63  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_64  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_65  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_66  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_67  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_68  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_69  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_70  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_71  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_72  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_73  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_74  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_75  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_76  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_77  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_78  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_79  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_80  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_81  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_82  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_83  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_84  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_85  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_86  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_87  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_88  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_89  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_90  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_91  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_92  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_93  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_94  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_95  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_96  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_97  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_98  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_99  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_0_0_100  node_path_mapping_coordination_2_12_0_0  -12500
+    y_12_0_1_0_0  OBJ       -693
+    y_12_0_1_0_0  minimum_profit  -693
+    y_12_0_1_0_1  OBJ       -694
+    y_12_0_1_0_1  ru_unique_mapping_12_0  1
+    y_12_0_1_0_1  radio_overprovision_12_0_1  1
+    y_12_0_1_0_1  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_1  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_1  radio_max_limit_1_0  873
+    y_12_0_1_0_1  minimum_profit  -694
+    y_12_0_1_0_2  OBJ       -595
+    y_12_0_1_0_2  ru_unique_mapping_12_0  1
+    y_12_0_1_0_2  radio_overprovision_12_0_1  2
+    y_12_0_1_0_2  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_2  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_2  radio_max_limit_1_0  1053
+    y_12_0_1_0_2  minimum_profit  -595
+    y_12_0_1_0_3  OBJ       -496
+    y_12_0_1_0_3  ru_unique_mapping_12_0  1
+    y_12_0_1_0_3  radio_overprovision_12_0_1  3
+    y_12_0_1_0_3  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_3  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_3  radio_max_limit_1_0  1233
+    y_12_0_1_0_3  minimum_profit  -496
+    y_12_0_1_0_4  OBJ       -397
+    y_12_0_1_0_4  ru_unique_mapping_12_0  1
+    y_12_0_1_0_4  radio_overprovision_12_0_1  4
+    y_12_0_1_0_4  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_4  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_4  radio_max_limit_1_0  1413
+    y_12_0_1_0_4  minimum_profit  -397
+    y_12_0_1_0_5  OBJ       -298
+    y_12_0_1_0_5  ru_unique_mapping_12_0  1
+    y_12_0_1_0_5  radio_overprovision_12_0_1  5
+    y_12_0_1_0_5  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_5  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_5  radio_max_limit_1_0  1593
+    y_12_0_1_0_5  minimum_profit  -298
+    y_12_0_1_0_6  OBJ       -199
+    y_12_0_1_0_6  ru_unique_mapping_12_0  1
+    y_12_0_1_0_6  radio_overprovision_12_0_1  6
+    y_12_0_1_0_6  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_6  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_6  radio_max_limit_1_0  1773
+    y_12_0_1_0_6  minimum_profit  -199
+    y_12_0_1_0_7  OBJ       -100
+    y_12_0_1_0_7  ru_unique_mapping_12_0  1
+    y_12_0_1_0_7  radio_overprovision_12_0_1  7
+    y_12_0_1_0_7  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_7  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_7  radio_max_limit_1_0  1953
+    y_12_0_1_0_7  minimum_profit  -100
+    y_12_0_1_0_8  OBJ       -1
+    y_12_0_1_0_8  ru_unique_mapping_12_0  1
+    y_12_0_1_0_8  radio_overprovision_12_0_1  8
+    y_12_0_1_0_8  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_8  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_8  radio_max_limit_1_0  2133
+    y_12_0_1_0_8  minimum_profit  -1
+    y_12_0_1_0_9  OBJ       98
+    y_12_0_1_0_9  ru_unique_mapping_12_0  1
+    y_12_0_1_0_9  radio_overprovision_12_0_1  9
+    y_12_0_1_0_9  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_9  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_9  radio_max_limit_1_0  2313
+    y_12_0_1_0_9  minimum_profit  98
+    y_12_0_1_0_10  OBJ       197
+    y_12_0_1_0_10  ru_unique_mapping_12_0  1
+    y_12_0_1_0_10  radio_overprovision_12_0_1  10
+    y_12_0_1_0_10  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_10  ru_regular_isolation_limit_12_0_1  1
+    y_12_0_1_0_10  radio_max_limit_1_0  2493
+    y_12_0_1_0_10  minimum_profit  197
+    y_12_0_1_0_11  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_12  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_13  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_14  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_15  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_16  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_17  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_18  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_19  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_20  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_21  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_22  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_23  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_24  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_25  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_26  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_27  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_28  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_29  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_30  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_31  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_32  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_33  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_34  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_35  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_36  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_37  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_38  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_39  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_40  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_41  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_42  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_43  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_44  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_45  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_46  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_47  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_48  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_49  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_50  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_51  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_52  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_53  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_54  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_55  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_56  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_57  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_58  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_59  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_60  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_61  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_62  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_63  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_64  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_65  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_66  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_67  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_68  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_69  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_70  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_71  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_72  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_73  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_74  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_75  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_76  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_77  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_78  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_79  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_80  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_81  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_82  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_83  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_84  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_85  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_86  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_87  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_88  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_89  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_90  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_91  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_92  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_93  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_94  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_95  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_96  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_97  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_98  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_99  node_path_mapping_coordination_2_12_0_1  -12500
+    y_12_0_1_0_100  node_path_mapping_coordination_2_12_0_1  -12500
+    z_12_0_0_0  OBJ       -12.5
+    z_12_0_0_0  link_regular_isolation_limit_12_0_0  1
+    z_12_0_0_0  link_path_mapping_coordination_1_12_0_0_0  0.01
+    z_12_0_0_0  link_path_mapping_coordination_2_12_0_0_0  -12500
+    z_12_0_0_0  auxiliary_constraints_3_1_12_0_0_0  -1
+    z_12_0_0_0  auxiliary_constraints_3_2_12_0_0  -1
+    z_12_0_0_0  bandwidth_max_limit_0_0  12500
+    z_12_0_0_0  minimum_profit  -12.5
+    z_12_0_1_0  OBJ       -12.5
+    z_12_0_1_0  link_regular_isolation_limit_12_0_1  1
+    z_12_0_1_0  link_path_mapping_coordination_1_12_0_1_0  0.01
+    z_12_0_1_0  link_path_mapping_coordination_2_12_0_1_0  -12500
+    z_12_0_1_0  auxiliary_constraints_3_1_12_0_1_0  -1
+    z_12_0_1_0  auxiliary_constraints_3_2_12_0_1  -1
+    z_12_0_1_0  bandwidth_max_limit_1_0  12500
+    z_12_0_1_0  minimum_profit  -12.5
+    z_12_0_2_0  OBJ       -12.5
+    z_12_0_2_0  link_regular_isolation_limit_12_0_2  1
+    z_12_0_2_0  link_path_mapping_coordination_1_12_0_2_0  0.01
+    z_12_0_2_0  link_path_mapping_coordination_2_12_0_2_0  -12500
+    z_12_0_2_0  auxiliary_constraints_3_1_12_0_2_0  -1
+    z_12_0_2_0  auxiliary_constraints_3_2_12_0_2  -1
+    z_12_0_2_0  bandwidth_max_limit_2_0  12500
+    z_12_0_2_0  minimum_profit  -12.5
+    z_12_0_3_0  OBJ       -12.5
+    z_12_0_3_0  link_regular_isolation_limit_12_0_3  1
+    z_12_0_3_0  link_path_mapping_coordination_1_12_0_3_0  0.01
+    z_12_0_3_0  link_path_mapping_coordination_2_12_0_3_0  -12500
+    z_12_0_3_0  auxiliary_constraints_3_1_12_0_3_0  -1
+    z_12_0_3_0  auxiliary_constraints_3_2_12_0_3  -1
+    z_12_0_3_0  bandwidth_max_limit_3_0  12500
+    z_12_0_3_0  minimum_profit  -12.5
+    z_12_0_4_0  OBJ       -12.5
+    z_12_0_4_0  link_regular_isolation_limit_12_0_4  1
+    z_12_0_4_0  link_path_mapping_coordination_1_12_0_4_0  0.01
+    z_12_0_4_0  link_path_mapping_coordination_2_12_0_4_0  -12500
+    z_12_0_4_0  auxiliary_constraints_3_1_12_0_4_0  -1
+    z_12_0_4_0  auxiliary_constraints_3_2_12_0_4  -1
+    z_12_0_4_0  bandwidth_max_limit_4_0  12500
+    z_12_0_4_0  minimum_profit  -12.5
+    z_12_0_5_0  OBJ       -12.5
+    z_12_0_5_0  link_regular_isolation_limit_12_0_5  1
+    z_12_0_5_0  link_path_mapping_coordination_1_12_0_5_0  0.01
+    z_12_0_5_0  link_path_mapping_coordination_2_12_0_5_0  -12500
+    z_12_0_5_0  auxiliary_constraints_3_1_12_0_5_0  -1
+    z_12_0_5_0  auxiliary_constraints_3_2_12_0_5  -1
+    z_12_0_5_0  bandwidth_max_limit_5_0  12500
+    z_12_0_5_0  minimum_profit  -12.5
+    z_12_0_6_0  OBJ       -12.5
+    z_12_0_6_0  link_regular_isolation_limit_12_0_6  1
+    z_12_0_6_0  link_path_mapping_coordination_1_12_0_6_0  0.01
+    z_12_0_6_0  link_path_mapping_coordination_2_12_0_6_0  -12500
+    z_12_0_6_0  auxiliary_constraints_3_1_12_0_6_0  -1
+    z_12_0_6_0  auxiliary_constraints_3_2_12_0_6  -1
+    z_12_0_6_0  bandwidth_max_limit_6_0  12500
+    z_12_0_6_0  minimum_profit  -12.5
+    z_12_0_7_0  OBJ       -12.5
+    z_12_0_7_0  link_regular_isolation_limit_12_0_7  1
+    z_12_0_7_0  link_path_mapping_coordination_1_12_0_7_0  0.01
+    z_12_0_7_0  link_path_mapping_coordination_2_12_0_7_0  -12500
+    z_12_0_7_0  auxiliary_constraints_3_1_12_0_7_0  -1
+    z_12_0_7_0  auxiliary_constraints_3_2_12_0_7  -1
+    z_12_0_7_0  bandwidth_max_limit_7_0  12500
+    z_12_0_7_0  minimum_profit  -12.5
+    c_12_0_0  OBJ       9990
+    c_12_0_0  mips_limit_1_12_0_0  -1
+    c_12_0_0  mips_limit_2_12_0_0  1
+    c_12_0_0  mips_max_limit_1_0  1
+    c_12_0_0  minimum_profit  9990
+    c_12_0_1  OBJ       9990
+    c_12_0_1  mips_limit_1_12_0_1  -1
+    c_12_0_1  mips_limit_2_12_0_1  1
+    c_12_0_1  mips_max_limit_1_1  1
+    c_12_0_1  minimum_profit  9990
+    c_12_0_2  OBJ       9990
+    c_12_0_2  mips_limit_1_12_0_2  -1
+    c_12_0_2  mips_limit_2_12_0_2  1
+    c_12_0_2  mips_max_limit_1_2  1
+    c_12_0_2  minimum_profit  9990
+    b_12_0_0_0_0  OBJ       0.999
+    b_12_0_0_0_0  link_path_mapping_coordination_1_12_0_0_0  -1
+    b_12_0_0_0_0  link_path_mapping_coordination_2_12_0_0_0  1
+    b_12_0_0_0_0  node_path_mapping_coordination_1_12_0_0  1
+    b_12_0_0_0_0  node_path_mapping_coordination_2_12_0_0  1
+    b_12_0_0_0_0  bandwidth_overprovisioning_3_12_0  -1
+    b_12_0_0_0_0  bandwidth_max_limit_0_0  1
+    b_12_0_0_0_0  minimum_profit  0.999
+    b_12_0_1_0_0  OBJ       0.999
+    b_12_0_1_0_0  link_path_mapping_coordination_1_12_0_1_0  -1
+    b_12_0_1_0_0  link_path_mapping_coordination_2_12_0_1_0  1
+    b_12_0_1_0_0  node_path_mapping_coordination_1_12_0_0  1
+    b_12_0_1_0_0  node_path_mapping_coordination_2_12_0_1  1
+    b_12_0_1_0_0  bandwidth_overprovisioning_3_12_0  -1
+    b_12_0_1_0_0  bandwidth_max_limit_1_0  1
+    b_12_0_1_0_0  minimum_profit  0.999
+    b_12_0_2_0_0  OBJ       0.999
+    b_12_0_2_0_0  link_path_mapping_coordination_1_12_0_2_0  -1
+    b_12_0_2_0_0  link_path_mapping_coordination_2_12_0_2_0  1
+    b_12_0_2_0_0  node_path_mapping_coordination_1_12_0_1  1
+    b_12_0_2_0_0  node_path_mapping_coordination_2_12_0_0  1
+    b_12_0_2_0_0  bandwidth_overprovisioning_3_12_0  -1
+    b_12_0_2_0_0  bandwidth_max_limit_2_0  1
+    b_12_0_2_0_0  minimum_profit  0.999
+    b_12_0_3_0_0  OBJ       0.999
+    b_12_0_3_0_0  link_path_mapping_coordination_1_12_0_3_0  -1
+    b_12_0_3_0_0  link_path_mapping_coordination_2_12_0_3_0  1
+    b_12_0_3_0_0  node_path_mapping_coordination_1_12_0_1  1
+    b_12_0_3_0_0  node_path_mapping_coordination_2_12_0_1  1
+    b_12_0_3_0_0  bandwidth_overprovisioning_3_12_0  -1
+    b_12_0_3_0_0  bandwidth_max_limit_3_0  1
+    b_12_0_3_0_0  minimum_profit  0.999
+    b_12_0_4_0_0  OBJ       0.999
+    b_12_0_4_0_0  link_path_mapping_coordination_1_12_0_4_0  -1
+    b_12_0_4_0_0  link_path_mapping_coordination_2_12_0_4_0  1
+    b_12_0_4_0_0  node_path_mapping_coordination_1_12_0_2  1
+    b_12_0_4_0_0  node_path_mapping_coordination_2_12_0_0  1
+    b_12_0_4_0_0  bandwidth_overprovisioning_3_12_0  -1
+    b_12_0_4_0_0  bandwidth_max_limit_4_0  1
+    b_12_0_4_0_0  minimum_profit  0.999
+    b_12_0_5_0_0  OBJ       0.999
+    b_12_0_5_0_0  link_path_mapping_coordination_1_12_0_5_0  -1
+    b_12_0_5_0_0  link_path_mapping_coordination_2_12_0_5_0  1
+    b_12_0_5_0_0  node_path_mapping_coordination_1_12_0_2  1
+    b_12_0_5_0_0  node_path_mapping_coordination_2_12_0_1  1
+    b_12_0_5_0_0  bandwidth_overprovisioning_3_12_0  -1
+    b_12_0_5_0_0  bandwidth_max_limit_5_0  1
+    b_12_0_5_0_0  minimum_profit  0.999
+    b_12_0_6_0_0  OBJ       -0.001
+    b_12_0_6_0_0  link_path_mapping_coordination_1_12_0_6_0  -1
+    b_12_0_6_0_0  link_path_mapping_coordination_2_12_0_6_0  1
+    b_12_0_6_0_0  node_path_mapping_coordination_1_12_0_0  1
+    b_12_0_6_0_0  bandwidth_max_limit_6_0  1
+    b_12_0_6_0_0  minimum_profit  -0.001
+    b_12_0_7_0_0  OBJ       -0.001
+    b_12_0_7_0_0  link_path_mapping_coordination_1_12_0_7_0  -1
+    b_12_0_7_0_0  link_path_mapping_coordination_2_12_0_7_0  1
+    b_12_0_7_0_0  node_path_mapping_coordination_1_12_0_1  1
+    b_12_0_7_0_0  bandwidth_max_limit_7_0  1
+    b_12_0_7_0_0  minimum_profit  -0.001
+    a_x1_12_0  OBJ       0
+    a_x1_12_1  OBJ       0
+    a_x1_12_2  OBJ       0
+    a_x4_12_0_0  OBJ       0
+    a_x4_12_0_1  OBJ       0
+    a_x4_12_0_2  OBJ       0
+    a_y1_12_0  OBJ       0
+    a_y1_12_1  OBJ       0
+    a_y2_12_0_0  OBJ       0
+    a_y2_12_0_1  OBJ       0
+    a_z1_12_0  OBJ       0
+    a_z1_12_1  OBJ       0
+    a_z1_12_2  OBJ       0
+    a_z1_12_3  OBJ       0
+    a_z1_12_4  OBJ       0
+    a_z1_12_5  OBJ       0
+    a_z1_12_6  OBJ       0
+    a_z1_12_7  OBJ       0
+    a_z2_12_0_0  vp_unique_mapping_12_0  1
+    a_z2_12_0_0  auxiliary_constraints_3_1_12_0_0_0  1
+    a_z2_12_0_0  auxiliary_constraints_3_2_12_0_0  1
+    a_z2_12_0_0  auxiliary_constraints_6_3_12_0_7  -1
+    a_z2_12_0_0  auxiliary_constraints_8_4_12_0_0  -1
+    a_z2_12_0_1  vp_unique_mapping_12_0  1
+    a_z2_12_0_1  auxiliary_constraints_3_1_12_0_1_0  1
+    a_z2_12_0_1  auxiliary_constraints_3_2_12_0_1  1
+    a_z2_12_0_1  auxiliary_constraints_6_3_12_0_7  -1
+    a_z2_12_0_1  auxiliary_constraints_8_4_12_0_1  -1
+    a_z2_12_0_2  vp_unique_mapping_12_0  1
+    a_z2_12_0_2  auxiliary_constraints_3_1_12_0_2_0  1
+    a_z2_12_0_2  auxiliary_constraints_3_2_12_0_2  1
+    a_z2_12_0_2  auxiliary_constraints_6_3_12_0_7  -0.02
+    a_z2_12_0_2  auxiliary_constraints_8_4_12_0_2  -0.02
+    a_z2_12_0_3  vp_unique_mapping_12_0  1
+    a_z2_12_0_3  auxiliary_constraints_3_1_12_0_3_0  1
+    a_z2_12_0_3  auxiliary_constraints_3_2_12_0_3  1
+    a_z2_12_0_3  auxiliary_constraints_6_3_12_0_7  -0.02
+    a_z2_12_0_3  auxiliary_constraints_8_4_12_0_3  -0.02
+    a_z2_12_0_4  vp_unique_mapping_12_0  1
+    a_z2_12_0_4  auxiliary_constraints_3_1_12_0_4_0  1
+    a_z2_12_0_4  auxiliary_constraints_3_2_12_0_4  1
+    a_z2_12_0_4  auxiliary_constraints_6_3_12_0_7  -10
+    a_z2_12_0_4  auxiliary_constraints_8_4_12_0_4  -10
+    a_z2_12_0_5  vp_unique_mapping_12_0  1
+    a_z2_12_0_5  auxiliary_constraints_3_1_12_0_5_0  1
+    a_z2_12_0_5  auxiliary_constraints_3_2_12_0_5  1
+    a_z2_12_0_5  auxiliary_constraints_6_3_12_0_7  -10
+    a_z2_12_0_5  auxiliary_constraints_8_4_12_0_5  -10
+    a_z2_12_0_6  vp_unique_mapping_12_0  1
+    a_z2_12_0_6  auxiliary_constraints_3_1_12_0_6_0  1
+    a_z2_12_0_6  auxiliary_constraints_3_2_12_0_6  1
+    a_z2_12_0_6  auxiliary_constraints_6_3_12_0_7  -10
+    a_z2_12_0_6  auxiliary_constraints_8_4_12_0_6  -10
+    a_z2_12_0_7  vp_unique_mapping_12_0  1
+    a_z2_12_0_7  auxiliary_constraints_3_1_12_0_7_0  1
+    a_z2_12_0_7  auxiliary_constraints_3_2_12_0_7  1
+    a_z2_12_0_7  auxiliary_constraints_6_3_12_0_7  -10
+    a_z2_12_0_7  auxiliary_constraints_8_4_12_0_7  -10
+    a_z3_12_0  OBJ       -0.01
+    a_z3_12_0  auxiliary_constraints_6_3_12_0_7  1
+    a_z3_12_0  auxiliary_constraints_7_12_0  1
+    a_z3_12_0  auxiliary_constraints_8_1_12_0  1
+    a_z3_12_0  auxiliary_constraints_8_4_12_0_0  1
+    a_z3_12_0  auxiliary_constraints_8_4_12_0_1  1
+    a_z3_12_0  auxiliary_constraints_8_4_12_0_2  1
+    a_z3_12_0  auxiliary_constraints_8_4_12_0_3  1
+    a_z3_12_0  auxiliary_constraints_8_4_12_0_4  1
+    a_z3_12_0  auxiliary_constraints_8_4_12_0_5  1
+    a_z3_12_0  auxiliary_constraints_8_4_12_0_6  1
+    a_z3_12_0  auxiliary_constraints_8_4_12_0_7  1
+    a_z3_12_0  minimum_profit  -0.01
+    a_z4_12_0  auxiliary_constraints_8_1_12_0  -1000
+    a_z4_12_0  auxiliary_constraints_8_4_12_0_0  1000
+    a_z4_12_0  auxiliary_constraints_8_4_12_0_1  1000
+    a_z4_12_0  auxiliary_constraints_8_4_12_0_2  1000
+    a_z4_12_0  auxiliary_constraints_8_4_12_0_3  1000
+    a_z4_12_0  auxiliary_constraints_8_4_12_0_4  1000
+    a_z4_12_0  auxiliary_constraints_8_4_12_0_5  1000
+    a_z4_12_0  auxiliary_constraints_8_4_12_0_6  1000
+    a_z4_12_0  auxiliary_constraints_8_4_12_0_7  1000
+    b_12_0_0_1_0  OBJ       0
+    b_12_0_0_2_0  OBJ       0
+    b_12_0_0_3_0  OBJ       0
+    b_12_0_0_4_0  OBJ       0
+    b_12_0_0_5_0  OBJ       0
+    b_12_0_0_6_0  OBJ       0
+    b_12_0_0_7_0  OBJ       0
+    b_12_0_1_1_0  OBJ       0
+    b_12_0_1_2_0  OBJ       0
+    b_12_0_1_3_0  OBJ       0
+    b_12_0_1_4_0  OBJ       0
+    b_12_0_1_5_0  OBJ       0
+    b_12_0_1_6_0  OBJ       0
+    b_12_0_1_7_0  OBJ       0
+    b_12_0_2_1_0  OBJ       0
+    b_12_0_2_2_0  OBJ       0
+    b_12_0_2_3_0  OBJ       0
+    b_12_0_2_4_0  OBJ       0
+    b_12_0_2_5_0  OBJ       0
+    b_12_0_2_6_0  OBJ       0
+    b_12_0_2_7_0  OBJ       0
+    b_12_0_3_1_0  OBJ       0
+    b_12_0_3_2_0  OBJ       0
+    b_12_0_3_3_0  OBJ       0
+    b_12_0_3_4_0  OBJ       0
+    b_12_0_3_5_0  OBJ       0
+    b_12_0_3_6_0  OBJ       0
+    b_12_0_3_7_0  OBJ       0
+    b_12_0_4_1_0  OBJ       0
+    b_12_0_4_2_0  OBJ       0
+    b_12_0_4_3_0  OBJ       0
+    b_12_0_4_4_0  OBJ       0
+    b_12_0_4_5_0  OBJ       0
+    b_12_0_4_6_0  OBJ       0
+    b_12_0_4_7_0  OBJ       0
+    b_12_0_5_1_0  OBJ       0
+    b_12_0_5_2_0  OBJ       0
+    b_12_0_5_3_0  OBJ       0
+    b_12_0_5_4_0  OBJ       0
+    b_12_0_5_5_0  OBJ       0
+    b_12_0_5_6_0  OBJ       0
+    b_12_0_5_7_0  OBJ       0
+    b_12_0_6_1_0  OBJ       0
+    b_12_0_6_2_0  OBJ       0
+    b_12_0_6_3_0  OBJ       0
+    b_12_0_6_4_0  OBJ       0
+    b_12_0_6_5_0  OBJ       0
+    b_12_0_6_6_0  OBJ       0
+    b_12_0_6_7_0  OBJ       0
+    b_12_0_7_1_0  OBJ       0
+    b_12_0_7_2_0  OBJ       0
+    b_12_0_7_3_0  OBJ       0
+    b_12_0_7_4_0  OBJ       0
+    b_12_0_7_5_0  OBJ       0
+    b_12_0_7_6_0  OBJ       0
+    b_12_0_7_7_0  OBJ       0
+    x_13_0_0  OBJ       -1.3636363636363635e+00
+    x_13_0_0  nf_unique_mapping_13_0  1
+    x_13_0_0  mips_limit_1_13_0_0  0.01
+    x_13_0_0  mips_limit_2_13_0_0  -0.6
+    x_13_0_0  node_path_mapping_coordination_1_13_0_0  -10000
+    x_13_0_0  auxiliary_constraints_8_1_13_0_0  -1
+    x_13_0_0  nf_regular_isolation_limit_13_0_0  1
+    x_13_0_0  mips_max_limit_1_0  1.3636363636363635e-01
+    x_13_0_0  mips_max_limit_2_0  2.7272727272727271e-02
+    x_13_0_0  auxiliary_constraints_8_2_0  -1
+    x_13_0_0  minimum_profit  -1.3636363636363635e+00
+    x_13_0_1  OBJ       -2.3636363636363633e+00
+    x_13_0_1  nf_unique_mapping_13_0  1
+    x_13_0_1  mips_limit_1_13_0_1  0.01
+    x_13_0_1  mips_limit_2_13_0_1  -0.6
+    x_13_0_1  node_path_mapping_coordination_1_13_0_1  -10000
+    x_13_0_1  auxiliary_constraints_8_1_13_0_1  -1
+    x_13_0_1  nf_regular_isolation_limit_13_0_1  1
+    x_13_0_1  mips_max_limit_1_1  1.3636363636363635e-01
+    x_13_0_1  mips_max_limit_2_1  2.7272727272727271e-02
+    x_13_0_1  auxiliary_constraints_8_2_1  -1
+    x_13_0_1  minimum_profit  -2.3636363636363633e+00
+    x_13_0_2  OBJ       -1.1363636363636365e+00
+    x_13_0_2  nf_unique_mapping_13_0  1
+    x_13_0_2  mips_limit_1_13_0_2  0.01
+    x_13_0_2  mips_limit_2_13_0_2  -0.6
+    x_13_0_2  node_path_mapping_coordination_1_13_0_2  -10000
+    x_13_0_2  auxiliary_constraints_8_1_13_0_2  -1
+    x_13_0_2  nf_regular_isolation_limit_13_0_2  1
+    x_13_0_2  mips_max_limit_1_2  1.3636363636363637e-02
+    x_13_0_2  mips_max_limit_2_2  2.7272727272727275e-03
+    x_13_0_2  auxiliary_constraints_8_2_2  -1
+    x_13_0_2  minimum_profit  -1.1363636363636365e+00
+    y_13_0_0_0_0  OBJ       0
+    y_13_0_0_0_1  OBJ       -0.9
+    y_13_0_0_0_1  ru_unique_mapping_13_0  1
+    y_13_0_0_0_1  radio_overprovision_13_0_0  1
+    y_13_0_0_0_1  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_1  ru_regular_isolation_limit_13_0_0  1
+    y_13_0_0_0_1  radio_max_limit_0_0  180
+    y_13_0_0_0_1  minimum_profit  -0.9
+    y_13_0_0_0_2  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_3  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_4  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_5  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_6  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_7  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_8  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_9  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_10  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_11  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_12  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_13  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_14  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_15  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_16  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_17  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_18  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_19  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_20  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_21  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_22  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_23  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_24  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_25  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_26  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_27  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_28  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_29  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_30  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_31  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_32  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_33  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_34  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_35  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_36  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_37  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_38  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_39  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_40  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_41  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_42  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_43  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_44  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_45  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_46  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_47  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_48  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_49  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_50  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_51  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_52  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_53  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_54  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_55  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_56  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_57  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_58  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_59  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_60  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_61  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_62  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_63  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_64  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_65  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_66  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_67  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_68  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_69  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_70  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_71  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_72  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_73  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_74  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_75  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_76  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_77  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_78  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_79  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_80  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_81  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_82  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_83  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_84  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_85  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_86  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_87  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_88  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_89  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_90  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_91  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_92  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_93  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_94  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_95  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_96  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_97  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_98  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_99  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_0_0_100  node_path_mapping_coordination_2_13_0_0  -10000
+    y_13_0_1_0_0  OBJ       0
+    y_13_0_1_0_1  OBJ       -1.9
+    y_13_0_1_0_1  ru_unique_mapping_13_0  1
+    y_13_0_1_0_1  radio_overprovision_13_0_1  1
+    y_13_0_1_0_1  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_1  ru_regular_isolation_limit_13_0_1  1
+    y_13_0_1_0_1  radio_max_limit_1_0  180
+    y_13_0_1_0_1  minimum_profit  -1.9
+    y_13_0_1_0_2  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_3  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_4  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_5  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_6  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_7  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_8  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_9  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_10  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_11  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_12  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_13  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_14  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_15  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_16  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_17  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_18  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_19  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_20  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_21  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_22  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_23  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_24  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_25  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_26  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_27  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_28  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_29  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_30  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_31  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_32  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_33  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_34  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_35  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_36  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_37  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_38  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_39  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_40  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_41  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_42  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_43  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_44  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_45  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_46  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_47  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_48  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_49  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_50  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_51  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_52  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_53  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_54  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_55  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_56  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_57  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_58  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_59  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_60  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_61  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_62  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_63  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_64  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_65  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_66  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_67  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_68  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_69  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_70  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_71  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_72  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_73  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_74  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_75  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_76  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_77  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_78  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_79  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_80  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_81  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_82  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_83  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_84  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_85  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_86  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_87  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_88  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_89  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_90  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_91  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_92  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_93  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_94  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_95  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_96  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_97  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_98  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_99  node_path_mapping_coordination_2_13_0_1  -10000
+    y_13_0_1_0_100  node_path_mapping_coordination_2_13_0_1  -10000
+    z_13_0_0_0  link_regular_isolation_limit_13_0_0  1
+    z_13_0_0_0  link_path_mapping_coordination_1_13_0_0_0  0.01
+    z_13_0_0_0  link_path_mapping_coordination_2_13_0_0_0  -10000
+    z_13_0_0_0  auxiliary_constraints_3_1_13_0_0_0  -1
+    z_13_0_0_0  auxiliary_constraints_3_2_13_0_0  -1
+    z_13_0_1_0  link_regular_isolation_limit_13_0_1  1
+    z_13_0_1_0  link_path_mapping_coordination_1_13_0_1_0  0.01
+    z_13_0_1_0  link_path_mapping_coordination_2_13_0_1_0  -10000
+    z_13_0_1_0  auxiliary_constraints_3_1_13_0_1_0  -1
+    z_13_0_1_0  auxiliary_constraints_3_2_13_0_1  -1
+    z_13_0_2_0  link_regular_isolation_limit_13_0_2  1
+    z_13_0_2_0  link_path_mapping_coordination_1_13_0_2_0  0.01
+    z_13_0_2_0  link_path_mapping_coordination_2_13_0_2_0  -10000
+    z_13_0_2_0  auxiliary_constraints_3_1_13_0_2_0  -1
+    z_13_0_2_0  auxiliary_constraints_3_2_13_0_2  -1
+    z_13_0_3_0  link_regular_isolation_limit_13_0_3  1
+    z_13_0_3_0  link_path_mapping_coordination_1_13_0_3_0  0.01
+    z_13_0_3_0  link_path_mapping_coordination_2_13_0_3_0  -10000
+    z_13_0_3_0  auxiliary_constraints_3_1_13_0_3_0  -1
+    z_13_0_3_0  auxiliary_constraints_3_2_13_0_3  -1
+    z_13_0_4_0  link_regular_isolation_limit_13_0_4  1
+    z_13_0_4_0  link_path_mapping_coordination_1_13_0_4_0  0.01
+    z_13_0_4_0  link_path_mapping_coordination_2_13_0_4_0  -10000
+    z_13_0_4_0  auxiliary_constraints_3_1_13_0_4_0  -1
+    z_13_0_4_0  auxiliary_constraints_3_2_13_0_4  -1
+    z_13_0_5_0  link_regular_isolation_limit_13_0_5  1
+    z_13_0_5_0  link_path_mapping_coordination_1_13_0_5_0  0.01
+    z_13_0_5_0  link_path_mapping_coordination_2_13_0_5_0  -10000
+    z_13_0_5_0  auxiliary_constraints_3_1_13_0_5_0  -1
+    z_13_0_5_0  auxiliary_constraints_3_2_13_0_5  -1
+    z_13_0_6_0  link_regular_isolation_limit_13_0_6  1
+    z_13_0_6_0  link_path_mapping_coordination_1_13_0_6_0  0.01
+    z_13_0_6_0  link_path_mapping_coordination_2_13_0_6_0  -10000
+    z_13_0_6_0  auxiliary_constraints_3_1_13_0_6_0  -1
+    z_13_0_6_0  auxiliary_constraints_3_2_13_0_6  -1
+    z_13_0_7_0  link_regular_isolation_limit_13_0_7  1
+    z_13_0_7_0  link_path_mapping_coordination_1_13_0_7_0  0.01
+    z_13_0_7_0  link_path_mapping_coordination_2_13_0_7_0  -10000
+    z_13_0_7_0  auxiliary_constraints_3_1_13_0_7_0  -1
+    z_13_0_7_0  auxiliary_constraints_3_2_13_0_7  -1
+    c_13_0_0  OBJ       90
+    c_13_0_0  mips_limit_1_13_0_0  -1
+    c_13_0_0  mips_limit_2_13_0_0  1
+    c_13_0_0  mips_max_limit_1_0  1
+    c_13_0_0  minimum_profit  90
+    c_13_0_1  OBJ       90
+    c_13_0_1  mips_limit_1_13_0_1  -1
+    c_13_0_1  mips_limit_2_13_0_1  1
+    c_13_0_1  mips_max_limit_1_1  1
+    c_13_0_1  minimum_profit  90
+    c_13_0_2  OBJ       90
+    c_13_0_2  mips_limit_1_13_0_2  -1
+    c_13_0_2  mips_limit_2_13_0_2  1
+    c_13_0_2  mips_max_limit_1_2  1
+    c_13_0_2  minimum_profit  90
+    b_13_0_0_0_0  OBJ       0.0985
+    b_13_0_0_0_0  link_path_mapping_coordination_1_13_0_0_0  -1
+    b_13_0_0_0_0  link_path_mapping_coordination_2_13_0_0_0  0.995
+    b_13_0_0_0_0  node_path_mapping_coordination_1_13_0_0  0.995
+    b_13_0_0_0_0  node_path_mapping_coordination_2_13_0_0  0.995
+    b_13_0_0_0_0  bandwidth_overprovisioning_3_13_0  -0.995
+    b_13_0_0_0_0  bandwidth_max_limit_0_0  1
+    b_13_0_0_0_0  minimum_profit  0.0985
+    b_13_0_1_0_0  OBJ       0.0985
+    b_13_0_1_0_0  link_path_mapping_coordination_1_13_0_1_0  -1
+    b_13_0_1_0_0  link_path_mapping_coordination_2_13_0_1_0  0.995
+    b_13_0_1_0_0  node_path_mapping_coordination_1_13_0_0  0.995
+    b_13_0_1_0_0  node_path_mapping_coordination_2_13_0_1  0.995
+    b_13_0_1_0_0  bandwidth_overprovisioning_3_13_0  -0.995
+    b_13_0_1_0_0  bandwidth_max_limit_1_0  1
+    b_13_0_1_0_0  minimum_profit  0.0985
+    b_13_0_2_0_0  OBJ       0.0985
+    b_13_0_2_0_0  link_path_mapping_coordination_1_13_0_2_0  -1
+    b_13_0_2_0_0  link_path_mapping_coordination_2_13_0_2_0  0.995
+    b_13_0_2_0_0  node_path_mapping_coordination_1_13_0_1  0.995
+    b_13_0_2_0_0  node_path_mapping_coordination_2_13_0_0  0.995
+    b_13_0_2_0_0  bandwidth_overprovisioning_3_13_0  -0.995
+    b_13_0_2_0_0  bandwidth_max_limit_2_0  1
+    b_13_0_2_0_0  minimum_profit  0.0985
+    b_13_0_3_0_0  OBJ       0.0985
+    b_13_0_3_0_0  link_path_mapping_coordination_1_13_0_3_0  -1
+    b_13_0_3_0_0  link_path_mapping_coordination_2_13_0_3_0  0.995
+    b_13_0_3_0_0  node_path_mapping_coordination_1_13_0_1  0.995
+    b_13_0_3_0_0  node_path_mapping_coordination_2_13_0_1  0.995
+    b_13_0_3_0_0  bandwidth_overprovisioning_3_13_0  -0.995
+    b_13_0_3_0_0  bandwidth_max_limit_3_0  1
+    b_13_0_3_0_0  minimum_profit  0.0985
+    b_13_0_4_0_0  OBJ       0.0985
+    b_13_0_4_0_0  link_path_mapping_coordination_1_13_0_4_0  -1
+    b_13_0_4_0_0  link_path_mapping_coordination_2_13_0_4_0  0.995
+    b_13_0_4_0_0  node_path_mapping_coordination_1_13_0_2  0.995
+    b_13_0_4_0_0  node_path_mapping_coordination_2_13_0_0  0.995
+    b_13_0_4_0_0  bandwidth_overprovisioning_3_13_0  -0.995
+    b_13_0_4_0_0  bandwidth_max_limit_4_0  1
+    b_13_0_4_0_0  minimum_profit  0.0985
+    b_13_0_5_0_0  OBJ       0.0985
+    b_13_0_5_0_0  link_path_mapping_coordination_1_13_0_5_0  -1
+    b_13_0_5_0_0  link_path_mapping_coordination_2_13_0_5_0  0.995
+    b_13_0_5_0_0  node_path_mapping_coordination_1_13_0_2  0.995
+    b_13_0_5_0_0  node_path_mapping_coordination_2_13_0_1  0.995
+    b_13_0_5_0_0  bandwidth_overprovisioning_3_13_0  -0.995
+    b_13_0_5_0_0  bandwidth_max_limit_5_0  1
+    b_13_0_5_0_0  minimum_profit  0.0985
+    b_13_0_6_0_0  OBJ       -0.001
+    b_13_0_6_0_0  link_path_mapping_coordination_1_13_0_6_0  -1
+    b_13_0_6_0_0  link_path_mapping_coordination_2_13_0_6_0  0.995
+    b_13_0_6_0_0  node_path_mapping_coordination_1_13_0_0  0.995
+    b_13_0_6_0_0  bandwidth_max_limit_6_0  1
+    b_13_0_6_0_0  minimum_profit  -0.001
+    b_13_0_7_0_0  OBJ       -0.001
+    b_13_0_7_0_0  link_path_mapping_coordination_1_13_0_7_0  -1
+    b_13_0_7_0_0  link_path_mapping_coordination_2_13_0_7_0  0.995
+    b_13_0_7_0_0  node_path_mapping_coordination_1_13_0_1  0.995
+    b_13_0_7_0_0  bandwidth_max_limit_7_0  1
+    b_13_0_7_0_0  minimum_profit  -0.001
+    a_x1_13_0  OBJ       0
+    a_x1_13_1  OBJ       0
+    a_x1_13_2  OBJ       0
+    a_x4_13_0_0  OBJ       0
+    a_x4_13_0_1  OBJ       0
+    a_x4_13_0_2  OBJ       0
+    a_y1_13_0  OBJ       0
+    a_y1_13_1  OBJ       0
+    a_y2_13_0_0  OBJ       0
+    a_y2_13_0_1  OBJ       0
+    a_z1_13_0  OBJ       0
+    a_z1_13_1  OBJ       0
+    a_z1_13_2  OBJ       0
+    a_z1_13_3  OBJ       0
+    a_z1_13_4  OBJ       0
+    a_z1_13_5  OBJ       0
+    a_z1_13_6  OBJ       0
+    a_z1_13_7  OBJ       0
+    a_z2_13_0_0  vp_unique_mapping_13_0  1
+    a_z2_13_0_0  auxiliary_constraints_3_1_13_0_0_0  1
+    a_z2_13_0_0  auxiliary_constraints_3_2_13_0_0  1
+    a_z2_13_0_0  auxiliary_constraints_6_3_13_0_7  -1
+    a_z2_13_0_0  auxiliary_constraints_8_4_13_0_0  -1
+    a_z2_13_0_1  vp_unique_mapping_13_0  1
+    a_z2_13_0_1  auxiliary_constraints_3_1_13_0_1_0  1
+    a_z2_13_0_1  auxiliary_constraints_3_2_13_0_1  1
+    a_z2_13_0_1  auxiliary_constraints_6_3_13_0_7  -1
+    a_z2_13_0_1  auxiliary_constraints_8_4_13_0_1  -1
+    a_z2_13_0_2  vp_unique_mapping_13_0  1
+    a_z2_13_0_2  auxiliary_constraints_3_1_13_0_2_0  1
+    a_z2_13_0_2  auxiliary_constraints_3_2_13_0_2  1
+    a_z2_13_0_2  auxiliary_constraints_6_3_13_0_7  -0.02
+    a_z2_13_0_2  auxiliary_constraints_8_4_13_0_2  -0.02
+    a_z2_13_0_3  vp_unique_mapping_13_0  1
+    a_z2_13_0_3  auxiliary_constraints_3_1_13_0_3_0  1
+    a_z2_13_0_3  auxiliary_constraints_3_2_13_0_3  1
+    a_z2_13_0_3  auxiliary_constraints_6_3_13_0_7  -0.02
+    a_z2_13_0_3  auxiliary_constraints_8_4_13_0_3  -0.02
+    a_z2_13_0_4  vp_unique_mapping_13_0  1
+    a_z2_13_0_4  auxiliary_constraints_3_1_13_0_4_0  1
+    a_z2_13_0_4  auxiliary_constraints_3_2_13_0_4  1
+    a_z2_13_0_4  auxiliary_constraints_6_3_13_0_7  -10
+    a_z2_13_0_4  auxiliary_constraints_8_4_13_0_4  -10
+    a_z2_13_0_5  vp_unique_mapping_13_0  1
+    a_z2_13_0_5  auxiliary_constraints_3_1_13_0_5_0  1
+    a_z2_13_0_5  auxiliary_constraints_3_2_13_0_5  1
+    a_z2_13_0_5  auxiliary_constraints_6_3_13_0_7  -10
+    a_z2_13_0_5  auxiliary_constraints_8_4_13_0_5  -10
+    a_z2_13_0_6  vp_unique_mapping_13_0  1
+    a_z2_13_0_6  auxiliary_constraints_3_1_13_0_6_0  1
+    a_z2_13_0_6  auxiliary_constraints_3_2_13_0_6  1
+    a_z2_13_0_6  auxiliary_constraints_6_3_13_0_7  -10
+    a_z2_13_0_6  auxiliary_constraints_8_4_13_0_6  -10
+    a_z2_13_0_7  vp_unique_mapping_13_0  1
+    a_z2_13_0_7  auxiliary_constraints_3_1_13_0_7_0  1
+    a_z2_13_0_7  auxiliary_constraints_3_2_13_0_7  1
+    a_z2_13_0_7  auxiliary_constraints_6_3_13_0_7  -10
+    a_z2_13_0_7  auxiliary_constraints_8_4_13_0_7  -10
+    a_z3_13_0  OBJ       -0.001
+    a_z3_13_0  auxiliary_constraints_6_3_13_0_7  1
+    a_z3_13_0  auxiliary_constraints_7_13_0  1
+    a_z3_13_0  auxiliary_constraints_8_1_13_0  1
+    a_z3_13_0  auxiliary_constraints_8_4_13_0_0  1
+    a_z3_13_0  auxiliary_constraints_8_4_13_0_1  1
+    a_z3_13_0  auxiliary_constraints_8_4_13_0_2  1
+    a_z3_13_0  auxiliary_constraints_8_4_13_0_3  1
+    a_z3_13_0  auxiliary_constraints_8_4_13_0_4  1
+    a_z3_13_0  auxiliary_constraints_8_4_13_0_5  1
+    a_z3_13_0  auxiliary_constraints_8_4_13_0_6  1
+    a_z3_13_0  auxiliary_constraints_8_4_13_0_7  1
+    a_z3_13_0  minimum_profit  -0.001
+    a_z4_13_0  auxiliary_constraints_8_1_13_0  -1000
+    a_z4_13_0  auxiliary_constraints_8_4_13_0_0  1000
+    a_z4_13_0  auxiliary_constraints_8_4_13_0_1  1000
+    a_z4_13_0  auxiliary_constraints_8_4_13_0_2  1000
+    a_z4_13_0  auxiliary_constraints_8_4_13_0_3  1000
+    a_z4_13_0  auxiliary_constraints_8_4_13_0_4  1000
+    a_z4_13_0  auxiliary_constraints_8_4_13_0_5  1000
+    a_z4_13_0  auxiliary_constraints_8_4_13_0_6  1000
+    a_z4_13_0  auxiliary_constraints_8_4_13_0_7  1000
+    b_13_0_0_1_0  OBJ       0
+    b_13_0_0_2_0  OBJ       0
+    b_13_0_0_3_0  OBJ       0
+    b_13_0_0_4_0  OBJ       0
+    b_13_0_0_5_0  OBJ       0
+    b_13_0_0_6_0  OBJ       0
+    b_13_0_0_7_0  OBJ       0
+    b_13_0_1_1_0  OBJ       0
+    b_13_0_1_2_0  OBJ       0
+    b_13_0_1_3_0  OBJ       0
+    b_13_0_1_4_0  OBJ       0
+    b_13_0_1_5_0  OBJ       0
+    b_13_0_1_6_0  OBJ       0
+    b_13_0_1_7_0  OBJ       0
+    b_13_0_2_1_0  OBJ       0
+    b_13_0_2_2_0  OBJ       0
+    b_13_0_2_3_0  OBJ       0
+    b_13_0_2_4_0  OBJ       0
+    b_13_0_2_5_0  OBJ       0
+    b_13_0_2_6_0  OBJ       0
+    b_13_0_2_7_0  OBJ       0
+    b_13_0_3_1_0  OBJ       0
+    b_13_0_3_2_0  OBJ       0
+    b_13_0_3_3_0  OBJ       0
+    b_13_0_3_4_0  OBJ       0
+    b_13_0_3_5_0  OBJ       0
+    b_13_0_3_6_0  OBJ       0
+    b_13_0_3_7_0  OBJ       0
+    b_13_0_4_1_0  OBJ       0
+    b_13_0_4_2_0  OBJ       0
+    b_13_0_4_3_0  OBJ       0
+    b_13_0_4_4_0  OBJ       0
+    b_13_0_4_5_0  OBJ       0
+    b_13_0_4_6_0  OBJ       0
+    b_13_0_4_7_0  OBJ       0
+    b_13_0_5_1_0  OBJ       0
+    b_13_0_5_2_0  OBJ       0
+    b_13_0_5_3_0  OBJ       0
+    b_13_0_5_4_0  OBJ       0
+    b_13_0_5_5_0  OBJ       0
+    b_13_0_5_6_0  OBJ       0
+    b_13_0_5_7_0  OBJ       0
+    b_13_0_6_1_0  OBJ       0
+    b_13_0_6_2_0  OBJ       0
+    b_13_0_6_3_0  OBJ       0
+    b_13_0_6_4_0  OBJ       0
+    b_13_0_6_5_0  OBJ       0
+    b_13_0_6_6_0  OBJ       0
+    b_13_0_6_7_0  OBJ       0
+    b_13_0_7_1_0  OBJ       0
+    b_13_0_7_2_0  OBJ       0
+    b_13_0_7_3_0  OBJ       0
+    b_13_0_7_4_0  OBJ       0
+    b_13_0_7_5_0  OBJ       0
+    b_13_0_7_6_0  OBJ       0
+    b_13_0_7_7_0  OBJ       0
+    x_14_0_0  OBJ       -1.3636363636363635e+00
+    x_14_0_0  nf_unique_mapping_14_0  1
+    x_14_0_0  mips_limit_1_14_0_0  0.01
+    x_14_0_0  mips_limit_2_14_0_0  -0.6
+    x_14_0_0  node_path_mapping_coordination_1_14_0_0  -10000
+    x_14_0_0  auxiliary_constraints_8_1_14_0_0  -1
+    x_14_0_0  nf_regular_isolation_limit_14_0_0  1
+    x_14_0_0  mips_max_limit_1_0  1.3636363636363635e-01
+    x_14_0_0  mips_max_limit_2_0  2.7272727272727271e-02
+    x_14_0_0  auxiliary_constraints_8_2_0  -1
+    x_14_0_0  minimum_profit  -1.3636363636363635e+00
+    x_14_0_1  OBJ       -2.3636363636363633e+00
+    x_14_0_1  nf_unique_mapping_14_0  1
+    x_14_0_1  mips_limit_1_14_0_1  0.01
+    x_14_0_1  mips_limit_2_14_0_1  -0.6
+    x_14_0_1  node_path_mapping_coordination_1_14_0_1  -10000
+    x_14_0_1  auxiliary_constraints_8_1_14_0_1  -1
+    x_14_0_1  nf_regular_isolation_limit_14_0_1  1
+    x_14_0_1  mips_max_limit_1_1  1.3636363636363635e-01
+    x_14_0_1  mips_max_limit_2_1  2.7272727272727271e-02
+    x_14_0_1  auxiliary_constraints_8_2_1  -1
+    x_14_0_1  minimum_profit  -2.3636363636363633e+00
+    x_14_0_2  OBJ       -1.1363636363636365e+00
+    x_14_0_2  nf_unique_mapping_14_0  1
+    x_14_0_2  mips_limit_1_14_0_2  0.01
+    x_14_0_2  mips_limit_2_14_0_2  -0.6
+    x_14_0_2  node_path_mapping_coordination_1_14_0_2  -10000
+    x_14_0_2  auxiliary_constraints_8_1_14_0_2  -1
+    x_14_0_2  nf_regular_isolation_limit_14_0_2  1
+    x_14_0_2  mips_max_limit_1_2  1.3636363636363637e-02
+    x_14_0_2  mips_max_limit_2_2  2.7272727272727275e-03
+    x_14_0_2  auxiliary_constraints_8_2_2  -1
+    x_14_0_2  minimum_profit  -1.1363636363636365e+00
+    y_14_0_0_0_0  OBJ       0
+    y_14_0_0_0_1  OBJ       -0.9
+    y_14_0_0_0_1  ru_unique_mapping_14_0  1
+    y_14_0_0_0_1  radio_overprovision_14_0_0  1
+    y_14_0_0_0_1  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_1  ru_regular_isolation_limit_14_0_0  1
+    y_14_0_0_0_1  radio_max_limit_0_0  180
+    y_14_0_0_0_1  minimum_profit  -0.9
+    y_14_0_0_0_2  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_3  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_4  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_5  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_6  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_7  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_8  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_9  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_10  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_11  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_12  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_13  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_14  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_15  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_16  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_17  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_18  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_19  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_20  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_21  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_22  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_23  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_24  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_25  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_26  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_27  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_28  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_29  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_30  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_31  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_32  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_33  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_34  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_35  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_36  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_37  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_38  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_39  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_40  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_41  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_42  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_43  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_44  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_45  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_46  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_47  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_48  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_49  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_50  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_51  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_52  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_53  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_54  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_55  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_56  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_57  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_58  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_59  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_60  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_61  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_62  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_63  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_64  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_65  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_66  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_67  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_68  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_69  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_70  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_71  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_72  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_73  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_74  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_75  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_76  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_77  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_78  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_79  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_80  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_81  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_82  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_83  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_84  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_85  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_86  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_87  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_88  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_89  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_90  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_91  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_92  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_93  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_94  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_95  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_96  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_97  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_98  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_99  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_0_0_100  node_path_mapping_coordination_2_14_0_0  -10000
+    y_14_0_1_0_0  OBJ       0
+    y_14_0_1_0_1  OBJ       -1.9
+    y_14_0_1_0_1  ru_unique_mapping_14_0  1
+    y_14_0_1_0_1  radio_overprovision_14_0_1  1
+    y_14_0_1_0_1  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_1  ru_regular_isolation_limit_14_0_1  1
+    y_14_0_1_0_1  radio_max_limit_1_0  180
+    y_14_0_1_0_1  minimum_profit  -1.9
+    y_14_0_1_0_2  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_3  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_4  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_5  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_6  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_7  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_8  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_9  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_10  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_11  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_12  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_13  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_14  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_15  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_16  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_17  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_18  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_19  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_20  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_21  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_22  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_23  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_24  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_25  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_26  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_27  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_28  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_29  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_30  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_31  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_32  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_33  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_34  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_35  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_36  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_37  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_38  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_39  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_40  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_41  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_42  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_43  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_44  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_45  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_46  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_47  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_48  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_49  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_50  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_51  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_52  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_53  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_54  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_55  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_56  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_57  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_58  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_59  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_60  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_61  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_62  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_63  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_64  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_65  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_66  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_67  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_68  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_69  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_70  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_71  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_72  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_73  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_74  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_75  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_76  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_77  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_78  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_79  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_80  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_81  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_82  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_83  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_84  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_85  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_86  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_87  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_88  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_89  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_90  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_91  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_92  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_93  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_94  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_95  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_96  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_97  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_98  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_99  node_path_mapping_coordination_2_14_0_1  -10000
+    y_14_0_1_0_100  node_path_mapping_coordination_2_14_0_1  -10000
+    z_14_0_0_0  link_regular_isolation_limit_14_0_0  1
+    z_14_0_0_0  link_path_mapping_coordination_1_14_0_0_0  0.01
+    z_14_0_0_0  link_path_mapping_coordination_2_14_0_0_0  -10000
+    z_14_0_0_0  auxiliary_constraints_3_1_14_0_0_0  -1
+    z_14_0_0_0  auxiliary_constraints_3_2_14_0_0  -1
+    z_14_0_1_0  link_regular_isolation_limit_14_0_1  1
+    z_14_0_1_0  link_path_mapping_coordination_1_14_0_1_0  0.01
+    z_14_0_1_0  link_path_mapping_coordination_2_14_0_1_0  -10000
+    z_14_0_1_0  auxiliary_constraints_3_1_14_0_1_0  -1
+    z_14_0_1_0  auxiliary_constraints_3_2_14_0_1  -1
+    z_14_0_2_0  link_regular_isolation_limit_14_0_2  1
+    z_14_0_2_0  link_path_mapping_coordination_1_14_0_2_0  0.01
+    z_14_0_2_0  link_path_mapping_coordination_2_14_0_2_0  -10000
+    z_14_0_2_0  auxiliary_constraints_3_1_14_0_2_0  -1
+    z_14_0_2_0  auxiliary_constraints_3_2_14_0_2  -1
+    z_14_0_3_0  link_regular_isolation_limit_14_0_3  1
+    z_14_0_3_0  link_path_mapping_coordination_1_14_0_3_0  0.01
+    z_14_0_3_0  link_path_mapping_coordination_2_14_0_3_0  -10000
+    z_14_0_3_0  auxiliary_constraints_3_1_14_0_3_0  -1
+    z_14_0_3_0  auxiliary_constraints_3_2_14_0_3  -1
+    z_14_0_4_0  link_regular_isolation_limit_14_0_4  1
+    z_14_0_4_0  link_path_mapping_coordination_1_14_0_4_0  0.01
+    z_14_0_4_0  link_path_mapping_coordination_2_14_0_4_0  -10000
+    z_14_0_4_0  auxiliary_constraints_3_1_14_0_4_0  -1
+    z_14_0_4_0  auxiliary_constraints_3_2_14_0_4  -1
+    z_14_0_5_0  link_regular_isolation_limit_14_0_5  1
+    z_14_0_5_0  link_path_mapping_coordination_1_14_0_5_0  0.01
+    z_14_0_5_0  link_path_mapping_coordination_2_14_0_5_0  -10000
+    z_14_0_5_0  auxiliary_constraints_3_1_14_0_5_0  -1
+    z_14_0_5_0  auxiliary_constraints_3_2_14_0_5  -1
+    z_14_0_6_0  link_regular_isolation_limit_14_0_6  1
+    z_14_0_6_0  link_path_mapping_coordination_1_14_0_6_0  0.01
+    z_14_0_6_0  link_path_mapping_coordination_2_14_0_6_0  -10000
+    z_14_0_6_0  auxiliary_constraints_3_1_14_0_6_0  -1
+    z_14_0_6_0  auxiliary_constraints_3_2_14_0_6  -1
+    z_14_0_7_0  link_regular_isolation_limit_14_0_7  1
+    z_14_0_7_0  link_path_mapping_coordination_1_14_0_7_0  0.01
+    z_14_0_7_0  link_path_mapping_coordination_2_14_0_7_0  -10000
+    z_14_0_7_0  auxiliary_constraints_3_1_14_0_7_0  -1
+    z_14_0_7_0  auxiliary_constraints_3_2_14_0_7  -1
+    c_14_0_0  OBJ       90
+    c_14_0_0  mips_limit_1_14_0_0  -1
+    c_14_0_0  mips_limit_2_14_0_0  1
+    c_14_0_0  mips_max_limit_1_0  1
+    c_14_0_0  minimum_profit  90
+    c_14_0_1  OBJ       90
+    c_14_0_1  mips_limit_1_14_0_1  -1
+    c_14_0_1  mips_limit_2_14_0_1  1
+    c_14_0_1  mips_max_limit_1_1  1
+    c_14_0_1  minimum_profit  90
+    c_14_0_2  OBJ       90
+    c_14_0_2  mips_limit_1_14_0_2  -1
+    c_14_0_2  mips_limit_2_14_0_2  1
+    c_14_0_2  mips_max_limit_1_2  1
+    c_14_0_2  minimum_profit  90
+    b_14_0_0_0_0  OBJ       0.0985
+    b_14_0_0_0_0  link_path_mapping_coordination_1_14_0_0_0  -1
+    b_14_0_0_0_0  link_path_mapping_coordination_2_14_0_0_0  0.995
+    b_14_0_0_0_0  node_path_mapping_coordination_1_14_0_0  0.995
+    b_14_0_0_0_0  node_path_mapping_coordination_2_14_0_0  0.995
+    b_14_0_0_0_0  bandwidth_overprovisioning_3_14_0  -0.995
+    b_14_0_0_0_0  bandwidth_max_limit_0_0  1
+    b_14_0_0_0_0  minimum_profit  0.0985
+    b_14_0_1_0_0  OBJ       0.0985
+    b_14_0_1_0_0  link_path_mapping_coordination_1_14_0_1_0  -1
+    b_14_0_1_0_0  link_path_mapping_coordination_2_14_0_1_0  0.995
+    b_14_0_1_0_0  node_path_mapping_coordination_1_14_0_0  0.995
+    b_14_0_1_0_0  node_path_mapping_coordination_2_14_0_1  0.995
+    b_14_0_1_0_0  bandwidth_overprovisioning_3_14_0  -0.995
+    b_14_0_1_0_0  bandwidth_max_limit_1_0  1
+    b_14_0_1_0_0  minimum_profit  0.0985
+    b_14_0_2_0_0  OBJ       0.0985
+    b_14_0_2_0_0  link_path_mapping_coordination_1_14_0_2_0  -1
+    b_14_0_2_0_0  link_path_mapping_coordination_2_14_0_2_0  0.995
+    b_14_0_2_0_0  node_path_mapping_coordination_1_14_0_1  0.995
+    b_14_0_2_0_0  node_path_mapping_coordination_2_14_0_0  0.995
+    b_14_0_2_0_0  bandwidth_overprovisioning_3_14_0  -0.995
+    b_14_0_2_0_0  bandwidth_max_limit_2_0  1
+    b_14_0_2_0_0  minimum_profit  0.0985
+    b_14_0_3_0_0  OBJ       0.0985
+    b_14_0_3_0_0  link_path_mapping_coordination_1_14_0_3_0  -1
+    b_14_0_3_0_0  link_path_mapping_coordination_2_14_0_3_0  0.995
+    b_14_0_3_0_0  node_path_mapping_coordination_1_14_0_1  0.995
+    b_14_0_3_0_0  node_path_mapping_coordination_2_14_0_1  0.995
+    b_14_0_3_0_0  bandwidth_overprovisioning_3_14_0  -0.995
+    b_14_0_3_0_0  bandwidth_max_limit_3_0  1
+    b_14_0_3_0_0  minimum_profit  0.0985
+    b_14_0_4_0_0  OBJ       0.0985
+    b_14_0_4_0_0  link_path_mapping_coordination_1_14_0_4_0  -1
+    b_14_0_4_0_0  link_path_mapping_coordination_2_14_0_4_0  0.995
+    b_14_0_4_0_0  node_path_mapping_coordination_1_14_0_2  0.995
+    b_14_0_4_0_0  node_path_mapping_coordination_2_14_0_0  0.995
+    b_14_0_4_0_0  bandwidth_overprovisioning_3_14_0  -0.995
+    b_14_0_4_0_0  bandwidth_max_limit_4_0  1
+    b_14_0_4_0_0  minimum_profit  0.0985
+    b_14_0_5_0_0  OBJ       0.0985
+    b_14_0_5_0_0  link_path_mapping_coordination_1_14_0_5_0  -1
+    b_14_0_5_0_0  link_path_mapping_coordination_2_14_0_5_0  0.995
+    b_14_0_5_0_0  node_path_mapping_coordination_1_14_0_2  0.995
+    b_14_0_5_0_0  node_path_mapping_coordination_2_14_0_1  0.995
+    b_14_0_5_0_0  bandwidth_overprovisioning_3_14_0  -0.995
+    b_14_0_5_0_0  bandwidth_max_limit_5_0  1
+    b_14_0_5_0_0  minimum_profit  0.0985
+    b_14_0_6_0_0  OBJ       -0.001
+    b_14_0_6_0_0  link_path_mapping_coordination_1_14_0_6_0  -1
+    b_14_0_6_0_0  link_path_mapping_coordination_2_14_0_6_0  0.995
+    b_14_0_6_0_0  node_path_mapping_coordination_1_14_0_0  0.995
+    b_14_0_6_0_0  bandwidth_max_limit_6_0  1
+    b_14_0_6_0_0  minimum_profit  -0.001
+    b_14_0_7_0_0  OBJ       -0.001
+    b_14_0_7_0_0  link_path_mapping_coordination_1_14_0_7_0  -1
+    b_14_0_7_0_0  link_path_mapping_coordination_2_14_0_7_0  0.995
+    b_14_0_7_0_0  node_path_mapping_coordination_1_14_0_1  0.995
+    b_14_0_7_0_0  bandwidth_max_limit_7_0  1
+    b_14_0_7_0_0  minimum_profit  -0.001
+    a_x1_14_0  OBJ       0
+    a_x1_14_1  OBJ       0
+    a_x1_14_2  OBJ       0
+    a_x4_14_0_0  OBJ       0
+    a_x4_14_0_1  OBJ       0
+    a_x4_14_0_2  OBJ       0
+    a_y1_14_0  OBJ       0
+    a_y1_14_1  OBJ       0
+    a_y2_14_0_0  OBJ       0
+    a_y2_14_0_1  OBJ       0
+    a_z1_14_0  OBJ       0
+    a_z1_14_1  OBJ       0
+    a_z1_14_2  OBJ       0
+    a_z1_14_3  OBJ       0
+    a_z1_14_4  OBJ       0
+    a_z1_14_5  OBJ       0
+    a_z1_14_6  OBJ       0
+    a_z1_14_7  OBJ       0
+    a_z2_14_0_0  vp_unique_mapping_14_0  1
+    a_z2_14_0_0  auxiliary_constraints_3_1_14_0_0_0  1
+    a_z2_14_0_0  auxiliary_constraints_3_2_14_0_0  1
+    a_z2_14_0_0  auxiliary_constraints_6_3_14_0_7  -1
+    a_z2_14_0_0  auxiliary_constraints_8_4_14_0_0  -1
+    a_z2_14_0_1  vp_unique_mapping_14_0  1
+    a_z2_14_0_1  auxiliary_constraints_3_1_14_0_1_0  1
+    a_z2_14_0_1  auxiliary_constraints_3_2_14_0_1  1
+    a_z2_14_0_1  auxiliary_constraints_6_3_14_0_7  -1
+    a_z2_14_0_1  auxiliary_constraints_8_4_14_0_1  -1
+    a_z2_14_0_2  vp_unique_mapping_14_0  1
+    a_z2_14_0_2  auxiliary_constraints_3_1_14_0_2_0  1
+    a_z2_14_0_2  auxiliary_constraints_3_2_14_0_2  1
+    a_z2_14_0_2  auxiliary_constraints_6_3_14_0_7  -0.02
+    a_z2_14_0_2  auxiliary_constraints_8_4_14_0_2  -0.02
+    a_z2_14_0_3  vp_unique_mapping_14_0  1
+    a_z2_14_0_3  auxiliary_constraints_3_1_14_0_3_0  1
+    a_z2_14_0_3  auxiliary_constraints_3_2_14_0_3  1
+    a_z2_14_0_3  auxiliary_constraints_6_3_14_0_7  -0.02
+    a_z2_14_0_3  auxiliary_constraints_8_4_14_0_3  -0.02
+    a_z2_14_0_4  vp_unique_mapping_14_0  1
+    a_z2_14_0_4  auxiliary_constraints_3_1_14_0_4_0  1
+    a_z2_14_0_4  auxiliary_constraints_3_2_14_0_4  1
+    a_z2_14_0_4  auxiliary_constraints_6_3_14_0_7  -10
+    a_z2_14_0_4  auxiliary_constraints_8_4_14_0_4  -10
+    a_z2_14_0_5  vp_unique_mapping_14_0  1
+    a_z2_14_0_5  auxiliary_constraints_3_1_14_0_5_0  1
+    a_z2_14_0_5  auxiliary_constraints_3_2_14_0_5  1
+    a_z2_14_0_5  auxiliary_constraints_6_3_14_0_7  -10
+    a_z2_14_0_5  auxiliary_constraints_8_4_14_0_5  -10
+    a_z2_14_0_6  vp_unique_mapping_14_0  1
+    a_z2_14_0_6  auxiliary_constraints_3_1_14_0_6_0  1
+    a_z2_14_0_6  auxiliary_constraints_3_2_14_0_6  1
+    a_z2_14_0_6  auxiliary_constraints_6_3_14_0_7  -10
+    a_z2_14_0_6  auxiliary_constraints_8_4_14_0_6  -10
+    a_z2_14_0_7  vp_unique_mapping_14_0  1
+    a_z2_14_0_7  auxiliary_constraints_3_1_14_0_7_0  1
+    a_z2_14_0_7  auxiliary_constraints_3_2_14_0_7  1
+    a_z2_14_0_7  auxiliary_constraints_6_3_14_0_7  -10
+    a_z2_14_0_7  auxiliary_constraints_8_4_14_0_7  -10
+    a_z3_14_0  OBJ       -0.001
+    a_z3_14_0  auxiliary_constraints_6_3_14_0_7  1
+    a_z3_14_0  auxiliary_constraints_7_14_0  1
+    a_z3_14_0  auxiliary_constraints_8_1_14_0  1
+    a_z3_14_0  auxiliary_constraints_8_4_14_0_0  1
+    a_z3_14_0  auxiliary_constraints_8_4_14_0_1  1
+    a_z3_14_0  auxiliary_constraints_8_4_14_0_2  1
+    a_z3_14_0  auxiliary_constraints_8_4_14_0_3  1
+    a_z3_14_0  auxiliary_constraints_8_4_14_0_4  1
+    a_z3_14_0  auxiliary_constraints_8_4_14_0_5  1
+    a_z3_14_0  auxiliary_constraints_8_4_14_0_6  1
+    a_z3_14_0  auxiliary_constraints_8_4_14_0_7  1
+    a_z3_14_0  minimum_profit  -0.001
+    a_z4_14_0  auxiliary_constraints_8_1_14_0  -1000
+    a_z4_14_0  auxiliary_constraints_8_4_14_0_0  1000
+    a_z4_14_0  auxiliary_constraints_8_4_14_0_1  1000
+    a_z4_14_0  auxiliary_constraints_8_4_14_0_2  1000
+    a_z4_14_0  auxiliary_constraints_8_4_14_0_3  1000
+    a_z4_14_0  auxiliary_constraints_8_4_14_0_4  1000
+    a_z4_14_0  auxiliary_constraints_8_4_14_0_5  1000
+    a_z4_14_0  auxiliary_constraints_8_4_14_0_6  1000
+    a_z4_14_0  auxiliary_constraints_8_4_14_0_7  1000
+    b_14_0_0_1_0  OBJ       0
+    b_14_0_0_2_0  OBJ       0
+    b_14_0_0_3_0  OBJ       0
+    b_14_0_0_4_0  OBJ       0
+    b_14_0_0_5_0  OBJ       0
+    b_14_0_0_6_0  OBJ       0
+    b_14_0_0_7_0  OBJ       0
+    b_14_0_1_1_0  OBJ       0
+    b_14_0_1_2_0  OBJ       0
+    b_14_0_1_3_0  OBJ       0
+    b_14_0_1_4_0  OBJ       0
+    b_14_0_1_5_0  OBJ       0
+    b_14_0_1_6_0  OBJ       0
+    b_14_0_1_7_0  OBJ       0
+    b_14_0_2_1_0  OBJ       0
+    b_14_0_2_2_0  OBJ       0
+    b_14_0_2_3_0  OBJ       0
+    b_14_0_2_4_0  OBJ       0
+    b_14_0_2_5_0  OBJ       0
+    b_14_0_2_6_0  OBJ       0
+    b_14_0_2_7_0  OBJ       0
+    b_14_0_3_1_0  OBJ       0
+    b_14_0_3_2_0  OBJ       0
+    b_14_0_3_3_0  OBJ       0
+    b_14_0_3_4_0  OBJ       0
+    b_14_0_3_5_0  OBJ       0
+    b_14_0_3_6_0  OBJ       0
+    b_14_0_3_7_0  OBJ       0
+    b_14_0_4_1_0  OBJ       0
+    b_14_0_4_2_0  OBJ       0
+    b_14_0_4_3_0  OBJ       0
+    b_14_0_4_4_0  OBJ       0
+    b_14_0_4_5_0  OBJ       0
+    b_14_0_4_6_0  OBJ       0
+    b_14_0_4_7_0  OBJ       0
+    b_14_0_5_1_0  OBJ       0
+    b_14_0_5_2_0  OBJ       0
+    b_14_0_5_3_0  OBJ       0
+    b_14_0_5_4_0  OBJ       0
+    b_14_0_5_5_0  OBJ       0
+    b_14_0_5_6_0  OBJ       0
+    b_14_0_5_7_0  OBJ       0
+    b_14_0_6_1_0  OBJ       0
+    b_14_0_6_2_0  OBJ       0
+    b_14_0_6_3_0  OBJ       0
+    b_14_0_6_4_0  OBJ       0
+    b_14_0_6_5_0  OBJ       0
+    b_14_0_6_6_0  OBJ       0
+    b_14_0_6_7_0  OBJ       0
+    b_14_0_7_1_0  OBJ       0
+    b_14_0_7_2_0  OBJ       0
+    b_14_0_7_3_0  OBJ       0
+    b_14_0_7_4_0  OBJ       0
+    b_14_0_7_5_0  OBJ       0
+    b_14_0_7_6_0  OBJ       0
+    b_14_0_7_7_0  OBJ       0
+    x_15_0_0  OBJ       -1.3636363636363635e+00
+    x_15_0_0  nf_unique_mapping_15_0  1
+    x_15_0_0  nf_regular_isolation_limit_15_0_0  1
+    x_15_0_0  mips_limit_1_15_0_0  0.01
+    x_15_0_0  mips_limit_2_15_0_0  -0.6
+    x_15_0_0  mips_max_limit_1_0  1.3636363636363635e-01
+    x_15_0_0  mips_max_limit_2_0  2.7272727272727271e-02
+    x_15_0_0  node_path_mapping_coordination_1_15_0_0  -10000
+    x_15_0_0  auxiliary_constraints_8_1_15_0_0  -1
+    x_15_0_0  auxiliary_constraints_8_2_0  -1
+    x_15_0_0  minimum_profit  -1.3636363636363635e+00
+    x_15_0_1  OBJ       -1.3636363636363635e+00
+    x_15_0_1  nf_unique_mapping_15_0  1
+    x_15_0_1  nf_regular_isolation_limit_15_0_1  1
+    x_15_0_1  mips_limit_1_15_0_1  0.01
+    x_15_0_1  mips_limit_2_15_0_1  -0.6
+    x_15_0_1  mips_max_limit_1_1  1.3636363636363635e-01
+    x_15_0_1  mips_max_limit_2_1  2.7272727272727271e-02
+    x_15_0_1  node_path_mapping_coordination_1_15_0_1  -10000
+    x_15_0_1  auxiliary_constraints_8_1_15_0_1  -1
+    x_15_0_1  auxiliary_constraints_8_2_1  -1
+    x_15_0_1  minimum_profit  -1.3636363636363635e+00
+    x_15_0_2  OBJ       -1.3636363636363638e-01
+    x_15_0_2  nf_unique_mapping_15_0  1
+    x_15_0_2  nf_regular_isolation_limit_15_0_2  1
+    x_15_0_2  mips_limit_1_15_0_2  0.01
+    x_15_0_2  mips_limit_2_15_0_2  -0.6
+    x_15_0_2  mips_max_limit_1_2  1.3636363636363637e-02
+    x_15_0_2  mips_max_limit_2_2  2.7272727272727275e-03
+    x_15_0_2  node_path_mapping_coordination_1_15_0_2  -10000
+    x_15_0_2  auxiliary_constraints_8_1_15_0_2  -1
+    x_15_0_2  auxiliary_constraints_8_2_2  -1
+    x_15_0_2  minimum_profit  -1.3636363636363638e-01
+    y_15_0_0_0_0  OBJ       0
+    y_15_0_0_0_1  OBJ       -0.9
+    y_15_0_0_0_1  ru_unique_mapping_15_0  1
+    y_15_0_0_0_1  ru_regular_isolation_limit_15_0_0  1
+    y_15_0_0_0_1  radio_overprovision_15_0_0  1
+    y_15_0_0_0_1  radio_max_limit_0_0  180
+    y_15_0_0_0_1  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_1  minimum_profit  -0.9
+    y_15_0_0_0_2  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_3  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_4  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_5  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_6  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_7  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_8  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_9  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_10  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_11  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_12  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_13  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_14  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_15  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_16  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_17  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_18  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_19  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_20  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_21  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_22  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_23  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_24  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_25  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_26  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_27  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_28  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_29  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_30  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_31  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_32  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_33  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_34  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_35  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_36  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_37  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_38  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_39  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_40  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_41  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_42  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_43  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_44  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_45  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_46  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_47  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_48  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_49  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_50  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_51  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_52  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_53  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_54  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_55  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_56  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_57  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_58  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_59  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_60  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_61  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_62  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_63  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_64  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_65  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_66  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_67  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_68  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_69  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_70  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_71  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_72  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_73  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_74  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_75  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_76  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_77  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_78  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_79  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_80  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_81  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_82  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_83  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_84  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_85  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_86  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_87  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_88  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_89  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_90  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_91  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_92  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_93  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_94  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_95  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_96  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_97  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_98  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_99  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_0_0_100  node_path_mapping_coordination_2_15_0_0  -10000
+    y_15_0_1_0_0  OBJ       0
+    y_15_0_1_0_1  OBJ       -0.9
+    y_15_0_1_0_1  ru_unique_mapping_15_0  1
+    y_15_0_1_0_1  ru_regular_isolation_limit_15_0_1  1
+    y_15_0_1_0_1  radio_overprovision_15_0_1  1
+    y_15_0_1_0_1  radio_max_limit_1_0  180
+    y_15_0_1_0_1  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_1  minimum_profit  -0.9
+    y_15_0_1_0_2  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_3  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_4  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_5  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_6  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_7  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_8  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_9  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_10  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_11  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_12  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_13  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_14  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_15  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_16  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_17  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_18  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_19  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_20  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_21  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_22  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_23  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_24  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_25  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_26  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_27  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_28  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_29  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_30  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_31  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_32  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_33  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_34  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_35  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_36  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_37  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_38  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_39  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_40  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_41  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_42  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_43  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_44  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_45  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_46  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_47  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_48  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_49  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_50  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_51  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_52  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_53  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_54  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_55  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_56  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_57  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_58  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_59  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_60  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_61  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_62  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_63  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_64  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_65  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_66  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_67  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_68  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_69  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_70  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_71  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_72  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_73  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_74  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_75  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_76  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_77  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_78  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_79  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_80  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_81  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_82  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_83  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_84  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_85  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_86  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_87  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_88  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_89  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_90  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_91  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_92  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_93  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_94  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_95  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_96  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_97  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_98  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_99  node_path_mapping_coordination_2_15_0_1  -10000
+    y_15_0_1_0_100  node_path_mapping_coordination_2_15_0_1  -10000
+    z_15_0_0_0  link_regular_isolation_limit_15_0_0  1
+    z_15_0_0_0  link_path_mapping_coordination_1_15_0_0_0  0.01
+    z_15_0_0_0  link_path_mapping_coordination_2_15_0_0_0  -10000
+    z_15_0_0_0  auxiliary_constraints_3_1_15_0_0_0  -1
+    z_15_0_0_0  auxiliary_constraints_3_2_15_0_0  -1
+    z_15_0_1_0  link_regular_isolation_limit_15_0_1  1
+    z_15_0_1_0  link_path_mapping_coordination_1_15_0_1_0  0.01
+    z_15_0_1_0  link_path_mapping_coordination_2_15_0_1_0  -10000
+    z_15_0_1_0  auxiliary_constraints_3_1_15_0_1_0  -1
+    z_15_0_1_0  auxiliary_constraints_3_2_15_0_1  -1
+    z_15_0_2_0  link_regular_isolation_limit_15_0_2  1
+    z_15_0_2_0  link_path_mapping_coordination_1_15_0_2_0  0.01
+    z_15_0_2_0  link_path_mapping_coordination_2_15_0_2_0  -10000
+    z_15_0_2_0  auxiliary_constraints_3_1_15_0_2_0  -1
+    z_15_0_2_0  auxiliary_constraints_3_2_15_0_2  -1
+    z_15_0_3_0  link_regular_isolation_limit_15_0_3  1
+    z_15_0_3_0  link_path_mapping_coordination_1_15_0_3_0  0.01
+    z_15_0_3_0  link_path_mapping_coordination_2_15_0_3_0  -10000
+    z_15_0_3_0  auxiliary_constraints_3_1_15_0_3_0  -1
+    z_15_0_3_0  auxiliary_constraints_3_2_15_0_3  -1
+    z_15_0_4_0  link_regular_isolation_limit_15_0_4  1
+    z_15_0_4_0  link_path_mapping_coordination_1_15_0_4_0  0.01
+    z_15_0_4_0  link_path_mapping_coordination_2_15_0_4_0  -10000
+    z_15_0_4_0  auxiliary_constraints_3_1_15_0_4_0  -1
+    z_15_0_4_0  auxiliary_constraints_3_2_15_0_4  -1
+    z_15_0_5_0  link_regular_isolation_limit_15_0_5  1
+    z_15_0_5_0  link_path_mapping_coordination_1_15_0_5_0  0.01
+    z_15_0_5_0  link_path_mapping_coordination_2_15_0_5_0  -10000
+    z_15_0_5_0  auxiliary_constraints_3_1_15_0_5_0  -1
+    z_15_0_5_0  auxiliary_constraints_3_2_15_0_5  -1
+    z_15_0_6_0  link_regular_isolation_limit_15_0_6  1
+    z_15_0_6_0  link_path_mapping_coordination_1_15_0_6_0  0.01
+    z_15_0_6_0  link_path_mapping_coordination_2_15_0_6_0  -10000
+    z_15_0_6_0  auxiliary_constraints_3_1_15_0_6_0  -1
+    z_15_0_6_0  auxiliary_constraints_3_2_15_0_6  -1
+    z_15_0_7_0  link_regular_isolation_limit_15_0_7  1
+    z_15_0_7_0  link_path_mapping_coordination_1_15_0_7_0  0.01
+    z_15_0_7_0  link_path_mapping_coordination_2_15_0_7_0  -10000
+    z_15_0_7_0  auxiliary_constraints_3_1_15_0_7_0  -1
+    z_15_0_7_0  auxiliary_constraints_3_2_15_0_7  -1
+    c_15_0_0  OBJ       90
+    c_15_0_0  mips_limit_1_15_0_0  -1
+    c_15_0_0  mips_limit_2_15_0_0  1
+    c_15_0_0  mips_max_limit_1_0  1
+    c_15_0_0  minimum_profit  90
+    c_15_0_1  OBJ       90
+    c_15_0_1  mips_limit_1_15_0_1  -1
+    c_15_0_1  mips_limit_2_15_0_1  1
+    c_15_0_1  mips_max_limit_1_1  1
+    c_15_0_1  minimum_profit  90
+    c_15_0_2  OBJ       90
+    c_15_0_2  mips_limit_1_15_0_2  -1
+    c_15_0_2  mips_limit_2_15_0_2  1
+    c_15_0_2  mips_max_limit_1_2  1
+    c_15_0_2  minimum_profit  90
+    b_15_0_0_0_0  OBJ       0.0985
+    b_15_0_0_0_0  link_path_mapping_coordination_1_15_0_0_0  -1
+    b_15_0_0_0_0  link_path_mapping_coordination_2_15_0_0_0  0.995
+    b_15_0_0_0_0  node_path_mapping_coordination_1_15_0_0  0.995
+    b_15_0_0_0_0  node_path_mapping_coordination_2_15_0_0  0.995
+    b_15_0_0_0_0  bandwidth_overprovisioning_3_15_0  -0.995
+    b_15_0_0_0_0  bandwidth_max_limit_0_0  1
+    b_15_0_0_0_0  minimum_profit  0.0985
+    b_15_0_1_0_0  OBJ       0.0985
+    b_15_0_1_0_0  link_path_mapping_coordination_1_15_0_1_0  -1
+    b_15_0_1_0_0  link_path_mapping_coordination_2_15_0_1_0  0.995
+    b_15_0_1_0_0  node_path_mapping_coordination_1_15_0_0  0.995
+    b_15_0_1_0_0  node_path_mapping_coordination_2_15_0_1  0.995
+    b_15_0_1_0_0  bandwidth_overprovisioning_3_15_0  -0.995
+    b_15_0_1_0_0  bandwidth_max_limit_1_0  1
+    b_15_0_1_0_0  minimum_profit  0.0985
+    b_15_0_2_0_0  OBJ       0.0985
+    b_15_0_2_0_0  link_path_mapping_coordination_1_15_0_2_0  -1
+    b_15_0_2_0_0  link_path_mapping_coordination_2_15_0_2_0  0.995
+    b_15_0_2_0_0  node_path_mapping_coordination_1_15_0_1  0.995
+    b_15_0_2_0_0  node_path_mapping_coordination_2_15_0_0  0.995
+    b_15_0_2_0_0  bandwidth_overprovisioning_3_15_0  -0.995
+    b_15_0_2_0_0  bandwidth_max_limit_2_0  1
+    b_15_0_2_0_0  minimum_profit  0.0985
+    b_15_0_3_0_0  OBJ       0.0985
+    b_15_0_3_0_0  link_path_mapping_coordination_1_15_0_3_0  -1
+    b_15_0_3_0_0  link_path_mapping_coordination_2_15_0_3_0  0.995
+    b_15_0_3_0_0  node_path_mapping_coordination_1_15_0_1  0.995
+    b_15_0_3_0_0  node_path_mapping_coordination_2_15_0_1  0.995
+    b_15_0_3_0_0  bandwidth_overprovisioning_3_15_0  -0.995
+    b_15_0_3_0_0  bandwidth_max_limit_3_0  1
+    b_15_0_3_0_0  minimum_profit  0.0985
+    b_15_0_4_0_0  OBJ       0.0985
+    b_15_0_4_0_0  link_path_mapping_coordination_1_15_0_4_0  -1
+    b_15_0_4_0_0  link_path_mapping_coordination_2_15_0_4_0  0.995
+    b_15_0_4_0_0  node_path_mapping_coordination_1_15_0_2  0.995
+    b_15_0_4_0_0  node_path_mapping_coordination_2_15_0_0  0.995
+    b_15_0_4_0_0  bandwidth_overprovisioning_3_15_0  -0.995
+    b_15_0_4_0_0  bandwidth_max_limit_4_0  1
+    b_15_0_4_0_0  minimum_profit  0.0985
+    b_15_0_5_0_0  OBJ       0.0985
+    b_15_0_5_0_0  link_path_mapping_coordination_1_15_0_5_0  -1
+    b_15_0_5_0_0  link_path_mapping_coordination_2_15_0_5_0  0.995
+    b_15_0_5_0_0  node_path_mapping_coordination_1_15_0_2  0.995
+    b_15_0_5_0_0  node_path_mapping_coordination_2_15_0_1  0.995
+    b_15_0_5_0_0  bandwidth_overprovisioning_3_15_0  -0.995
+    b_15_0_5_0_0  bandwidth_max_limit_5_0  1
+    b_15_0_5_0_0  minimum_profit  0.0985
+    b_15_0_6_0_0  OBJ       -0.001
+    b_15_0_6_0_0  link_path_mapping_coordination_1_15_0_6_0  -1
+    b_15_0_6_0_0  link_path_mapping_coordination_2_15_0_6_0  0.995
+    b_15_0_6_0_0  node_path_mapping_coordination_1_15_0_0  0.995
+    b_15_0_6_0_0  bandwidth_max_limit_6_0  1
+    b_15_0_6_0_0  minimum_profit  -0.001
+    b_15_0_7_0_0  OBJ       -0.001
+    b_15_0_7_0_0  link_path_mapping_coordination_1_15_0_7_0  -1
+    b_15_0_7_0_0  link_path_mapping_coordination_2_15_0_7_0  0.995
+    b_15_0_7_0_0  node_path_mapping_coordination_1_15_0_1  0.995
+    b_15_0_7_0_0  bandwidth_max_limit_7_0  1
+    b_15_0_7_0_0  minimum_profit  -0.001
+    a_x1_15_0  OBJ       0
+    a_x1_15_1  OBJ       0
+    a_x1_15_2  OBJ       0
+    a_x4_15_0_0  OBJ       0
+    a_x4_15_0_1  OBJ       0
+    a_x4_15_0_2  OBJ       0
+    a_y1_15_0  OBJ       0
+    a_y1_15_1  OBJ       0
+    a_y2_15_0_0  OBJ       0
+    a_y2_15_0_1  OBJ       0
+    a_z1_15_0  OBJ       0
+    a_z1_15_1  OBJ       0
+    a_z1_15_2  OBJ       0
+    a_z1_15_3  OBJ       0
+    a_z1_15_4  OBJ       0
+    a_z1_15_5  OBJ       0
+    a_z1_15_6  OBJ       0
+    a_z1_15_7  OBJ       0
+    a_z2_15_0_0  vp_unique_mapping_15_0  1
+    a_z2_15_0_0  auxiliary_constraints_3_1_15_0_0_0  1
+    a_z2_15_0_0  auxiliary_constraints_3_2_15_0_0  1
+    a_z2_15_0_0  auxiliary_constraints_6_3_15_0_7  -1
+    a_z2_15_0_0  auxiliary_constraints_8_4_15_0_0  -1
+    a_z2_15_0_1  vp_unique_mapping_15_0  1
+    a_z2_15_0_1  auxiliary_constraints_3_1_15_0_1_0  1
+    a_z2_15_0_1  auxiliary_constraints_3_2_15_0_1  1
+    a_z2_15_0_1  auxiliary_constraints_6_3_15_0_7  -1
+    a_z2_15_0_1  auxiliary_constraints_8_4_15_0_1  -1
+    a_z2_15_0_2  vp_unique_mapping_15_0  1
+    a_z2_15_0_2  auxiliary_constraints_3_1_15_0_2_0  1
+    a_z2_15_0_2  auxiliary_constraints_3_2_15_0_2  1
+    a_z2_15_0_2  auxiliary_constraints_6_3_15_0_7  -0.02
+    a_z2_15_0_2  auxiliary_constraints_8_4_15_0_2  -0.02
+    a_z2_15_0_3  vp_unique_mapping_15_0  1
+    a_z2_15_0_3  auxiliary_constraints_3_1_15_0_3_0  1
+    a_z2_15_0_3  auxiliary_constraints_3_2_15_0_3  1
+    a_z2_15_0_3  auxiliary_constraints_6_3_15_0_7  -0.02
+    a_z2_15_0_3  auxiliary_constraints_8_4_15_0_3  -0.02
+    a_z2_15_0_4  vp_unique_mapping_15_0  1
+    a_z2_15_0_4  auxiliary_constraints_3_1_15_0_4_0  1
+    a_z2_15_0_4  auxiliary_constraints_3_2_15_0_4  1
+    a_z2_15_0_4  auxiliary_constraints_6_3_15_0_7  -10
+    a_z2_15_0_4  auxiliary_constraints_8_4_15_0_4  -10
+    a_z2_15_0_5  vp_unique_mapping_15_0  1
+    a_z2_15_0_5  auxiliary_constraints_3_1_15_0_5_0  1
+    a_z2_15_0_5  auxiliary_constraints_3_2_15_0_5  1
+    a_z2_15_0_5  auxiliary_constraints_6_3_15_0_7  -10
+    a_z2_15_0_5  auxiliary_constraints_8_4_15_0_5  -10
+    a_z2_15_0_6  vp_unique_mapping_15_0  1
+    a_z2_15_0_6  auxiliary_constraints_3_1_15_0_6_0  1
+    a_z2_15_0_6  auxiliary_constraints_3_2_15_0_6  1
+    a_z2_15_0_6  auxiliary_constraints_6_3_15_0_7  -10
+    a_z2_15_0_6  auxiliary_constraints_8_4_15_0_6  -10
+    a_z2_15_0_7  vp_unique_mapping_15_0  1
+    a_z2_15_0_7  auxiliary_constraints_3_1_15_0_7_0  1
+    a_z2_15_0_7  auxiliary_constraints_3_2_15_0_7  1
+    a_z2_15_0_7  auxiliary_constraints_6_3_15_0_7  -10
+    a_z2_15_0_7  auxiliary_constraints_8_4_15_0_7  -10
+    a_z3_15_0  OBJ       -0.001
+    a_z3_15_0  auxiliary_constraints_6_3_15_0_7  1
+    a_z3_15_0  auxiliary_constraints_7_15_0  1
+    a_z3_15_0  auxiliary_constraints_8_1_15_0  1
+    a_z3_15_0  auxiliary_constraints_8_4_15_0_0  1
+    a_z3_15_0  auxiliary_constraints_8_4_15_0_1  1
+    a_z3_15_0  auxiliary_constraints_8_4_15_0_2  1
+    a_z3_15_0  auxiliary_constraints_8_4_15_0_3  1
+    a_z3_15_0  auxiliary_constraints_8_4_15_0_4  1
+    a_z3_15_0  auxiliary_constraints_8_4_15_0_5  1
+    a_z3_15_0  auxiliary_constraints_8_4_15_0_6  1
+    a_z3_15_0  auxiliary_constraints_8_4_15_0_7  1
+    a_z3_15_0  minimum_profit  -0.001
+    a_z4_15_0  auxiliary_constraints_8_1_15_0  -1000
+    a_z4_15_0  auxiliary_constraints_8_4_15_0_0  1000
+    a_z4_15_0  auxiliary_constraints_8_4_15_0_1  1000
+    a_z4_15_0  auxiliary_constraints_8_4_15_0_2  1000
+    a_z4_15_0  auxiliary_constraints_8_4_15_0_3  1000
+    a_z4_15_0  auxiliary_constraints_8_4_15_0_4  1000
+    a_z4_15_0  auxiliary_constraints_8_4_15_0_5  1000
+    a_z4_15_0  auxiliary_constraints_8_4_15_0_6  1000
+    a_z4_15_0  auxiliary_constraints_8_4_15_0_7  1000
 RHS
-    RHS1      OBJ       69540.9
+    RHS1      OBJ       65281.3
     RHS1      nf_unique_mapping_0_0  1
     RHS1      ru_unique_mapping_0_0  1
     RHS1      radio_overprovision_0_0_0  1
@@ -7455,8 +9769,8 @@ RHS
     RHS1      auxiliary_constraints_8_4_0_0_7  990
     RHS1      nf_unique_mapping_1_0  1
     RHS1      ru_unique_mapping_1_0  1
-    RHS1      radio_overprovision_1_0_0  10
-    RHS1      radio_overprovision_1_0_1  10
+    RHS1      radio_overprovision_1_0_0  1
+    RHS1      radio_overprovision_1_0_1  1
     RHS1      vp_unique_mapping_1_0  1
     RHS1      link_regular_isolation_limit_1_0_0  1
     RHS1      link_regular_isolation_limit_1_0_1  1
@@ -7466,7 +9780,7 @@ RHS
     RHS1      link_regular_isolation_limit_1_0_5  1
     RHS1      link_regular_isolation_limit_1_0_6  1
     RHS1      link_regular_isolation_limit_1_0_7  1
-    RHS1      bandwidth_overprovisioning_3_1_0  -12500
+    RHS1      bandwidth_overprovisioning_3_1_0  -10000
     RHS1      auxiliary_constraints_3_2_1_0_0  -7
     RHS1      auxiliary_constraints_3_2_1_0_1  -7
     RHS1      auxiliary_constraints_3_2_1_0_2  -7
@@ -7475,19 +9789,19 @@ RHS
     RHS1      auxiliary_constraints_3_2_1_0_5  -7
     RHS1      auxiliary_constraints_3_2_1_0_6  -7
     RHS1      auxiliary_constraints_3_2_1_0_7  -7
-    RHS1      auxiliary_constraints_6_3_1_0_7  -0.1
-    RHS1      auxiliary_constraints_8_4_1_0_0  999.9
-    RHS1      auxiliary_constraints_8_4_1_0_1  999.9
-    RHS1      auxiliary_constraints_8_4_1_0_2  999.9
-    RHS1      auxiliary_constraints_8_4_1_0_3  999.9
-    RHS1      auxiliary_constraints_8_4_1_0_4  999.9
-    RHS1      auxiliary_constraints_8_4_1_0_5  999.9
-    RHS1      auxiliary_constraints_8_4_1_0_6  999.9
-    RHS1      auxiliary_constraints_8_4_1_0_7  999.9
+    RHS1      auxiliary_constraints_6_3_1_0_7  -10
+    RHS1      auxiliary_constraints_8_4_1_0_0  990
+    RHS1      auxiliary_constraints_8_4_1_0_1  990
+    RHS1      auxiliary_constraints_8_4_1_0_2  990
+    RHS1      auxiliary_constraints_8_4_1_0_3  990
+    RHS1      auxiliary_constraints_8_4_1_0_4  990
+    RHS1      auxiliary_constraints_8_4_1_0_5  990
+    RHS1      auxiliary_constraints_8_4_1_0_6  990
+    RHS1      auxiliary_constraints_8_4_1_0_7  990
     RHS1      nf_unique_mapping_2_0  1
     RHS1      ru_unique_mapping_2_0  1
-    RHS1      radio_overprovision_2_0_0  10
-    RHS1      radio_overprovision_2_0_1  10
+    RHS1      radio_overprovision_2_0_0  1
+    RHS1      radio_overprovision_2_0_1  1
     RHS1      vp_unique_mapping_2_0  1
     RHS1      link_regular_isolation_limit_2_0_0  1
     RHS1      link_regular_isolation_limit_2_0_1  1
@@ -7497,7 +9811,7 @@ RHS
     RHS1      link_regular_isolation_limit_2_0_5  1
     RHS1      link_regular_isolation_limit_2_0_6  1
     RHS1      link_regular_isolation_limit_2_0_7  1
-    RHS1      bandwidth_overprovisioning_3_2_0  -12500
+    RHS1      bandwidth_overprovisioning_3_2_0  -10000
     RHS1      auxiliary_constraints_3_2_2_0_0  -7
     RHS1      auxiliary_constraints_3_2_2_0_1  -7
     RHS1      auxiliary_constraints_3_2_2_0_2  -7
@@ -7506,15 +9820,15 @@ RHS
     RHS1      auxiliary_constraints_3_2_2_0_5  -7
     RHS1      auxiliary_constraints_3_2_2_0_6  -7
     RHS1      auxiliary_constraints_3_2_2_0_7  -7
-    RHS1      auxiliary_constraints_6_3_2_0_7  -0.1
-    RHS1      auxiliary_constraints_8_4_2_0_0  999.9
-    RHS1      auxiliary_constraints_8_4_2_0_1  999.9
-    RHS1      auxiliary_constraints_8_4_2_0_2  999.9
-    RHS1      auxiliary_constraints_8_4_2_0_3  999.9
-    RHS1      auxiliary_constraints_8_4_2_0_4  999.9
-    RHS1      auxiliary_constraints_8_4_2_0_5  999.9
-    RHS1      auxiliary_constraints_8_4_2_0_6  999.9
-    RHS1      auxiliary_constraints_8_4_2_0_7  999.9
+    RHS1      auxiliary_constraints_6_3_2_0_7  -10
+    RHS1      auxiliary_constraints_8_4_2_0_0  990
+    RHS1      auxiliary_constraints_8_4_2_0_1  990
+    RHS1      auxiliary_constraints_8_4_2_0_2  990
+    RHS1      auxiliary_constraints_8_4_2_0_3  990
+    RHS1      auxiliary_constraints_8_4_2_0_4  990
+    RHS1      auxiliary_constraints_8_4_2_0_5  990
+    RHS1      auxiliary_constraints_8_4_2_0_6  990
+    RHS1      auxiliary_constraints_8_4_2_0_7  990
     RHS1      nf_unique_mapping_3_0  1
     RHS1      ru_unique_mapping_3_0  1
     RHS1      radio_overprovision_3_0_0  1
@@ -7578,20 +9892,10 @@ RHS
     RHS1      auxiliary_constraints_8_4_4_0_6  999.9
     RHS1      auxiliary_constraints_8_4_4_0_7  999.9
     RHS1      nf_unique_mapping_5_0  1
-    RHS1      nf_unique_mapping_6_0  1
-    RHS1      nf_unique_mapping_7_0  1
     RHS1      ru_unique_mapping_5_0  1
-    RHS1      ru_unique_mapping_6_0  1
-    RHS1      ru_unique_mapping_7_0  1
     RHS1      radio_overprovision_5_0_0  1
     RHS1      radio_overprovision_5_0_1  1
-    RHS1      radio_overprovision_6_0_0  1
-    RHS1      radio_overprovision_6_0_1  1
-    RHS1      radio_overprovision_7_0_0  1
-    RHS1      radio_overprovision_7_0_1  1
     RHS1      vp_unique_mapping_5_0  1
-    RHS1      vp_unique_mapping_6_0  1
-    RHS1      vp_unique_mapping_7_0  1
     RHS1      link_regular_isolation_limit_5_0_0  1
     RHS1      link_regular_isolation_limit_5_0_1  1
     RHS1      link_regular_isolation_limit_5_0_2  1
@@ -7600,25 +9904,7 @@ RHS
     RHS1      link_regular_isolation_limit_5_0_5  1
     RHS1      link_regular_isolation_limit_5_0_6  1
     RHS1      link_regular_isolation_limit_5_0_7  1
-    RHS1      link_regular_isolation_limit_6_0_0  1
-    RHS1      link_regular_isolation_limit_6_0_1  1
-    RHS1      link_regular_isolation_limit_6_0_2  1
-    RHS1      link_regular_isolation_limit_6_0_3  1
-    RHS1      link_regular_isolation_limit_6_0_4  1
-    RHS1      link_regular_isolation_limit_6_0_5  1
-    RHS1      link_regular_isolation_limit_6_0_6  1
-    RHS1      link_regular_isolation_limit_6_0_7  1
-    RHS1      link_regular_isolation_limit_7_0_0  1
-    RHS1      link_regular_isolation_limit_7_0_1  1
-    RHS1      link_regular_isolation_limit_7_0_2  1
-    RHS1      link_regular_isolation_limit_7_0_3  1
-    RHS1      link_regular_isolation_limit_7_0_4  1
-    RHS1      link_regular_isolation_limit_7_0_5  1
-    RHS1      link_regular_isolation_limit_7_0_6  1
-    RHS1      link_regular_isolation_limit_7_0_7  1
     RHS1      bandwidth_overprovisioning_3_5_0  -10000
-    RHS1      bandwidth_overprovisioning_3_6_0  -10000
-    RHS1      bandwidth_overprovisioning_3_7_0  -10000
     RHS1      auxiliary_constraints_3_2_5_0_0  -7
     RHS1      auxiliary_constraints_3_2_5_0_1  -7
     RHS1      auxiliary_constraints_3_2_5_0_2  -7
@@ -7627,22 +9913,6 @@ RHS
     RHS1      auxiliary_constraints_3_2_5_0_5  -7
     RHS1      auxiliary_constraints_3_2_5_0_6  -7
     RHS1      auxiliary_constraints_3_2_5_0_7  -7
-    RHS1      auxiliary_constraints_3_2_6_0_0  -7
-    RHS1      auxiliary_constraints_3_2_6_0_1  -7
-    RHS1      auxiliary_constraints_3_2_6_0_2  -7
-    RHS1      auxiliary_constraints_3_2_6_0_3  -7
-    RHS1      auxiliary_constraints_3_2_6_0_4  -7
-    RHS1      auxiliary_constraints_3_2_6_0_5  -7
-    RHS1      auxiliary_constraints_3_2_6_0_6  -7
-    RHS1      auxiliary_constraints_3_2_6_0_7  -7
-    RHS1      auxiliary_constraints_3_2_7_0_0  -7
-    RHS1      auxiliary_constraints_3_2_7_0_1  -7
-    RHS1      auxiliary_constraints_3_2_7_0_2  -7
-    RHS1      auxiliary_constraints_3_2_7_0_3  -7
-    RHS1      auxiliary_constraints_3_2_7_0_4  -7
-    RHS1      auxiliary_constraints_3_2_7_0_5  -7
-    RHS1      auxiliary_constraints_3_2_7_0_6  -7
-    RHS1      auxiliary_constraints_3_2_7_0_7  -7
     RHS1      auxiliary_constraints_6_3_5_0_7  -10
     RHS1      auxiliary_constraints_8_4_5_0_0  990
     RHS1      auxiliary_constraints_8_4_5_0_1  990
@@ -7652,6 +9922,28 @@ RHS
     RHS1      auxiliary_constraints_8_4_5_0_5  990
     RHS1      auxiliary_constraints_8_4_5_0_6  990
     RHS1      auxiliary_constraints_8_4_5_0_7  990
+    RHS1      nf_unique_mapping_6_0  1
+    RHS1      ru_unique_mapping_6_0  1
+    RHS1      radio_overprovision_6_0_0  1
+    RHS1      radio_overprovision_6_0_1  1
+    RHS1      vp_unique_mapping_6_0  1
+    RHS1      link_regular_isolation_limit_6_0_0  1
+    RHS1      link_regular_isolation_limit_6_0_1  1
+    RHS1      link_regular_isolation_limit_6_0_2  1
+    RHS1      link_regular_isolation_limit_6_0_3  1
+    RHS1      link_regular_isolation_limit_6_0_4  1
+    RHS1      link_regular_isolation_limit_6_0_5  1
+    RHS1      link_regular_isolation_limit_6_0_6  1
+    RHS1      link_regular_isolation_limit_6_0_7  1
+    RHS1      bandwidth_overprovisioning_3_6_0  -10000
+    RHS1      auxiliary_constraints_3_2_6_0_0  -7
+    RHS1      auxiliary_constraints_3_2_6_0_1  -7
+    RHS1      auxiliary_constraints_3_2_6_0_2  -7
+    RHS1      auxiliary_constraints_3_2_6_0_3  -7
+    RHS1      auxiliary_constraints_3_2_6_0_4  -7
+    RHS1      auxiliary_constraints_3_2_6_0_5  -7
+    RHS1      auxiliary_constraints_3_2_6_0_6  -7
+    RHS1      auxiliary_constraints_3_2_6_0_7  -7
     RHS1      auxiliary_constraints_6_3_6_0_7  -10
     RHS1      auxiliary_constraints_8_4_6_0_0  990
     RHS1      auxiliary_constraints_8_4_6_0_1  990
@@ -7661,23 +9953,256 @@ RHS
     RHS1      auxiliary_constraints_8_4_6_0_5  990
     RHS1      auxiliary_constraints_8_4_6_0_6  990
     RHS1      auxiliary_constraints_8_4_6_0_7  990
-    RHS1      auxiliary_constraints_6_3_7_0_7  -10
-    RHS1      auxiliary_constraints_8_4_7_0_0  990
-    RHS1      auxiliary_constraints_8_4_7_0_1  990
-    RHS1      auxiliary_constraints_8_4_7_0_2  990
-    RHS1      auxiliary_constraints_8_4_7_0_3  990
-    RHS1      auxiliary_constraints_8_4_7_0_4  990
-    RHS1      auxiliary_constraints_8_4_7_0_5  990
-    RHS1      auxiliary_constraints_8_4_7_0_6  990
-    RHS1      auxiliary_constraints_8_4_7_0_7  990
+    RHS1      nf_unique_mapping_7_0  1
+    RHS1      ru_unique_mapping_7_0  1
+    RHS1      radio_overprovision_7_0_0  10
+    RHS1      radio_overprovision_7_0_1  10
+    RHS1      vp_unique_mapping_7_0  1
+    RHS1      link_regular_isolation_limit_7_0_0  1
+    RHS1      link_regular_isolation_limit_7_0_1  1
+    RHS1      link_regular_isolation_limit_7_0_2  1
+    RHS1      link_regular_isolation_limit_7_0_3  1
+    RHS1      link_regular_isolation_limit_7_0_4  1
+    RHS1      link_regular_isolation_limit_7_0_5  1
+    RHS1      link_regular_isolation_limit_7_0_6  1
+    RHS1      link_regular_isolation_limit_7_0_7  1
+    RHS1      bandwidth_overprovisioning_3_7_0  -12500
+    RHS1      auxiliary_constraints_3_2_7_0_0  -7
+    RHS1      auxiliary_constraints_3_2_7_0_1  -7
+    RHS1      auxiliary_constraints_3_2_7_0_2  -7
+    RHS1      auxiliary_constraints_3_2_7_0_3  -7
+    RHS1      auxiliary_constraints_3_2_7_0_4  -7
+    RHS1      auxiliary_constraints_3_2_7_0_5  -7
+    RHS1      auxiliary_constraints_3_2_7_0_6  -7
+    RHS1      auxiliary_constraints_3_2_7_0_7  -7
+    RHS1      auxiliary_constraints_6_3_7_0_7  -0.1
+    RHS1      auxiliary_constraints_8_4_7_0_0  999.9
+    RHS1      auxiliary_constraints_8_4_7_0_1  999.9
+    RHS1      auxiliary_constraints_8_4_7_0_2  999.9
+    RHS1      auxiliary_constraints_8_4_7_0_3  999.9
+    RHS1      auxiliary_constraints_8_4_7_0_4  999.9
+    RHS1      auxiliary_constraints_8_4_7_0_5  999.9
+    RHS1      auxiliary_constraints_8_4_7_0_6  999.9
+    RHS1      auxiliary_constraints_8_4_7_0_7  999.9
     RHS1      nf_unique_mapping_8_0  1
-    RHS1      nf_unique_mapping_9_0  1
-    RHS1      nf_unique_mapping_10_0  1
-    RHS1      nf_unique_mapping_11_0  1
     RHS1      ru_unique_mapping_8_0  1
+    RHS1      radio_overprovision_8_0_0  1
+    RHS1      radio_overprovision_8_0_1  1
+    RHS1      vp_unique_mapping_8_0  1
+    RHS1      link_regular_isolation_limit_8_0_0  1
+    RHS1      link_regular_isolation_limit_8_0_1  1
+    RHS1      link_regular_isolation_limit_8_0_2  1
+    RHS1      link_regular_isolation_limit_8_0_3  1
+    RHS1      link_regular_isolation_limit_8_0_4  1
+    RHS1      link_regular_isolation_limit_8_0_5  1
+    RHS1      link_regular_isolation_limit_8_0_6  1
+    RHS1      link_regular_isolation_limit_8_0_7  1
+    RHS1      bandwidth_overprovisioning_3_8_0  -10000
+    RHS1      auxiliary_constraints_3_2_8_0_0  -7
+    RHS1      auxiliary_constraints_3_2_8_0_1  -7
+    RHS1      auxiliary_constraints_3_2_8_0_2  -7
+    RHS1      auxiliary_constraints_3_2_8_0_3  -7
+    RHS1      auxiliary_constraints_3_2_8_0_4  -7
+    RHS1      auxiliary_constraints_3_2_8_0_5  -7
+    RHS1      auxiliary_constraints_3_2_8_0_6  -7
+    RHS1      auxiliary_constraints_3_2_8_0_7  -7
+    RHS1      auxiliary_constraints_6_3_8_0_7  -10
+    RHS1      auxiliary_constraints_8_4_8_0_0  990
+    RHS1      auxiliary_constraints_8_4_8_0_1  990
+    RHS1      auxiliary_constraints_8_4_8_0_2  990
+    RHS1      auxiliary_constraints_8_4_8_0_3  990
+    RHS1      auxiliary_constraints_8_4_8_0_4  990
+    RHS1      auxiliary_constraints_8_4_8_0_5  990
+    RHS1      auxiliary_constraints_8_4_8_0_6  990
+    RHS1      auxiliary_constraints_8_4_8_0_7  990
+    RHS1      nf_unique_mapping_9_0  1
     RHS1      ru_unique_mapping_9_0  1
+    RHS1      radio_overprovision_9_0_0  1
+    RHS1      radio_overprovision_9_0_1  1
+    RHS1      vp_unique_mapping_9_0  1
+    RHS1      link_regular_isolation_limit_9_0_0  1
+    RHS1      link_regular_isolation_limit_9_0_1  1
+    RHS1      link_regular_isolation_limit_9_0_2  1
+    RHS1      link_regular_isolation_limit_9_0_3  1
+    RHS1      link_regular_isolation_limit_9_0_4  1
+    RHS1      link_regular_isolation_limit_9_0_5  1
+    RHS1      link_regular_isolation_limit_9_0_6  1
+    RHS1      link_regular_isolation_limit_9_0_7  1
+    RHS1      bandwidth_overprovisioning_3_9_0  -10000
+    RHS1      auxiliary_constraints_3_2_9_0_0  -7
+    RHS1      auxiliary_constraints_3_2_9_0_1  -7
+    RHS1      auxiliary_constraints_3_2_9_0_2  -7
+    RHS1      auxiliary_constraints_3_2_9_0_3  -7
+    RHS1      auxiliary_constraints_3_2_9_0_4  -7
+    RHS1      auxiliary_constraints_3_2_9_0_5  -7
+    RHS1      auxiliary_constraints_3_2_9_0_6  -7
+    RHS1      auxiliary_constraints_3_2_9_0_7  -7
+    RHS1      auxiliary_constraints_6_3_9_0_7  -10
+    RHS1      auxiliary_constraints_8_4_9_0_0  990
+    RHS1      auxiliary_constraints_8_4_9_0_1  990
+    RHS1      auxiliary_constraints_8_4_9_0_2  990
+    RHS1      auxiliary_constraints_8_4_9_0_3  990
+    RHS1      auxiliary_constraints_8_4_9_0_4  990
+    RHS1      auxiliary_constraints_8_4_9_0_5  990
+    RHS1      auxiliary_constraints_8_4_9_0_6  990
+    RHS1      auxiliary_constraints_8_4_9_0_7  990
+    RHS1      nf_unique_mapping_10_0  1
     RHS1      ru_unique_mapping_10_0  1
+    RHS1      radio_overprovision_10_0_0  1
+    RHS1      radio_overprovision_10_0_1  1
+    RHS1      vp_unique_mapping_10_0  1
+    RHS1      link_regular_isolation_limit_10_0_0  1
+    RHS1      link_regular_isolation_limit_10_0_1  1
+    RHS1      link_regular_isolation_limit_10_0_2  1
+    RHS1      link_regular_isolation_limit_10_0_3  1
+    RHS1      link_regular_isolation_limit_10_0_4  1
+    RHS1      link_regular_isolation_limit_10_0_5  1
+    RHS1      link_regular_isolation_limit_10_0_6  1
+    RHS1      link_regular_isolation_limit_10_0_7  1
+    RHS1      bandwidth_overprovisioning_3_10_0  -10000
+    RHS1      auxiliary_constraints_3_2_10_0_0  -7
+    RHS1      auxiliary_constraints_3_2_10_0_1  -7
+    RHS1      auxiliary_constraints_3_2_10_0_2  -7
+    RHS1      auxiliary_constraints_3_2_10_0_3  -7
+    RHS1      auxiliary_constraints_3_2_10_0_4  -7
+    RHS1      auxiliary_constraints_3_2_10_0_5  -7
+    RHS1      auxiliary_constraints_3_2_10_0_6  -7
+    RHS1      auxiliary_constraints_3_2_10_0_7  -7
+    RHS1      auxiliary_constraints_6_3_10_0_7  -10
+    RHS1      auxiliary_constraints_8_4_10_0_0  990
+    RHS1      auxiliary_constraints_8_4_10_0_1  990
+    RHS1      auxiliary_constraints_8_4_10_0_2  990
+    RHS1      auxiliary_constraints_8_4_10_0_3  990
+    RHS1      auxiliary_constraints_8_4_10_0_4  990
+    RHS1      auxiliary_constraints_8_4_10_0_5  990
+    RHS1      auxiliary_constraints_8_4_10_0_6  990
+    RHS1      auxiliary_constraints_8_4_10_0_7  990
+    RHS1      nf_unique_mapping_11_0  1
     RHS1      ru_unique_mapping_11_0  1
+    RHS1      radio_overprovision_11_0_0  1
+    RHS1      radio_overprovision_11_0_1  1
+    RHS1      vp_unique_mapping_11_0  1
+    RHS1      link_regular_isolation_limit_11_0_0  1
+    RHS1      link_regular_isolation_limit_11_0_1  1
+    RHS1      link_regular_isolation_limit_11_0_2  1
+    RHS1      link_regular_isolation_limit_11_0_3  1
+    RHS1      link_regular_isolation_limit_11_0_4  1
+    RHS1      link_regular_isolation_limit_11_0_5  1
+    RHS1      link_regular_isolation_limit_11_0_6  1
+    RHS1      link_regular_isolation_limit_11_0_7  1
+    RHS1      bandwidth_overprovisioning_3_11_0  -10000
+    RHS1      auxiliary_constraints_3_2_11_0_0  -7
+    RHS1      auxiliary_constraints_3_2_11_0_1  -7
+    RHS1      auxiliary_constraints_3_2_11_0_2  -7
+    RHS1      auxiliary_constraints_3_2_11_0_3  -7
+    RHS1      auxiliary_constraints_3_2_11_0_4  -7
+    RHS1      auxiliary_constraints_3_2_11_0_5  -7
+    RHS1      auxiliary_constraints_3_2_11_0_6  -7
+    RHS1      auxiliary_constraints_3_2_11_0_7  -7
+    RHS1      auxiliary_constraints_6_3_11_0_7  -10
+    RHS1      auxiliary_constraints_8_4_11_0_0  990
+    RHS1      auxiliary_constraints_8_4_11_0_1  990
+    RHS1      auxiliary_constraints_8_4_11_0_2  990
+    RHS1      auxiliary_constraints_8_4_11_0_3  990
+    RHS1      auxiliary_constraints_8_4_11_0_4  990
+    RHS1      auxiliary_constraints_8_4_11_0_5  990
+    RHS1      auxiliary_constraints_8_4_11_0_6  990
+    RHS1      auxiliary_constraints_8_4_11_0_7  990
+    RHS1      nf_unique_mapping_12_0  1
+    RHS1      ru_unique_mapping_12_0  1
+    RHS1      radio_overprovision_12_0_0  10
+    RHS1      radio_overprovision_12_0_1  10
+    RHS1      vp_unique_mapping_12_0  1
+    RHS1      link_regular_isolation_limit_12_0_0  1
+    RHS1      link_regular_isolation_limit_12_0_1  1
+    RHS1      link_regular_isolation_limit_12_0_2  1
+    RHS1      link_regular_isolation_limit_12_0_3  1
+    RHS1      link_regular_isolation_limit_12_0_4  1
+    RHS1      link_regular_isolation_limit_12_0_5  1
+    RHS1      link_regular_isolation_limit_12_0_6  1
+    RHS1      link_regular_isolation_limit_12_0_7  1
+    RHS1      bandwidth_overprovisioning_3_12_0  -12500
+    RHS1      auxiliary_constraints_3_2_12_0_0  -7
+    RHS1      auxiliary_constraints_3_2_12_0_1  -7
+    RHS1      auxiliary_constraints_3_2_12_0_2  -7
+    RHS1      auxiliary_constraints_3_2_12_0_3  -7
+    RHS1      auxiliary_constraints_3_2_12_0_4  -7
+    RHS1      auxiliary_constraints_3_2_12_0_5  -7
+    RHS1      auxiliary_constraints_3_2_12_0_6  -7
+    RHS1      auxiliary_constraints_3_2_12_0_7  -7
+    RHS1      auxiliary_constraints_6_3_12_0_7  -0.1
+    RHS1      auxiliary_constraints_8_4_12_0_0  999.9
+    RHS1      auxiliary_constraints_8_4_12_0_1  999.9
+    RHS1      auxiliary_constraints_8_4_12_0_2  999.9
+    RHS1      auxiliary_constraints_8_4_12_0_3  999.9
+    RHS1      auxiliary_constraints_8_4_12_0_4  999.9
+    RHS1      auxiliary_constraints_8_4_12_0_5  999.9
+    RHS1      auxiliary_constraints_8_4_12_0_6  999.9
+    RHS1      auxiliary_constraints_8_4_12_0_7  999.9
+    RHS1      nf_unique_mapping_13_0  1
+    RHS1      ru_unique_mapping_13_0  1
+    RHS1      radio_overprovision_13_0_0  1
+    RHS1      radio_overprovision_13_0_1  1
+    RHS1      vp_unique_mapping_13_0  1
+    RHS1      link_regular_isolation_limit_13_0_0  1
+    RHS1      link_regular_isolation_limit_13_0_1  1
+    RHS1      link_regular_isolation_limit_13_0_2  1
+    RHS1      link_regular_isolation_limit_13_0_3  1
+    RHS1      link_regular_isolation_limit_13_0_4  1
+    RHS1      link_regular_isolation_limit_13_0_5  1
+    RHS1      link_regular_isolation_limit_13_0_6  1
+    RHS1      link_regular_isolation_limit_13_0_7  1
+    RHS1      bandwidth_overprovisioning_3_13_0  -10000
+    RHS1      auxiliary_constraints_3_2_13_0_0  -7
+    RHS1      auxiliary_constraints_3_2_13_0_1  -7
+    RHS1      auxiliary_constraints_3_2_13_0_2  -7
+    RHS1      auxiliary_constraints_3_2_13_0_3  -7
+    RHS1      auxiliary_constraints_3_2_13_0_4  -7
+    RHS1      auxiliary_constraints_3_2_13_0_5  -7
+    RHS1      auxiliary_constraints_3_2_13_0_6  -7
+    RHS1      auxiliary_constraints_3_2_13_0_7  -7
+    RHS1      auxiliary_constraints_6_3_13_0_7  -10
+    RHS1      auxiliary_constraints_8_4_13_0_0  990
+    RHS1      auxiliary_constraints_8_4_13_0_1  990
+    RHS1      auxiliary_constraints_8_4_13_0_2  990
+    RHS1      auxiliary_constraints_8_4_13_0_3  990
+    RHS1      auxiliary_constraints_8_4_13_0_4  990
+    RHS1      auxiliary_constraints_8_4_13_0_5  990
+    RHS1      auxiliary_constraints_8_4_13_0_6  990
+    RHS1      auxiliary_constraints_8_4_13_0_7  990
+    RHS1      nf_unique_mapping_14_0  1
+    RHS1      ru_unique_mapping_14_0  1
+    RHS1      radio_overprovision_14_0_0  1
+    RHS1      radio_overprovision_14_0_1  1
+    RHS1      vp_unique_mapping_14_0  1
+    RHS1      link_regular_isolation_limit_14_0_0  1
+    RHS1      link_regular_isolation_limit_14_0_1  1
+    RHS1      link_regular_isolation_limit_14_0_2  1
+    RHS1      link_regular_isolation_limit_14_0_3  1
+    RHS1      link_regular_isolation_limit_14_0_4  1
+    RHS1      link_regular_isolation_limit_14_0_5  1
+    RHS1      link_regular_isolation_limit_14_0_6  1
+    RHS1      link_regular_isolation_limit_14_0_7  1
+    RHS1      bandwidth_overprovisioning_3_14_0  -10000
+    RHS1      auxiliary_constraints_3_2_14_0_0  -7
+    RHS1      auxiliary_constraints_3_2_14_0_1  -7
+    RHS1      auxiliary_constraints_3_2_14_0_2  -7
+    RHS1      auxiliary_constraints_3_2_14_0_3  -7
+    RHS1      auxiliary_constraints_3_2_14_0_4  -7
+    RHS1      auxiliary_constraints_3_2_14_0_5  -7
+    RHS1      auxiliary_constraints_3_2_14_0_6  -7
+    RHS1      auxiliary_constraints_3_2_14_0_7  -7
+    RHS1      auxiliary_constraints_6_3_14_0_7  -10
+    RHS1      auxiliary_constraints_8_4_14_0_0  990
+    RHS1      auxiliary_constraints_8_4_14_0_1  990
+    RHS1      auxiliary_constraints_8_4_14_0_2  990
+    RHS1      auxiliary_constraints_8_4_14_0_3  990
+    RHS1      auxiliary_constraints_8_4_14_0_4  990
+    RHS1      auxiliary_constraints_8_4_14_0_5  990
+    RHS1      auxiliary_constraints_8_4_14_0_6  990
+    RHS1      auxiliary_constraints_8_4_14_0_7  990
+    RHS1      nf_unique_mapping_15_0  1
+    RHS1      ru_unique_mapping_15_0  1
     RHS1      nf_max_isolation_limit_0  1
     RHS1      nf_max_isolation_limit_1  1
     RHS1      nf_max_isolation_limit_2  1
@@ -7719,6 +10244,18 @@ RHS
     RHS1      nf_regular_isolation_limit_11_0_0  1
     RHS1      nf_regular_isolation_limit_11_0_1  1
     RHS1      nf_regular_isolation_limit_11_0_2  1
+    RHS1      nf_regular_isolation_limit_12_0_0  1
+    RHS1      nf_regular_isolation_limit_12_0_1  1
+    RHS1      nf_regular_isolation_limit_12_0_2  1
+    RHS1      nf_regular_isolation_limit_13_0_0  1
+    RHS1      nf_regular_isolation_limit_13_0_1  1
+    RHS1      nf_regular_isolation_limit_13_0_2  1
+    RHS1      nf_regular_isolation_limit_14_0_0  1
+    RHS1      nf_regular_isolation_limit_14_0_1  1
+    RHS1      nf_regular_isolation_limit_14_0_2  1
+    RHS1      nf_regular_isolation_limit_15_0_0  1
+    RHS1      nf_regular_isolation_limit_15_0_1  1
+    RHS1      nf_regular_isolation_limit_15_0_2  1
     RHS1      ru_regular_isolation_limit_0_0_0  1
     RHS1      ru_regular_isolation_limit_0_0_1  1
     RHS1      ru_regular_isolation_limit_1_0_0  1
@@ -7743,26 +10280,25 @@ RHS
     RHS1      ru_regular_isolation_limit_10_0_1  1
     RHS1      ru_regular_isolation_limit_11_0_0  1
     RHS1      ru_regular_isolation_limit_11_0_1  1
-    RHS1      radio_overprovision_8_0_0  1
-    RHS1      radio_overprovision_8_0_1  1
-    RHS1      radio_overprovision_9_0_0  1
-    RHS1      radio_overprovision_9_0_1  1
-    RHS1      radio_overprovision_10_0_0  1
-    RHS1      radio_overprovision_10_0_1  1
-    RHS1      radio_overprovision_11_0_0  1
-    RHS1      radio_overprovision_11_0_1  1
-    RHS1      mips_max_limit_1_0  45
-    RHS1      mips_max_limit_1_1  45
-    RHS1      mips_max_limit_1_2  45
+    RHS1      ru_regular_isolation_limit_12_0_0  1
+    RHS1      ru_regular_isolation_limit_12_0_1  1
+    RHS1      ru_regular_isolation_limit_13_0_0  1
+    RHS1      ru_regular_isolation_limit_13_0_1  1
+    RHS1      ru_regular_isolation_limit_14_0_0  1
+    RHS1      ru_regular_isolation_limit_14_0_1  1
+    RHS1      ru_regular_isolation_limit_15_0_0  1
+    RHS1      ru_regular_isolation_limit_15_0_1  1
+    RHS1      radio_overprovision_15_0_0  1
+    RHS1      radio_overprovision_15_0_1  1
+    RHS1      mips_max_limit_1_0  95
+    RHS1      mips_max_limit_1_1  95
+    RHS1      mips_max_limit_1_2  95
     RHS1      mips_max_limit_2_0  59
     RHS1      mips_max_limit_2_1  59
     RHS1      mips_max_limit_2_2  599
     RHS1      radio_max_limit_0_0  50000
     RHS1      radio_max_limit_1_0  50000
-    RHS1      vp_unique_mapping_8_0  1
-    RHS1      vp_unique_mapping_9_0  1
-    RHS1      vp_unique_mapping_10_0  1
-    RHS1      vp_unique_mapping_11_0  1
+    RHS1      vp_unique_mapping_15_0  1
     RHS1      link_max_isolation_limit_0  1
     RHS1      link_max_isolation_limit_1  1
     RHS1      link_max_isolation_limit_2  1
@@ -7771,42 +10307,15 @@ RHS
     RHS1      link_max_isolation_limit_5  1
     RHS1      link_max_isolation_limit_6  1
     RHS1      link_max_isolation_limit_7  1
-    RHS1      link_regular_isolation_limit_8_0_0  1
-    RHS1      link_regular_isolation_limit_8_0_1  1
-    RHS1      link_regular_isolation_limit_8_0_2  1
-    RHS1      link_regular_isolation_limit_8_0_3  1
-    RHS1      link_regular_isolation_limit_8_0_4  1
-    RHS1      link_regular_isolation_limit_8_0_5  1
-    RHS1      link_regular_isolation_limit_8_0_6  1
-    RHS1      link_regular_isolation_limit_8_0_7  1
-    RHS1      link_regular_isolation_limit_9_0_0  1
-    RHS1      link_regular_isolation_limit_9_0_1  1
-    RHS1      link_regular_isolation_limit_9_0_2  1
-    RHS1      link_regular_isolation_limit_9_0_3  1
-    RHS1      link_regular_isolation_limit_9_0_4  1
-    RHS1      link_regular_isolation_limit_9_0_5  1
-    RHS1      link_regular_isolation_limit_9_0_6  1
-    RHS1      link_regular_isolation_limit_9_0_7  1
-    RHS1      link_regular_isolation_limit_10_0_0  1
-    RHS1      link_regular_isolation_limit_10_0_1  1
-    RHS1      link_regular_isolation_limit_10_0_2  1
-    RHS1      link_regular_isolation_limit_10_0_3  1
-    RHS1      link_regular_isolation_limit_10_0_4  1
-    RHS1      link_regular_isolation_limit_10_0_5  1
-    RHS1      link_regular_isolation_limit_10_0_6  1
-    RHS1      link_regular_isolation_limit_10_0_7  1
-    RHS1      link_regular_isolation_limit_11_0_0  1
-    RHS1      link_regular_isolation_limit_11_0_1  1
-    RHS1      link_regular_isolation_limit_11_0_2  1
-    RHS1      link_regular_isolation_limit_11_0_3  1
-    RHS1      link_regular_isolation_limit_11_0_4  1
-    RHS1      link_regular_isolation_limit_11_0_5  1
-    RHS1      link_regular_isolation_limit_11_0_6  1
-    RHS1      link_regular_isolation_limit_11_0_7  1
-    RHS1      bandwidth_overprovisioning_3_8_0  -10000
-    RHS1      bandwidth_overprovisioning_3_9_0  -10000
-    RHS1      bandwidth_overprovisioning_3_10_0  -10000
-    RHS1      bandwidth_overprovisioning_3_11_0  -10000
+    RHS1      link_regular_isolation_limit_15_0_0  1
+    RHS1      link_regular_isolation_limit_15_0_1  1
+    RHS1      link_regular_isolation_limit_15_0_2  1
+    RHS1      link_regular_isolation_limit_15_0_3  1
+    RHS1      link_regular_isolation_limit_15_0_4  1
+    RHS1      link_regular_isolation_limit_15_0_5  1
+    RHS1      link_regular_isolation_limit_15_0_6  1
+    RHS1      link_regular_isolation_limit_15_0_7  1
+    RHS1      bandwidth_overprovisioning_3_15_0  -10000
     RHS1      bandwidth_max_limit_0_0  4800000
     RHS1      bandwidth_max_limit_1_0  4800000
     RHS1      bandwidth_max_limit_2_0  4800000
@@ -7815,75 +10324,24 @@ RHS
     RHS1      bandwidth_max_limit_5_0  4800000
     RHS1      bandwidth_max_limit_6_0  4800000
     RHS1      bandwidth_max_limit_7_0  4800000
-    RHS1      auxiliary_constraints_3_2_8_0_0  -7
-    RHS1      auxiliary_constraints_3_2_8_0_1  -7
-    RHS1      auxiliary_constraints_3_2_8_0_2  -7
-    RHS1      auxiliary_constraints_3_2_8_0_3  -7
-    RHS1      auxiliary_constraints_3_2_8_0_4  -7
-    RHS1      auxiliary_constraints_3_2_8_0_5  -7
-    RHS1      auxiliary_constraints_3_2_8_0_6  -7
-    RHS1      auxiliary_constraints_3_2_8_0_7  -7
-    RHS1      auxiliary_constraints_3_2_9_0_0  -7
-    RHS1      auxiliary_constraints_3_2_9_0_1  -7
-    RHS1      auxiliary_constraints_3_2_9_0_2  -7
-    RHS1      auxiliary_constraints_3_2_9_0_3  -7
-    RHS1      auxiliary_constraints_3_2_9_0_4  -7
-    RHS1      auxiliary_constraints_3_2_9_0_5  -7
-    RHS1      auxiliary_constraints_3_2_9_0_6  -7
-    RHS1      auxiliary_constraints_3_2_9_0_7  -7
-    RHS1      auxiliary_constraints_3_2_10_0_0  -7
-    RHS1      auxiliary_constraints_3_2_10_0_1  -7
-    RHS1      auxiliary_constraints_3_2_10_0_2  -7
-    RHS1      auxiliary_constraints_3_2_10_0_3  -7
-    RHS1      auxiliary_constraints_3_2_10_0_4  -7
-    RHS1      auxiliary_constraints_3_2_10_0_5  -7
-    RHS1      auxiliary_constraints_3_2_10_0_6  -7
-    RHS1      auxiliary_constraints_3_2_10_0_7  -7
-    RHS1      auxiliary_constraints_3_2_11_0_0  -7
-    RHS1      auxiliary_constraints_3_2_11_0_1  -7
-    RHS1      auxiliary_constraints_3_2_11_0_2  -7
-    RHS1      auxiliary_constraints_3_2_11_0_3  -7
-    RHS1      auxiliary_constraints_3_2_11_0_4  -7
-    RHS1      auxiliary_constraints_3_2_11_0_5  -7
-    RHS1      auxiliary_constraints_3_2_11_0_6  -7
-    RHS1      auxiliary_constraints_3_2_11_0_7  -7
-    RHS1      auxiliary_constraints_6_3_8_0_7  -10
-    RHS1      auxiliary_constraints_8_4_8_0_0  990
-    RHS1      auxiliary_constraints_8_4_8_0_1  990
-    RHS1      auxiliary_constraints_8_4_8_0_2  990
-    RHS1      auxiliary_constraints_8_4_8_0_3  990
-    RHS1      auxiliary_constraints_8_4_8_0_4  990
-    RHS1      auxiliary_constraints_8_4_8_0_5  990
-    RHS1      auxiliary_constraints_8_4_8_0_6  990
-    RHS1      auxiliary_constraints_8_4_8_0_7  990
-    RHS1      auxiliary_constraints_6_3_9_0_7  -10
-    RHS1      auxiliary_constraints_8_4_9_0_0  990
-    RHS1      auxiliary_constraints_8_4_9_0_1  990
-    RHS1      auxiliary_constraints_8_4_9_0_2  990
-    RHS1      auxiliary_constraints_8_4_9_0_3  990
-    RHS1      auxiliary_constraints_8_4_9_0_4  990
-    RHS1      auxiliary_constraints_8_4_9_0_5  990
-    RHS1      auxiliary_constraints_8_4_9_0_6  990
-    RHS1      auxiliary_constraints_8_4_9_0_7  990
-    RHS1      auxiliary_constraints_6_3_10_0_7  -10
-    RHS1      auxiliary_constraints_8_4_10_0_0  990
-    RHS1      auxiliary_constraints_8_4_10_0_1  990
-    RHS1      auxiliary_constraints_8_4_10_0_2  990
-    RHS1      auxiliary_constraints_8_4_10_0_3  990
-    RHS1      auxiliary_constraints_8_4_10_0_4  990
-    RHS1      auxiliary_constraints_8_4_10_0_5  990
-    RHS1      auxiliary_constraints_8_4_10_0_6  990
-    RHS1      auxiliary_constraints_8_4_10_0_7  990
-    RHS1      auxiliary_constraints_6_3_11_0_7  -10
-    RHS1      auxiliary_constraints_8_4_11_0_0  990
-    RHS1      auxiliary_constraints_8_4_11_0_1  990
-    RHS1      auxiliary_constraints_8_4_11_0_2  990
-    RHS1      auxiliary_constraints_8_4_11_0_3  990
-    RHS1      auxiliary_constraints_8_4_11_0_4  990
-    RHS1      auxiliary_constraints_8_4_11_0_5  990
-    RHS1      auxiliary_constraints_8_4_11_0_6  990
-    RHS1      auxiliary_constraints_8_4_11_0_7  990
-    RHS1      minimum_profit  7.6614407080858829e+04
+    RHS1      auxiliary_constraints_3_2_15_0_0  -7
+    RHS1      auxiliary_constraints_3_2_15_0_1  -7
+    RHS1      auxiliary_constraints_3_2_15_0_2  -7
+    RHS1      auxiliary_constraints_3_2_15_0_3  -7
+    RHS1      auxiliary_constraints_3_2_15_0_4  -7
+    RHS1      auxiliary_constraints_3_2_15_0_5  -7
+    RHS1      auxiliary_constraints_3_2_15_0_6  -7
+    RHS1      auxiliary_constraints_3_2_15_0_7  -7
+    RHS1      auxiliary_constraints_6_3_15_0_7  -10
+    RHS1      auxiliary_constraints_8_4_15_0_0  990
+    RHS1      auxiliary_constraints_8_4_15_0_1  990
+    RHS1      auxiliary_constraints_8_4_15_0_2  990
+    RHS1      auxiliary_constraints_8_4_15_0_3  990
+    RHS1      auxiliary_constraints_8_4_15_0_4  990
+    RHS1      auxiliary_constraints_8_4_15_0_5  990
+    RHS1      auxiliary_constraints_8_4_15_0_6  990
+    RHS1      auxiliary_constraints_8_4_15_0_7  990
+    RHS1      minimum_profit  8.0337696984924623e+04
 BOUNDS
  UP BND1      a_x2_0_0  1
  UP BND1      a_x2_0_1  1
@@ -9112,9 +11570,6 @@ BOUNDS
  UP BND1      x_5_0_0   1
  UP BND1      x_5_0_1   1
  UP BND1      x_5_0_2   1
- UP BND1      x_6_0_0   1
- UP BND1      x_6_0_1   1
- UP BND1      x_6_0_2   1
  UP BND1      y_5_0_0_0_0  1
  UP BND1      y_5_0_0_0_1  1
  UP BND1      y_5_0_0_0_2  1
@@ -9317,6 +11772,44 @@ BOUNDS
  UP BND1      y_5_0_1_0_98  1
  UP BND1      y_5_0_1_0_99  1
  UP BND1      y_5_0_1_0_100  1
+ UP BND1      z_5_0_0_0  1
+ UP BND1      z_5_0_1_0  1
+ UP BND1      z_5_0_2_0  1
+ UP BND1      z_5_0_3_0  1
+ UP BND1      z_5_0_4_0  1
+ UP BND1      z_5_0_5_0  1
+ UP BND1      z_5_0_6_0  1
+ UP BND1      z_5_0_7_0  1
+ UP BND1      a_x1_5_0  1
+ UP BND1      a_x1_5_1  1
+ UP BND1      a_x1_5_2  1
+ UP BND1      a_x4_5_0_0  1
+ UP BND1      a_x4_5_0_1  1
+ UP BND1      a_x4_5_0_2  1
+ UP BND1      a_y1_5_0  1
+ UP BND1      a_y1_5_1  1
+ UP BND1      a_y2_5_0_0  1
+ UP BND1      a_y2_5_0_1  1
+ UP BND1      a_z1_5_0  1
+ UP BND1      a_z1_5_1  1
+ UP BND1      a_z1_5_2  1
+ UP BND1      a_z1_5_3  1
+ UP BND1      a_z1_5_4  1
+ UP BND1      a_z1_5_5  1
+ UP BND1      a_z1_5_6  1
+ UP BND1      a_z1_5_7  1
+ UP BND1      a_z2_5_0_0  1
+ UP BND1      a_z2_5_0_1  1
+ UP BND1      a_z2_5_0_2  1
+ UP BND1      a_z2_5_0_3  1
+ UP BND1      a_z2_5_0_4  1
+ UP BND1      a_z2_5_0_5  1
+ UP BND1      a_z2_5_0_6  1
+ UP BND1      a_z2_5_0_7  1
+ UP BND1      a_z4_5_0  1
+ UP BND1      x_6_0_0   1
+ UP BND1      x_6_0_1   1
+ UP BND1      x_6_0_2   1
  UP BND1      y_6_0_0_0_0  1
  UP BND1      y_6_0_0_0_1  1
  UP BND1      y_6_0_0_0_2  1
@@ -9519,14 +12012,6 @@ BOUNDS
  UP BND1      y_6_0_1_0_98  1
  UP BND1      y_6_0_1_0_99  1
  UP BND1      y_6_0_1_0_100  1
- UP BND1      z_5_0_0_0  1
- UP BND1      z_5_0_1_0  1
- UP BND1      z_5_0_2_0  1
- UP BND1      z_5_0_3_0  1
- UP BND1      z_5_0_4_0  1
- UP BND1      z_5_0_5_0  1
- UP BND1      z_5_0_6_0  1
- UP BND1      z_5_0_7_0  1
  UP BND1      z_6_0_0_0  1
  UP BND1      z_6_0_1_0  1
  UP BND1      z_6_0_2_0  1
@@ -9535,34 +12020,16 @@ BOUNDS
  UP BND1      z_6_0_5_0  1
  UP BND1      z_6_0_6_0  1
  UP BND1      z_6_0_7_0  1
- UP BND1      a_x1_5_0  1
- UP BND1      a_x1_5_1  1
- UP BND1      a_x1_5_2  1
  UP BND1      a_x1_6_0  1
  UP BND1      a_x1_6_1  1
  UP BND1      a_x1_6_2  1
- UP BND1      a_x4_5_0_0  1
- UP BND1      a_x4_5_0_1  1
- UP BND1      a_x4_5_0_2  1
  UP BND1      a_x4_6_0_0  1
  UP BND1      a_x4_6_0_1  1
  UP BND1      a_x4_6_0_2  1
- UP BND1      a_y1_5_0  1
- UP BND1      a_y1_5_1  1
  UP BND1      a_y1_6_0  1
  UP BND1      a_y1_6_1  1
- UP BND1      a_y2_5_0_0  1
- UP BND1      a_y2_5_0_1  1
  UP BND1      a_y2_6_0_0  1
  UP BND1      a_y2_6_0_1  1
- UP BND1      a_z1_5_0  1
- UP BND1      a_z1_5_1  1
- UP BND1      a_z1_5_2  1
- UP BND1      a_z1_5_3  1
- UP BND1      a_z1_5_4  1
- UP BND1      a_z1_5_5  1
- UP BND1      a_z1_5_6  1
- UP BND1      a_z1_5_7  1
  UP BND1      a_z1_6_0  1
  UP BND1      a_z1_6_1  1
  UP BND1      a_z1_6_2  1
@@ -9571,14 +12038,6 @@ BOUNDS
  UP BND1      a_z1_6_5  1
  UP BND1      a_z1_6_6  1
  UP BND1      a_z1_6_7  1
- UP BND1      a_z2_5_0_0  1
- UP BND1      a_z2_5_0_1  1
- UP BND1      a_z2_5_0_2  1
- UP BND1      a_z2_5_0_3  1
- UP BND1      a_z2_5_0_4  1
- UP BND1      a_z2_5_0_5  1
- UP BND1      a_z2_5_0_6  1
- UP BND1      a_z2_5_0_7  1
  UP BND1      a_z2_6_0_0  1
  UP BND1      a_z2_6_0_1  1
  UP BND1      a_z2_6_0_2  1
@@ -9587,7 +12046,6 @@ BOUNDS
  UP BND1      a_z2_6_0_5  1
  UP BND1      a_z2_6_0_6  1
  UP BND1      a_z2_6_0_7  1
- UP BND1      a_z4_5_0  1
  UP BND1      a_z4_6_0  1
  UP BND1      x_7_0_0   1
  UP BND1      x_7_0_1   1
@@ -9832,12 +12290,6 @@ BOUNDS
  UP BND1      x_8_0_0   1
  UP BND1      x_8_0_1   1
  UP BND1      x_8_0_2   1
- UP BND1      x_9_0_0   1
- UP BND1      x_9_0_1   1
- UP BND1      x_9_0_2   1
- UP BND1      x_10_0_0  1
- UP BND1      x_10_0_1  1
- UP BND1      x_10_0_2  1
  UP BND1      y_8_0_0_0_0  1
  UP BND1      y_8_0_0_0_1  1
  UP BND1      y_8_0_0_0_2  1
@@ -10040,6 +12492,44 @@ BOUNDS
  UP BND1      y_8_0_1_0_98  1
  UP BND1      y_8_0_1_0_99  1
  UP BND1      y_8_0_1_0_100  1
+ UP BND1      z_8_0_0_0  1
+ UP BND1      z_8_0_1_0  1
+ UP BND1      z_8_0_2_0  1
+ UP BND1      z_8_0_3_0  1
+ UP BND1      z_8_0_4_0  1
+ UP BND1      z_8_0_5_0  1
+ UP BND1      z_8_0_6_0  1
+ UP BND1      z_8_0_7_0  1
+ UP BND1      a_x1_8_0  1
+ UP BND1      a_x1_8_1  1
+ UP BND1      a_x1_8_2  1
+ UP BND1      a_x4_8_0_0  1
+ UP BND1      a_x4_8_0_1  1
+ UP BND1      a_x4_8_0_2  1
+ UP BND1      a_y1_8_0  1
+ UP BND1      a_y1_8_1  1
+ UP BND1      a_y2_8_0_0  1
+ UP BND1      a_y2_8_0_1  1
+ UP BND1      a_z1_8_0  1
+ UP BND1      a_z1_8_1  1
+ UP BND1      a_z1_8_2  1
+ UP BND1      a_z1_8_3  1
+ UP BND1      a_z1_8_4  1
+ UP BND1      a_z1_8_5  1
+ UP BND1      a_z1_8_6  1
+ UP BND1      a_z1_8_7  1
+ UP BND1      a_z2_8_0_0  1
+ UP BND1      a_z2_8_0_1  1
+ UP BND1      a_z2_8_0_2  1
+ UP BND1      a_z2_8_0_3  1
+ UP BND1      a_z2_8_0_4  1
+ UP BND1      a_z2_8_0_5  1
+ UP BND1      a_z2_8_0_6  1
+ UP BND1      a_z2_8_0_7  1
+ UP BND1      a_z4_8_0  1
+ UP BND1      x_9_0_0   1
+ UP BND1      x_9_0_1   1
+ UP BND1      x_9_0_2   1
  UP BND1      y_9_0_0_0_0  1
  UP BND1      y_9_0_0_0_1  1
  UP BND1      y_9_0_0_0_2  1
@@ -10242,6 +12732,44 @@ BOUNDS
  UP BND1      y_9_0_1_0_98  1
  UP BND1      y_9_0_1_0_99  1
  UP BND1      y_9_0_1_0_100  1
+ UP BND1      z_9_0_0_0  1
+ UP BND1      z_9_0_1_0  1
+ UP BND1      z_9_0_2_0  1
+ UP BND1      z_9_0_3_0  1
+ UP BND1      z_9_0_4_0  1
+ UP BND1      z_9_0_5_0  1
+ UP BND1      z_9_0_6_0  1
+ UP BND1      z_9_0_7_0  1
+ UP BND1      a_x1_9_0  1
+ UP BND1      a_x1_9_1  1
+ UP BND1      a_x1_9_2  1
+ UP BND1      a_x4_9_0_0  1
+ UP BND1      a_x4_9_0_1  1
+ UP BND1      a_x4_9_0_2  1
+ UP BND1      a_y1_9_0  1
+ UP BND1      a_y1_9_1  1
+ UP BND1      a_y2_9_0_0  1
+ UP BND1      a_y2_9_0_1  1
+ UP BND1      a_z1_9_0  1
+ UP BND1      a_z1_9_1  1
+ UP BND1      a_z1_9_2  1
+ UP BND1      a_z1_9_3  1
+ UP BND1      a_z1_9_4  1
+ UP BND1      a_z1_9_5  1
+ UP BND1      a_z1_9_6  1
+ UP BND1      a_z1_9_7  1
+ UP BND1      a_z2_9_0_0  1
+ UP BND1      a_z2_9_0_1  1
+ UP BND1      a_z2_9_0_2  1
+ UP BND1      a_z2_9_0_3  1
+ UP BND1      a_z2_9_0_4  1
+ UP BND1      a_z2_9_0_5  1
+ UP BND1      a_z2_9_0_6  1
+ UP BND1      a_z2_9_0_7  1
+ UP BND1      a_z4_9_0  1
+ UP BND1      x_10_0_0  1
+ UP BND1      x_10_0_1  1
+ UP BND1      x_10_0_2  1
  UP BND1      y_10_0_0_0_0  1
  UP BND1      y_10_0_0_0_1  1
  UP BND1      y_10_0_0_0_2  1
@@ -10444,22 +12972,6 @@ BOUNDS
  UP BND1      y_10_0_1_0_98  1
  UP BND1      y_10_0_1_0_99  1
  UP BND1      y_10_0_1_0_100  1
- UP BND1      z_8_0_0_0  1
- UP BND1      z_8_0_1_0  1
- UP BND1      z_8_0_2_0  1
- UP BND1      z_8_0_3_0  1
- UP BND1      z_8_0_4_0  1
- UP BND1      z_8_0_5_0  1
- UP BND1      z_8_0_6_0  1
- UP BND1      z_8_0_7_0  1
- UP BND1      z_9_0_0_0  1
- UP BND1      z_9_0_1_0  1
- UP BND1      z_9_0_2_0  1
- UP BND1      z_9_0_3_0  1
- UP BND1      z_9_0_4_0  1
- UP BND1      z_9_0_5_0  1
- UP BND1      z_9_0_6_0  1
- UP BND1      z_9_0_7_0  1
  UP BND1      z_10_0_0_0  1
  UP BND1      z_10_0_1_0  1
  UP BND1      z_10_0_2_0  1
@@ -10468,52 +12980,16 @@ BOUNDS
  UP BND1      z_10_0_5_0  1
  UP BND1      z_10_0_6_0  1
  UP BND1      z_10_0_7_0  1
- UP BND1      a_x1_8_0  1
- UP BND1      a_x1_8_1  1
- UP BND1      a_x1_8_2  1
- UP BND1      a_x1_9_0  1
- UP BND1      a_x1_9_1  1
- UP BND1      a_x1_9_2  1
  UP BND1      a_x1_10_0  1
  UP BND1      a_x1_10_1  1
  UP BND1      a_x1_10_2  1
- UP BND1      a_x4_8_0_0  1
- UP BND1      a_x4_8_0_1  1
- UP BND1      a_x4_8_0_2  1
- UP BND1      a_x4_9_0_0  1
- UP BND1      a_x4_9_0_1  1
- UP BND1      a_x4_9_0_2  1
  UP BND1      a_x4_10_0_0  1
  UP BND1      a_x4_10_0_1  1
  UP BND1      a_x4_10_0_2  1
- UP BND1      a_y1_8_0  1
- UP BND1      a_y1_8_1  1
- UP BND1      a_y1_9_0  1
- UP BND1      a_y1_9_1  1
  UP BND1      a_y1_10_0  1
  UP BND1      a_y1_10_1  1
- UP BND1      a_y2_8_0_0  1
- UP BND1      a_y2_8_0_1  1
- UP BND1      a_y2_9_0_0  1
- UP BND1      a_y2_9_0_1  1
  UP BND1      a_y2_10_0_0  1
  UP BND1      a_y2_10_0_1  1
- UP BND1      a_z1_8_0  1
- UP BND1      a_z1_8_1  1
- UP BND1      a_z1_8_2  1
- UP BND1      a_z1_8_3  1
- UP BND1      a_z1_8_4  1
- UP BND1      a_z1_8_5  1
- UP BND1      a_z1_8_6  1
- UP BND1      a_z1_8_7  1
- UP BND1      a_z1_9_0  1
- UP BND1      a_z1_9_1  1
- UP BND1      a_z1_9_2  1
- UP BND1      a_z1_9_3  1
- UP BND1      a_z1_9_4  1
- UP BND1      a_z1_9_5  1
- UP BND1      a_z1_9_6  1
- UP BND1      a_z1_9_7  1
  UP BND1      a_z1_10_0  1
  UP BND1      a_z1_10_1  1
  UP BND1      a_z1_10_2  1
@@ -10522,22 +12998,6 @@ BOUNDS
  UP BND1      a_z1_10_5  1
  UP BND1      a_z1_10_6  1
  UP BND1      a_z1_10_7  1
- UP BND1      a_z2_8_0_0  1
- UP BND1      a_z2_8_0_1  1
- UP BND1      a_z2_8_0_2  1
- UP BND1      a_z2_8_0_3  1
- UP BND1      a_z2_8_0_4  1
- UP BND1      a_z2_8_0_5  1
- UP BND1      a_z2_8_0_6  1
- UP BND1      a_z2_8_0_7  1
- UP BND1      a_z2_9_0_0  1
- UP BND1      a_z2_9_0_1  1
- UP BND1      a_z2_9_0_2  1
- UP BND1      a_z2_9_0_3  1
- UP BND1      a_z2_9_0_4  1
- UP BND1      a_z2_9_0_5  1
- UP BND1      a_z2_9_0_6  1
- UP BND1      a_z2_9_0_7  1
  UP BND1      a_z2_10_0_0  1
  UP BND1      a_z2_10_0_1  1
  UP BND1      a_z2_10_0_2  1
@@ -10546,8 +13006,6 @@ BOUNDS
  UP BND1      a_z2_10_0_5  1
  UP BND1      a_z2_10_0_6  1
  UP BND1      a_z2_10_0_7  1
- UP BND1      a_z4_8_0  1
- UP BND1      a_z4_9_0  1
  UP BND1      a_z4_10_0  1
  UP BND1      x_11_0_0  1
  UP BND1      x_11_0_1  1
@@ -10789,4 +13247,964 @@ BOUNDS
  UP BND1      a_z2_11_0_6  1
  UP BND1      a_z2_11_0_7  1
  UP BND1      a_z4_11_0  1
+ UP BND1      x_12_0_0  1
+ UP BND1      x_12_0_1  1
+ UP BND1      x_12_0_2  1
+ UP BND1      y_12_0_0_0_0  1
+ UP BND1      y_12_0_0_0_1  1
+ UP BND1      y_12_0_0_0_2  1
+ UP BND1      y_12_0_0_0_3  1
+ UP BND1      y_12_0_0_0_4  1
+ UP BND1      y_12_0_0_0_5  1
+ UP BND1      y_12_0_0_0_6  1
+ UP BND1      y_12_0_0_0_7  1
+ UP BND1      y_12_0_0_0_8  1
+ UP BND1      y_12_0_0_0_9  1
+ UP BND1      y_12_0_0_0_10  1
+ UP BND1      y_12_0_0_0_11  1
+ UP BND1      y_12_0_0_0_12  1
+ UP BND1      y_12_0_0_0_13  1
+ UP BND1      y_12_0_0_0_14  1
+ UP BND1      y_12_0_0_0_15  1
+ UP BND1      y_12_0_0_0_16  1
+ UP BND1      y_12_0_0_0_17  1
+ UP BND1      y_12_0_0_0_18  1
+ UP BND1      y_12_0_0_0_19  1
+ UP BND1      y_12_0_0_0_20  1
+ UP BND1      y_12_0_0_0_21  1
+ UP BND1      y_12_0_0_0_22  1
+ UP BND1      y_12_0_0_0_23  1
+ UP BND1      y_12_0_0_0_24  1
+ UP BND1      y_12_0_0_0_25  1
+ UP BND1      y_12_0_0_0_26  1
+ UP BND1      y_12_0_0_0_27  1
+ UP BND1      y_12_0_0_0_28  1
+ UP BND1      y_12_0_0_0_29  1
+ UP BND1      y_12_0_0_0_30  1
+ UP BND1      y_12_0_0_0_31  1
+ UP BND1      y_12_0_0_0_32  1
+ UP BND1      y_12_0_0_0_33  1
+ UP BND1      y_12_0_0_0_34  1
+ UP BND1      y_12_0_0_0_35  1
+ UP BND1      y_12_0_0_0_36  1
+ UP BND1      y_12_0_0_0_37  1
+ UP BND1      y_12_0_0_0_38  1
+ UP BND1      y_12_0_0_0_39  1
+ UP BND1      y_12_0_0_0_40  1
+ UP BND1      y_12_0_0_0_41  1
+ UP BND1      y_12_0_0_0_42  1
+ UP BND1      y_12_0_0_0_43  1
+ UP BND1      y_12_0_0_0_44  1
+ UP BND1      y_12_0_0_0_45  1
+ UP BND1      y_12_0_0_0_46  1
+ UP BND1      y_12_0_0_0_47  1
+ UP BND1      y_12_0_0_0_48  1
+ UP BND1      y_12_0_0_0_49  1
+ UP BND1      y_12_0_0_0_50  1
+ UP BND1      y_12_0_0_0_51  1
+ UP BND1      y_12_0_0_0_52  1
+ UP BND1      y_12_0_0_0_53  1
+ UP BND1      y_12_0_0_0_54  1
+ UP BND1      y_12_0_0_0_55  1
+ UP BND1      y_12_0_0_0_56  1
+ UP BND1      y_12_0_0_0_57  1
+ UP BND1      y_12_0_0_0_58  1
+ UP BND1      y_12_0_0_0_59  1
+ UP BND1      y_12_0_0_0_60  1
+ UP BND1      y_12_0_0_0_61  1
+ UP BND1      y_12_0_0_0_62  1
+ UP BND1      y_12_0_0_0_63  1
+ UP BND1      y_12_0_0_0_64  1
+ UP BND1      y_12_0_0_0_65  1
+ UP BND1      y_12_0_0_0_66  1
+ UP BND1      y_12_0_0_0_67  1
+ UP BND1      y_12_0_0_0_68  1
+ UP BND1      y_12_0_0_0_69  1
+ UP BND1      y_12_0_0_0_70  1
+ UP BND1      y_12_0_0_0_71  1
+ UP BND1      y_12_0_0_0_72  1
+ UP BND1      y_12_0_0_0_73  1
+ UP BND1      y_12_0_0_0_74  1
+ UP BND1      y_12_0_0_0_75  1
+ UP BND1      y_12_0_0_0_76  1
+ UP BND1      y_12_0_0_0_77  1
+ UP BND1      y_12_0_0_0_78  1
+ UP BND1      y_12_0_0_0_79  1
+ UP BND1      y_12_0_0_0_80  1
+ UP BND1      y_12_0_0_0_81  1
+ UP BND1      y_12_0_0_0_82  1
+ UP BND1      y_12_0_0_0_83  1
+ UP BND1      y_12_0_0_0_84  1
+ UP BND1      y_12_0_0_0_85  1
+ UP BND1      y_12_0_0_0_86  1
+ UP BND1      y_12_0_0_0_87  1
+ UP BND1      y_12_0_0_0_88  1
+ UP BND1      y_12_0_0_0_89  1
+ UP BND1      y_12_0_0_0_90  1
+ UP BND1      y_12_0_0_0_91  1
+ UP BND1      y_12_0_0_0_92  1
+ UP BND1      y_12_0_0_0_93  1
+ UP BND1      y_12_0_0_0_94  1
+ UP BND1      y_12_0_0_0_95  1
+ UP BND1      y_12_0_0_0_96  1
+ UP BND1      y_12_0_0_0_97  1
+ UP BND1      y_12_0_0_0_98  1
+ UP BND1      y_12_0_0_0_99  1
+ UP BND1      y_12_0_0_0_100  1
+ UP BND1      y_12_0_1_0_0  1
+ UP BND1      y_12_0_1_0_1  1
+ UP BND1      y_12_0_1_0_2  1
+ UP BND1      y_12_0_1_0_3  1
+ UP BND1      y_12_0_1_0_4  1
+ UP BND1      y_12_0_1_0_5  1
+ UP BND1      y_12_0_1_0_6  1
+ UP BND1      y_12_0_1_0_7  1
+ UP BND1      y_12_0_1_0_8  1
+ UP BND1      y_12_0_1_0_9  1
+ UP BND1      y_12_0_1_0_10  1
+ UP BND1      y_12_0_1_0_11  1
+ UP BND1      y_12_0_1_0_12  1
+ UP BND1      y_12_0_1_0_13  1
+ UP BND1      y_12_0_1_0_14  1
+ UP BND1      y_12_0_1_0_15  1
+ UP BND1      y_12_0_1_0_16  1
+ UP BND1      y_12_0_1_0_17  1
+ UP BND1      y_12_0_1_0_18  1
+ UP BND1      y_12_0_1_0_19  1
+ UP BND1      y_12_0_1_0_20  1
+ UP BND1      y_12_0_1_0_21  1
+ UP BND1      y_12_0_1_0_22  1
+ UP BND1      y_12_0_1_0_23  1
+ UP BND1      y_12_0_1_0_24  1
+ UP BND1      y_12_0_1_0_25  1
+ UP BND1      y_12_0_1_0_26  1
+ UP BND1      y_12_0_1_0_27  1
+ UP BND1      y_12_0_1_0_28  1
+ UP BND1      y_12_0_1_0_29  1
+ UP BND1      y_12_0_1_0_30  1
+ UP BND1      y_12_0_1_0_31  1
+ UP BND1      y_12_0_1_0_32  1
+ UP BND1      y_12_0_1_0_33  1
+ UP BND1      y_12_0_1_0_34  1
+ UP BND1      y_12_0_1_0_35  1
+ UP BND1      y_12_0_1_0_36  1
+ UP BND1      y_12_0_1_0_37  1
+ UP BND1      y_12_0_1_0_38  1
+ UP BND1      y_12_0_1_0_39  1
+ UP BND1      y_12_0_1_0_40  1
+ UP BND1      y_12_0_1_0_41  1
+ UP BND1      y_12_0_1_0_42  1
+ UP BND1      y_12_0_1_0_43  1
+ UP BND1      y_12_0_1_0_44  1
+ UP BND1      y_12_0_1_0_45  1
+ UP BND1      y_12_0_1_0_46  1
+ UP BND1      y_12_0_1_0_47  1
+ UP BND1      y_12_0_1_0_48  1
+ UP BND1      y_12_0_1_0_49  1
+ UP BND1      y_12_0_1_0_50  1
+ UP BND1      y_12_0_1_0_51  1
+ UP BND1      y_12_0_1_0_52  1
+ UP BND1      y_12_0_1_0_53  1
+ UP BND1      y_12_0_1_0_54  1
+ UP BND1      y_12_0_1_0_55  1
+ UP BND1      y_12_0_1_0_56  1
+ UP BND1      y_12_0_1_0_57  1
+ UP BND1      y_12_0_1_0_58  1
+ UP BND1      y_12_0_1_0_59  1
+ UP BND1      y_12_0_1_0_60  1
+ UP BND1      y_12_0_1_0_61  1
+ UP BND1      y_12_0_1_0_62  1
+ UP BND1      y_12_0_1_0_63  1
+ UP BND1      y_12_0_1_0_64  1
+ UP BND1      y_12_0_1_0_65  1
+ UP BND1      y_12_0_1_0_66  1
+ UP BND1      y_12_0_1_0_67  1
+ UP BND1      y_12_0_1_0_68  1
+ UP BND1      y_12_0_1_0_69  1
+ UP BND1      y_12_0_1_0_70  1
+ UP BND1      y_12_0_1_0_71  1
+ UP BND1      y_12_0_1_0_72  1
+ UP BND1      y_12_0_1_0_73  1
+ UP BND1      y_12_0_1_0_74  1
+ UP BND1      y_12_0_1_0_75  1
+ UP BND1      y_12_0_1_0_76  1
+ UP BND1      y_12_0_1_0_77  1
+ UP BND1      y_12_0_1_0_78  1
+ UP BND1      y_12_0_1_0_79  1
+ UP BND1      y_12_0_1_0_80  1
+ UP BND1      y_12_0_1_0_81  1
+ UP BND1      y_12_0_1_0_82  1
+ UP BND1      y_12_0_1_0_83  1
+ UP BND1      y_12_0_1_0_84  1
+ UP BND1      y_12_0_1_0_85  1
+ UP BND1      y_12_0_1_0_86  1
+ UP BND1      y_12_0_1_0_87  1
+ UP BND1      y_12_0_1_0_88  1
+ UP BND1      y_12_0_1_0_89  1
+ UP BND1      y_12_0_1_0_90  1
+ UP BND1      y_12_0_1_0_91  1
+ UP BND1      y_12_0_1_0_92  1
+ UP BND1      y_12_0_1_0_93  1
+ UP BND1      y_12_0_1_0_94  1
+ UP BND1      y_12_0_1_0_95  1
+ UP BND1      y_12_0_1_0_96  1
+ UP BND1      y_12_0_1_0_97  1
+ UP BND1      y_12_0_1_0_98  1
+ UP BND1      y_12_0_1_0_99  1
+ UP BND1      y_12_0_1_0_100  1
+ UP BND1      z_12_0_0_0  1
+ UP BND1      z_12_0_1_0  1
+ UP BND1      z_12_0_2_0  1
+ UP BND1      z_12_0_3_0  1
+ UP BND1      z_12_0_4_0  1
+ UP BND1      z_12_0_5_0  1
+ UP BND1      z_12_0_6_0  1
+ UP BND1      z_12_0_7_0  1
+ UP BND1      a_x1_12_0  1
+ UP BND1      a_x1_12_1  1
+ UP BND1      a_x1_12_2  1
+ UP BND1      a_x4_12_0_0  1
+ UP BND1      a_x4_12_0_1  1
+ UP BND1      a_x4_12_0_2  1
+ UP BND1      a_y1_12_0  1
+ UP BND1      a_y1_12_1  1
+ UP BND1      a_y2_12_0_0  1
+ UP BND1      a_y2_12_0_1  1
+ UP BND1      a_z1_12_0  1
+ UP BND1      a_z1_12_1  1
+ UP BND1      a_z1_12_2  1
+ UP BND1      a_z1_12_3  1
+ UP BND1      a_z1_12_4  1
+ UP BND1      a_z1_12_5  1
+ UP BND1      a_z1_12_6  1
+ UP BND1      a_z1_12_7  1
+ UP BND1      a_z2_12_0_0  1
+ UP BND1      a_z2_12_0_1  1
+ UP BND1      a_z2_12_0_2  1
+ UP BND1      a_z2_12_0_3  1
+ UP BND1      a_z2_12_0_4  1
+ UP BND1      a_z2_12_0_5  1
+ UP BND1      a_z2_12_0_6  1
+ UP BND1      a_z2_12_0_7  1
+ UP BND1      a_z4_12_0  1
+ UP BND1      x_13_0_0  1
+ UP BND1      x_13_0_1  1
+ UP BND1      x_13_0_2  1
+ UP BND1      y_13_0_0_0_0  1
+ UP BND1      y_13_0_0_0_1  1
+ UP BND1      y_13_0_0_0_2  1
+ UP BND1      y_13_0_0_0_3  1
+ UP BND1      y_13_0_0_0_4  1
+ UP BND1      y_13_0_0_0_5  1
+ UP BND1      y_13_0_0_0_6  1
+ UP BND1      y_13_0_0_0_7  1
+ UP BND1      y_13_0_0_0_8  1
+ UP BND1      y_13_0_0_0_9  1
+ UP BND1      y_13_0_0_0_10  1
+ UP BND1      y_13_0_0_0_11  1
+ UP BND1      y_13_0_0_0_12  1
+ UP BND1      y_13_0_0_0_13  1
+ UP BND1      y_13_0_0_0_14  1
+ UP BND1      y_13_0_0_0_15  1
+ UP BND1      y_13_0_0_0_16  1
+ UP BND1      y_13_0_0_0_17  1
+ UP BND1      y_13_0_0_0_18  1
+ UP BND1      y_13_0_0_0_19  1
+ UP BND1      y_13_0_0_0_20  1
+ UP BND1      y_13_0_0_0_21  1
+ UP BND1      y_13_0_0_0_22  1
+ UP BND1      y_13_0_0_0_23  1
+ UP BND1      y_13_0_0_0_24  1
+ UP BND1      y_13_0_0_0_25  1
+ UP BND1      y_13_0_0_0_26  1
+ UP BND1      y_13_0_0_0_27  1
+ UP BND1      y_13_0_0_0_28  1
+ UP BND1      y_13_0_0_0_29  1
+ UP BND1      y_13_0_0_0_30  1
+ UP BND1      y_13_0_0_0_31  1
+ UP BND1      y_13_0_0_0_32  1
+ UP BND1      y_13_0_0_0_33  1
+ UP BND1      y_13_0_0_0_34  1
+ UP BND1      y_13_0_0_0_35  1
+ UP BND1      y_13_0_0_0_36  1
+ UP BND1      y_13_0_0_0_37  1
+ UP BND1      y_13_0_0_0_38  1
+ UP BND1      y_13_0_0_0_39  1
+ UP BND1      y_13_0_0_0_40  1
+ UP BND1      y_13_0_0_0_41  1
+ UP BND1      y_13_0_0_0_42  1
+ UP BND1      y_13_0_0_0_43  1
+ UP BND1      y_13_0_0_0_44  1
+ UP BND1      y_13_0_0_0_45  1
+ UP BND1      y_13_0_0_0_46  1
+ UP BND1      y_13_0_0_0_47  1
+ UP BND1      y_13_0_0_0_48  1
+ UP BND1      y_13_0_0_0_49  1
+ UP BND1      y_13_0_0_0_50  1
+ UP BND1      y_13_0_0_0_51  1
+ UP BND1      y_13_0_0_0_52  1
+ UP BND1      y_13_0_0_0_53  1
+ UP BND1      y_13_0_0_0_54  1
+ UP BND1      y_13_0_0_0_55  1
+ UP BND1      y_13_0_0_0_56  1
+ UP BND1      y_13_0_0_0_57  1
+ UP BND1      y_13_0_0_0_58  1
+ UP BND1      y_13_0_0_0_59  1
+ UP BND1      y_13_0_0_0_60  1
+ UP BND1      y_13_0_0_0_61  1
+ UP BND1      y_13_0_0_0_62  1
+ UP BND1      y_13_0_0_0_63  1
+ UP BND1      y_13_0_0_0_64  1
+ UP BND1      y_13_0_0_0_65  1
+ UP BND1      y_13_0_0_0_66  1
+ UP BND1      y_13_0_0_0_67  1
+ UP BND1      y_13_0_0_0_68  1
+ UP BND1      y_13_0_0_0_69  1
+ UP BND1      y_13_0_0_0_70  1
+ UP BND1      y_13_0_0_0_71  1
+ UP BND1      y_13_0_0_0_72  1
+ UP BND1      y_13_0_0_0_73  1
+ UP BND1      y_13_0_0_0_74  1
+ UP BND1      y_13_0_0_0_75  1
+ UP BND1      y_13_0_0_0_76  1
+ UP BND1      y_13_0_0_0_77  1
+ UP BND1      y_13_0_0_0_78  1
+ UP BND1      y_13_0_0_0_79  1
+ UP BND1      y_13_0_0_0_80  1
+ UP BND1      y_13_0_0_0_81  1
+ UP BND1      y_13_0_0_0_82  1
+ UP BND1      y_13_0_0_0_83  1
+ UP BND1      y_13_0_0_0_84  1
+ UP BND1      y_13_0_0_0_85  1
+ UP BND1      y_13_0_0_0_86  1
+ UP BND1      y_13_0_0_0_87  1
+ UP BND1      y_13_0_0_0_88  1
+ UP BND1      y_13_0_0_0_89  1
+ UP BND1      y_13_0_0_0_90  1
+ UP BND1      y_13_0_0_0_91  1
+ UP BND1      y_13_0_0_0_92  1
+ UP BND1      y_13_0_0_0_93  1
+ UP BND1      y_13_0_0_0_94  1
+ UP BND1      y_13_0_0_0_95  1
+ UP BND1      y_13_0_0_0_96  1
+ UP BND1      y_13_0_0_0_97  1
+ UP BND1      y_13_0_0_0_98  1
+ UP BND1      y_13_0_0_0_99  1
+ UP BND1      y_13_0_0_0_100  1
+ UP BND1      y_13_0_1_0_0  1
+ UP BND1      y_13_0_1_0_1  1
+ UP BND1      y_13_0_1_0_2  1
+ UP BND1      y_13_0_1_0_3  1
+ UP BND1      y_13_0_1_0_4  1
+ UP BND1      y_13_0_1_0_5  1
+ UP BND1      y_13_0_1_0_6  1
+ UP BND1      y_13_0_1_0_7  1
+ UP BND1      y_13_0_1_0_8  1
+ UP BND1      y_13_0_1_0_9  1
+ UP BND1      y_13_0_1_0_10  1
+ UP BND1      y_13_0_1_0_11  1
+ UP BND1      y_13_0_1_0_12  1
+ UP BND1      y_13_0_1_0_13  1
+ UP BND1      y_13_0_1_0_14  1
+ UP BND1      y_13_0_1_0_15  1
+ UP BND1      y_13_0_1_0_16  1
+ UP BND1      y_13_0_1_0_17  1
+ UP BND1      y_13_0_1_0_18  1
+ UP BND1      y_13_0_1_0_19  1
+ UP BND1      y_13_0_1_0_20  1
+ UP BND1      y_13_0_1_0_21  1
+ UP BND1      y_13_0_1_0_22  1
+ UP BND1      y_13_0_1_0_23  1
+ UP BND1      y_13_0_1_0_24  1
+ UP BND1      y_13_0_1_0_25  1
+ UP BND1      y_13_0_1_0_26  1
+ UP BND1      y_13_0_1_0_27  1
+ UP BND1      y_13_0_1_0_28  1
+ UP BND1      y_13_0_1_0_29  1
+ UP BND1      y_13_0_1_0_30  1
+ UP BND1      y_13_0_1_0_31  1
+ UP BND1      y_13_0_1_0_32  1
+ UP BND1      y_13_0_1_0_33  1
+ UP BND1      y_13_0_1_0_34  1
+ UP BND1      y_13_0_1_0_35  1
+ UP BND1      y_13_0_1_0_36  1
+ UP BND1      y_13_0_1_0_37  1
+ UP BND1      y_13_0_1_0_38  1
+ UP BND1      y_13_0_1_0_39  1
+ UP BND1      y_13_0_1_0_40  1
+ UP BND1      y_13_0_1_0_41  1
+ UP BND1      y_13_0_1_0_42  1
+ UP BND1      y_13_0_1_0_43  1
+ UP BND1      y_13_0_1_0_44  1
+ UP BND1      y_13_0_1_0_45  1
+ UP BND1      y_13_0_1_0_46  1
+ UP BND1      y_13_0_1_0_47  1
+ UP BND1      y_13_0_1_0_48  1
+ UP BND1      y_13_0_1_0_49  1
+ UP BND1      y_13_0_1_0_50  1
+ UP BND1      y_13_0_1_0_51  1
+ UP BND1      y_13_0_1_0_52  1
+ UP BND1      y_13_0_1_0_53  1
+ UP BND1      y_13_0_1_0_54  1
+ UP BND1      y_13_0_1_0_55  1
+ UP BND1      y_13_0_1_0_56  1
+ UP BND1      y_13_0_1_0_57  1
+ UP BND1      y_13_0_1_0_58  1
+ UP BND1      y_13_0_1_0_59  1
+ UP BND1      y_13_0_1_0_60  1
+ UP BND1      y_13_0_1_0_61  1
+ UP BND1      y_13_0_1_0_62  1
+ UP BND1      y_13_0_1_0_63  1
+ UP BND1      y_13_0_1_0_64  1
+ UP BND1      y_13_0_1_0_65  1
+ UP BND1      y_13_0_1_0_66  1
+ UP BND1      y_13_0_1_0_67  1
+ UP BND1      y_13_0_1_0_68  1
+ UP BND1      y_13_0_1_0_69  1
+ UP BND1      y_13_0_1_0_70  1
+ UP BND1      y_13_0_1_0_71  1
+ UP BND1      y_13_0_1_0_72  1
+ UP BND1      y_13_0_1_0_73  1
+ UP BND1      y_13_0_1_0_74  1
+ UP BND1      y_13_0_1_0_75  1
+ UP BND1      y_13_0_1_0_76  1
+ UP BND1      y_13_0_1_0_77  1
+ UP BND1      y_13_0_1_0_78  1
+ UP BND1      y_13_0_1_0_79  1
+ UP BND1      y_13_0_1_0_80  1
+ UP BND1      y_13_0_1_0_81  1
+ UP BND1      y_13_0_1_0_82  1
+ UP BND1      y_13_0_1_0_83  1
+ UP BND1      y_13_0_1_0_84  1
+ UP BND1      y_13_0_1_0_85  1
+ UP BND1      y_13_0_1_0_86  1
+ UP BND1      y_13_0_1_0_87  1
+ UP BND1      y_13_0_1_0_88  1
+ UP BND1      y_13_0_1_0_89  1
+ UP BND1      y_13_0_1_0_90  1
+ UP BND1      y_13_0_1_0_91  1
+ UP BND1      y_13_0_1_0_92  1
+ UP BND1      y_13_0_1_0_93  1
+ UP BND1      y_13_0_1_0_94  1
+ UP BND1      y_13_0_1_0_95  1
+ UP BND1      y_13_0_1_0_96  1
+ UP BND1      y_13_0_1_0_97  1
+ UP BND1      y_13_0_1_0_98  1
+ UP BND1      y_13_0_1_0_99  1
+ UP BND1      y_13_0_1_0_100  1
+ UP BND1      z_13_0_0_0  1
+ UP BND1      z_13_0_1_0  1
+ UP BND1      z_13_0_2_0  1
+ UP BND1      z_13_0_3_0  1
+ UP BND1      z_13_0_4_0  1
+ UP BND1      z_13_0_5_0  1
+ UP BND1      z_13_0_6_0  1
+ UP BND1      z_13_0_7_0  1
+ UP BND1      a_x1_13_0  1
+ UP BND1      a_x1_13_1  1
+ UP BND1      a_x1_13_2  1
+ UP BND1      a_x4_13_0_0  1
+ UP BND1      a_x4_13_0_1  1
+ UP BND1      a_x4_13_0_2  1
+ UP BND1      a_y1_13_0  1
+ UP BND1      a_y1_13_1  1
+ UP BND1      a_y2_13_0_0  1
+ UP BND1      a_y2_13_0_1  1
+ UP BND1      a_z1_13_0  1
+ UP BND1      a_z1_13_1  1
+ UP BND1      a_z1_13_2  1
+ UP BND1      a_z1_13_3  1
+ UP BND1      a_z1_13_4  1
+ UP BND1      a_z1_13_5  1
+ UP BND1      a_z1_13_6  1
+ UP BND1      a_z1_13_7  1
+ UP BND1      a_z2_13_0_0  1
+ UP BND1      a_z2_13_0_1  1
+ UP BND1      a_z2_13_0_2  1
+ UP BND1      a_z2_13_0_3  1
+ UP BND1      a_z2_13_0_4  1
+ UP BND1      a_z2_13_0_5  1
+ UP BND1      a_z2_13_0_6  1
+ UP BND1      a_z2_13_0_7  1
+ UP BND1      a_z4_13_0  1
+ UP BND1      x_14_0_0  1
+ UP BND1      x_14_0_1  1
+ UP BND1      x_14_0_2  1
+ UP BND1      y_14_0_0_0_0  1
+ UP BND1      y_14_0_0_0_1  1
+ UP BND1      y_14_0_0_0_2  1
+ UP BND1      y_14_0_0_0_3  1
+ UP BND1      y_14_0_0_0_4  1
+ UP BND1      y_14_0_0_0_5  1
+ UP BND1      y_14_0_0_0_6  1
+ UP BND1      y_14_0_0_0_7  1
+ UP BND1      y_14_0_0_0_8  1
+ UP BND1      y_14_0_0_0_9  1
+ UP BND1      y_14_0_0_0_10  1
+ UP BND1      y_14_0_0_0_11  1
+ UP BND1      y_14_0_0_0_12  1
+ UP BND1      y_14_0_0_0_13  1
+ UP BND1      y_14_0_0_0_14  1
+ UP BND1      y_14_0_0_0_15  1
+ UP BND1      y_14_0_0_0_16  1
+ UP BND1      y_14_0_0_0_17  1
+ UP BND1      y_14_0_0_0_18  1
+ UP BND1      y_14_0_0_0_19  1
+ UP BND1      y_14_0_0_0_20  1
+ UP BND1      y_14_0_0_0_21  1
+ UP BND1      y_14_0_0_0_22  1
+ UP BND1      y_14_0_0_0_23  1
+ UP BND1      y_14_0_0_0_24  1
+ UP BND1      y_14_0_0_0_25  1
+ UP BND1      y_14_0_0_0_26  1
+ UP BND1      y_14_0_0_0_27  1
+ UP BND1      y_14_0_0_0_28  1
+ UP BND1      y_14_0_0_0_29  1
+ UP BND1      y_14_0_0_0_30  1
+ UP BND1      y_14_0_0_0_31  1
+ UP BND1      y_14_0_0_0_32  1
+ UP BND1      y_14_0_0_0_33  1
+ UP BND1      y_14_0_0_0_34  1
+ UP BND1      y_14_0_0_0_35  1
+ UP BND1      y_14_0_0_0_36  1
+ UP BND1      y_14_0_0_0_37  1
+ UP BND1      y_14_0_0_0_38  1
+ UP BND1      y_14_0_0_0_39  1
+ UP BND1      y_14_0_0_0_40  1
+ UP BND1      y_14_0_0_0_41  1
+ UP BND1      y_14_0_0_0_42  1
+ UP BND1      y_14_0_0_0_43  1
+ UP BND1      y_14_0_0_0_44  1
+ UP BND1      y_14_0_0_0_45  1
+ UP BND1      y_14_0_0_0_46  1
+ UP BND1      y_14_0_0_0_47  1
+ UP BND1      y_14_0_0_0_48  1
+ UP BND1      y_14_0_0_0_49  1
+ UP BND1      y_14_0_0_0_50  1
+ UP BND1      y_14_0_0_0_51  1
+ UP BND1      y_14_0_0_0_52  1
+ UP BND1      y_14_0_0_0_53  1
+ UP BND1      y_14_0_0_0_54  1
+ UP BND1      y_14_0_0_0_55  1
+ UP BND1      y_14_0_0_0_56  1
+ UP BND1      y_14_0_0_0_57  1
+ UP BND1      y_14_0_0_0_58  1
+ UP BND1      y_14_0_0_0_59  1
+ UP BND1      y_14_0_0_0_60  1
+ UP BND1      y_14_0_0_0_61  1
+ UP BND1      y_14_0_0_0_62  1
+ UP BND1      y_14_0_0_0_63  1
+ UP BND1      y_14_0_0_0_64  1
+ UP BND1      y_14_0_0_0_65  1
+ UP BND1      y_14_0_0_0_66  1
+ UP BND1      y_14_0_0_0_67  1
+ UP BND1      y_14_0_0_0_68  1
+ UP BND1      y_14_0_0_0_69  1
+ UP BND1      y_14_0_0_0_70  1
+ UP BND1      y_14_0_0_0_71  1
+ UP BND1      y_14_0_0_0_72  1
+ UP BND1      y_14_0_0_0_73  1
+ UP BND1      y_14_0_0_0_74  1
+ UP BND1      y_14_0_0_0_75  1
+ UP BND1      y_14_0_0_0_76  1
+ UP BND1      y_14_0_0_0_77  1
+ UP BND1      y_14_0_0_0_78  1
+ UP BND1      y_14_0_0_0_79  1
+ UP BND1      y_14_0_0_0_80  1
+ UP BND1      y_14_0_0_0_81  1
+ UP BND1      y_14_0_0_0_82  1
+ UP BND1      y_14_0_0_0_83  1
+ UP BND1      y_14_0_0_0_84  1
+ UP BND1      y_14_0_0_0_85  1
+ UP BND1      y_14_0_0_0_86  1
+ UP BND1      y_14_0_0_0_87  1
+ UP BND1      y_14_0_0_0_88  1
+ UP BND1      y_14_0_0_0_89  1
+ UP BND1      y_14_0_0_0_90  1
+ UP BND1      y_14_0_0_0_91  1
+ UP BND1      y_14_0_0_0_92  1
+ UP BND1      y_14_0_0_0_93  1
+ UP BND1      y_14_0_0_0_94  1
+ UP BND1      y_14_0_0_0_95  1
+ UP BND1      y_14_0_0_0_96  1
+ UP BND1      y_14_0_0_0_97  1
+ UP BND1      y_14_0_0_0_98  1
+ UP BND1      y_14_0_0_0_99  1
+ UP BND1      y_14_0_0_0_100  1
+ UP BND1      y_14_0_1_0_0  1
+ UP BND1      y_14_0_1_0_1  1
+ UP BND1      y_14_0_1_0_2  1
+ UP BND1      y_14_0_1_0_3  1
+ UP BND1      y_14_0_1_0_4  1
+ UP BND1      y_14_0_1_0_5  1
+ UP BND1      y_14_0_1_0_6  1
+ UP BND1      y_14_0_1_0_7  1
+ UP BND1      y_14_0_1_0_8  1
+ UP BND1      y_14_0_1_0_9  1
+ UP BND1      y_14_0_1_0_10  1
+ UP BND1      y_14_0_1_0_11  1
+ UP BND1      y_14_0_1_0_12  1
+ UP BND1      y_14_0_1_0_13  1
+ UP BND1      y_14_0_1_0_14  1
+ UP BND1      y_14_0_1_0_15  1
+ UP BND1      y_14_0_1_0_16  1
+ UP BND1      y_14_0_1_0_17  1
+ UP BND1      y_14_0_1_0_18  1
+ UP BND1      y_14_0_1_0_19  1
+ UP BND1      y_14_0_1_0_20  1
+ UP BND1      y_14_0_1_0_21  1
+ UP BND1      y_14_0_1_0_22  1
+ UP BND1      y_14_0_1_0_23  1
+ UP BND1      y_14_0_1_0_24  1
+ UP BND1      y_14_0_1_0_25  1
+ UP BND1      y_14_0_1_0_26  1
+ UP BND1      y_14_0_1_0_27  1
+ UP BND1      y_14_0_1_0_28  1
+ UP BND1      y_14_0_1_0_29  1
+ UP BND1      y_14_0_1_0_30  1
+ UP BND1      y_14_0_1_0_31  1
+ UP BND1      y_14_0_1_0_32  1
+ UP BND1      y_14_0_1_0_33  1
+ UP BND1      y_14_0_1_0_34  1
+ UP BND1      y_14_0_1_0_35  1
+ UP BND1      y_14_0_1_0_36  1
+ UP BND1      y_14_0_1_0_37  1
+ UP BND1      y_14_0_1_0_38  1
+ UP BND1      y_14_0_1_0_39  1
+ UP BND1      y_14_0_1_0_40  1
+ UP BND1      y_14_0_1_0_41  1
+ UP BND1      y_14_0_1_0_42  1
+ UP BND1      y_14_0_1_0_43  1
+ UP BND1      y_14_0_1_0_44  1
+ UP BND1      y_14_0_1_0_45  1
+ UP BND1      y_14_0_1_0_46  1
+ UP BND1      y_14_0_1_0_47  1
+ UP BND1      y_14_0_1_0_48  1
+ UP BND1      y_14_0_1_0_49  1
+ UP BND1      y_14_0_1_0_50  1
+ UP BND1      y_14_0_1_0_51  1
+ UP BND1      y_14_0_1_0_52  1
+ UP BND1      y_14_0_1_0_53  1
+ UP BND1      y_14_0_1_0_54  1
+ UP BND1      y_14_0_1_0_55  1
+ UP BND1      y_14_0_1_0_56  1
+ UP BND1      y_14_0_1_0_57  1
+ UP BND1      y_14_0_1_0_58  1
+ UP BND1      y_14_0_1_0_59  1
+ UP BND1      y_14_0_1_0_60  1
+ UP BND1      y_14_0_1_0_61  1
+ UP BND1      y_14_0_1_0_62  1
+ UP BND1      y_14_0_1_0_63  1
+ UP BND1      y_14_0_1_0_64  1
+ UP BND1      y_14_0_1_0_65  1
+ UP BND1      y_14_0_1_0_66  1
+ UP BND1      y_14_0_1_0_67  1
+ UP BND1      y_14_0_1_0_68  1
+ UP BND1      y_14_0_1_0_69  1
+ UP BND1      y_14_0_1_0_70  1
+ UP BND1      y_14_0_1_0_71  1
+ UP BND1      y_14_0_1_0_72  1
+ UP BND1      y_14_0_1_0_73  1
+ UP BND1      y_14_0_1_0_74  1
+ UP BND1      y_14_0_1_0_75  1
+ UP BND1      y_14_0_1_0_76  1
+ UP BND1      y_14_0_1_0_77  1
+ UP BND1      y_14_0_1_0_78  1
+ UP BND1      y_14_0_1_0_79  1
+ UP BND1      y_14_0_1_0_80  1
+ UP BND1      y_14_0_1_0_81  1
+ UP BND1      y_14_0_1_0_82  1
+ UP BND1      y_14_0_1_0_83  1
+ UP BND1      y_14_0_1_0_84  1
+ UP BND1      y_14_0_1_0_85  1
+ UP BND1      y_14_0_1_0_86  1
+ UP BND1      y_14_0_1_0_87  1
+ UP BND1      y_14_0_1_0_88  1
+ UP BND1      y_14_0_1_0_89  1
+ UP BND1      y_14_0_1_0_90  1
+ UP BND1      y_14_0_1_0_91  1
+ UP BND1      y_14_0_1_0_92  1
+ UP BND1      y_14_0_1_0_93  1
+ UP BND1      y_14_0_1_0_94  1
+ UP BND1      y_14_0_1_0_95  1
+ UP BND1      y_14_0_1_0_96  1
+ UP BND1      y_14_0_1_0_97  1
+ UP BND1      y_14_0_1_0_98  1
+ UP BND1      y_14_0_1_0_99  1
+ UP BND1      y_14_0_1_0_100  1
+ UP BND1      z_14_0_0_0  1
+ UP BND1      z_14_0_1_0  1
+ UP BND1      z_14_0_2_0  1
+ UP BND1      z_14_0_3_0  1
+ UP BND1      z_14_0_4_0  1
+ UP BND1      z_14_0_5_0  1
+ UP BND1      z_14_0_6_0  1
+ UP BND1      z_14_0_7_0  1
+ UP BND1      a_x1_14_0  1
+ UP BND1      a_x1_14_1  1
+ UP BND1      a_x1_14_2  1
+ UP BND1      a_x4_14_0_0  1
+ UP BND1      a_x4_14_0_1  1
+ UP BND1      a_x4_14_0_2  1
+ UP BND1      a_y1_14_0  1
+ UP BND1      a_y1_14_1  1
+ UP BND1      a_y2_14_0_0  1
+ UP BND1      a_y2_14_0_1  1
+ UP BND1      a_z1_14_0  1
+ UP BND1      a_z1_14_1  1
+ UP BND1      a_z1_14_2  1
+ UP BND1      a_z1_14_3  1
+ UP BND1      a_z1_14_4  1
+ UP BND1      a_z1_14_5  1
+ UP BND1      a_z1_14_6  1
+ UP BND1      a_z1_14_7  1
+ UP BND1      a_z2_14_0_0  1
+ UP BND1      a_z2_14_0_1  1
+ UP BND1      a_z2_14_0_2  1
+ UP BND1      a_z2_14_0_3  1
+ UP BND1      a_z2_14_0_4  1
+ UP BND1      a_z2_14_0_5  1
+ UP BND1      a_z2_14_0_6  1
+ UP BND1      a_z2_14_0_7  1
+ UP BND1      a_z4_14_0  1
+ UP BND1      x_15_0_0  1
+ UP BND1      x_15_0_1  1
+ UP BND1      x_15_0_2  1
+ UP BND1      y_15_0_0_0_0  1
+ UP BND1      y_15_0_0_0_1  1
+ UP BND1      y_15_0_0_0_2  1
+ UP BND1      y_15_0_0_0_3  1
+ UP BND1      y_15_0_0_0_4  1
+ UP BND1      y_15_0_0_0_5  1
+ UP BND1      y_15_0_0_0_6  1
+ UP BND1      y_15_0_0_0_7  1
+ UP BND1      y_15_0_0_0_8  1
+ UP BND1      y_15_0_0_0_9  1
+ UP BND1      y_15_0_0_0_10  1
+ UP BND1      y_15_0_0_0_11  1
+ UP BND1      y_15_0_0_0_12  1
+ UP BND1      y_15_0_0_0_13  1
+ UP BND1      y_15_0_0_0_14  1
+ UP BND1      y_15_0_0_0_15  1
+ UP BND1      y_15_0_0_0_16  1
+ UP BND1      y_15_0_0_0_17  1
+ UP BND1      y_15_0_0_0_18  1
+ UP BND1      y_15_0_0_0_19  1
+ UP BND1      y_15_0_0_0_20  1
+ UP BND1      y_15_0_0_0_21  1
+ UP BND1      y_15_0_0_0_22  1
+ UP BND1      y_15_0_0_0_23  1
+ UP BND1      y_15_0_0_0_24  1
+ UP BND1      y_15_0_0_0_25  1
+ UP BND1      y_15_0_0_0_26  1
+ UP BND1      y_15_0_0_0_27  1
+ UP BND1      y_15_0_0_0_28  1
+ UP BND1      y_15_0_0_0_29  1
+ UP BND1      y_15_0_0_0_30  1
+ UP BND1      y_15_0_0_0_31  1
+ UP BND1      y_15_0_0_0_32  1
+ UP BND1      y_15_0_0_0_33  1
+ UP BND1      y_15_0_0_0_34  1
+ UP BND1      y_15_0_0_0_35  1
+ UP BND1      y_15_0_0_0_36  1
+ UP BND1      y_15_0_0_0_37  1
+ UP BND1      y_15_0_0_0_38  1
+ UP BND1      y_15_0_0_0_39  1
+ UP BND1      y_15_0_0_0_40  1
+ UP BND1      y_15_0_0_0_41  1
+ UP BND1      y_15_0_0_0_42  1
+ UP BND1      y_15_0_0_0_43  1
+ UP BND1      y_15_0_0_0_44  1
+ UP BND1      y_15_0_0_0_45  1
+ UP BND1      y_15_0_0_0_46  1
+ UP BND1      y_15_0_0_0_47  1
+ UP BND1      y_15_0_0_0_48  1
+ UP BND1      y_15_0_0_0_49  1
+ UP BND1      y_15_0_0_0_50  1
+ UP BND1      y_15_0_0_0_51  1
+ UP BND1      y_15_0_0_0_52  1
+ UP BND1      y_15_0_0_0_53  1
+ UP BND1      y_15_0_0_0_54  1
+ UP BND1      y_15_0_0_0_55  1
+ UP BND1      y_15_0_0_0_56  1
+ UP BND1      y_15_0_0_0_57  1
+ UP BND1      y_15_0_0_0_58  1
+ UP BND1      y_15_0_0_0_59  1
+ UP BND1      y_15_0_0_0_60  1
+ UP BND1      y_15_0_0_0_61  1
+ UP BND1      y_15_0_0_0_62  1
+ UP BND1      y_15_0_0_0_63  1
+ UP BND1      y_15_0_0_0_64  1
+ UP BND1      y_15_0_0_0_65  1
+ UP BND1      y_15_0_0_0_66  1
+ UP BND1      y_15_0_0_0_67  1
+ UP BND1      y_15_0_0_0_68  1
+ UP BND1      y_15_0_0_0_69  1
+ UP BND1      y_15_0_0_0_70  1
+ UP BND1      y_15_0_0_0_71  1
+ UP BND1      y_15_0_0_0_72  1
+ UP BND1      y_15_0_0_0_73  1
+ UP BND1      y_15_0_0_0_74  1
+ UP BND1      y_15_0_0_0_75  1
+ UP BND1      y_15_0_0_0_76  1
+ UP BND1      y_15_0_0_0_77  1
+ UP BND1      y_15_0_0_0_78  1
+ UP BND1      y_15_0_0_0_79  1
+ UP BND1      y_15_0_0_0_80  1
+ UP BND1      y_15_0_0_0_81  1
+ UP BND1      y_15_0_0_0_82  1
+ UP BND1      y_15_0_0_0_83  1
+ UP BND1      y_15_0_0_0_84  1
+ UP BND1      y_15_0_0_0_85  1
+ UP BND1      y_15_0_0_0_86  1
+ UP BND1      y_15_0_0_0_87  1
+ UP BND1      y_15_0_0_0_88  1
+ UP BND1      y_15_0_0_0_89  1
+ UP BND1      y_15_0_0_0_90  1
+ UP BND1      y_15_0_0_0_91  1
+ UP BND1      y_15_0_0_0_92  1
+ UP BND1      y_15_0_0_0_93  1
+ UP BND1      y_15_0_0_0_94  1
+ UP BND1      y_15_0_0_0_95  1
+ UP BND1      y_15_0_0_0_96  1
+ UP BND1      y_15_0_0_0_97  1
+ UP BND1      y_15_0_0_0_98  1
+ UP BND1      y_15_0_0_0_99  1
+ UP BND1      y_15_0_0_0_100  1
+ UP BND1      y_15_0_1_0_0  1
+ UP BND1      y_15_0_1_0_1  1
+ UP BND1      y_15_0_1_0_2  1
+ UP BND1      y_15_0_1_0_3  1
+ UP BND1      y_15_0_1_0_4  1
+ UP BND1      y_15_0_1_0_5  1
+ UP BND1      y_15_0_1_0_6  1
+ UP BND1      y_15_0_1_0_7  1
+ UP BND1      y_15_0_1_0_8  1
+ UP BND1      y_15_0_1_0_9  1
+ UP BND1      y_15_0_1_0_10  1
+ UP BND1      y_15_0_1_0_11  1
+ UP BND1      y_15_0_1_0_12  1
+ UP BND1      y_15_0_1_0_13  1
+ UP BND1      y_15_0_1_0_14  1
+ UP BND1      y_15_0_1_0_15  1
+ UP BND1      y_15_0_1_0_16  1
+ UP BND1      y_15_0_1_0_17  1
+ UP BND1      y_15_0_1_0_18  1
+ UP BND1      y_15_0_1_0_19  1
+ UP BND1      y_15_0_1_0_20  1
+ UP BND1      y_15_0_1_0_21  1
+ UP BND1      y_15_0_1_0_22  1
+ UP BND1      y_15_0_1_0_23  1
+ UP BND1      y_15_0_1_0_24  1
+ UP BND1      y_15_0_1_0_25  1
+ UP BND1      y_15_0_1_0_26  1
+ UP BND1      y_15_0_1_0_27  1
+ UP BND1      y_15_0_1_0_28  1
+ UP BND1      y_15_0_1_0_29  1
+ UP BND1      y_15_0_1_0_30  1
+ UP BND1      y_15_0_1_0_31  1
+ UP BND1      y_15_0_1_0_32  1
+ UP BND1      y_15_0_1_0_33  1
+ UP BND1      y_15_0_1_0_34  1
+ UP BND1      y_15_0_1_0_35  1
+ UP BND1      y_15_0_1_0_36  1
+ UP BND1      y_15_0_1_0_37  1
+ UP BND1      y_15_0_1_0_38  1
+ UP BND1      y_15_0_1_0_39  1
+ UP BND1      y_15_0_1_0_40  1
+ UP BND1      y_15_0_1_0_41  1
+ UP BND1      y_15_0_1_0_42  1
+ UP BND1      y_15_0_1_0_43  1
+ UP BND1      y_15_0_1_0_44  1
+ UP BND1      y_15_0_1_0_45  1
+ UP BND1      y_15_0_1_0_46  1
+ UP BND1      y_15_0_1_0_47  1
+ UP BND1      y_15_0_1_0_48  1
+ UP BND1      y_15_0_1_0_49  1
+ UP BND1      y_15_0_1_0_50  1
+ UP BND1      y_15_0_1_0_51  1
+ UP BND1      y_15_0_1_0_52  1
+ UP BND1      y_15_0_1_0_53  1
+ UP BND1      y_15_0_1_0_54  1
+ UP BND1      y_15_0_1_0_55  1
+ UP BND1      y_15_0_1_0_56  1
+ UP BND1      y_15_0_1_0_57  1
+ UP BND1      y_15_0_1_0_58  1
+ UP BND1      y_15_0_1_0_59  1
+ UP BND1      y_15_0_1_0_60  1
+ UP BND1      y_15_0_1_0_61  1
+ UP BND1      y_15_0_1_0_62  1
+ UP BND1      y_15_0_1_0_63  1
+ UP BND1      y_15_0_1_0_64  1
+ UP BND1      y_15_0_1_0_65  1
+ UP BND1      y_15_0_1_0_66  1
+ UP BND1      y_15_0_1_0_67  1
+ UP BND1      y_15_0_1_0_68  1
+ UP BND1      y_15_0_1_0_69  1
+ UP BND1      y_15_0_1_0_70  1
+ UP BND1      y_15_0_1_0_71  1
+ UP BND1      y_15_0_1_0_72  1
+ UP BND1      y_15_0_1_0_73  1
+ UP BND1      y_15_0_1_0_74  1
+ UP BND1      y_15_0_1_0_75  1
+ UP BND1      y_15_0_1_0_76  1
+ UP BND1      y_15_0_1_0_77  1
+ UP BND1      y_15_0_1_0_78  1
+ UP BND1      y_15_0_1_0_79  1
+ UP BND1      y_15_0_1_0_80  1
+ UP BND1      y_15_0_1_0_81  1
+ UP BND1      y_15_0_1_0_82  1
+ UP BND1      y_15_0_1_0_83  1
+ UP BND1      y_15_0_1_0_84  1
+ UP BND1      y_15_0_1_0_85  1
+ UP BND1      y_15_0_1_0_86  1
+ UP BND1      y_15_0_1_0_87  1
+ UP BND1      y_15_0_1_0_88  1
+ UP BND1      y_15_0_1_0_89  1
+ UP BND1      y_15_0_1_0_90  1
+ UP BND1      y_15_0_1_0_91  1
+ UP BND1      y_15_0_1_0_92  1
+ UP BND1      y_15_0_1_0_93  1
+ UP BND1      y_15_0_1_0_94  1
+ UP BND1      y_15_0_1_0_95  1
+ UP BND1      y_15_0_1_0_96  1
+ UP BND1      y_15_0_1_0_97  1
+ UP BND1      y_15_0_1_0_98  1
+ UP BND1      y_15_0_1_0_99  1
+ UP BND1      y_15_0_1_0_100  1
+ UP BND1      z_15_0_0_0  1
+ UP BND1      z_15_0_1_0  1
+ UP BND1      z_15_0_2_0  1
+ UP BND1      z_15_0_3_0  1
+ UP BND1      z_15_0_4_0  1
+ UP BND1      z_15_0_5_0  1
+ UP BND1      z_15_0_6_0  1
+ UP BND1      z_15_0_7_0  1
+ UP BND1      a_x1_15_0  1
+ UP BND1      a_x1_15_1  1
+ UP BND1      a_x1_15_2  1
+ UP BND1      a_x4_15_0_0  1
+ UP BND1      a_x4_15_0_1  1
+ UP BND1      a_x4_15_0_2  1
+ UP BND1      a_y1_15_0  1
+ UP BND1      a_y1_15_1  1
+ UP BND1      a_y2_15_0_0  1
+ UP BND1      a_y2_15_0_1  1
+ UP BND1      a_z1_15_0  1
+ UP BND1      a_z1_15_1  1
+ UP BND1      a_z1_15_2  1
+ UP BND1      a_z1_15_3  1
+ UP BND1      a_z1_15_4  1
+ UP BND1      a_z1_15_5  1
+ UP BND1      a_z1_15_6  1
+ UP BND1      a_z1_15_7  1
+ UP BND1      a_z2_15_0_0  1
+ UP BND1      a_z2_15_0_1  1
+ UP BND1      a_z2_15_0_2  1
+ UP BND1      a_z2_15_0_3  1
+ UP BND1      a_z2_15_0_4  1
+ UP BND1      a_z2_15_0_5  1
+ UP BND1      a_z2_15_0_6  1
+ UP BND1      a_z2_15_0_7  1
+ UP BND1      a_z4_15_0  1
 ENDATA

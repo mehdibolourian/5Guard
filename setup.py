@@ -41,9 +41,9 @@ def init_setup_synth():
     L_pqi   = []
     
     NUM_P_S = 5
-    V_P_S.append(ps(500000 * MIPS_SCALE, [110, 60, 1]))  # AMD EPYC 9684X
-    V_P_S.append(ps(500000 * MIPS_SCALE, [110, 60, 1]))  # AMD EPYC 9684X
-    V_P_S.append(ps(500000 * MIPS_SCALE, [1100, 600, 1]))  # AMD EPYC 9684X * 10
+    V_P_S.append(ps(1000000 * MIPS_SCALE, [110, 60, 1]))  # AMD EPYC 9684X
+    V_P_S.append(ps(1000000 * MIPS_SCALE, [110, 60, 1]))  # AMD EPYC 9684X
+    V_P_S.append(ps(1000000 * MIPS_SCALE, [1100, 600, 1]))  # AMD EPYC 9684X * 10
     
     NUM_P_R = 2
     V_P_R   = [nr_bs([50000]) for _ in range(NUM_P_R)]  # 50MHz channel bandwidth --> 50MHz * 1ms = 50000
@@ -144,18 +144,18 @@ def create_sr_resources():
     V_R_mmtc = [ru(100)]
     E_mmtc = [vp(V_S_mmtc[0], V_R_mmtc[0], 0, 10e4 * BANDWIDTH_SCALE, 1e-3 * LATENCY_SCALE)]
     r_mmtc = sr(
-        V_S_mmtc, V_R_mmtc, E_mmtc, 0, 0, 500,
+        V_S_mmtc, V_R_mmtc, E_mmtc, 0, 0, 1000,
         1e-2 / BANDWIDTH_SCALE, 10 / LATENCY_SCALE, 1e-1 / MIPS_SCALE, 10,
-        10, 10*0.1
+        1, 10*0.1*0.2
     )
 
     V_S_embb = [nf(6000 * MIPS_SCALE, 3, [0, 1, 2])]
     V_R_embb = [ru(1)]
     E_embb = [vp(V_S_embb[0], V_R_embb[0], 0, 10e9 * BANDWIDTH_SCALE, 1e-3 * LATENCY_SCALE)]
     r_embb = sr(
-        V_S_embb, V_R_embb, E_embb, 0, 1, 500,
+        V_S_embb, V_R_embb, E_embb, 0, 1, 1000,
         1e-7 / BANDWIDTH_SCALE, 10 / LATENCY_SCALE, 1e-2 / MIPS_SCALE, 0.1,
-        10, 6*0.1
+        1, 6*0.1*0.2
     )
 
     ######## Isolation Level 1:
@@ -165,7 +165,7 @@ def create_sr_resources():
     r_urll = sr(
         V_S_urll, V_R_urll, E_urll, 1, 0, 2000,
         1e-6 / BANDWIDTH_SCALE, 100 / LATENCY_SCALE, 1 / MIPS_SCALE, 100,
-        100, 2*0.1
+        100, 2*0.1*0.13
     )
 
     ######## Isolation Level 2:
@@ -173,10 +173,10 @@ def create_sr_resources():
     V_R_mcri = [ru(10)]
     E_mcri = [vp(V_S_mcri[0], V_R_mcri[0], 0, 10e9 * BANDWIDTH_SCALE, 1e-5 * LATENCY_SCALE)]
     r_mcri = sr(
-        V_S_mcri, V_R_mcri, E_mcri, 2, 0, 10000,
+        V_S_mcri, V_R_mcri, E_mcri, 2, 0, 5000,
         #1e6, 1e6, 1e6, 1e6,
         1e4, 1e4, 1e4, 1e4,
-        1e6, 1*0.1
+        1e4, 1*0.1*0.2
     )
 
     sr_types = [r_embb, r_urll, r_mmtc, r_mcri] # L01, L1, L00, L2

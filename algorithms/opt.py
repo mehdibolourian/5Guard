@@ -15,10 +15,7 @@ def run_with_timeout(timeout, func, *args, **kwargs):
         except concurrent.futures.TimeoutError:
             raise TimeoutException("Timeout reached!")
 
-def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr):
-    X_t = []
-    Y_t = []
-
+def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr, X_t, Y_t):
     #reqs_lp_t = []
     reqs = R_t.copy()
     
@@ -171,7 +168,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             for idx_r in range(len_R)]
 
     # ## Auxiliary variables
-    if t == 0: ## No model is defined yet --> No a_x2 or a_x3 defined
+    if len(R_t) == 0: ## No model is defined yet --> No a_x2 or a_x3 defined
         a_x2 = [[m.addVar(name=f"a_x2_{idx_p}_{chi}", vtype=gp.GRB.BINARY)
                  for chi in range(sys.CHI_MAX+1)]
                 for idx_p in range(len_V_P_S)]
@@ -1140,7 +1137,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     #m.setObjective(sum(r.R for r in reqs), GRB.MAXIMIZE)
 
     # Start the timer
-    start_time = time.time()
+    start_time = time.perf_counter()
     
     timeout = 0
     try:
@@ -1332,7 +1329,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                               )
 
         ############################## Overhead Costs ##############################
-        h_VM_L0 = [sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
+        h_VM_L0 = [math.ceil(sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                        for idx_r, r in enumerate(reqs)
                        for idx_v, v in enumerate(r.V_S)
                        for xi       in range(v.Xi_REQ)
@@ -1345,7 +1342,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                        for idx_r, r in enumerate(reqs)
                        for idx_v, v in enumerate(r.V_S)
                        if (r.gamma == 0) and (r.kappa == 1)
-                      ) / p.Xi_MAX[0] + 1
+                      ) / p.Xi_MAX[0])
                   ## Plus 1 is the approximation of the ceiling function
                   for idx_p, p in enumerate(V_P_S)
                  ]
@@ -1369,7 +1366,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                      )
                     )
 
-        g_ovh_C_opt = sum( sys.Omega * ((sys.C_K8S + sys.C_GOS) * (h_VM_L0[idx_p] - 1)
+        g_ovh_C_opt = sum( sys.Omega * ((sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
                                            + sys.C_HHO * vars_opt["a_x3_{}".format(idx_p)]
                                            + sys.C_GOS * sum(v.Xi_REQ * vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                                                              for idx_r, r in enumerate(reqs)
@@ -1510,7 +1507,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         m.update()
 
     # Stop the timer
-    end_time = time.time()
+    end_time = time.perf_counter()
     time_opt = end_time - start_time
 
     if time_opt > r_t.timeout:
@@ -1518,14 +1515,15 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         feasible = 0
         reject_opt[r_t.gamma] = 1
 
-        reqs.pop()
-        len_R = len(reqs)
+        if len(reqs):
+            reqs.pop()
+            len_R = len(reqs)
         
-        if f_fgr:
-            m = gp.read(f'saved_model/model_backup_fgr_opt_{iter}.mps')
-        else:
-            m = gp.read(f'saved_model/model_backup_opt_{iter}.mps')
-        m.update()
+            if f_fgr:
+                m = gp.read(f'saved_model/model_backup_fgr_opt_{iter}.mps')
+            else:
+                m = gp.read(f'saved_model/model_backup_opt_{iter}.mps')
+            m.update()
 
     if f_fgr == 0:
         if feasible:
@@ -1547,10 +1545,12 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 data.append(["Migration Cost", g_mig_opt])
             if g_ovh_opt:
                 data.append(["Overhead Cost", g_ovh_opt])
+
+            data.append(["Deployment Cost", g_dep_opt])
         else:
             data = [
-                ["Request Isolation Level", r_t.gamma],
-                ["Request Isolation Sub-level", r_t.kappa],
+                ["Algorithm", "OPT"],
+                ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
                 ["Allocation Time", time_opt],
                 ["Feasible", feasible],
                 ["Timeout", timeout]
@@ -1564,4 +1564,4 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     else:
         m.write(f'saved_model/model_backup_opt_{iter}.mps')
 
-    return profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs
+    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs], X_t, Y_t

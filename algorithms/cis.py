@@ -15,10 +15,7 @@ def run_with_timeout(timeout, func, *args, **kwargs):
         except concurrent.futures.TimeoutError:
             raise TimeoutException("Timeout reached!")
 
-def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr):
-    X_t = []
-    Y_t = []
-
+def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr, X_t, Y_t):
     #reqs_lp_t = []
     reqs = R_t.copy()
     
@@ -166,7 +163,7 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             for idx_r in range(len_R)]
 
     # ## Auxiliary variables
-    if t == 0: ## No model is defined yet --> No a_x2 or a_x3 defined
+    if len(R_t) == 0: ## No model is defined yet --> No a_x2 or a_x3 defined
         a_x2 = [[m.addVar(name=f"a_x2_{idx_p}_{chi}", vtype=gp.GRB.BINARY)
                  for chi in range(sys.CHI_MAX+1)]
                 for idx_p in range(len_V_P_S)]
@@ -967,7 +964,7 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     #m.setObjective(sum(10000 for r in reqs), GRB.MAXIMIZE)
 
     # Start the timer
-    start_time = time.time()
+    start_time = time.perf_counter()
     
     timeout = 0
     try:
@@ -1237,7 +1234,7 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         m.update()
 
     # Stop the timer
-    end_time = time.time()
+    end_time = time.perf_counter()
     time_opt = end_time - start_time
 
     if time_opt > r_t.timeout:
@@ -1245,19 +1242,20 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         feasible = 0
         reject_opt[2] = 1
 
-        reqs.pop()
-        len_R = len(reqs)
-        
-        if f_fgr:
-            m = gp.read(f'saved_model/model_backup_fgr_cis_{iter}.mps')
-        else:
-            m = gp.read(f'saved_model/model_backup_cis_{iter}.mps')
-        m.update()
+        if len(reqs):
+            reqs.pop()
+            len_R = len(reqs)
+            
+            if f_fgr:
+                m = gp.read(f'saved_model/model_backup_fgr_cis_{iter}.mps')
+            else:
+                m = gp.read(f'saved_model/model_backup_cis_{iter}.mps')
+            m.update()
 
     if f_fgr == 0:
         if feasible:
             data = [
-                ["Algorithm", "OPT"],
+                ["Algorithm", "CIS"],
                 ["Request Isolation Level", f"({2}, {0})"],
                 ["Profit", profit],
                 ["Allocation Time", time_opt],
@@ -1274,10 +1272,12 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 data.append(["Migration Cost", g_mig_opt])
             if g_ovh_opt:
                 data.append(["Overhead Cost", g_ovh_opt])
+
+            data.append(["Deployment Cost", g_dep_opt])
         else:
             data = [
-                ["Request Isolation Level", 2],
-                ["Request Isolation Sub-level", 0],
+                ["Algorithm", "CIS"],
+                ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
                 ["Allocation Time", time_opt],
                 ["Feasible", feasible],
                 ["Timeout", timeout]
@@ -1291,4 +1291,4 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     else:
         m.write(f'saved_model/model_backup_cis_{iter}.mps')
 
-    return profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs
+    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs], X_t, Y_t
