@@ -280,7 +280,6 @@ COLUMNS
     x_0_0_0   auxiliary_constraints_10_2_0_0  -1
     x_0_0_0   nf_regular_isolation_limit_0_0_0  1
     x_0_0_0   minimum_profit  -1
-    x_0_0_1   OBJ       -1
     x_0_0_1   nf_unique_mapping_0_0  1
     x_0_0_1   mips_limit_1_0_0_1  0.01
     x_0_0_1   mips_limit_2_0_0_1  -0.6
@@ -288,7 +287,7 @@ COLUMNS
     x_0_0_1   auxiliary_constraints_10_1_0_1_0  -1
     x_0_0_1   auxiliary_constraints_10_2_0_1  -1
     x_0_0_1   nf_regular_isolation_limit_0_0_1  1
-    x_0_0_1   minimum_profit  -1
+    x_0_0_2   OBJ       -1
     x_0_0_2   nf_unique_mapping_0_0  1
     x_0_0_2   mips_limit_1_0_0_2  0.01
     x_0_0_2   mips_limit_2_0_0_2  -0.6
@@ -296,8 +295,9 @@ COLUMNS
     x_0_0_2   auxiliary_constraints_10_1_0_2_0  -1
     x_0_0_2   auxiliary_constraints_10_2_0_2  -1
     x_0_0_2   nf_regular_isolation_limit_0_0_2  1
+    x_0_0_2   minimum_profit  -1
     y_0_0_0_0_0  OBJ       0
-    y_0_0_0_0_1  OBJ       1000
+    y_0_0_0_0_1  OBJ       10000
     y_0_0_0_0_1  ru_unique_mapping_0_0  1
     y_0_0_0_0_1  radio_overprovision_0_0_0  1
     y_0_0_0_0_1  node_path_mapping_coordination_2_0_0_0  -10000
@@ -305,7 +305,7 @@ COLUMNS
     y_0_0_0_0_1  auxiliary_constraints_11_2_0_0  -1
     y_0_0_0_0_1  ru_regular_isolation_limit_0_0_0  1
     y_0_0_0_0_1  radio_max_limit_0_0  180
-    y_0_0_0_0_1  minimum_profit  1000
+    y_0_0_0_0_1  minimum_profit  10000
     y_0_0_0_0_2  node_path_mapping_coordination_2_0_0_0  -10000
     y_0_0_0_0_3  node_path_mapping_coordination_2_0_0_0  -10000
     y_0_0_0_0_4  node_path_mapping_coordination_2_0_0_0  -10000
@@ -406,7 +406,7 @@ COLUMNS
     y_0_0_0_0_99  node_path_mapping_coordination_2_0_0_0  -10000
     y_0_0_0_0_100  node_path_mapping_coordination_2_0_0_0  -10000
     y_0_0_1_0_0  OBJ       0
-    y_0_0_1_0_1  OBJ       999
+    y_0_0_1_0_1  OBJ       9999
     y_0_0_1_0_1  ru_unique_mapping_0_0  1
     y_0_0_1_0_1  radio_overprovision_0_0_1  1
     y_0_0_1_0_1  node_path_mapping_coordination_2_0_0_1  -10000
@@ -414,7 +414,7 @@ COLUMNS
     y_0_0_1_0_1  auxiliary_constraints_11_2_0_1  -1
     y_0_0_1_0_1  ru_regular_isolation_limit_0_0_1  1
     y_0_0_1_0_1  radio_max_limit_1_0  180
-    y_0_0_1_0_1  minimum_profit  999
+    y_0_0_1_0_1  minimum_profit  9999
     y_0_0_1_0_2  node_path_mapping_coordination_2_0_0_1  -10000
     y_0_0_1_0_3  node_path_mapping_coordination_2_0_0_1  -10000
     y_0_0_1_0_4  node_path_mapping_coordination_2_0_0_1  -10000
@@ -571,69 +571,69 @@ COLUMNS
     z_0_0_7_0  auxiliary_constraints_12_1_0_7_0_0  -1
     z_0_0_7_0  auxiliary_constraints_12_2_0_7  -1
     MARKER    'MARKER'                 'INTEND'
-    c_0_0_0   OBJ       1000
+    c_0_0_0   OBJ       10000
     c_0_0_0   mips_limit_1_0_0_0  -1
     c_0_0_0   mips_limit_2_0_0_0  1
     c_0_0_0   mips_max_limit_1_0  1
-    c_0_0_0   minimum_profit  1000
-    c_0_0_1   OBJ       1000
+    c_0_0_0   minimum_profit  10000
+    c_0_0_1   OBJ       10000
     c_0_0_1   mips_limit_1_0_0_1  -1
     c_0_0_1   mips_limit_2_0_0_1  1
     c_0_0_1   mips_max_limit_1_1  1
-    c_0_0_1   minimum_profit  1000
-    c_0_0_2   OBJ       1000
+    c_0_0_1   minimum_profit  10000
+    c_0_0_2   OBJ       10000
     c_0_0_2   mips_limit_1_0_0_2  -1
     c_0_0_2   mips_limit_2_0_0_2  1
     c_0_0_2   mips_max_limit_1_2  1
-    c_0_0_2   minimum_profit  1000
-    b_0_0_0_0_0  OBJ       1000
+    c_0_0_2   minimum_profit  10000
+    b_0_0_0_0_0  OBJ       10000
     b_0_0_0_0_0  link_path_mapping_coordination_1_0_0_0_0  -1
     b_0_0_0_0_0  link_path_mapping_coordination_2_0_0_0_0  1
     b_0_0_0_0_0  node_path_mapping_coordination_1_0_0_0  1
     b_0_0_0_0_0  node_path_mapping_coordination_2_0_0_0  1
     b_0_0_0_0_0  bandwidth_overprovisioning_3_0_0  -1
     b_0_0_0_0_0  bandwidth_max_limit_0_0  1
-    b_0_0_0_0_0  minimum_profit  1000
-    b_0_0_1_0_0  OBJ       1000
+    b_0_0_0_0_0  minimum_profit  10000
+    b_0_0_1_0_0  OBJ       10000
     b_0_0_1_0_0  link_path_mapping_coordination_1_0_0_1_0  -1
     b_0_0_1_0_0  link_path_mapping_coordination_2_0_0_1_0  1
     b_0_0_1_0_0  node_path_mapping_coordination_1_0_0_0  1
     b_0_0_1_0_0  node_path_mapping_coordination_2_0_0_1  1
     b_0_0_1_0_0  bandwidth_overprovisioning_3_0_0  -1
     b_0_0_1_0_0  bandwidth_max_limit_1_0  1
-    b_0_0_1_0_0  minimum_profit  1000
-    b_0_0_2_0_0  OBJ       1000
+    b_0_0_1_0_0  minimum_profit  10000
+    b_0_0_2_0_0  OBJ       10000
     b_0_0_2_0_0  link_path_mapping_coordination_1_0_0_2_0  -1
     b_0_0_2_0_0  link_path_mapping_coordination_2_0_0_2_0  1
     b_0_0_2_0_0  node_path_mapping_coordination_1_0_0_1  1
     b_0_0_2_0_0  node_path_mapping_coordination_2_0_0_0  1
     b_0_0_2_0_0  bandwidth_overprovisioning_3_0_0  -1
     b_0_0_2_0_0  bandwidth_max_limit_2_0  1
-    b_0_0_2_0_0  minimum_profit  1000
-    b_0_0_3_0_0  OBJ       1000
+    b_0_0_2_0_0  minimum_profit  10000
+    b_0_0_3_0_0  OBJ       10000
     b_0_0_3_0_0  link_path_mapping_coordination_1_0_0_3_0  -1
     b_0_0_3_0_0  link_path_mapping_coordination_2_0_0_3_0  1
     b_0_0_3_0_0  node_path_mapping_coordination_1_0_0_1  1
     b_0_0_3_0_0  node_path_mapping_coordination_2_0_0_1  1
     b_0_0_3_0_0  bandwidth_overprovisioning_3_0_0  -1
     b_0_0_3_0_0  bandwidth_max_limit_3_0  1
-    b_0_0_3_0_0  minimum_profit  1000
-    b_0_0_4_0_0  OBJ       1000
+    b_0_0_3_0_0  minimum_profit  10000
+    b_0_0_4_0_0  OBJ       10000
     b_0_0_4_0_0  link_path_mapping_coordination_1_0_0_4_0  -1
     b_0_0_4_0_0  link_path_mapping_coordination_2_0_0_4_0  1
     b_0_0_4_0_0  node_path_mapping_coordination_1_0_0_2  1
     b_0_0_4_0_0  node_path_mapping_coordination_2_0_0_0  1
     b_0_0_4_0_0  bandwidth_overprovisioning_3_0_0  -1
     b_0_0_4_0_0  bandwidth_max_limit_4_0  1
-    b_0_0_4_0_0  minimum_profit  1000
-    b_0_0_5_0_0  OBJ       1000
+    b_0_0_4_0_0  minimum_profit  10000
+    b_0_0_5_0_0  OBJ       10000
     b_0_0_5_0_0  link_path_mapping_coordination_1_0_0_5_0  -1
     b_0_0_5_0_0  link_path_mapping_coordination_2_0_0_5_0  1
     b_0_0_5_0_0  node_path_mapping_coordination_1_0_0_2  1
     b_0_0_5_0_0  node_path_mapping_coordination_2_0_0_1  1
     b_0_0_5_0_0  bandwidth_overprovisioning_3_0_0  -1
     b_0_0_5_0_0  bandwidth_max_limit_5_0  1
-    b_0_0_5_0_0  minimum_profit  1000
+    b_0_0_5_0_0  minimum_profit  10000
     b_0_0_6_0_0  link_path_mapping_coordination_1_0_0_6_0  -1
     b_0_0_6_0_0  link_path_mapping_coordination_2_0_0_6_0  1
     b_0_0_6_0_0  node_path_mapping_coordination_1_0_0_0  1
@@ -643,24 +643,24 @@ COLUMNS
     b_0_0_7_0_0  node_path_mapping_coordination_1_0_0_1  1
     b_0_0_7_0_0  bandwidth_max_limit_7_0  1
     MARKER    'MARKER'                 'INTORG'
-    a_x1_0_0  OBJ       -1000
+    a_x1_0_0  OBJ       -100
     a_x1_0_0  auxiliary_constraints_10_1_0_0_0  1
     a_x1_0_0  auxiliary_constraints_10_2_0_0  1
     a_x1_0_0  nf_max_isolation_limit_0  1
     a_x1_0_0  nf_regular_isolation_limit_1_0_0  1
-    a_x1_0_0  minimum_profit  -1000
-    a_x1_0_1  OBJ       -1000
+    a_x1_0_0  minimum_profit  -100
+    a_x1_0_1  OBJ       -100
     a_x1_0_1  auxiliary_constraints_10_1_0_1_0  1
     a_x1_0_1  auxiliary_constraints_10_2_0_1  1
     a_x1_0_1  nf_max_isolation_limit_1  1
     a_x1_0_1  nf_regular_isolation_limit_1_0_1  1
-    a_x1_0_1  minimum_profit  -1000
-    a_x1_0_2  OBJ       -1000
+    a_x1_0_1  minimum_profit  -100
+    a_x1_0_2  OBJ       -100
     a_x1_0_2  auxiliary_constraints_10_1_0_2_0  1
     a_x1_0_2  auxiliary_constraints_10_2_0_2  1
     a_x1_0_2  nf_max_isolation_limit_2  1
     a_x1_0_2  nf_regular_isolation_limit_1_0_2  1
-    a_x1_0_2  minimum_profit  -1000
+    a_x1_0_2  minimum_profit  -100
     a_x4_0_0_0  OBJ       0
     a_x4_0_0_1  OBJ       0
     a_x4_0_0_2  OBJ       0
@@ -678,54 +678,54 @@ COLUMNS
     a_y1_0_1  minimum_profit  -2.7777777777777777e+02
     a_y2_0_0_0  OBJ       0
     a_y2_0_0_1  OBJ       0
-    a_z1_0_0  OBJ       -4800
+    a_z1_0_0  OBJ       -480
     a_z1_0_0  auxiliary_constraints_12_1_0_0_0_0  1
     a_z1_0_0  link_max_isolation_limit_0  1
     a_z1_0_0  link_regular_isolation_limit_1_0_0  1
     a_z1_0_0  auxiliary_constraints_12_2_0_0  1
-    a_z1_0_0  minimum_profit  -4800
-    a_z1_0_1  OBJ       -4800
+    a_z1_0_0  minimum_profit  -480
+    a_z1_0_1  OBJ       -480
     a_z1_0_1  auxiliary_constraints_12_1_0_1_0_0  1
     a_z1_0_1  link_max_isolation_limit_1  1
     a_z1_0_1  link_regular_isolation_limit_1_0_1  1
     a_z1_0_1  auxiliary_constraints_12_2_0_1  1
-    a_z1_0_1  minimum_profit  -4800
-    a_z1_0_2  OBJ       -4800
+    a_z1_0_1  minimum_profit  -480
+    a_z1_0_2  OBJ       -480
     a_z1_0_2  auxiliary_constraints_12_1_0_2_0_0  1
     a_z1_0_2  link_max_isolation_limit_2  1
     a_z1_0_2  link_regular_isolation_limit_1_0_2  1
     a_z1_0_2  auxiliary_constraints_12_2_0_2  1
-    a_z1_0_2  minimum_profit  -4800
-    a_z1_0_3  OBJ       -4800
+    a_z1_0_2  minimum_profit  -480
+    a_z1_0_3  OBJ       -480
     a_z1_0_3  auxiliary_constraints_12_1_0_3_0_0  1
     a_z1_0_3  link_max_isolation_limit_3  1
     a_z1_0_3  link_regular_isolation_limit_1_0_3  1
     a_z1_0_3  auxiliary_constraints_12_2_0_3  1
-    a_z1_0_3  minimum_profit  -4800
-    a_z1_0_4  OBJ       -4800
+    a_z1_0_3  minimum_profit  -480
+    a_z1_0_4  OBJ       -480
     a_z1_0_4  auxiliary_constraints_12_1_0_4_0_0  1
     a_z1_0_4  link_max_isolation_limit_4  1
     a_z1_0_4  link_regular_isolation_limit_1_0_4  1
     a_z1_0_4  auxiliary_constraints_12_2_0_4  1
-    a_z1_0_4  minimum_profit  -4800
-    a_z1_0_5  OBJ       -4800
+    a_z1_0_4  minimum_profit  -480
+    a_z1_0_5  OBJ       -480
     a_z1_0_5  auxiliary_constraints_12_1_0_5_0_0  1
     a_z1_0_5  link_max_isolation_limit_5  1
     a_z1_0_5  link_regular_isolation_limit_1_0_5  1
     a_z1_0_5  auxiliary_constraints_12_2_0_5  1
-    a_z1_0_5  minimum_profit  -4800
-    a_z1_0_6  OBJ       -4800
+    a_z1_0_5  minimum_profit  -480
+    a_z1_0_6  OBJ       -480
     a_z1_0_6  auxiliary_constraints_12_1_0_6_0_0  1
     a_z1_0_6  link_max_isolation_limit_6  1
     a_z1_0_6  link_regular_isolation_limit_1_0_6  1
     a_z1_0_6  auxiliary_constraints_12_2_0_6  1
-    a_z1_0_6  minimum_profit  -4800
-    a_z1_0_7  OBJ       -4800
+    a_z1_0_6  minimum_profit  -480
+    a_z1_0_7  OBJ       -480
     a_z1_0_7  auxiliary_constraints_12_1_0_7_0_0  1
     a_z1_0_7  link_max_isolation_limit_7  1
     a_z1_0_7  link_regular_isolation_limit_1_0_7  1
     a_z1_0_7  auxiliary_constraints_12_2_0_7  1
-    a_z1_0_7  minimum_profit  -4800
+    a_z1_0_7  minimum_profit  -480
     a_z2_0_0_0  vp_unique_mapping_0_0  1
     a_z2_0_0_0  auxiliary_constraints_3_1_0_0_0_0  1
     a_z2_0_0_0  auxiliary_constraints_3_2_0_0_0  1
@@ -767,7 +767,7 @@ COLUMNS
     a_z2_0_0_7  auxiliary_constraints_6_3_0_0_7  -10
     a_z2_0_0_7  auxiliary_constraints_8_4_0_0_7  -10
     MARKER    'MARKER'                 'INTEND'
-    a_z3_0_0  OBJ       -1000
+    a_z3_0_0  OBJ       -10000
     a_z3_0_0  auxiliary_constraints_6_3_0_0_7  1
     a_z3_0_0  auxiliary_constraints_7_0_0  1
     a_z3_0_0  auxiliary_constraints_8_1_0_0  1
@@ -779,7 +779,7 @@ COLUMNS
     a_z3_0_0  auxiliary_constraints_8_4_0_0_5  1
     a_z3_0_0  auxiliary_constraints_8_4_0_0_6  1
     a_z3_0_0  auxiliary_constraints_8_4_0_0_7  1
-    a_z3_0_0  minimum_profit  -1000
+    a_z3_0_0  minimum_profit  -10000
     MARKER    'MARKER'                 'INTORG'
     a_z4_0_0  auxiliary_constraints_8_1_0_0  -1000
     a_z4_0_0  auxiliary_constraints_8_4_0_0_0  1000
@@ -870,7 +870,7 @@ COLUMNS
     x_1_0_2   auxiliary_constraints_10_1_1_2_0  -1
     x_1_0_2   auxiliary_constraints_10_2_1_2  -1
     y_1_0_0_0_0  OBJ       0
-    y_1_0_0_0_1  OBJ       1000
+    y_1_0_0_0_1  OBJ       10000
     y_1_0_0_0_1  ru_unique_mapping_1_0  1
     y_1_0_0_0_1  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_1  radio_overprovision_1_0_0  1
@@ -878,8 +878,8 @@ COLUMNS
     y_1_0_0_0_1  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_1  auxiliary_constraints_11_1_1_0_0_0_1  -1
     y_1_0_0_0_1  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_1  minimum_profit  1000
-    y_1_0_0_0_2  OBJ       2000
+    y_1_0_0_0_1  minimum_profit  10000
+    y_1_0_0_0_2  OBJ       20000
     y_1_0_0_0_2  ru_unique_mapping_1_0  1
     y_1_0_0_0_2  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_2  radio_overprovision_1_0_0  2
@@ -887,8 +887,8 @@ COLUMNS
     y_1_0_0_0_2  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_2  auxiliary_constraints_11_1_1_0_0_0_2  -1
     y_1_0_0_0_2  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_2  minimum_profit  2000
-    y_1_0_0_0_3  OBJ       3000
+    y_1_0_0_0_2  minimum_profit  20000
+    y_1_0_0_0_3  OBJ       30000
     y_1_0_0_0_3  ru_unique_mapping_1_0  1
     y_1_0_0_0_3  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_3  radio_overprovision_1_0_0  3
@@ -896,8 +896,8 @@ COLUMNS
     y_1_0_0_0_3  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_3  auxiliary_constraints_11_1_1_0_0_0_3  -1
     y_1_0_0_0_3  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_3  minimum_profit  3000
-    y_1_0_0_0_4  OBJ       4000
+    y_1_0_0_0_3  minimum_profit  30000
+    y_1_0_0_0_4  OBJ       40000
     y_1_0_0_0_4  ru_unique_mapping_1_0  1
     y_1_0_0_0_4  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_4  radio_overprovision_1_0_0  4
@@ -905,8 +905,8 @@ COLUMNS
     y_1_0_0_0_4  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_4  auxiliary_constraints_11_1_1_0_0_0_4  -1
     y_1_0_0_0_4  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_4  minimum_profit  4000
-    y_1_0_0_0_5  OBJ       5000
+    y_1_0_0_0_4  minimum_profit  40000
+    y_1_0_0_0_5  OBJ       50000
     y_1_0_0_0_5  ru_unique_mapping_1_0  1
     y_1_0_0_0_5  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_5  radio_overprovision_1_0_0  5
@@ -914,8 +914,8 @@ COLUMNS
     y_1_0_0_0_5  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_5  auxiliary_constraints_11_1_1_0_0_0_5  -1
     y_1_0_0_0_5  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_5  minimum_profit  5000
-    y_1_0_0_0_6  OBJ       6000
+    y_1_0_0_0_5  minimum_profit  50000
+    y_1_0_0_0_6  OBJ       60000
     y_1_0_0_0_6  ru_unique_mapping_1_0  1
     y_1_0_0_0_6  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_6  radio_overprovision_1_0_0  6
@@ -923,8 +923,8 @@ COLUMNS
     y_1_0_0_0_6  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_6  auxiliary_constraints_11_1_1_0_0_0_6  -1
     y_1_0_0_0_6  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_6  minimum_profit  6000
-    y_1_0_0_0_7  OBJ       7000
+    y_1_0_0_0_6  minimum_profit  60000
+    y_1_0_0_0_7  OBJ       70000
     y_1_0_0_0_7  ru_unique_mapping_1_0  1
     y_1_0_0_0_7  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_7  radio_overprovision_1_0_0  7
@@ -932,8 +932,8 @@ COLUMNS
     y_1_0_0_0_7  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_7  auxiliary_constraints_11_1_1_0_0_0_7  -1
     y_1_0_0_0_7  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_7  minimum_profit  7000
-    y_1_0_0_0_8  OBJ       8000
+    y_1_0_0_0_7  minimum_profit  70000
+    y_1_0_0_0_8  OBJ       80000
     y_1_0_0_0_8  ru_unique_mapping_1_0  1
     y_1_0_0_0_8  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_8  radio_overprovision_1_0_0  8
@@ -941,8 +941,8 @@ COLUMNS
     y_1_0_0_0_8  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_8  auxiliary_constraints_11_1_1_0_0_0_8  -1
     y_1_0_0_0_8  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_8  minimum_profit  8000
-    y_1_0_0_0_9  OBJ       9000
+    y_1_0_0_0_8  minimum_profit  80000
+    y_1_0_0_0_9  OBJ       90000
     y_1_0_0_0_9  ru_unique_mapping_1_0  1
     y_1_0_0_0_9  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_9  radio_overprovision_1_0_0  9
@@ -950,8 +950,8 @@ COLUMNS
     y_1_0_0_0_9  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_9  auxiliary_constraints_11_1_1_0_0_0_9  -1
     y_1_0_0_0_9  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_9  minimum_profit  9000
-    y_1_0_0_0_10  OBJ       10000
+    y_1_0_0_0_9  minimum_profit  90000
+    y_1_0_0_0_10  OBJ       100000
     y_1_0_0_0_10  ru_unique_mapping_1_0  1
     y_1_0_0_0_10  ru_regular_isolation_limit_1_0_0  1
     y_1_0_0_0_10  radio_overprovision_1_0_0  10
@@ -959,7 +959,7 @@ COLUMNS
     y_1_0_0_0_10  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_10  auxiliary_constraints_11_1_1_0_0_0_10  -1
     y_1_0_0_0_10  auxiliary_constraints_11_2_1_0  -1
-    y_1_0_0_0_10  minimum_profit  10000
+    y_1_0_0_0_10  minimum_profit  100000
     y_1_0_0_0_11  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_12  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_13  node_path_mapping_coordination_2_1_0_0  -10000
@@ -1051,7 +1051,7 @@ COLUMNS
     y_1_0_0_0_99  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_0_0_100  node_path_mapping_coordination_2_1_0_0  -10000
     y_1_0_1_0_0  OBJ       0
-    y_1_0_1_0_1  OBJ       1000
+    y_1_0_1_0_1  OBJ       10000
     y_1_0_1_0_1  ru_unique_mapping_1_0  1
     y_1_0_1_0_1  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_1  radio_overprovision_1_0_1  1
@@ -1059,8 +1059,8 @@ COLUMNS
     y_1_0_1_0_1  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_1  auxiliary_constraints_11_1_1_1_0_0_1  -1
     y_1_0_1_0_1  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_1  minimum_profit  1000
-    y_1_0_1_0_2  OBJ       2000
+    y_1_0_1_0_1  minimum_profit  10000
+    y_1_0_1_0_2  OBJ       20000
     y_1_0_1_0_2  ru_unique_mapping_1_0  1
     y_1_0_1_0_2  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_2  radio_overprovision_1_0_1  2
@@ -1068,8 +1068,8 @@ COLUMNS
     y_1_0_1_0_2  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_2  auxiliary_constraints_11_1_1_1_0_0_2  -1
     y_1_0_1_0_2  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_2  minimum_profit  2000
-    y_1_0_1_0_3  OBJ       3000
+    y_1_0_1_0_2  minimum_profit  20000
+    y_1_0_1_0_3  OBJ       30000
     y_1_0_1_0_3  ru_unique_mapping_1_0  1
     y_1_0_1_0_3  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_3  radio_overprovision_1_0_1  3
@@ -1077,8 +1077,8 @@ COLUMNS
     y_1_0_1_0_3  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_3  auxiliary_constraints_11_1_1_1_0_0_3  -1
     y_1_0_1_0_3  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_3  minimum_profit  3000
-    y_1_0_1_0_4  OBJ       4000
+    y_1_0_1_0_3  minimum_profit  30000
+    y_1_0_1_0_4  OBJ       40000
     y_1_0_1_0_4  ru_unique_mapping_1_0  1
     y_1_0_1_0_4  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_4  radio_overprovision_1_0_1  4
@@ -1086,8 +1086,8 @@ COLUMNS
     y_1_0_1_0_4  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_4  auxiliary_constraints_11_1_1_1_0_0_4  -1
     y_1_0_1_0_4  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_4  minimum_profit  4000
-    y_1_0_1_0_5  OBJ       5000
+    y_1_0_1_0_4  minimum_profit  40000
+    y_1_0_1_0_5  OBJ       50000
     y_1_0_1_0_5  ru_unique_mapping_1_0  1
     y_1_0_1_0_5  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_5  radio_overprovision_1_0_1  5
@@ -1095,8 +1095,8 @@ COLUMNS
     y_1_0_1_0_5  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_5  auxiliary_constraints_11_1_1_1_0_0_5  -1
     y_1_0_1_0_5  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_5  minimum_profit  5000
-    y_1_0_1_0_6  OBJ       6000
+    y_1_0_1_0_5  minimum_profit  50000
+    y_1_0_1_0_6  OBJ       60000
     y_1_0_1_0_6  ru_unique_mapping_1_0  1
     y_1_0_1_0_6  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_6  radio_overprovision_1_0_1  6
@@ -1104,8 +1104,8 @@ COLUMNS
     y_1_0_1_0_6  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_6  auxiliary_constraints_11_1_1_1_0_0_6  -1
     y_1_0_1_0_6  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_6  minimum_profit  6000
-    y_1_0_1_0_7  OBJ       7000
+    y_1_0_1_0_6  minimum_profit  60000
+    y_1_0_1_0_7  OBJ       70000
     y_1_0_1_0_7  ru_unique_mapping_1_0  1
     y_1_0_1_0_7  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_7  radio_overprovision_1_0_1  7
@@ -1113,8 +1113,8 @@ COLUMNS
     y_1_0_1_0_7  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_7  auxiliary_constraints_11_1_1_1_0_0_7  -1
     y_1_0_1_0_7  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_7  minimum_profit  7000
-    y_1_0_1_0_8  OBJ       8000
+    y_1_0_1_0_7  minimum_profit  70000
+    y_1_0_1_0_8  OBJ       80000
     y_1_0_1_0_8  ru_unique_mapping_1_0  1
     y_1_0_1_0_8  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_8  radio_overprovision_1_0_1  8
@@ -1122,8 +1122,8 @@ COLUMNS
     y_1_0_1_0_8  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_8  auxiliary_constraints_11_1_1_1_0_0_8  -1
     y_1_0_1_0_8  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_8  minimum_profit  8000
-    y_1_0_1_0_9  OBJ       9000
+    y_1_0_1_0_8  minimum_profit  80000
+    y_1_0_1_0_9  OBJ       90000
     y_1_0_1_0_9  ru_unique_mapping_1_0  1
     y_1_0_1_0_9  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_9  radio_overprovision_1_0_1  9
@@ -1131,8 +1131,8 @@ COLUMNS
     y_1_0_1_0_9  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_9  auxiliary_constraints_11_1_1_1_0_0_9  -1
     y_1_0_1_0_9  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_9  minimum_profit  9000
-    y_1_0_1_0_10  OBJ       10000
+    y_1_0_1_0_9  minimum_profit  90000
+    y_1_0_1_0_10  OBJ       100000
     y_1_0_1_0_10  ru_unique_mapping_1_0  1
     y_1_0_1_0_10  ru_regular_isolation_limit_1_0_1  1
     y_1_0_1_0_10  radio_overprovision_1_0_1  10
@@ -1140,7 +1140,7 @@ COLUMNS
     y_1_0_1_0_10  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_10  auxiliary_constraints_11_1_1_1_0_0_10  -1
     y_1_0_1_0_10  auxiliary_constraints_11_2_1_1  -1
-    y_1_0_1_0_10  minimum_profit  10000
+    y_1_0_1_0_10  minimum_profit  100000
     y_1_0_1_0_11  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_12  node_path_mapping_coordination_2_1_0_1  -10000
     y_1_0_1_0_13  node_path_mapping_coordination_2_1_0_1  -10000
@@ -1288,69 +1288,69 @@ COLUMNS
     z_1_0_7_0  auxiliary_constraints_12_1_1_7_0_0  -1
     z_1_0_7_0  auxiliary_constraints_12_2_1_7  -1
     MARKER    'MARKER'                 'INTEND'
-    c_1_0_0   OBJ       1000
+    c_1_0_0   OBJ       10000
     c_1_0_0   mips_limit_1_1_0_0  -1
     c_1_0_0   mips_limit_2_1_0_0  1
     c_1_0_0   mips_max_limit_1_0  1
-    c_1_0_0   minimum_profit  1000
-    c_1_0_1   OBJ       1000
+    c_1_0_0   minimum_profit  10000
+    c_1_0_1   OBJ       10000
     c_1_0_1   mips_limit_1_1_0_1  -1
     c_1_0_1   mips_limit_2_1_0_1  1
     c_1_0_1   mips_max_limit_1_1  1
-    c_1_0_1   minimum_profit  1000
-    c_1_0_2   OBJ       1000
+    c_1_0_1   minimum_profit  10000
+    c_1_0_2   OBJ       10000
     c_1_0_2   mips_limit_1_1_0_2  -1
     c_1_0_2   mips_limit_2_1_0_2  1
     c_1_0_2   mips_max_limit_1_2  1
-    c_1_0_2   minimum_profit  1000
-    b_1_0_0_0_0  OBJ       1000
+    c_1_0_2   minimum_profit  10000
+    b_1_0_0_0_0  OBJ       10000
     b_1_0_0_0_0  link_path_mapping_coordination_1_1_0_0_0  -1
     b_1_0_0_0_0  link_path_mapping_coordination_2_1_0_0_0  1
     b_1_0_0_0_0  node_path_mapping_coordination_1_1_0_0  1
     b_1_0_0_0_0  node_path_mapping_coordination_2_1_0_0  1
     b_1_0_0_0_0  bandwidth_overprovisioning_3_1_0  -1
     b_1_0_0_0_0  bandwidth_max_limit_0_0  1
-    b_1_0_0_0_0  minimum_profit  1000
-    b_1_0_1_0_0  OBJ       1000
+    b_1_0_0_0_0  minimum_profit  10000
+    b_1_0_1_0_0  OBJ       10000
     b_1_0_1_0_0  link_path_mapping_coordination_1_1_0_1_0  -1
     b_1_0_1_0_0  link_path_mapping_coordination_2_1_0_1_0  1
     b_1_0_1_0_0  node_path_mapping_coordination_1_1_0_0  1
     b_1_0_1_0_0  node_path_mapping_coordination_2_1_0_1  1
     b_1_0_1_0_0  bandwidth_overprovisioning_3_1_0  -1
     b_1_0_1_0_0  bandwidth_max_limit_1_0  1
-    b_1_0_1_0_0  minimum_profit  1000
-    b_1_0_2_0_0  OBJ       1000
+    b_1_0_1_0_0  minimum_profit  10000
+    b_1_0_2_0_0  OBJ       10000
     b_1_0_2_0_0  link_path_mapping_coordination_1_1_0_2_0  -1
     b_1_0_2_0_0  link_path_mapping_coordination_2_1_0_2_0  1
     b_1_0_2_0_0  node_path_mapping_coordination_1_1_0_1  1
     b_1_0_2_0_0  node_path_mapping_coordination_2_1_0_0  1
     b_1_0_2_0_0  bandwidth_overprovisioning_3_1_0  -1
     b_1_0_2_0_0  bandwidth_max_limit_2_0  1
-    b_1_0_2_0_0  minimum_profit  1000
-    b_1_0_3_0_0  OBJ       1000
+    b_1_0_2_0_0  minimum_profit  10000
+    b_1_0_3_0_0  OBJ       10000
     b_1_0_3_0_0  link_path_mapping_coordination_1_1_0_3_0  -1
     b_1_0_3_0_0  link_path_mapping_coordination_2_1_0_3_0  1
     b_1_0_3_0_0  node_path_mapping_coordination_1_1_0_1  1
     b_1_0_3_0_0  node_path_mapping_coordination_2_1_0_1  1
     b_1_0_3_0_0  bandwidth_overprovisioning_3_1_0  -1
     b_1_0_3_0_0  bandwidth_max_limit_3_0  1
-    b_1_0_3_0_0  minimum_profit  1000
-    b_1_0_4_0_0  OBJ       1000
+    b_1_0_3_0_0  minimum_profit  10000
+    b_1_0_4_0_0  OBJ       10000
     b_1_0_4_0_0  link_path_mapping_coordination_1_1_0_4_0  -1
     b_1_0_4_0_0  link_path_mapping_coordination_2_1_0_4_0  1
     b_1_0_4_0_0  node_path_mapping_coordination_1_1_0_2  1
     b_1_0_4_0_0  node_path_mapping_coordination_2_1_0_0  1
     b_1_0_4_0_0  bandwidth_overprovisioning_3_1_0  -1
     b_1_0_4_0_0  bandwidth_max_limit_4_0  1
-    b_1_0_4_0_0  minimum_profit  1000
-    b_1_0_5_0_0  OBJ       1000
+    b_1_0_4_0_0  minimum_profit  10000
+    b_1_0_5_0_0  OBJ       10000
     b_1_0_5_0_0  link_path_mapping_coordination_1_1_0_5_0  -1
     b_1_0_5_0_0  link_path_mapping_coordination_2_1_0_5_0  1
     b_1_0_5_0_0  node_path_mapping_coordination_1_1_0_2  1
     b_1_0_5_0_0  node_path_mapping_coordination_2_1_0_1  1
     b_1_0_5_0_0  bandwidth_overprovisioning_3_1_0  -1
     b_1_0_5_0_0  bandwidth_max_limit_5_0  1
-    b_1_0_5_0_0  minimum_profit  1000
+    b_1_0_5_0_0  minimum_profit  10000
     b_1_0_6_0_0  link_path_mapping_coordination_1_1_0_6_0  -1
     b_1_0_6_0_0  link_path_mapping_coordination_2_1_0_6_0  1
     b_1_0_6_0_0  node_path_mapping_coordination_1_1_0_0  1
@@ -1360,24 +1360,24 @@ COLUMNS
     b_1_0_7_0_0  node_path_mapping_coordination_1_1_0_1  1
     b_1_0_7_0_0  bandwidth_max_limit_7_0  1
     MARKER    'MARKER'                 'INTORG'
-    a_x1_1_0  OBJ       -1000
+    a_x1_1_0  OBJ       -100
     a_x1_1_0  nf_max_isolation_limit_0  1
     a_x1_1_0  nf_regular_isolation_limit_0_0_0  1
     a_x1_1_0  auxiliary_constraints_10_1_1_0_0  1
     a_x1_1_0  auxiliary_constraints_10_2_1_0  1
-    a_x1_1_0  minimum_profit  -1000
-    a_x1_1_1  OBJ       -1000
+    a_x1_1_0  minimum_profit  -100
+    a_x1_1_1  OBJ       -100
     a_x1_1_1  nf_max_isolation_limit_1  1
     a_x1_1_1  nf_regular_isolation_limit_0_0_1  1
     a_x1_1_1  auxiliary_constraints_10_1_1_1_0  1
     a_x1_1_1  auxiliary_constraints_10_2_1_1  1
-    a_x1_1_1  minimum_profit  -1000
-    a_x1_1_2  OBJ       -1000
+    a_x1_1_1  minimum_profit  -100
+    a_x1_1_2  OBJ       -100
     a_x1_1_2  nf_max_isolation_limit_2  1
     a_x1_1_2  nf_regular_isolation_limit_0_0_2  1
     a_x1_1_2  auxiliary_constraints_10_1_1_2_0  1
     a_x1_1_2  auxiliary_constraints_10_2_1_2  1
-    a_x1_1_2  minimum_profit  -1000
+    a_x1_1_2  minimum_profit  -100
     a_x4_1_0_0  OBJ       0
     a_x4_1_0_1  OBJ       0
     a_x4_1_0_2  OBJ       0
@@ -1413,46 +1413,46 @@ COLUMNS
     a_y1_1_1  minimum_profit  -2.7777777777777777e+02
     a_y2_1_0_0  OBJ       0
     a_y2_1_0_1  OBJ       0
-    a_z1_1_0  OBJ       -4800
+    a_z1_1_0  OBJ       -480
     a_z1_1_0  link_max_isolation_limit_0  1
     a_z1_1_0  auxiliary_constraints_12_1_1_0_0_0  1
     a_z1_1_0  auxiliary_constraints_12_2_1_0  1
-    a_z1_1_0  minimum_profit  -4800
-    a_z1_1_1  OBJ       -4800
+    a_z1_1_0  minimum_profit  -480
+    a_z1_1_1  OBJ       -480
     a_z1_1_1  link_max_isolation_limit_1  1
     a_z1_1_1  auxiliary_constraints_12_1_1_1_0_0  1
     a_z1_1_1  auxiliary_constraints_12_2_1_1  1
-    a_z1_1_1  minimum_profit  -4800
-    a_z1_1_2  OBJ       -4800
+    a_z1_1_1  minimum_profit  -480
+    a_z1_1_2  OBJ       -480
     a_z1_1_2  link_max_isolation_limit_2  1
     a_z1_1_2  auxiliary_constraints_12_1_1_2_0_0  1
     a_z1_1_2  auxiliary_constraints_12_2_1_2  1
-    a_z1_1_2  minimum_profit  -4800
-    a_z1_1_3  OBJ       -4800
+    a_z1_1_2  minimum_profit  -480
+    a_z1_1_3  OBJ       -480
     a_z1_1_3  link_max_isolation_limit_3  1
     a_z1_1_3  auxiliary_constraints_12_1_1_3_0_0  1
     a_z1_1_3  auxiliary_constraints_12_2_1_3  1
-    a_z1_1_3  minimum_profit  -4800
-    a_z1_1_4  OBJ       -4800
+    a_z1_1_3  minimum_profit  -480
+    a_z1_1_4  OBJ       -480
     a_z1_1_4  link_max_isolation_limit_4  1
     a_z1_1_4  auxiliary_constraints_12_1_1_4_0_0  1
     a_z1_1_4  auxiliary_constraints_12_2_1_4  1
-    a_z1_1_4  minimum_profit  -4800
-    a_z1_1_5  OBJ       -4800
+    a_z1_1_4  minimum_profit  -480
+    a_z1_1_5  OBJ       -480
     a_z1_1_5  link_max_isolation_limit_5  1
     a_z1_1_5  auxiliary_constraints_12_1_1_5_0_0  1
     a_z1_1_5  auxiliary_constraints_12_2_1_5  1
-    a_z1_1_5  minimum_profit  -4800
-    a_z1_1_6  OBJ       -4800
+    a_z1_1_5  minimum_profit  -480
+    a_z1_1_6  OBJ       -480
     a_z1_1_6  link_max_isolation_limit_6  1
     a_z1_1_6  auxiliary_constraints_12_1_1_6_0_0  1
     a_z1_1_6  auxiliary_constraints_12_2_1_6  1
-    a_z1_1_6  minimum_profit  -4800
-    a_z1_1_7  OBJ       -4800
+    a_z1_1_6  minimum_profit  -480
+    a_z1_1_7  OBJ       -480
     a_z1_1_7  link_max_isolation_limit_7  1
     a_z1_1_7  auxiliary_constraints_12_1_1_7_0_0  1
     a_z1_1_7  auxiliary_constraints_12_2_1_7  1
-    a_z1_1_7  minimum_profit  -4800
+    a_z1_1_7  minimum_profit  -480
     a_z2_1_0_0  vp_unique_mapping_1_0  1
     a_z2_1_0_0  auxiliary_constraints_3_1_1_0_0_0  1
     a_z2_1_0_0  auxiliary_constraints_3_2_1_0_0  1
@@ -1494,7 +1494,7 @@ COLUMNS
     a_z2_1_0_7  auxiliary_constraints_6_3_1_0_7  -10
     a_z2_1_0_7  auxiliary_constraints_8_4_1_0_7  -10
     MARKER    'MARKER'                 'INTEND'
-    a_z3_1_0  OBJ       -1000
+    a_z3_1_0  OBJ       -10000
     a_z3_1_0  auxiliary_constraints_6_3_1_0_7  1
     a_z3_1_0  auxiliary_constraints_7_1_0  1
     a_z3_1_0  auxiliary_constraints_8_1_1_0  1
@@ -1506,7 +1506,7 @@ COLUMNS
     a_z3_1_0  auxiliary_constraints_8_4_1_0_5  1
     a_z3_1_0  auxiliary_constraints_8_4_1_0_6  1
     a_z3_1_0  auxiliary_constraints_8_4_1_0_7  1
-    a_z3_1_0  minimum_profit  -1000
+    a_z3_1_0  minimum_profit  -10000
     MARKER    'MARKER'                 'INTORG'
     a_z4_1_0  auxiliary_constraints_8_1_1_0  -1000
     a_z4_1_0  auxiliary_constraints_8_4_1_0_0  1000
@@ -1519,7 +1519,7 @@ COLUMNS
     a_z4_1_0  auxiliary_constraints_8_4_1_0_7  1000
     MARKER    'MARKER'                 'INTEND'
 RHS
-    RHS1      OBJ       19993200
+    RHS1      OBJ       200128569
     RHS1      nf_unique_mapping_0_0  1
     RHS1      ru_unique_mapping_0_0  1
     RHS1      radio_overprovision_0_0_0  1
@@ -1618,7 +1618,7 @@ RHS
     RHS1      auxiliary_constraints_8_4_1_0_5  999.9
     RHS1      auxiliary_constraints_8_4_1_0_6  999.9
     RHS1      auxiliary_constraints_8_4_1_0_7  999.9
-    RHS1      minimum_profit  1.9997122222222224e+07
+    RHS1      minimum_profit  2.0012937622222221e+08
 BOUNDS
  BV BND1      a_x2_0_0
  BV BND1      a_x2_0_1

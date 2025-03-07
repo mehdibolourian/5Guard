@@ -206,7 +206,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     
                                 found = 1
                                 break
-                            elif (q_sel == 0) and (k == 1) and (V_P_R_REM.index(q) == (len(V_P_R_REM) - 1)) and (f == (len(q.Pi_MAX) - 1)):
+                            elif (q_sel == 0) and (k == 1) and (V_P_R_REM_TMP.index(q) == (len(V_P_R_REM_TMP) - 1)) and (f == (len(q.Pi_MAX) - 1)):
                                 print(f"infeasible: Checked all possible NR-BSs. No remaining NR-BS for mapping RU {w_sel} of SR {r_sel}")
                                 feasible = 0
                                 reject_opt[r_t.gamma] = 1
@@ -323,8 +323,6 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 E_P_REM = [e_p for e_p in E_P_REM if (e_p in E_P_DEL) == 0]
 
     end_time1 = time.perf_counter()
-
-    print(f"end_time1-start_time1:{(end_time1-start_time1)}")
     
     #print(f"x={x}")
     #print(f"y={y}")
@@ -343,7 +341,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                    for idx_e_p in range(len_E_P)]
                   for idx_e in range(len_E)])
 
-        m.setParam('Threads', 4)
+        m.setParam('Threads', THREADS)
         
         m.update()
 
@@ -838,7 +836,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                   for idx_l, l in enumerate(L)
                                   for s in range(S_MAX)
                                  )
-                + sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * (h_VM_L0[idx_p] - 1)
+                + sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
                                            + sys.C_HHO * max((x[idx_r][idx_v][idx_p] * (r.gamma <= 1)
                                                              for idx_r, r in enumerate(reqs)
                                                              for idx_v, v in enumerate(r.V_S))
@@ -860,12 +858,14 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                  )
                 )
 
+        print(f"g_ovhb:{g_ovh}")
+
         if len_R >= 2:
             constraint_to_remove = m.getConstrByName(f"minimum_profit")
             if constraint_to_remove is not None:
                 m.remove(constraint_to_remove)
 
-        # Eq. 32
+        # Eq. 38
         m.addConstr(
             (
                 (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
@@ -898,6 +898,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             # Get the optimal values of variables
             vars_opt = {var.varName: var.x for var in m.getVars()}
 
+            ############################## Violation Costs ##############################
             h_B_h_1 = [[(sys.Psi_HDR*(r.gamma == 0) - 1)*sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
                                                              for idx_e_p, e_p in enumerate(E_P)
                                                              if  (e_p.p in V_P_S) and (e_p.q in V_P_S)
@@ -976,6 +977,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             g_vio_opt = g_D_opt + g_C_opt + g_K_opt + g_B_opt
 
 
+            ############################## Deployment Costs ##############################
             g_dep_K_opt = (sys.Phi * sum(k * y[idx_r][idx_w][idx_q][f][k]
                                         for idx_r, r in enumerate(reqs)
                                         if  r.gamma < 2
@@ -1030,39 +1032,6 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         )
             
             g_dep_opt = g_dep_K_opt + g_dep_B_opt + g_dep_C_opt
-
-            g_ovh_C_opt = ( sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
-                                                   + sys.C_HHO * max((x[idx_r][idx_v][idx_p] * (r.gamma <= 1)
-                                                                     for idx_r, r in enumerate(reqs)
-                                                                     for idx_v, v in enumerate(r.V_S))
-                                                                    , default=0)
-                                                   + sys.C_GOS * gp.quicksum(v.Xi_REQ * x[idx_r][idx_v][idx_p]
-                                                                             for idx_r, r in enumerate(reqs)
-                                                                             if r.gamma == 1
-                                                                             for idx_v, v in enumerate(r.V_S)
-                                                                            )
-                                                  for idx_p, p in enumerate(V_P_S)
-                                                 )
-                         )
-
-            g_ovh_K_opt = ( sys.Phi * sum(sys.Pi_FGB * y[idx_r][idx_w][idx_q][f][k]
-                                          for idx_r, r in enumerate(reqs)
-                                          if  r.gamma == 1
-                                          for idx_w, w in enumerate(r.V_R)
-                                          for idx_q, q in enumerate(V_P_R)
-                                          for f in range(len(q.Pi_MAX))
-                                          for k in range(K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
-                                         )
-                          )
-
-            g_ovh_B_opt = ( sys.Theta * sum(z[idx_r][idx_e][idx_l][s] * sys.B_WGB
-                                                for idx_r, r in enumerate(reqs)
-                                                if r.gamma == 1
-                                                for idx_e, e in enumerate(r.E)
-                                                for idx_l, l in enumerate(L)
-                                                for s in range(S_MAX)
-                                               )
-                              )
     
             g_mig_opt = g_mig
 
@@ -1129,7 +1098,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             for idx_r, r in enumerate(reqs)
                             for idx_w, w in enumerate(r.V_R)
                            ) * sys.Phi
-            g_res_K_opt = min([sum_K_REQ / (g_dep_K_opt + g_ovh_K_opt), 1]) * 100
+            g_res_K_opt = min([sum_K_REQ / (g_dep_K_opt + g_ovh_K_opt) if (g_dep_K_opt + g_ovh_K_opt) != 0 else float('inf'), 1]) * 100
     
             sum_B_REQ = sum(B_REQ_EFF[idx_r][idx_e]
                             for idx_r, r     in enumerate(reqs)
@@ -1140,13 +1109,13 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                    for s            in range(len(l.B_MAX))
                                   ) != 0
                                ) * sys.Theta
-            g_res_B_opt = min([sum_B_REQ / (g_dep_B_opt + g_ovh_B_opt), 1]) * 100
+            g_res_B_opt = min([sum_B_REQ / (g_dep_B_opt + g_ovh_B_opt) if (g_dep_B_opt + g_ovh_B_opt) != 0 else float('inf'), 1]) * 100
     
             sum_C_REQ = sum(v.C_REQ
                             for idx_r, r in enumerate(reqs)
                             for idx_v, v in enumerate(r.V_S)
                            ) * sys.Omega
-            g_res_C_opt = min([sum_C_REQ / (g_dep_C_opt + g_ovh_C_opt), 1]) * 100
+            g_res_C_opt = min([sum_C_REQ / (g_dep_C_opt + g_ovh_C_opt) if (g_dep_C_opt + g_ovh_C_opt) != 0 else float('inf'), 1]) * 100
             
             g_res_opt = (g_res_K_opt + g_res_B_opt + g_res_C_opt) / 3
 

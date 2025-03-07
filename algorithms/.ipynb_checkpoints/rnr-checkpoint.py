@@ -16,7 +16,6 @@ def run_with_timeout(timeout, func, *args, **kwargs):
             raise TimeoutException("Timeout reached!")
 
 def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr, X_t, Y_t):
-    #reqs_lp_t = []
     reqs = R_t.copy()
     
     len_R      = len(reqs)
@@ -242,7 +241,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     a_z4.append([m.addVar(name=f"a_z4_{len_R-1}_{idx_e}", vtype=gp.GRB.CONTINUOUS, ub=1)
                  for idx_e in range(len_E)])
 
-    m.setParam('Threads', 4)
+    m.setParam('Threads', THREADS)
     m.update()
     
     ## Constraints
@@ -1077,7 +1076,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_l, l in enumerate(L)
                                       for s in range(S_MAX)
                                      )
-            + sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * (h_VM_L0[idx_p] - 1)
+            + sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
                                        + sys.C_HHO * a_x3[idx_p]
                                        + sys.C_GOS * gp.quicksum(v.Xi_REQ * x[idx_r][idx_v][idx_p]
                                                                  for idx_r, r in enumerate(reqs)
@@ -1126,7 +1125,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         if constraint_to_remove is not None:
             m.remove(constraint_to_remove)
             
-    # Eq. 32
+    # Eq. 38
     m.addConstr(
         (
             (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
@@ -1144,7 +1143,6 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     try:
         m = run_with_timeout(r_t.timeout, timeout_optimize, m)
     except TimeoutException as e:
-        print(e)
         timeout = 1
 
     status = m.status
@@ -1182,6 +1180,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             for idx_v, v in enumerate(r.V_S):
                 for idx_p, p in enumerate(V_P_S):
                     vars_opt["c_{}_{}_{}".format(idx_r,idx_v,idx_p)] = c_opt[idx_r][idx_v][idx_p]
+                    vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)] = x_opt[idx_r][idx_v][idx_p]
         
         y_opt_lp = [[[[[vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                         for k in range(K_REQ_EFF[idx_r][idx_w] + 1)]
@@ -1244,6 +1243,12 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     s_sel    = int(ls_sel - l_sel * S_MAX)
                     
                     z_opt[idx_r][idx_e][l_sel][s_sel] = 1
+
+        for idx_r,r in enumerate(reqs):
+            for idx_e, e in enumerate(r.E):
+                for idx_l, l in enumerate(L):
+                    for s in range(S_MAX):
+                        vars_opt["z_{}_{}_{}_{}".format(idx_r,idx_e,idx_l,s)] = z_opt[idx_r][idx_e][idx_l][s]
         
         for idx_r,r in enumerate(reqs):
             for idx_e, e in enumerate(r.E):
@@ -1424,8 +1429,8 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         for idx_w, w in enumerate(r.V_R)
                         for idx_q, q in enumerate(V_P_R)
                        )
-
-        h_VM_L0 = [math.ceil(sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
+        
+        h_VM_L0_um = [sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                        for idx_r, r in enumerate(reqs)
                        for idx_v, v in enumerate(r.V_S)
                        for xi       in range(v.Xi_REQ)
@@ -1438,7 +1443,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                           for idx_r, r in enumerate(reqs)
                           for idx_v, v in enumerate(r.V_S)
                           if (r.gamma == 0) and (r.kappa == 1)
-                         ) / p.Xi_MAX[0])
+                         ) / p.Xi_MAX[0] + 1
                    ## Plus 1 is the approximation of the ceiling function
                    for idx_p, p in enumerate(V_P_S)
                   ]
@@ -1447,7 +1452,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             for idx_r, r in enumerate(reqs)
                             for idx_v, v in enumerate(r.V_S)
                            ) 
-                        + (sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
+                        + (sys.C_K8S + sys.C_GOS) * h_VM_L0_um[idx_p]
                         + sys.C_HHO * vars_opt["a_x3_{}".format(idx_p)]
                         + sys.C_GOS * sum(v.Xi_REQ * vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                                           for idx_r, r in enumerate(reqs)
@@ -1458,7 +1463,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         for idx_p, p in enumerate(V_P_S)
                        )
 
-        constr[5] = all(h_VM_L0[idx_p]
+        constr[5] = all(h_VM_L0_um[idx_p]
                         + sum(v.Xi_REQ * vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                               for idx_r, r in enumerate(reqs)
                               if r.gamma == 1
@@ -1623,7 +1628,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                           for idx_r, r in enumerate(reqs)
                           for idx_v, v in enumerate(r.V_S)
                          )
-            g_K_opt = max((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
+            g_K_opt = sum((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                                for idx_q, q in enumerate(V_P_R)
                                                                for f in range(len(q.Pi_MAX))
                                                                for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
@@ -1789,7 +1794,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             for idx_r, r in enumerate(reqs)
                             for idx_w, w in enumerate(r.V_R)
                            ) * sys.Phi
-            g_res_K_opt = min([sum_K_REQ / (g_dep_K_opt + g_ovh_K_opt), 1]) * 100
+            g_res_K_opt = min([sum_K_REQ / (g_dep_K_opt + g_ovh_K_opt) if (g_dep_K_opt + g_ovh_K_opt) != 0 else float('inf'), 1]) * 100
     
             sum_B_REQ = sum(B_REQ_EFF[idx_r][idx_e]
                             for idx_r, r     in enumerate(reqs)
@@ -1800,13 +1805,13 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                    for s            in range(len(l.B_MAX))
                                   ) != 0
                                ) * sys.Theta
-            g_res_B_opt = min([sum_B_REQ / (g_dep_B_opt + g_ovh_B_opt), 1]) * 100
+            g_res_B_opt = min([sum_B_REQ / (g_dep_B_opt + g_ovh_B_opt) if (g_dep_B_opt + g_ovh_B_opt) != 0 else float('inf'), 1]) * 100
     
             sum_C_REQ = sum(v.C_REQ
                             for idx_r, r in enumerate(reqs)
                             for idx_v, v in enumerate(r.V_S)
                            ) * sys.Omega
-            g_res_C_opt = min([sum_C_REQ / (g_dep_C_opt + g_ovh_C_opt), 1]) * 100
+            g_res_C_opt = min([sum_C_REQ / (g_dep_C_opt + g_ovh_C_opt) if (g_dep_C_opt + g_ovh_C_opt) != 0 else float('inf'), 1]) * 100
             
             g_res_opt = (g_res_K_opt + g_res_B_opt + g_res_C_opt) / 3
             

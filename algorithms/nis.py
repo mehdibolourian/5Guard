@@ -16,7 +16,9 @@ def run_with_timeout(timeout, func, *args, **kwargs):
             raise TimeoutException("Timeout reached!")
 
 def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr, X_t, Y_t):
-    #reqs_lp_t = []
+    offset = 0
+    scale  = 2
+    
     reqs = R_t.copy()
     
     len_R      = len(reqs)
@@ -69,10 +71,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
     ############## 5G-INS ##############
     # Create Optimization Model
-    if f_fgr:
-        m = gp.read(f'saved_model/model_backup_fgr_nis_{iter}.mps')
-    else:
-        m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
+    m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
 
     ##  Main Variables
     #   Only append the variable for the incoming SR and reuse the other variables from the last instance of the problem
@@ -218,7 +217,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     a_z4.append([m.addVar(name=f"a_z4_{len_R-1}_{idx_e}", vtype=gp.GRB.BINARY)
                  for idx_e in range(len_E)])
 
-    m.setParam('Threads', 4)
+    m.setParam('Threads', THREADS)
     
     m.update()
     
@@ -820,7 +819,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             )
 
     # Overhead Cost
-    g_ovh = ( sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * (h_VM_L0[idx_p] - 1)
+    g_ovh = ( sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
                                        + sys.C_HHO * a_x3[idx_p]
                                       for idx_p, p in enumerate(V_P_S)
                                      )
@@ -851,25 +850,25 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                          )
             )
 
+
+    cost = ( sys.Theta  * sum(e.B_REQ for r in reqs for idx_e, e in enumerate(r.E))
+            + sys.Omega * sum(v.C_REQ + (sys.C_K8S + sys.C_GOS)*v.Xi_REQ/110 + sys.C_HHO*v.Xi_REQ/110/60 for r in reqs for idx_v, v in enumerate(r.V_S))
+            + sys.Phi   * sum(w.K_REQ for r in reqs for idx_w, w in enumerate(r.V_R))
+           )
+    revenue = int(cost * scale) + offset
+
     if len_R >= 2:
         constraint_to_remove = m.getConstrByName(f"minimum_profit")
         if constraint_to_remove is not None:
             m.remove(constraint_to_remove)
-    if t >= 1:
-        # Eq. 32
-        m.addConstr(
-            (
-                (sum(500 for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
-            ), name="minimum_profit"
-        )
-    else:
-        m.addConstr(
-            (
-                sum(500 for r in reqs) - g_dep - g_vio - g_mig - g_ovh >= P_min
-            ), name="minimum_profit"
-        )
+    # Eq. 38
+    m.addConstr(
+        (
+            (revenue - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
+        ), name="minimum_profit"
+    )
     
-    m.setObjective(sum(500 for r in reqs)- g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
+    m.setObjective(revenue - g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
 
     # Start the timer
     start_time = time.perf_counter()
@@ -878,7 +877,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     try:
         m = run_with_timeout(r_t.timeout, timeout_optimize, m)
     except TimeoutException as e:
-        #print(e)
         timeout = 1
 
     status = m.status
@@ -937,7 +935,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                       for idx_r, r in enumerate(reqs)
                       for idx_v, v in enumerate(r.V_S)
                      )
-        g_K_opt = max((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
+        g_K_opt = sum((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                            for idx_q, q in enumerate(V_P_R)
                                                            for f in range(len(q.Pi_MAX))
                                                            for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
@@ -1036,15 +1034,15 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                               )
 
         ############################## Overhead Costs ##############################
-        h_VM_L0 = [sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
+        h_VM_L0 = [math.ceil(sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                        for idx_r, r in enumerate(reqs)
                        for idx_v, v in enumerate(r.V_S)
                        for xi       in range(v.Xi_REQ)
-                       if  (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
+                       if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
                       ) / p.Xi_MAX[0]
                  + sum(vars_opt["a_x2_{}_{}".format(idx_p,chi)]
                        for chi in range(sys.CHI_MAX)
-                      ) / p.Xi_MAX[0] + 1
+                      ) / p.Xi_MAX[0])
                   ## Plus 1 is the approximation of the ceiling function
                   for idx_p, p in enumerate(V_P_S)
                  ]
@@ -1053,7 +1051,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
         g_ovh_B_opt = 0
 
-        g_ovh_C_opt = sum( sys.Omega * ((sys.C_K8S + sys.C_GOS) * (h_VM_L0[idx_p] - 1)
+        g_ovh_C_opt = sum( sys.Omega * ((sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
                                            + sys.C_HHO * vars_opt["a_x3_{}".format(idx_p)]
                                           )
                              for idx_p, p in enumerate(V_P_S)
@@ -1061,41 +1059,12 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
         g_ovh_opt = g_ovh_K_opt + g_ovh_B_opt + g_ovh_C_opt
 
-        g_sum_1_opt = sum(vars_opt["a_x2_{}_{}".format(idx_p,chi)]
-                          for idx_p, p in enumerate(V_P_S)
-                          for chi      in range(sys.CHI_MAX)
-                         )
-        g_sum_2_opt = sum(vars_opt["a_x3_{}".format(idx_p)]
-                          for idx_p, p in enumerate(V_P_S)
-                         )
-        g_sum_3_opt = sum(vars_opt["a_x4_{}_{}_{}".format(idx_r,idx_e,idx_p)]
-                          for idx_r, r in enumerate(reqs)
-                          for idx_e, e in enumerate(r.E)
-                          if  (e.v in r.V_S) and (e.w in r.V_S)
-                          for idx_p, p in enumerate(V_P_S)
-                         )
-        g_sum_4_opt = sum(vars_opt["a_y2_{}_{}_{}".format(idx_r,idx_e,idx_q)]
-                          for idx_q, q in enumerate(V_P_R)
-                          for idx_r, r in enumerate(reqs)
-                          for idx_e, e in enumerate(r.E)
-                          if  (e.v in r.V_R) and (e.w in r.V_R)
-                         )
-        g_sum_5_opt = sum(vars_opt["a_z2_{}_{}_{}".format(idx_r,idx_e,idx_e_p)]
-                          for idx_r,   r   in enumerate(reqs)
-                          for idx_e,   e   in enumerate(r.E)
-                          for idx_e_p, e_p in enumerate(E_P)
-                         )
-        g_sum_6_opt = sum(vars_opt["a_z3_{}_{}".format(idx_r,idx_e)]
-                          for idx_r, r in enumerate(reqs)
-                          for idx_e, e in enumerate(r.E)
-                         )
-
         ############################## Resource Efficiency ##############################
         sum_K_REQ = sum(K_REQ_EFF[idx_r][idx_w]
                         for idx_r, r in enumerate(reqs)
                         for idx_w, w in enumerate(r.V_R)
                        ) * sys.Phi
-        g_res_K_opt = min([sum_K_REQ / (g_dep_K_opt + g_ovh_K_opt), 1]) * 100
+        g_res_K_opt = min([sum_K_REQ / (g_dep_K_opt + g_ovh_K_opt) if (g_dep_K_opt + g_ovh_K_opt) != 0 else float('inf'), 1]) * 100
 
         sum_B_REQ = sum(B_REQ_EFF[idx_r][idx_e]
                         for idx_r, r     in enumerate(reqs)
@@ -1106,17 +1075,17 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                for s            in range(len(l.B_MAX))
                               ) != 0
                            ) * sys.Theta
-        g_res_B_opt = min([sum_B_REQ / (g_dep_B_opt + g_ovh_B_opt), 1]) * 100
+        g_res_B_opt = min([sum_B_REQ / (g_dep_B_opt + g_ovh_B_opt) if (g_dep_B_opt + g_ovh_B_opt) != 0 else float('inf'), 1]) * 100
 
         sum_C_REQ = sum(v.C_REQ
                         for idx_r, r in enumerate(reqs)
                         for idx_v, v in enumerate(r.V_S)
                        ) * sys.Omega
-        g_res_C_opt = min([sum_C_REQ / (g_dep_C_opt + g_ovh_C_opt), 1]) * 100
+        g_res_C_opt = min([sum_C_REQ / (g_dep_C_opt + g_ovh_C_opt) if (g_dep_C_opt + g_ovh_C_opt) != 0 else float('inf'), 1]) * 100
         
         g_res_opt = (g_res_K_opt + g_res_B_opt + g_res_C_opt) / 3
         
-        profit = sum(500 for r in reqs) - g_dep_opt - g_vio_opt - g_mig_opt - g_ovh_opt #m.objVal
+        profit = revenue - g_dep_opt - g_vio_opt - g_mig_opt - g_ovh_opt #m.objVal
 
         n_mig_opt = sum(sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                             for idx_p, p in enumerate(V_P_S)
@@ -1182,10 +1151,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         reqs.pop()
         len_R = len(reqs)
 
-        if f_fgr:
-            m = gp.read(f'saved_model/model_backup_fgr_nis_{iter}.mps')
-        else:
-            m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
+        m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
         m.update()
 
     # Stop the timer
@@ -1201,10 +1167,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             reqs.pop()
             len_R = len(reqs)
             
-            if f_fgr:
-                m = gp.read(f'saved_model/model_backup_fgr_nis_{iter}.mps')
-            else:
-                m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
+            m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
             m.update()
 
     if feasible:
@@ -1240,9 +1203,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
 
     m.update()
-    if f_fgr:
-        m.write(f'saved_model/model_backup_fgr_nis_{iter}.mps')
-    else:
-        m.write(f'saved_model/model_backup_nis_{iter}.mps')
+    m.write(f'saved_model/model_backup_nis_{iter}.mps')
 
     return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs], X_t, Y_t

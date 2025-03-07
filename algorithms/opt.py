@@ -16,7 +16,6 @@ def run_with_timeout(timeout, func, *args, **kwargs):
             raise TimeoutException("Timeout reached!")
 
 def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr, X_t, Y_t):
-    #reqs_lp_t = []
     reqs = R_t.copy()
     
     len_R      = len(reqs)
@@ -242,7 +241,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     a_z4.append([m.addVar(name=f"a_z4_{len_R-1}_{idx_e}", vtype=gp.GRB.BINARY)
                  for idx_e in range(len_E)])
 
-    m.setParam('Threads', 4)
+    m.setParam('Threads', THREADS)
     m.update()
     
     ## Constraints
@@ -1077,7 +1076,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_l, l in enumerate(L)
                                       for s in range(S_MAX)
                                      )
-            + sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * (h_VM_L0[idx_p] - 1)
+            + sys.Omega * gp.quicksum((sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
                                        + sys.C_HHO * a_x3[idx_p]
                                        + sys.C_GOS * gp.quicksum(v.Xi_REQ * x[idx_r][idx_v][idx_p]
                                                                  for idx_r, r in enumerate(reqs)
@@ -1126,7 +1125,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         if constraint_to_remove is not None:
             m.remove(constraint_to_remove)
 
-    # Eq. 32
+    # Eq. 38
     m.addConstr(
         (
             (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
@@ -1134,7 +1133,6 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     )
     
     m.setObjective(sum(r.R for r in reqs)- g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
-    #m.setObjective(sum(r.R for r in reqs), GRB.MAXIMIZE)
 
     # Start the timer
     start_time = time.perf_counter()
@@ -1143,7 +1141,6 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     try:
         m = run_with_timeout(r_t.timeout, timeout_optimize, m)
     except TimeoutException as e:
-        #print(e)
         timeout = 1
 
     status = m.status
@@ -1152,15 +1149,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     if (status == gp.GRB.OPTIMAL) and (timeout == 0):
         # Get the optimal values of variables
         vars_opt = {var.varName: var.x for var in m.getVars()}
-        
-#         for idx_r, r in enumerate(reqs):
-#             for idx_w, w in enumerate(r.V_R):
-#                 for idx_q, q in enumerate(V_P_R):
-#                     for f in range(len(q.Pi_MAX)):
-#                         for k in range(K_REQ_EFF[idx_r][idx_w] + 1):
-#                             print(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)])
                                       
-
         ############################## Deployment Costs ##############################
         g_dep_K_opt = (sys.Phi   * sum(k * vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                       for idx_r, r in enumerate(reqs)
@@ -1230,7 +1219,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                       for idx_r, r in enumerate(reqs)
                       for idx_v, v in enumerate(r.V_S)
                      )
-        g_K_opt = max((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
+        g_K_opt = sum((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                            for idx_q, q in enumerate(V_P_R)
                                                            for f in range(len(q.Pi_MAX))
                                                            for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
@@ -1347,6 +1336,24 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                   for idx_p, p in enumerate(V_P_S)
                  ]
 
+        h_VM_L0tmp = [sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
+                       for idx_r, r in enumerate(reqs)
+                       for idx_v, v in enumerate(r.V_S)
+                       for xi       in range(v.Xi_REQ)
+                       if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
+                      ) / p.Xi_MAX[0]
+                 + sum(vars_opt["a_x2_{}_{}".format(idx_p,chi)]
+                       for chi in range(sys.CHI_MAX)
+                      ) / p.Xi_MAX[0]
+                 + sum(v.Xi_REQ * vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
+                       for idx_r, r in enumerate(reqs)
+                       for idx_v, v in enumerate(r.V_S)
+                       if (r.gamma == 0) and (r.kappa == 1)
+                      ) / p.Xi_MAX[0]
+                  ## Plus 1 is the approximation of the ceiling function
+                  for idx_p, p in enumerate(V_P_S)
+                 ]
+
         g_ovh_K_opt = (sys.Phi   * sum(sys.Pi_FGB * vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                       for idx_r, r in enumerate(reqs)
                                       if  r.gamma == 1
@@ -1379,41 +1386,12 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
         g_ovh_opt = g_ovh_K_opt + g_ovh_B_opt + g_ovh_C_opt
 
-        g_sum_1_opt = sum(vars_opt["a_x2_{}_{}".format(idx_p,chi)]
-                          for idx_p, p in enumerate(V_P_S)
-                          for chi      in range(sys.CHI_MAX)
-                         )
-        g_sum_2_opt = sum(vars_opt["a_x3_{}".format(idx_p)]
-                          for idx_p, p in enumerate(V_P_S)
-                         )
-        g_sum_3_opt = sum(vars_opt["a_x4_{}_{}_{}".format(idx_r,idx_e,idx_p)]
-                          for idx_r, r in enumerate(reqs)
-                          for idx_e, e in enumerate(r.E)
-                          if  (e.v in r.V_S) and (e.w in r.V_S)
-                          for idx_p, p in enumerate(V_P_S)
-                         )
-        g_sum_4_opt = sum(vars_opt["a_y2_{}_{}_{}".format(idx_r,idx_e,idx_q)]
-                          for idx_q, q in enumerate(V_P_R)
-                          for idx_r, r in enumerate(reqs)
-                          for idx_e, e in enumerate(r.E)
-                          if  (e.v in r.V_R) and (e.w in r.V_R)
-                         )
-        g_sum_5_opt = sum(vars_opt["a_z2_{}_{}_{}".format(idx_r,idx_e,idx_e_p)]
-                          for idx_r,   r   in enumerate(reqs)
-                          for idx_e,   e   in enumerate(r.E)
-                          for idx_e_p, e_p in enumerate(E_P)
-                         )
-        g_sum_6_opt = sum(vars_opt["a_z3_{}_{}".format(idx_r,idx_e)]
-                          for idx_r, r in enumerate(reqs)
-                          for idx_e, e in enumerate(r.E)
-                         )
-
         ############################## Resource Efficiency ##############################
         sum_K_REQ = sum(K_REQ_EFF[idx_r][idx_w]
                         for idx_r, r in enumerate(reqs)
                         for idx_w, w in enumerate(r.V_R)
                        ) * sys.Phi
-        g_res_K_opt = min([sum_K_REQ / (g_dep_K_opt + g_ovh_K_opt), 1]) * 100
+        g_res_K_opt = min([sum_K_REQ / (g_dep_K_opt + g_ovh_K_opt) if (g_dep_K_opt + g_ovh_K_opt) != 0 else float('inf'), 1]) * 100
 
         sum_B_REQ = sum(B_REQ_EFF[idx_r][idx_e]
                         for idx_r, r     in enumerate(reqs)
@@ -1424,13 +1402,13 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                for s            in range(len(l.B_MAX))
                               ) != 0
                            ) * sys.Theta
-        g_res_B_opt = min([sum_B_REQ / (g_dep_B_opt + g_ovh_B_opt), 1]) * 100
+        g_res_B_opt = min([sum_B_REQ / (g_dep_B_opt + g_ovh_B_opt) if (g_dep_B_opt + g_ovh_B_opt) != 0 else float('inf'), 1]) * 100
 
         sum_C_REQ = sum(v.C_REQ
                         for idx_r, r in enumerate(reqs)
                         for idx_v, v in enumerate(r.V_S)
                        ) * sys.Omega
-        g_res_C_opt = min([sum_C_REQ / (g_dep_C_opt + g_ovh_C_opt), 1]) * 100
+        g_res_C_opt = min([sum_C_REQ / (g_dep_C_opt + g_ovh_C_opt) if (g_dep_C_opt + g_ovh_C_opt) != 0 else float('inf'), 1]) * 100
         
         g_res_opt = (g_res_K_opt + g_res_B_opt + g_res_C_opt) / 3
         
@@ -1483,6 +1461,20 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         deploy_opt[1] = g_dep_K_opt
         deploy_opt[2] = g_dep_B_opt
         deploy_opt[3] = g_dep_C_opt
+
+        k_alloc = sum(k * vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
+                      for idx_r, r in enumerate(reqs)
+                      if  r.gamma < 2
+                      for idx_w, w in enumerate(r.V_R)
+                      for idx_q, q in enumerate(V_P_R)
+                      for f in range(len(q.Pi_MAX))
+                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                     )
+        k_req = sum(K_REQ_EFF[idx_r][idx_w]
+                      for idx_r, r in enumerate(reqs)
+                      if  r.gamma < 2
+                      for idx_w, w in enumerate(r.V_R)
+                     )
         
         overhe_opt[0] = g_ovh_opt
         overhe_opt[1] = g_ovh_K_opt
@@ -1525,38 +1517,38 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 m = gp.read(f'saved_model/model_backup_opt_{iter}.mps')
             m.update()
 
-    if f_fgr == 0:
-        if feasible:
-            data = [
-                ["Algorithm", "OPT"],
-                ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
-                ["Profit", profit],
-                ["Allocation Time", time_opt],
-            ]
-            if g_D_opt:
-                data.append(["Delay Cost", g_D_opt])
-            if g_K_opt:
-                data.append(["Radio Violation Cost", g_K_opt])
-            if g_C_opt:
-                data.append(["MIPS Violation Cost", g_C_opt])
-            if g_B_1_opt or g_B_2_opt or g_B_3_opt:
-                data.append(["Bandwidth Violation Costs", f"{g_B_1_opt}, {g_B_2_opt}, {g_B_3_opt}"])
-            if g_mig_opt:
-                data.append(["Migration Cost", g_mig_opt])
-            if g_ovh_opt:
-                data.append(["Overhead Cost", g_ovh_opt])
+    #if f_fgr == 0:
+    if feasible:
+        data = [
+            ["Algorithm", "OPT"],
+            ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
+            ["Profit", profit],
+            ["Allocation Time", time_opt],
+        ]
+        if g_D_opt:
+            data.append(["Delay Cost", g_D_opt])
+        if g_K_opt:
+            data.append(["Radio Violation Cost", g_K_opt])
+        if g_C_opt:
+            data.append(["MIPS Violation Cost", g_C_opt])
+        if g_B_1_opt or g_B_2_opt or g_B_3_opt:
+            data.append(["Bandwidth Violation Costs", f"{g_B_1_opt}, {g_B_2_opt}, {g_B_3_opt}"])
+        if g_mig_opt:
+            data.append(["Migration Cost", g_mig_opt])
+        if g_ovh_opt:
+            data.append(["Overhead Cost", f"{g_ovh_opt}, {g_ovh_K_opt}, {g_ovh_B_opt}, {g_ovh_C_opt}"])
 
-            data.append(["Deployment Cost", g_dep_opt])
-        else:
-            data = [
-                ["Algorithm", "OPT"],
-                ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
-                ["Allocation Time", time_opt],
-                ["Feasible", feasible],
-                ["Timeout", timeout]
-            ]
-    
-        print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
+        data.append(["Deployment Cost", g_dep_opt])
+    else:
+        data = [
+            ["Algorithm", "OPT"],
+            ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
+            ["Allocation Time", time_opt],
+            ["Feasible", feasible],
+            ["Timeout", timeout]
+        ]
+
+    print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
 
     m.update()
     if f_fgr:

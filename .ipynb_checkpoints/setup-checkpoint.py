@@ -4,19 +4,19 @@ MIPS_SCALE          = 1e-4
 BANDWIDTH_SCALE     = 1e-6 #1e-9
 LATENCY_SCALE       = 1e4
 
-P_min               = 0
+P_min               = -50
 BETA_HP             = (1e6) - 1
 epsilon             = 1e-2
 delta               = 1e-2
 M                   = 100
 N                   = 1000
-ScaleFlag           = 0
-NumericFocus        = 1
+
+THREADS             = 16
 
 ## Pi_PRB  = 15 * 12 = 180        --> Subcarrier spacing options: 15 kHz (1 ms), 30 kHz (0.5 ms), 60 kHz (0.25 ms), 120 kHz (0.125 ms), 240 kHz (0.0625 ms)
 ## N_FRM   = 10                   --> Frame is 10ms --> 10, 20, 40, 80, 160  -- 3GPP TS 38.211
 ## C_HHO   = 100,000              --> 10% of AMD EPYC 9684X 1,000,545 MFOps
-## C_CON   = 25,000               --> 2.5% of AMD EPYC 9684X 1,000,545 MFOps
+## C_K8S   = 25,000               --> 2.5% of AMD EPYC 9684X 1,000,545 MFOps
 ## C_GOS   = 25,000               --> 2.5% of AMD EPYC 9684X 1,000,545 MFOps
 ## Pi_FGB  = 693                  --> 692.5kHz*1ms = 693 -- 3GPP TS 38.104
 ## Psi_HDR = 0.005                --> 32bits/65535bits --> Payload/Header
@@ -26,11 +26,11 @@ NumericFocus        = 1
 ## Omega   = 1e-3/MIPS_SCALE      --> Cost of a unit of MIPS (0.001 $ per MIPS)
 ## Phi     = 0.01                 --> Cost of a unit of radio resource (0.01 $ per PRB)
 ## Theta   = 1e-9/BANDWIDTH_SCALE --> Cost of a unit of bandwidth (0.001 $ per MHz)
-sys = system(180,10,100000*MIPS_SCALE,25000*MIPS_SCALE,25000*MIPS_SCALE,693,0.005,6,12.5e9*BANDWIDTH_SCALE,12.5e9*BANDWIDTH_SCALE,1e-3/MIPS_SCALE,1,1e-9/BANDWIDTH_SCALE) # 0.005
+sys = system(180,10,100000*MIPS_SCALE,25000*MIPS_SCALE,25000*MIPS_SCALE,693,0.005,6,12.5e9*BANDWIDTH_SCALE,12.5e9*BANDWIDTH_SCALE,1e-4/MIPS_SCALE,1,1e-10/BANDWIDTH_SCALE) # 0.005
 
 def init_setup_synth():
     global P_min, BETA_HP, epsilon, delta, M, N, SIMULATION_INTERVAL
-    global ITER, TIMEOUT, ScaleFlag, NumericFocus
+    global ITER, TIMEOUT
 
     # Process each node
     V_P_S   = []
@@ -68,7 +68,7 @@ def init_setup_synth():
 
 def init_setup_brain():
     global P_min, BETA_HP, epsilon, delta, M, N, SIMULATION_INTERVAL
-    global ITER, coef, TIMEOUT, ScaleFlag, NumericFocus
+    global ITER, coef, TIMEOUT
     
     # Topology from https://sndlib.put.poznan.pl/home.action
     namespace = {'ns': 'http://sndlib.zib.de/network'}
@@ -130,7 +130,6 @@ def init_setup_brain():
 
     return V_P_S, V_P_R, E_P, E_P_l, L, L_pqi
 
-
 def create_sr_resources():
     """
     Create predefined slice resources and their configurations.
@@ -139,47 +138,73 @@ def create_sr_resources():
         sr_probs (list): Probabilities for each SR type.
     """
 
+    offset = 0
+    scale  = 2
+    
     ######## Isolation Level 0:
     V_S_mmtc = [nf(4000 * MIPS_SCALE, 1, [0])]
     V_R_mmtc = [ru(100)]
-    E_mmtc = [vp(V_S_mmtc[0], V_R_mmtc[0], 0, 10e4 * BANDWIDTH_SCALE, 1e-3 * LATENCY_SCALE)]
+    E_mmtc   = [vp(V_S_mmtc[0], V_R_mmtc[0], 0, 10e4 * BANDWIDTH_SCALE, 1e-3 * LATENCY_SCALE)]
+    cost = ( sys.Theta  * sum(e.B_REQ for idx_e, e in enumerate(E_mmtc))
+            + sys.Omega * sum(v.C_REQ + (sys.C_K8S + sys.C_GOS)*v.Xi_REQ/110 + sys.C_HHO*v.Xi_REQ/110/60 for idx_v, v in enumerate(V_S_mmtc))
+            + sys.Phi   * sum(w.K_REQ for idx_w, w in enumerate(V_R_mmtc))
+           )
+    revenue = int(cost * scale) + offset #250 #int(cost * 50)
     r_mmtc = sr(
-        V_S_mmtc, V_R_mmtc, E_mmtc, 0, 0, 1000,
-        1e-2 / BANDWIDTH_SCALE, 10 / LATENCY_SCALE, 1e-1 / MIPS_SCALE, 10,
-        1, 10*0.1*0.2
+        V_S_mmtc, V_R_mmtc, E_mmtc, 0, 0, revenue,
+        1e-1 / BANDWIDTH_SCALE, 10 / LATENCY_SCALE, 1e-1 / MIPS_SCALE, 10,
+        1, 10
     )
 
     V_S_embb = [nf(6000 * MIPS_SCALE, 3, [0, 1, 2])]
     V_R_embb = [ru(1)]
     E_embb = [vp(V_S_embb[0], V_R_embb[0], 0, 10e9 * BANDWIDTH_SCALE, 1e-3 * LATENCY_SCALE)]
+    cost = ( sys.Theta  * sum(e.B_REQ for idx_e, e in enumerate(E_embb))
+            + sys.Omega * sum(v.C_REQ + (sys.C_K8S + sys.C_GOS)*v.Xi_REQ/110 + sys.C_HHO*v.Xi_REQ/110/60 for idx_v, v in enumerate(V_S_embb))
+            + sys.Phi   * sum(w.K_REQ for idx_w, w in enumerate(V_R_embb))
+           )
+    revenue = int(cost * scale) + offset # 100 #int(cost * 50)
     r_embb = sr(
-        V_S_embb, V_R_embb, E_embb, 0, 1, 1000,
+        V_S_embb, V_R_embb, E_embb, 0, 1, revenue,
         1e-7 / BANDWIDTH_SCALE, 10 / LATENCY_SCALE, 1e-2 / MIPS_SCALE, 0.1,
-        1, 6*0.1*0.2
+        1, 6
     )
 
     ######## Isolation Level 1:
     V_S_urll = [nf(10000 * MIPS_SCALE, 5, [0, 1, 2, 3, 4])]
     V_R_urll = [ru(10)]
     E_urll = [vp(V_S_urll[0], V_R_urll[0], 0, 10e6 * BANDWIDTH_SCALE, 1e-5 * LATENCY_SCALE)]
+    cost = ( sys.Theta  * sum(max(e.B_REQ, math.ceil(e.B_REQ * BANDWIDTH_SCALE / sys.B_WSC) * sys.B_WSC) + sys.B_WGB for idx_e, e in enumerate(E_urll))
+            + sys.Omega * sum(v.C_REQ + sys.C_GOS*v.Xi_REQ + sys.C_HHO*v.Xi_REQ/60 for idx_v, v in enumerate(V_S_urll))
+            + sys.Phi   * sum(max(w.K_REQ, math.ceil(w.K_REQ / sys.N_FRM) * sys.N_FRM) + sys.Pi_FGB for idx_w, w in enumerate(V_R_urll))
+           )
+    revenue = int(cost * scale) + offset #1000 #int(cost * 50)
     r_urll = sr(
-        V_S_urll, V_R_urll, E_urll, 1, 0, 2000,
+        V_S_urll, V_R_urll, E_urll, 1, 0, revenue,
         1e-6 / BANDWIDTH_SCALE, 100 / LATENCY_SCALE, 1 / MIPS_SCALE, 100,
-        100, 2*0.1*0.13
+        100, 2
     )
 
     ######## Isolation Level 2:
     V_S_mcri = [nf(16000 * MIPS_SCALE, 5, [0, 1, 2, 3, 4])]
     V_R_mcri = [ru(10)]
     E_mcri = [vp(V_S_mcri[0], V_R_mcri[0], 0, 10e9 * BANDWIDTH_SCALE, 1e-5 * LATENCY_SCALE)]
+    cost = ( sys.Theta  * sum(4.8e12 * BANDWIDTH_SCALE for idx_e, e in enumerate(E_mcri) )
+            + sys.Omega * sum(1000000 * MIPS_SCALE for idx_v, v in enumerate(V_S_mcri))
+            + sys.Phi   * sum(50000/sys.Pi_PRB for idx_w, w in enumerate(V_R_mcri))
+           )
+    revenue = int(cost * scale) + offset #2500 #int(cost * 50)
     r_mcri = sr(
-        V_S_mcri, V_R_mcri, E_mcri, 2, 0, 5000,
+        V_S_mcri, V_R_mcri, E_mcri, 2, 0, revenue,
         #1e6, 1e6, 1e6, 1e6,
         1e4, 1e4, 1e4, 1e4,
-        1e4, 1*0.1*0.2
+        1e4, 1
     )
 
     sr_types = [r_embb, r_urll, r_mmtc, r_mcri] # L01, L1, L00, L2
+
+    for i, r in enumerate(sr_types):
+        print(f"revenue of SR type {i} with isolation level {r.gamma} and sub-level {r.kappa}: {r.R}")
 
     return sr_types
 
