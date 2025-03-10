@@ -858,8 +858,6 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                  )
                 )
 
-        print(f"g_ovhb:{g_ovh}")
-
         if len_R >= 2:
             constraint_to_remove = m.getConstrByName(f"minimum_profit")
             if constraint_to_remove is not None:
@@ -880,10 +878,15 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         start_time2 = time.perf_counter()
         
         timeout = 0
-        try:
-            m = run_with_timeout(r_t.timeout, timeout_optimize, m)
-        except TimeoutException as e:
-            timeout = 1
+        if f_fgr:
+            try:
+                m = run_with_timeout(r_t.timeout, timeout_optimize, m)
+            except TimeoutException as e:
+                timeout = 1
+        else:
+            m.optimize()
+            if (time.perf_counter() - start_time2) + (end_time1 - start_time1) > r_t.timeout:
+                timeout = 1
         
         # Stop the timer
         end_time2 = time.perf_counter()
@@ -1212,6 +1215,8 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     time_opt = timer
 
     if time_opt > r_t.timeout:
+        if f_fgr:
+            time_opt = r_t.timeout
         timeout  = 1
         feasible = 0
         reject_opt[r_t.gamma] = 1

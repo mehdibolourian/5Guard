@@ -1142,10 +1142,15 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     start_time = time.perf_counter()
     
     timeout = 0
-    try:
-        m = run_with_timeout(r_t.timeout, timeout_optimize, m)
-    except TimeoutException as e:
-        timeout = 1
+    if f_fgr:
+        try:
+            m = run_with_timeout(r_t.timeout, timeout_optimize, m)
+        except TimeoutException as e:
+            timeout = 1
+    else:
+        m.optimize()
+        if time.perf_counter() - start_time > r_t.timeout:
+            timeout = 1
 
     status = m.status
 
@@ -1889,6 +1894,8 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     time_opt = end_time - start_time
 
     if time_opt > r_t.timeout:
+        if f_fgr:
+            time_opt = r_t.timeout
         timeout  = 1
         feasible = 0
         reject_opt[r_t.gamma] = 1

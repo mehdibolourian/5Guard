@@ -1,23 +1,23 @@
 from libraries import *
 
-class TimeoutException(Exception):
-    pass
+# class TimeoutException(Exception):
+#     pass
 
-def timeout_optimize(model):
-    model.optimize()
-    return model
+# def timeout_optimize(model):
+#     model.optimize()
+#     return model
 
-def run_with_timeout(timeout, func, *args, **kwargs):
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        future = executor.submit(func, *args, **kwargs)
-        try:
-            return future.result(timeout=timeout)
-        except concurrent.futures.TimeoutError:
-            raise TimeoutException("Timeout reached!")
+# def run_with_timeout(timeout, func, *args, **kwargs):
+#     with concurrent.futures.ThreadPoolExecutor() as executor:
+#         future = executor.submit(func, *args, **kwargs)
+#         try:
+#             return future.result(timeout=timeout)
+#         except concurrent.futures.TimeoutError:
+#             raise TimeoutException("Timeout reached!")
 
 def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr, X_t, Y_t):
     offset = 0
-    scale  = 2
+    scale  = 5
     
     reqs = R_t.copy()
     
@@ -972,9 +972,8 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     start_time = time.perf_counter()
     
     timeout = 0
-    try:
-        m = run_with_timeout(r_t.timeout, timeout_optimize, m)
-    except TimeoutException as e:
+    m.optimize()
+    if time.perf_counter() - start_time > r_t.timeout:
         timeout = 1
 
     status = m.status

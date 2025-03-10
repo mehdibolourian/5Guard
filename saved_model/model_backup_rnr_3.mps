@@ -10178,7 +10178,7 @@ COLUMNS
     a_z4_16_0  auxiliary_constraints_8_4_16_0_6  1000
     a_z4_16_0  auxiliary_constraints_8_4_16_0_7  1000
 RHS
-    RHS1      OBJ       59963.5
+    RHS1      OBJ       55523.5
     RHS1      nf_unique_mapping_0_0  1
     RHS1      ru_unique_mapping_0_0  1
     RHS1      radio_overprovision_0_0_0  1
@@ -10769,14 +10769,14 @@ RHS
     RHS1      ru_regular_isolation_limit_16_0_1  1
     RHS1      radio_overprovision_16_0_0  10
     RHS1      radio_overprovision_16_0_1  10
-    RHS1      mips_max_limit_1_0  95
-    RHS1      mips_max_limit_1_1  95
-    RHS1      mips_max_limit_1_2  95
+    RHS1      mips_max_limit_1_0  95.0545
+    RHS1      mips_max_limit_1_1  95.0545
+    RHS1      mips_max_limit_1_2  9.9554500000000007e+02
     RHS1      mips_max_limit_2_0  59
     RHS1      mips_max_limit_2_1  59
     RHS1      mips_max_limit_2_2  599
-    RHS1      radio_max_limit_0_0  50000
-    RHS1      radio_max_limit_1_0  50000
+    RHS1      radio_max_limit_0_0  500040
+    RHS1      radio_max_limit_1_0  500040
     RHS1      vp_unique_mapping_16_0  1
     RHS1      link_max_isolation_limit_0  1
     RHS1      link_max_isolation_limit_1  1
@@ -10820,7 +10820,7 @@ RHS
     RHS1      auxiliary_constraints_8_4_16_0_5  999.9
     RHS1      auxiliary_constraints_8_4_16_0_6  999.9
     RHS1      auxiliary_constraints_8_4_16_0_7  999.9
-    RHS1      minimum_profit  6.0654424623115578e+04
+    RHS1      minimum_profit  5.8494424623115578e+04
 BOUNDS
  UP BND1      a_x2_0_0  1
  UP BND1      a_x2_0_1  1

@@ -13,12 +13,12 @@ N                   = 1000
 
 THREADS             = 16
 
-## Pi_PRB  = 15 * 12 = 180        --> Subcarrier spacing options: 15 kHz (1 ms), 30 kHz (0.5 ms), 60 kHz (0.25 ms), 120 kHz (0.125 ms), 240 kHz (0.0625 ms)
+## Pi_PRB  = 15 * 12 = 180        --> 12 subcarriers with 15 kHz spacing for 1 ms interval
 ## N_FRM   = 10                   --> Frame is 10ms --> 10, 20, 40, 80, 160  -- 3GPP TS 38.211
 ## C_HHO   = 100,000              --> 10% of AMD EPYC 9684X 1,000,545 MFOps
 ## C_K8S   = 25,000               --> 2.5% of AMD EPYC 9684X 1,000,545 MFOps
 ## C_GOS   = 25,000               --> 2.5% of AMD EPYC 9684X 1,000,545 MFOps
-## Pi_FGB  = 693                  --> 692.5kHz*1ms = 693 -- 3GPP TS 38.104
+## Pi_FGB  = 693                  --> 692.5kHz*1ms = 693 --> 3GPP TS 38.104
 ## Psi_HDR = 0.005                --> 32bits/65535bits --> Payload/Header
 ## CHI_MAX = 6                    --> 6 high-level types
 ## B_WSC   = 12.5 GHz             --> ITU-T G.698.2
@@ -41,12 +41,12 @@ def init_setup_synth():
     L_pqi   = []
     
     NUM_P_S = 5
-    V_P_S.append(ps(1000000 * MIPS_SCALE, [110, 60, 1]))  # AMD EPYC 9684X
-    V_P_S.append(ps(1000000 * MIPS_SCALE, [110, 60, 1]))  # AMD EPYC 9684X
-    V_P_S.append(ps(1000000 * MIPS_SCALE, [1100, 600, 1]))  # AMD EPYC 9684X * 10
+    V_P_S.append(ps(1000545  * MIPS_SCALE, [110, 60, 1]))    # AMD EPYC 9684X
+    V_P_S.append(ps(1000545  * MIPS_SCALE, [110, 60, 1]))    # AMD EPYC 9684X
+    V_P_S.append(ps(10005450 * MIPS_SCALE, [1100, 600, 1]))  # AMD EPYC 9684X * 10
     
     NUM_P_R = 2
-    V_P_R   = [nr_bs([50000]) for _ in range(NUM_P_R)]  # 50MHz channel bandwidth --> 50MHz * 1ms = 50000
+    V_P_R   = [nr_bs([500040]) for _ in range(NUM_P_R)]  # 50MHz channel bandwidth --> 50MHz * 10ms = 500000 --> 2778 PRBs-sec.
         
     E_P.append(pp(V_P_S[0], V_P_R[0], 0, 1e-4 * LATENCY_SCALE))
     E_P.append(pp(V_P_S[0], V_P_R[1], 0, 1e-4 * LATENCY_SCALE))
@@ -93,10 +93,10 @@ def init_setup_brain():
         node_id = node.attrib['id']
         # Cloud servers:
         if (node_id == 'UP') or (node_id == 'TU') or (node_id == 'CVK') or (node_id == 'HU') or (node_id == 'HTW') or (node_id == 'ADH') or (node_id == 'ZIB') or (node_id == 'SPK') or (node_id == 'WIAS'):
-            V_P_S.append(ps(10000000*MIPS_SCALE, [1100,600,1])) ## AMD EPYC 9684X * 10
+            V_P_S.append(ps(10005450*MIPS_SCALE, [1100,600,1])) ## AMD EPYC 9684X * 10
         else:
-            V_P_S.append(ps(1000000*MIPS_SCALE, [110,60,1])) ## AMD EPYC 9684X
-            V_P_R.append(nr_bs([50000]))                     ## 50MHz channel bandwidth --> 50MHz * 1ms = 50000
+            V_P_S.append(ps(1000545*MIPS_SCALE, [110,60,1]))    ## AMD EPYC 9684X
+            V_P_R.append(nr_bs([500040]))                       ## 50MHz channel bandwidth --> 50MHz * 10ms = 500000
             E_P.append(pp(V_P_S[-1], V_P_R[-1], 0, 2e-6*LATENCY_SCALE))
             L.append(link([4.8e12*BANDWIDTH_SCALE], [E_P[-1]])) ## 4.8 THz (191.3 THz to 196.1 THz, 1565 nm to 1570 nm) = roughly 320 subcarriers
     
@@ -139,7 +139,7 @@ def create_sr_resources():
     """
 
     offset = 0
-    scale  = 2
+    scale  = 5
     
     ######## Isolation Level 0:
     V_S_mmtc = [nf(4000 * MIPS_SCALE, 1, [0])]
