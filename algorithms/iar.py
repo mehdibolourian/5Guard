@@ -34,10 +34,6 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     len_V_S  = max((len(r.V_S) for idx_r, r in enumerate(reqs)), default=0)
     len_V_R  = max((len(r.V_R) for idx_r, r in enumerate(reqs)), default=0)
 
-    K_MAX = 101
-    F_MAX = 1
-    S_MAX = 1
-
     profit_opt = 0
     violat_opt = np.zeros(5) ## 5 for Total, Radio, Bandwidth, MIPS, and Delay
     migrat_opt = 0

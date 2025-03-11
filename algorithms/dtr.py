@@ -33,10 +33,6 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     len_V_S  = max((len(r.V_S) for idx_r, r in enumerate(reqs)), default=0)
     len_V_R  = max((len(r.V_R) for idx_r, r in enumerate(reqs)), default=0)
 
-    K_MAX = 101
-    F_MAX = 1
-    S_MAX = 1
-
     profit_opt = 0
     violat_opt = np.zeros(5) ## 5 for Total, Radio, Bandwidth, MIPS, and Delay
     migrat_opt = 0
@@ -1139,7 +1135,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     m.setObjective(sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
 
     # Start the timer
-    start_time = time.perf_counter()
+    start_time1 = time.perf_counter()
     
     timeout = 0
     if f_fgr:
@@ -1149,9 +1145,14 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
             timeout = 1
     else:
         m.optimize()
-        if time.perf_counter() - start_time > r_t.timeout:
+        if time.perf_counter() - start_time1 > r_t.timeout:
             timeout = 1
 
+    # Stop the timer
+    end_time1   = time.perf_counter()
+    start_time2 = 0
+    end_time2   = 0
+    
     status = m.status
 
     # Determine feasibility based on the status
@@ -1161,6 +1162,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
         vars_opt_relax = copy.deepcopy(vars_opt)
 
         ################################## Deterministic Rounding ##################################
+        start_time2 = time.perf_counter()
         x_opt_lp = [[[vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                       for idx_p, p in enumerate(V_P_S)]
                      for idx_v, v in enumerate(r.V_S)]
@@ -1207,7 +1209,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
             for idx_w, w in enumerate(r.V_R):
                 for idx_q, q in enumerate(V_P_R):
                     for f in range(len(q.Pi_MAX)):
-                        for k in range(1, w.K_REQ + 1):
+                        for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1):
                             if (y_opt_lp[idx_r][idx_w][idx_q][f][k] > LIMIT) and (sum(sum(sum(r) for r in row) for row in y_opt[idx_r][idx_w]) == 0):
                                 y_opt[idx_r][idx_w][idx_q][f][k] = 1
                                 break
@@ -1396,6 +1398,8 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                                                       for idx_e_p, e_p in enumerate(E_P)
                                                      ), 0)
                 vars_opt["a_z3_{}_{}".format(idx_r,idx_e)] = a_z3_opt[idx_r][idx_e]
+
+        end_time2 = time.perf_counter()
         ##############################################################################
 
         ############################## Rechecking constraints ########################
@@ -1815,13 +1819,13 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                             for idx_v, v in enumerate(r.V_S)
                            ) + sum(sum(sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                     for f in range(len(q.Pi_MAX))
-                                                    for k in range(1, w.K_REQ + 1)
+                                                    for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                    )
                                        for idx_q, q in enumerate(V_P_R)
                                        if(len(Y_t))
                                        if(sum(Y_t[idx_r][idx_w][idx_q][f][k]
                                               for f in range(len(q.Pi_MAX))
-                                              for k in range(1, w.K_REQ + 1)
+                                              for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                              ) == 0)
                                       )
                                    for idx_r, r in enumerate(R_t)
@@ -1889,9 +1893,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
             m = gp.read(f'saved_model/model_backup_dtr_{iter}.mps')
         m.update()
 
-    # Stop the timer
-    end_time = time.perf_counter()
-    time_opt = end_time - start_time
+    time_opt  = (end_time2 - start_time2) + (end_time1 - start_time1)
 
     if time_opt > r_t.timeout:
         if f_fgr:
@@ -1942,9 +1944,6 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
             ]
 
         print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
-    
-    # if time_opt[t] > r_t.timeout:
-    #     time_opt[t] = r_t.timeout
 
     m.update()
     if f_fgr:

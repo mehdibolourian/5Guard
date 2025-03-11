@@ -32,10 +32,6 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     len_V_S  = max((len(r.V_S) for idx_r, r in enumerate(reqs)), default=0)
     len_V_R  = max((len(r.V_R) for idx_r, r in enumerate(reqs)), default=0)
 
-    K_MAX = 101
-    F_MAX = 1
-    S_MAX = 1
-
     profit_opt = 0
     violat_opt = np.zeros(5) ## 5 for Total, Radio, Bandwidth, MIPS, and Delay
     migrat_opt = 0
@@ -1137,7 +1133,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     m.setObjective(sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
 
     # Start the timer
-    start_time = time.perf_counter()
+    start_time1 = time.perf_counter()
     
     timeout = 0
     if f_fgr:
@@ -1147,8 +1143,13 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             timeout = 1
     else:
         m.optimize()
-        if time.perf_counter() - start_time > r_t.timeout:
+        if time.perf_counter() - start_time1 > r_t.timeout:
             timeout = 1
+
+    # Stop the timer
+    end_time1   = time.perf_counter()
+    start_time2 = 0
+    end_time2   = 0
 
     status = m.status
 
@@ -1206,7 +1207,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 q_sel    = int(qfk_sel / (K_REQ_EFF[idx_r][idx_w]+1) // F_MAX)
                 fk_sel   = int(qfk_sel - q_sel * (K_REQ_EFF[idx_r][idx_w]+1) * F_MAX)
                 f_sel    = int(fk_sel // K_MAX)
-                k_sel    = w.K_REQ if r.beta >= 1e6 else fk_sel - int(f_sel*(K_REQ_EFF[idx_r][idx_w]+1))
+                k_sel    = K_REQ_EFF[idx_r][idx_w] if r.beta >= 1e6 else fk_sel - int(f_sel*(K_REQ_EFF[idx_r][idx_w]+1))
                 
                 y_opt[idx_r][idx_w][q_sel][f_sel][k_sel] = 1
                 
@@ -1464,7 +1465,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                           if r.gamma == 1
                                           for idx_v, v in enumerate(r.V_S)
                                          )
-                        <= p.C_MAX
+                        <= float(p.C_MAX)
                         for idx_p, p in enumerate(V_P_S)
                        )
 
@@ -1831,13 +1832,13 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             for idx_v, v in enumerate(r.V_S)
                            ) + sum(sum(sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                     for f in range(len(q.Pi_MAX))
-                                                    for k in range(1, w.K_REQ + 1)
+                                                    for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                    )
                                        for idx_q, q in enumerate(V_P_R)
                                        if(len(Y_t))
                                        if(sum(Y_t[idx_r][idx_w][idx_q][f][k]
                                               for f in range(len(q.Pi_MAX))
-                                              for k in range(1, w.K_REQ + 1)
+                                              for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                              ) == 0)
                                       )
                                    for idx_r, r in enumerate(R_t)
@@ -1907,9 +1908,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
         feasible = 0
 
-    # Stop the timer
-    end_time = time.perf_counter()
-    time_opt = end_time - start_time
+    time_opt  = (end_time2 - start_time2) + (end_time1 - start_time1)
     
     if time_opt > r_t.timeout:
         if f_fgr:

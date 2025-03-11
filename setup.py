@@ -4,7 +4,7 @@ MIPS_SCALE          = 1e-4
 BANDWIDTH_SCALE     = 1e-6 #1e-9
 LATENCY_SCALE       = 1e4
 
-P_min               = -50
+P_min               = -5000
 BETA_HP             = (1e6) - 1
 epsilon             = 1e-2
 delta               = 1e-2
@@ -12,6 +12,10 @@ M                   = 100
 N                   = 1000
 
 THREADS             = 16
+
+K_MAX = 11
+F_MAX = 1
+S_MAX = 1
 
 ## Pi_PRB  = 15 * 12 = 180        --> 12 subcarriers with 15 kHz spacing for 1 ms interval
 ## N_FRM   = 10                   --> Frame is 10ms --> 10, 20, 40, 80, 160  -- 3GPP TS 38.211
@@ -41,12 +45,12 @@ def init_setup_synth():
     L_pqi   = []
     
     NUM_P_S = 5
-    V_P_S.append(ps(1000545  * MIPS_SCALE, [110, 60, 1]))    # AMD EPYC 9684X
-    V_P_S.append(ps(1000545  * MIPS_SCALE, [110, 60, 1]))    # AMD EPYC 9684X
-    V_P_S.append(ps(10005450 * MIPS_SCALE, [1100, 600, 1]))  # AMD EPYC 9684X * 10
+    V_P_S.append(ps(1000545/5  * MIPS_SCALE, [110, 60, 1]))    # AMD EPYC 9684X
+    V_P_S.append(ps(1000545/5  * MIPS_SCALE, [110, 60, 1]))    # AMD EPYC 9684X
+    V_P_S.append(ps(10005450/5 * MIPS_SCALE, [1100, 600, 1]))  # AMD EPYC 9684X * 10
     
     NUM_P_R = 2
-    V_P_R   = [nr_bs([500040]) for _ in range(NUM_P_R)]  # 50MHz channel bandwidth --> 50MHz * 10ms = 500000 --> 2778 PRBs-sec.
+    V_P_R   = [nr_bs([500040/5]) for _ in range(NUM_P_R)]  # 50MHz channel bandwidth --> 50MHz * 10ms/5 = 500000/5 --> 2778/5 PRBs-sec.
         
     E_P.append(pp(V_P_S[0], V_P_R[0], 0, 1e-4 * LATENCY_SCALE))
     E_P.append(pp(V_P_S[0], V_P_R[1], 0, 1e-4 * LATENCY_SCALE))
@@ -58,7 +62,7 @@ def init_setup_synth():
     E_P.append(pp(V_P_S[1], V_P_S[2], 0, 1e-3 * LATENCY_SCALE))
     
     for i in range(8):
-        L.append(link([4.8e12 * BANDWIDTH_SCALE], [E_P[i]]))  # 4.8 THz link bandwidth
+        L.append(link([4.8e12/5 * BANDWIDTH_SCALE], [E_P[i]]))  # 4.8 THz link bandwidth
     
     L_pqi = [[l for l in L if e_p in l.E_P] for e_p in E_P]
     E_P_l = [[e_p for e_p in l.E_P] for l in L]
@@ -96,7 +100,7 @@ def init_setup_brain():
             V_P_S.append(ps(10005450*MIPS_SCALE, [1100,600,1])) ## AMD EPYC 9684X * 10
         else:
             V_P_S.append(ps(1000545*MIPS_SCALE, [110,60,1]))    ## AMD EPYC 9684X
-            V_P_R.append(nr_bs([500040]))                       ## 50MHz channel bandwidth --> 50MHz * 10ms = 500000
+            V_P_R.append(nr_bs([500040]))                       # 50MHz channel bandwidth --> 50MHz * 10ms/5 = 500000/5 --> 2778/5 PRBs-sec.
             E_P.append(pp(V_P_S[-1], V_P_R[-1], 0, 2e-6*LATENCY_SCALE))
             L.append(link([4.8e12*BANDWIDTH_SCALE], [E_P[-1]])) ## 4.8 THz (191.3 THz to 196.1 THz, 1565 nm to 1570 nm) = roughly 320 subcarriers
     
@@ -143,7 +147,7 @@ def create_sr_resources():
     
     ######## Isolation Level 0:
     V_S_mmtc = [nf(4000 * MIPS_SCALE, 1, [0])]
-    V_R_mmtc = [ru(100)]
+    V_R_mmtc = [ru(10)]
     E_mmtc   = [vp(V_S_mmtc[0], V_R_mmtc[0], 0, 10e4 * BANDWIDTH_SCALE, 1e-3 * LATENCY_SCALE)]
     cost = ( sys.Theta  * sum(e.B_REQ for idx_e, e in enumerate(E_mmtc))
             + sys.Omega * sum(v.C_REQ + (sys.C_K8S + sys.C_GOS)*v.Xi_REQ/110 + sys.C_HHO*v.Xi_REQ/110/60 for idx_v, v in enumerate(V_S_mmtc))
@@ -172,7 +176,7 @@ def create_sr_resources():
 
     ######## Isolation Level 1:
     V_S_urll = [nf(10000 * MIPS_SCALE, 5, [0, 1, 2, 3, 4])]
-    V_R_urll = [ru(10)]
+    V_R_urll = [ru(1)] ## Will be rounded to the bandwidth of the wavelength subcarrier
     E_urll = [vp(V_S_urll[0], V_R_urll[0], 0, 10e6 * BANDWIDTH_SCALE, 1e-5 * LATENCY_SCALE)]
     cost = ( sys.Theta  * sum(max(e.B_REQ, math.ceil(e.B_REQ * BANDWIDTH_SCALE / sys.B_WSC) * sys.B_WSC) + sys.B_WGB for idx_e, e in enumerate(E_urll))
             + sys.Omega * sum(v.C_REQ + sys.C_GOS*v.Xi_REQ + sys.C_HHO*v.Xi_REQ/60 for idx_v, v in enumerate(V_S_urll))
@@ -187,7 +191,7 @@ def create_sr_resources():
 
     ######## Isolation Level 2:
     V_S_mcri = [nf(16000 * MIPS_SCALE, 5, [0, 1, 2, 3, 4])]
-    V_R_mcri = [ru(10)]
+    V_R_mcri = [ru(1)]
     E_mcri = [vp(V_S_mcri[0], V_R_mcri[0], 0, 10e9 * BANDWIDTH_SCALE, 1e-5 * LATENCY_SCALE)]
     cost = ( sys.Theta  * sum(4.8e12 * BANDWIDTH_SCALE for idx_e, e in enumerate(E_mcri) )
             + sys.Omega * sum(1000000 * MIPS_SCALE for idx_v, v in enumerate(V_S_mcri))

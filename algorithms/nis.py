@@ -35,10 +35,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     len_V_S  = max((len(r.V_S) for idx_r, r in enumerate(reqs)), default=0)
     len_V_R  = max((len(r.V_R) for idx_r, r in enumerate(reqs)), default=0)
 
-    K_MAX = 101
-    F_MAX = 1
-    S_MAX = 1
-
     profit_opt = 0
     violat_opt = np.zeros(5) ## 5 for Total, Radio, Bandwidth, MIPS, and Delay
     migrat_opt = 0
@@ -853,7 +849,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
     cost = ( sys.Theta  * sum(e.B_REQ for r in reqs for idx_e, e in enumerate(r.E))
             + sys.Omega * sum(v.C_REQ + (sys.C_K8S + sys.C_GOS)*v.Xi_REQ/110 + sys.C_HHO*v.Xi_REQ/110/60 for r in reqs for idx_v, v in enumerate(r.V_S))
-            + sys.Phi   * sum(w.K_REQ for r in reqs for idx_w, w in enumerate(r.V_R))
+            + sys.Phi   * sum(K_REQ_EFF[idx_r][idx_w] for idx_r, r in enumerate(reqs) for idx_w, w in enumerate(r.V_R))
            )
     revenue = int(cost * scale) + offset
 
@@ -877,6 +873,10 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     m.optimize()
     if time.perf_counter() - start_time > r_t.timeout:
         timeout = 1
+
+    # Stop the timer
+    end_time = time.perf_counter()
+    time_opt = end_time - start_time
 
     status = m.status
 
@@ -1152,11 +1152,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
         m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
         m.update()
-
-    # Stop the timer
-    end_time = time.perf_counter()
-    time_opt = end_time - start_time
-
+        
     if time_opt > r_t.timeout:
         timeout  = 1
         feasible = 0

@@ -948,8 +948,8 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             )
 
     cost = ( sys.Theta  * sum(4.8e12 * BANDWIDTH_SCALE for r in reqs for idx_e, e in enumerate(r.E))
-            + sys.Omega * sum(1000000 * MIPS_SCALE for r in reqs for idx_v, v in enumerate(r.V_S))
-            + sys.Phi   * sum(50000/sys.Pi_PRB for r in reqs for idx_w, w in enumerate(r.V_R))
+            + sys.Omega * sum(1000545/5 * MIPS_SCALE for r in reqs for idx_v, v in enumerate(r.V_S))
+            + sys.Phi   * sum(500040/5/sys.Pi_PRB for r in reqs for idx_w, w in enumerate(r.V_R))
            )
     revenue = int(cost * scale + offset)
 
@@ -976,6 +976,9 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     if time.perf_counter() - start_time > r_t.timeout:
         timeout = 1
 
+    # Stop the timer
+    end_time = time.perf_counter()
+    time_opt = end_time - start_time
     status = m.status
 
     # Determine feasibility based on the status
@@ -1167,13 +1170,13 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         for idx_v, v in enumerate(r.V_S)
                        ) + sum(sum(sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                 for f in range(len(q.Pi_MAX))
-                                                for k in range(1, w.K_REQ + 1)
+                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                )
                                    for idx_q, q in enumerate(V_P_R)
                                    if(len(Y_t))
                                    if(sum(Y_t[idx_r][idx_w][idx_q][f][k]
                                           for f in range(len(q.Pi_MAX))
-                                          for k in range(1, w.K_REQ + 1)
+                                          for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                          ) == 0)
                                   )
                                for idx_r, r in enumerate(R_t)
@@ -1224,10 +1227,6 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
         m = gp.read(f'saved_model/model_backup_cis_{iter}.mps')
         m.update()
-
-    # Stop the timer
-    end_time = time.perf_counter()
-    time_opt = end_time - start_time
 
     if time_opt > r_t.timeout:
         timeout  = 1

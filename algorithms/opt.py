@@ -32,10 +32,6 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     len_V_S  = max((len(r.V_S) for idx_r, r in enumerate(reqs)), default=0)
     len_V_R  = max((len(r.V_R) for idx_r, r in enumerate(reqs)), default=0)
 
-    K_MAX = 101
-    F_MAX = 1
-    S_MAX = 1
-
     profit_opt = 0
     violat_opt = np.zeros(5) ## 5 for Total, Radio, Bandwidth, MIPS, and Delay
     migrat_opt = 0
@@ -167,7 +163,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             for idx_r in range(len_R)]
 
     # ## Auxiliary variables
-    if len(R_t) == 0: ## No model is defined yet --> No a_x2 or a_x3 defined
+    if (m.getVarByName(f"a_x2_{0}_{0}") is None) and (m.getVarByName(f"a_x3_{0}") is None): ## No model is defined yet --> No a_x2 or a_x3 defined
         a_x2 = [[m.addVar(name=f"a_x2_{idx_p}_{chi}", vtype=gp.GRB.BINARY)
                  for chi in range(sys.CHI_MAX+1)]
                 for idx_p in range(len_V_P_S)]
@@ -192,6 +188,9 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
     ## Only used for 5Guard: To handle infeasibility in the previous time step where the last SR is removed from the model.
     R_miss = [idx_r for idx_r, r in enumerate(reqs) if m.getVarByName(f"c_{idx_r}_{0}_{0}") is None]
+    #print(f"model:{m}")
+    #print(f"R_miss:{R_miss}")
+    #print(f"reqs:{reqs}")
 
     ################################ 5G-INS ################################
     ### Decision Variables
@@ -200,11 +199,11 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     x.append([[m.addVar(name=f"x_{len_R-1}_{idx_v}_{idx_p}", vtype=gp.GRB.BINARY)
                for idx_p in range(len_V_P_S)]
               for idx_v in range(len_V_S)])
-    y.append([[[[m.addVar(name=f"y_{len_R-1}_{idx_v}_{idx_q}_{f}_{k}", vtype=gp.GRB.BINARY)
+    y.append([[[[m.addVar(name=f"y_{len_R-1}_{idx_w}_{idx_q}_{f}_{k}", vtype=gp.GRB.BINARY)
                  for k in range(K_MAX)]
                 for f in range(F_MAX)]
                for idx_q in range(len_V_P_R)]
-              for idx_v in range(len_V_R)])
+              for idx_w in range(len_V_R)])
     z.append([[[m.addVar(name=f"z_{len_R-1}_{idx_e}_{idx_l}_{s}", vtype=gp.GRB.BINARY)
                 for s in range(S_MAX)]
                for idx_l in range(len_L)]
@@ -1148,6 +1147,9 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         if time.perf_counter() - start_time > r_t.timeout:
             timeout = 1
 
+    # Stop the timer
+    end_time = time.perf_counter()
+    time_opt = end_time - start_time
     status = m.status
 
     # Determine feasibility based on the status
@@ -1428,13 +1430,13 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         for idx_v, v in enumerate(r.V_S)
                        ) + sum(sum(sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                 for f in range(len(q.Pi_MAX))
-                                                for k in range(1, w.K_REQ + 1)
+                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                )
                                    for idx_q, q in enumerate(V_P_R)
                                    if(len(Y_t))
                                    if(sum(Y_t[idx_r][idx_w][idx_q][f][k]
                                           for f in range(len(q.Pi_MAX))
-                                          for k in range(1, w.K_REQ + 1)
+                                          for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                          ) == 0)
                                   )
                                for idx_r, r in enumerate(R_t)
@@ -1502,10 +1504,6 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         else:
             m = gp.read(f'saved_model/model_backup_opt_{iter}.mps')
         m.update()
-
-    # Stop the timer
-    end_time = time.perf_counter()
-    time_opt = end_time - start_time
 
     if time_opt > r_t.timeout:
         if f_fgr:

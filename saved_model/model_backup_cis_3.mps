@@ -253,6 +253,7 @@ COLUMNS
     a_x3_0    OBJ       0
     a_x3_1    OBJ       0
     a_x3_2    OBJ       0
+    x_0_0_0   OBJ       -1
     x_0_0_0   nf_unique_mapping_0_0  1
     x_0_0_0   mips_limit_1_0_0_0  0.01
     x_0_0_0   mips_limit_2_0_0_0  -0.6
@@ -260,7 +261,7 @@ COLUMNS
     x_0_0_0   auxiliary_constraints_10_1_0_0_0  -1
     x_0_0_0   auxiliary_constraints_10_2_0_0  -1
     x_0_0_0   nf_regular_isolation_limit_0_0_0  1
-    x_0_0_1   OBJ       -1
+    x_0_0_0   minimum_profit  -1
     x_0_0_1   nf_unique_mapping_0_0  1
     x_0_0_1   mips_limit_1_0_0_1  0.01
     x_0_0_1   mips_limit_2_0_0_1  -0.6
@@ -268,7 +269,6 @@ COLUMNS
     x_0_0_1   auxiliary_constraints_10_1_0_1_0  -1
     x_0_0_1   auxiliary_constraints_10_2_0_1  -1
     x_0_0_1   nf_regular_isolation_limit_0_0_1  1
-    x_0_0_1   minimum_profit  -1
     x_0_0_2   OBJ       -1
     x_0_0_2   nf_unique_mapping_0_0  1
     x_0_0_2   mips_limit_1_0_0_2  0.01
@@ -625,89 +625,89 @@ COLUMNS
     b_0_0_7_0_0  node_path_mapping_coordination_1_0_0_1  1
     b_0_0_7_0_0  bandwidth_max_limit_7_0  1
     MARKER    'MARKER'                 'INTORG'
-    a_x1_0_0  OBJ       -100.0545
+    a_x1_0_0  OBJ       -20.0109
     a_x1_0_0  auxiliary_constraints_10_1_0_0_0  1
     a_x1_0_0  auxiliary_constraints_10_2_0_0  1
     a_x1_0_0  nf_max_isolation_limit_0  1
     a_x1_0_0  nf_regular_isolation_limit_1_0_0  1
-    a_x1_0_0  minimum_profit  -100.0545
-    a_x1_0_1  OBJ       -100.0545
+    a_x1_0_0  minimum_profit  -20.0109
+    a_x1_0_1  OBJ       -20.0109
     a_x1_0_1  auxiliary_constraints_10_1_0_1_0  1
     a_x1_0_1  auxiliary_constraints_10_2_0_1  1
     a_x1_0_1  nf_max_isolation_limit_1  1
     a_x1_0_1  nf_regular_isolation_limit_1_0_1  1
-    a_x1_0_1  minimum_profit  -100.0545
-    a_x1_0_2  OBJ       -1.0005450000000001e+03
+    a_x1_0_1  minimum_profit  -20.0109
+    a_x1_0_2  OBJ       -200.109
     a_x1_0_2  auxiliary_constraints_10_1_0_2_0  1
     a_x1_0_2  auxiliary_constraints_10_2_0_2  1
     a_x1_0_2  nf_max_isolation_limit_2  1
     a_x1_0_2  nf_regular_isolation_limit_1_0_2  1
-    a_x1_0_2  minimum_profit  -1.0005450000000001e+03
+    a_x1_0_2  minimum_profit  -200.109
     a_x4_0_0_0  OBJ       0
     a_x4_0_0_1  OBJ       0
     a_x4_0_0_2  OBJ       0
-    a_y1_0_0  OBJ       -2778
+    a_y1_0_0  OBJ       -555.6
     a_y1_0_0  auxiliary_constraints_11_1_0_0_0_0_1  1
     a_y1_0_0  auxiliary_constraints_11_2_0_0  1
     a_y1_0_0  ru_max_isolation_limit_0  1
     a_y1_0_0  ru_regular_isolation_limit_1_0_0  1
-    a_y1_0_0  minimum_profit  -2778
-    a_y1_0_1  OBJ       -2778
+    a_y1_0_0  minimum_profit  -555.6
+    a_y1_0_1  OBJ       -555.6
     a_y1_0_1  auxiliary_constraints_11_1_0_1_0_0_1  1
     a_y1_0_1  auxiliary_constraints_11_2_0_1  1
     a_y1_0_1  ru_max_isolation_limit_1  1
     a_y1_0_1  ru_regular_isolation_limit_1_0_1  1
-    a_y1_0_1  minimum_profit  -2778
+    a_y1_0_1  minimum_profit  -555.6
     a_y2_0_0_0  OBJ       0
     a_y2_0_0_1  OBJ       0
-    a_z1_0_0  OBJ       -480
+    a_z1_0_0  OBJ       -96
     a_z1_0_0  auxiliary_constraints_12_1_0_0_0_0  1
     a_z1_0_0  link_max_isolation_limit_0  1
     a_z1_0_0  link_regular_isolation_limit_1_0_0  1
     a_z1_0_0  auxiliary_constraints_12_2_0_0  1
-    a_z1_0_0  minimum_profit  -480
-    a_z1_0_1  OBJ       -480
+    a_z1_0_0  minimum_profit  -96
+    a_z1_0_1  OBJ       -96
     a_z1_0_1  auxiliary_constraints_12_1_0_1_0_0  1
     a_z1_0_1  link_max_isolation_limit_1  1
     a_z1_0_1  link_regular_isolation_limit_1_0_1  1
     a_z1_0_1  auxiliary_constraints_12_2_0_1  1
-    a_z1_0_1  minimum_profit  -480
-    a_z1_0_2  OBJ       -480
+    a_z1_0_1  minimum_profit  -96
+    a_z1_0_2  OBJ       -96
     a_z1_0_2  auxiliary_constraints_12_1_0_2_0_0  1
     a_z1_0_2  link_max_isolation_limit_2  1
     a_z1_0_2  link_regular_isolation_limit_1_0_2  1
     a_z1_0_2  auxiliary_constraints_12_2_0_2  1
-    a_z1_0_2  minimum_profit  -480
-    a_z1_0_3  OBJ       -480
+    a_z1_0_2  minimum_profit  -96
+    a_z1_0_3  OBJ       -96
     a_z1_0_3  auxiliary_constraints_12_1_0_3_0_0  1
     a_z1_0_3  link_max_isolation_limit_3  1
     a_z1_0_3  link_regular_isolation_limit_1_0_3  1
     a_z1_0_3  auxiliary_constraints_12_2_0_3  1
-    a_z1_0_3  minimum_profit  -480
-    a_z1_0_4  OBJ       -480
+    a_z1_0_3  minimum_profit  -96
+    a_z1_0_4  OBJ       -96
     a_z1_0_4  auxiliary_constraints_12_1_0_4_0_0  1
     a_z1_0_4  link_max_isolation_limit_4  1
     a_z1_0_4  link_regular_isolation_limit_1_0_4  1
     a_z1_0_4  auxiliary_constraints_12_2_0_4  1
-    a_z1_0_4  minimum_profit  -480
-    a_z1_0_5  OBJ       -480
+    a_z1_0_4  minimum_profit  -96
+    a_z1_0_5  OBJ       -96
     a_z1_0_5  auxiliary_constraints_12_1_0_5_0_0  1
     a_z1_0_5  link_max_isolation_limit_5  1
     a_z1_0_5  link_regular_isolation_limit_1_0_5  1
     a_z1_0_5  auxiliary_constraints_12_2_0_5  1
-    a_z1_0_5  minimum_profit  -480
-    a_z1_0_6  OBJ       -480
+    a_z1_0_5  minimum_profit  -96
+    a_z1_0_6  OBJ       -96
     a_z1_0_6  auxiliary_constraints_12_1_0_6_0_0  1
     a_z1_0_6  link_max_isolation_limit_6  1
     a_z1_0_6  link_regular_isolation_limit_1_0_6  1
     a_z1_0_6  auxiliary_constraints_12_2_0_6  1
-    a_z1_0_6  minimum_profit  -480
-    a_z1_0_7  OBJ       -480
+    a_z1_0_6  minimum_profit  -96
+    a_z1_0_7  OBJ       -96
     a_z1_0_7  auxiliary_constraints_12_1_0_7_0_0  1
     a_z1_0_7  link_max_isolation_limit_7  1
     a_z1_0_7  link_regular_isolation_limit_1_0_7  1
     a_z1_0_7  auxiliary_constraints_12_2_0_7  1
-    a_z1_0_7  minimum_profit  -480
+    a_z1_0_7  minimum_profit  -96
     a_z2_0_0_0  vp_unique_mapping_0_0  1
     a_z2_0_0_0  auxiliary_constraints_3_1_0_0_0_0  1
     a_z2_0_0_0  auxiliary_constraints_3_2_0_0_0  1
@@ -1198,81 +1198,81 @@ COLUMNS
     b_1_0_7_0_0  node_path_mapping_coordination_1_1_0_1  1
     b_1_0_7_0_0  bandwidth_max_limit_7_0  1
     MARKER    'MARKER'                 'INTORG'
-    a_x1_1_0  OBJ       -100.0545
+    a_x1_1_0  OBJ       -20.0109
     a_x1_1_0  nf_max_isolation_limit_0  1
     a_x1_1_0  nf_regular_isolation_limit_0_0_0  1
     a_x1_1_0  auxiliary_constraints_10_1_1_0_0  1
     a_x1_1_0  auxiliary_constraints_10_2_1_0  1
-    a_x1_1_0  minimum_profit  -100.0545
-    a_x1_1_1  OBJ       -100.0545
+    a_x1_1_0  minimum_profit  -20.0109
+    a_x1_1_1  OBJ       -20.0109
     a_x1_1_1  nf_max_isolation_limit_1  1
     a_x1_1_1  nf_regular_isolation_limit_0_0_1  1
     a_x1_1_1  auxiliary_constraints_10_1_1_1_0  1
     a_x1_1_1  auxiliary_constraints_10_2_1_1  1
-    a_x1_1_1  minimum_profit  -100.0545
-    a_x1_1_2  OBJ       -1.0005450000000001e+03
+    a_x1_1_1  minimum_profit  -20.0109
+    a_x1_1_2  OBJ       -200.109
     a_x1_1_2  nf_max_isolation_limit_2  1
     a_x1_1_2  nf_regular_isolation_limit_0_0_2  1
     a_x1_1_2  auxiliary_constraints_10_1_1_2_0  1
     a_x1_1_2  auxiliary_constraints_10_2_1_2  1
-    a_x1_1_2  minimum_profit  -1.0005450000000001e+03
+    a_x1_1_2  minimum_profit  -200.109
     a_x4_1_0_0  OBJ       0
     a_x4_1_0_1  OBJ       0
     a_x4_1_0_2  OBJ       0
-    a_y1_1_0  OBJ       -2778
+    a_y1_1_0  OBJ       -555.6
     a_y1_1_0  ru_max_isolation_limit_0  1
     a_y1_1_0  ru_regular_isolation_limit_0_0_0  1
     a_y1_1_0  auxiliary_constraints_11_1_1_0_0_0_1  1
     a_y1_1_0  auxiliary_constraints_11_2_1_0  1
-    a_y1_1_0  minimum_profit  -2778
-    a_y1_1_1  OBJ       -2778
+    a_y1_1_0  minimum_profit  -555.6
+    a_y1_1_1  OBJ       -555.6
     a_y1_1_1  ru_max_isolation_limit_1  1
     a_y1_1_1  ru_regular_isolation_limit_0_0_1  1
     a_y1_1_1  auxiliary_constraints_11_1_1_1_0_0_1  1
     a_y1_1_1  auxiliary_constraints_11_2_1_1  1
-    a_y1_1_1  minimum_profit  -2778
+    a_y1_1_1  minimum_profit  -555.6
     a_y2_1_0_0  OBJ       0
     a_y2_1_0_1  OBJ       0
-    a_z1_1_0  OBJ       -480
+    a_z1_1_0  OBJ       -96
     a_z1_1_0  link_max_isolation_limit_0  1
     a_z1_1_0  auxiliary_constraints_12_1_1_0_0_0  1
     a_z1_1_0  auxiliary_constraints_12_2_1_0  1
-    a_z1_1_0  minimum_profit  -480
-    a_z1_1_1  OBJ       -480
+    a_z1_1_0  minimum_profit  -96
+    a_z1_1_1  OBJ       -96
     a_z1_1_1  link_max_isolation_limit_1  1
     a_z1_1_1  auxiliary_constraints_12_1_1_1_0_0  1
     a_z1_1_1  auxiliary_constraints_12_2_1_1  1
-    a_z1_1_1  minimum_profit  -480
-    a_z1_1_2  OBJ       -480
+    a_z1_1_1  minimum_profit  -96
+    a_z1_1_2  OBJ       -96
     a_z1_1_2  link_max_isolation_limit_2  1
     a_z1_1_2  auxiliary_constraints_12_1_1_2_0_0  1
     a_z1_1_2  auxiliary_constraints_12_2_1_2  1
-    a_z1_1_2  minimum_profit  -480
-    a_z1_1_3  OBJ       -480
+    a_z1_1_2  minimum_profit  -96
+    a_z1_1_3  OBJ       -96
     a_z1_1_3  link_max_isolation_limit_3  1
     a_z1_1_3  auxiliary_constraints_12_1_1_3_0_0  1
     a_z1_1_3  auxiliary_constraints_12_2_1_3  1
-    a_z1_1_3  minimum_profit  -480
-    a_z1_1_4  OBJ       -480
+    a_z1_1_3  minimum_profit  -96
+    a_z1_1_4  OBJ       -96
     a_z1_1_4  link_max_isolation_limit_4  1
     a_z1_1_4  auxiliary_constraints_12_1_1_4_0_0  1
     a_z1_1_4  auxiliary_constraints_12_2_1_4  1
-    a_z1_1_4  minimum_profit  -480
-    a_z1_1_5  OBJ       -480
+    a_z1_1_4  minimum_profit  -96
+    a_z1_1_5  OBJ       -96
     a_z1_1_5  link_max_isolation_limit_5  1
     a_z1_1_5  auxiliary_constraints_12_1_1_5_0_0  1
     a_z1_1_5  auxiliary_constraints_12_2_1_5  1
-    a_z1_1_5  minimum_profit  -480
-    a_z1_1_6  OBJ       -480
+    a_z1_1_5  minimum_profit  -96
+    a_z1_1_6  OBJ       -96
     a_z1_1_6  link_max_isolation_limit_6  1
     a_z1_1_6  auxiliary_constraints_12_1_1_6_0_0  1
     a_z1_1_6  auxiliary_constraints_12_2_1_6  1
-    a_z1_1_6  minimum_profit  -480
-    a_z1_1_7  OBJ       -480
+    a_z1_1_6  minimum_profit  -96
+    a_z1_1_7  OBJ       -96
     a_z1_1_7  link_max_isolation_limit_7  1
     a_z1_1_7  auxiliary_constraints_12_1_1_7_0_0  1
     a_z1_1_7  auxiliary_constraints_12_2_1_7  1
-    a_z1_1_7  minimum_profit  -480
+    a_z1_1_7  minimum_profit  -96
     a_z2_1_0_0  vp_unique_mapping_1_0  1
     a_z2_1_0_0  auxiliary_constraints_3_1_1_0_0_0  1
     a_z2_1_0_0  auxiliary_constraints_3_2_1_0_0  1
@@ -1339,7 +1339,7 @@ COLUMNS
     a_z4_1_0  auxiliary_constraints_8_4_1_0_7  1000
     MARKER    'MARKER'                 'INTEND'
 RHS
-    RHS1      OBJ       200023423
+    RHS1      OBJ       200021444
     RHS1      nf_unique_mapping_0_0  1
     RHS1      ru_unique_mapping_0_0  1
     RHS1      radio_overprovision_0_0_0  1
@@ -1390,11 +1390,11 @@ RHS
     RHS1      ru_regular_isolation_limit_1_0_1  1
     RHS1      radio_overprovision_1_0_0  1
     RHS1      radio_overprovision_1_0_1  1
-    RHS1      mips_max_limit_1_0  100.0545
-    RHS1      mips_max_limit_1_1  100.0545
-    RHS1      mips_max_limit_1_2  1.0005450000000001e+03
-    RHS1      radio_max_limit_0_0  500040
-    RHS1      radio_max_limit_1_0  500040
+    RHS1      mips_max_limit_1_0  20.0109
+    RHS1      mips_max_limit_1_1  20.0109
+    RHS1      mips_max_limit_1_2  200.109
+    RHS1      radio_max_limit_0_0  100008
+    RHS1      radio_max_limit_1_0  100008
     RHS1      vp_unique_mapping_1_0  1
     RHS1      link_max_isolation_limit_0  1
     RHS1      link_max_isolation_limit_1  1
@@ -1413,14 +1413,14 @@ RHS
     RHS1      link_regular_isolation_limit_1_0_6  1
     RHS1      link_regular_isolation_limit_1_0_7  1
     RHS1      bandwidth_overprovisioning_3_1_0  -10000
-    RHS1      bandwidth_max_limit_0_0  4800000
-    RHS1      bandwidth_max_limit_1_0  4800000
-    RHS1      bandwidth_max_limit_2_0  4800000
-    RHS1      bandwidth_max_limit_3_0  4800000
-    RHS1      bandwidth_max_limit_4_0  4800000
-    RHS1      bandwidth_max_limit_5_0  4800000
-    RHS1      bandwidth_max_limit_6_0  4800000
-    RHS1      bandwidth_max_limit_7_0  4800000
+    RHS1      bandwidth_max_limit_0_0  960000
+    RHS1      bandwidth_max_limit_1_0  960000
+    RHS1      bandwidth_max_limit_2_0  960000
+    RHS1      bandwidth_max_limit_3_0  960000
+    RHS1      bandwidth_max_limit_4_0  960000
+    RHS1      bandwidth_max_limit_5_0  960000
+    RHS1      bandwidth_max_limit_6_0  960000
+    RHS1      bandwidth_max_limit_7_0  960000
     RHS1      auxiliary_constraints_3_2_1_0_0  -7
     RHS1      auxiliary_constraints_3_2_1_0_1  -7
     RHS1      auxiliary_constraints_3_2_1_0_2  -7
@@ -1438,7 +1438,7 @@ RHS
     RHS1      auxiliary_constraints_8_4_1_0_5  990
     RHS1      auxiliary_constraints_8_4_1_0_6  990
     RHS1      auxiliary_constraints_8_4_1_0_7  990
-    RHS1      minimum_profit  200024302.9455
+    RHS1      minimum_profit  200021050.3891
 BOUNDS
  BV BND1      a_x2_0_0
  BV BND1      a_x2_0_1
