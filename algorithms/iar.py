@@ -930,17 +930,6 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                        for idx_r, r in enumerate(reqs)
                       ]
 
-            h_B_h_3_tmp = [[sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
-                                 for idx_e_p, e_p in enumerate(E_P)
-                                 if  (e_p.p in V_P_S) and (e_p.q in V_P_R)
-                                 for s            in range(S_MAX)
-                                )
-                        for idx_e, e in enumerate(r.E)
-                        #if  (e.v in r.V_S) and (e.w in r.V_R)
-                       ]
-                       for idx_r, r in enumerate(reqs)
-                      ]
-
             g_B_1_opt = sum(r.rho_B * h_B_h_1[idx_r][idx_e]
                             for idx_r, r in enumerate(reqs)
                             for idx_e, e in enumerate(r.E)
@@ -952,7 +941,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             for idx_e, e in enumerate(r.E)
                             if (e.v in r.V_R) and (e.w in r.V_R)
                            )
-            g_B_3_opt = sum(h_B_h_3[idx_r][idx_e]
+            g_B_3_opt = sum(r.rho_B * h_B_h_3[idx_r][idx_e]
                             for idx_r, r in enumerate(reqs)
                             for idx_e, e in enumerate(r.E)
                             if (e.v in r.V_S) and (e.w in r.V_R)

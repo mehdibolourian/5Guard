@@ -8906,7 +8906,7 @@ RHS
     RHS1      auxiliary_constraints_8_4_18_0_5  999.9
     RHS1      auxiliary_constraints_8_4_18_0_6  999.9
     RHS1      auxiliary_constraints_8_4_18_0_7  999.9
-    RHS1      minimum_profit  7.7824072821195979e+04
+    RHS1      minimum_profit  8.1820044768693464e+04
 BOUNDS
  UP BND1      a_x2_0_0  1
  UP BND1      a_x2_0_1  1

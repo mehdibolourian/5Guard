@@ -1381,77 +1381,6 @@ ROWS
  G  auxiliary_constraints_8_1_17_0_2
  E  nf_unique_mapping_18_0
  E  ru_unique_mapping_18_0
- L  mips_limit_1_18_0_0
- L  mips_limit_2_18_0_0
- L  mips_limit_1_18_0_1
- L  mips_limit_2_18_0_1
- L  mips_limit_1_18_0_2
- L  mips_limit_2_18_0_2
- L  radio_overprovision_18_0_0
- L  radio_overprovision_18_0_1
- L  vp_unique_mapping_18_0
- L  link_regular_isolation_limit_18_0_0
- L  link_regular_isolation_limit_18_0_1
- L  link_regular_isolation_limit_18_0_2
- L  link_regular_isolation_limit_18_0_3
- L  link_regular_isolation_limit_18_0_4
- L  link_regular_isolation_limit_18_0_5
- L  link_regular_isolation_limit_18_0_6
- L  link_regular_isolation_limit_18_0_7
- L  link_path_mapping_coordination_1_18_0_0_0
- L  link_path_mapping_coordination_1_18_0_1_0
- L  link_path_mapping_coordination_1_18_0_2_0
- L  link_path_mapping_coordination_1_18_0_3_0
- L  link_path_mapping_coordination_1_18_0_4_0
- L  link_path_mapping_coordination_1_18_0_5_0
- L  link_path_mapping_coordination_1_18_0_6_0
- L  link_path_mapping_coordination_1_18_0_7_0
- L  link_path_mapping_coordination_2_18_0_0_0
- L  link_path_mapping_coordination_2_18_0_1_0
- L  link_path_mapping_coordination_2_18_0_2_0
- L  link_path_mapping_coordination_2_18_0_3_0
- L  link_path_mapping_coordination_2_18_0_4_0
- L  link_path_mapping_coordination_2_18_0_5_0
- L  link_path_mapping_coordination_2_18_0_6_0
- L  link_path_mapping_coordination_2_18_0_7_0
- L  node_path_mapping_coordination_1_18_0_0
- L  node_path_mapping_coordination_1_18_0_1
- L  node_path_mapping_coordination_1_18_0_2
- L  node_path_mapping_coordination_2_18_0_0
- L  node_path_mapping_coordination_2_18_0_1
- G  bandwidth_overprovisioning_3_18_0
- L  auxiliary_constraints_3_1_18_0_0_0
- L  auxiliary_constraints_3_1_18_0_1_0
- L  auxiliary_constraints_3_1_18_0_2_0
- L  auxiliary_constraints_3_1_18_0_3_0
- L  auxiliary_constraints_3_1_18_0_4_0
- L  auxiliary_constraints_3_1_18_0_5_0
- L  auxiliary_constraints_3_1_18_0_6_0
- L  auxiliary_constraints_3_1_18_0_7_0
- G  auxiliary_constraints_3_2_18_0_0
- G  auxiliary_constraints_3_2_18_0_1
- G  auxiliary_constraints_3_2_18_0_2
- G  auxiliary_constraints_3_2_18_0_3
- G  auxiliary_constraints_3_2_18_0_4
- G  auxiliary_constraints_3_2_18_0_5
- G  auxiliary_constraints_3_2_18_0_6
- G  auxiliary_constraints_3_2_18_0_7
- G  auxiliary_constraints_6_3_18_0_7
- G  auxiliary_constraints_7_18_0
- L  auxiliary_constraints_8_1_18_0
- L  auxiliary_constraints_8_4_18_0_0
- L  auxiliary_constraints_8_4_18_0_1
- L  auxiliary_constraints_8_4_18_0_2
- L  auxiliary_constraints_8_4_18_0_3
- L  auxiliary_constraints_8_4_18_0_4
- L  auxiliary_constraints_8_4_18_0_5
- L  auxiliary_constraints_8_4_18_0_6
- L  auxiliary_constraints_8_4_18_0_7
- G  auxiliary_constraints_8_1_18_0_0
- G  auxiliary_constraints_8_1_18_0_1
- G  auxiliary_constraints_8_1_18_0_2
- E  nf_unique_mapping_19_0
- E  ru_unique_mapping_19_0
  L  nf_max_isolation_limit_0
  L  nf_max_isolation_limit_1
  L  nf_max_isolation_limit_2
@@ -1514,9 +1443,6 @@ ROWS
  L  nf_regular_isolation_limit_18_0_0
  L  nf_regular_isolation_limit_18_0_1
  L  nf_regular_isolation_limit_18_0_2
- L  nf_regular_isolation_limit_19_0_0
- L  nf_regular_isolation_limit_19_0_1
- L  nf_regular_isolation_limit_19_0_2
  L  ru_regular_isolation_limit_0_0_0
  L  ru_regular_isolation_limit_0_0_1
  L  ru_regular_isolation_limit_1_0_0
@@ -1555,16 +1481,14 @@ ROWS
  L  ru_regular_isolation_limit_17_0_1
  L  ru_regular_isolation_limit_18_0_0
  L  ru_regular_isolation_limit_18_0_1
- L  ru_regular_isolation_limit_19_0_0
- L  ru_regular_isolation_limit_19_0_1
- L  mips_limit_1_19_0_0
- L  mips_limit_2_19_0_0
- L  mips_limit_1_19_0_1
- L  mips_limit_2_19_0_1
- L  mips_limit_1_19_0_2
- L  mips_limit_2_19_0_2
- L  radio_overprovision_19_0_0
- L  radio_overprovision_19_0_1
+ L  mips_limit_1_18_0_0
+ L  mips_limit_2_18_0_0
+ L  mips_limit_1_18_0_1
+ L  mips_limit_2_18_0_1
+ L  mips_limit_1_18_0_2
+ L  mips_limit_2_18_0_2
+ L  radio_overprovision_18_0_0
+ L  radio_overprovision_18_0_1
  L  mips_max_limit_1_0
  L  mips_max_limit_1_1
  L  mips_max_limit_1_2
@@ -1573,7 +1497,7 @@ ROWS
  L  mips_max_limit_2_2
  L  radio_max_limit_0_0
  L  radio_max_limit_1_0
- L  vp_unique_mapping_19_0
+ L  vp_unique_mapping_18_0
  L  link_max_isolation_limit_0
  L  link_max_isolation_limit_1
  L  link_max_isolation_limit_2
@@ -1582,36 +1506,36 @@ ROWS
  L  link_max_isolation_limit_5
  L  link_max_isolation_limit_6
  L  link_max_isolation_limit_7
- L  link_regular_isolation_limit_19_0_0
- L  link_regular_isolation_limit_19_0_1
- L  link_regular_isolation_limit_19_0_2
- L  link_regular_isolation_limit_19_0_3
- L  link_regular_isolation_limit_19_0_4
- L  link_regular_isolation_limit_19_0_5
- L  link_regular_isolation_limit_19_0_6
- L  link_regular_isolation_limit_19_0_7
- L  link_path_mapping_coordination_1_19_0_0_0
- L  link_path_mapping_coordination_1_19_0_1_0
- L  link_path_mapping_coordination_1_19_0_2_0
- L  link_path_mapping_coordination_1_19_0_3_0
- L  link_path_mapping_coordination_1_19_0_4_0
- L  link_path_mapping_coordination_1_19_0_5_0
- L  link_path_mapping_coordination_1_19_0_6_0
- L  link_path_mapping_coordination_1_19_0_7_0
- L  link_path_mapping_coordination_2_19_0_0_0
- L  link_path_mapping_coordination_2_19_0_1_0
- L  link_path_mapping_coordination_2_19_0_2_0
- L  link_path_mapping_coordination_2_19_0_3_0
- L  link_path_mapping_coordination_2_19_0_4_0
- L  link_path_mapping_coordination_2_19_0_5_0
- L  link_path_mapping_coordination_2_19_0_6_0
- L  link_path_mapping_coordination_2_19_0_7_0
- L  node_path_mapping_coordination_1_19_0_0
- L  node_path_mapping_coordination_1_19_0_1
- L  node_path_mapping_coordination_1_19_0_2
- L  node_path_mapping_coordination_2_19_0_0
- L  node_path_mapping_coordination_2_19_0_1
- G  bandwidth_overprovisioning_3_19_0
+ L  link_regular_isolation_limit_18_0_0
+ L  link_regular_isolation_limit_18_0_1
+ L  link_regular_isolation_limit_18_0_2
+ L  link_regular_isolation_limit_18_0_3
+ L  link_regular_isolation_limit_18_0_4
+ L  link_regular_isolation_limit_18_0_5
+ L  link_regular_isolation_limit_18_0_6
+ L  link_regular_isolation_limit_18_0_7
+ L  link_path_mapping_coordination_1_18_0_0_0
+ L  link_path_mapping_coordination_1_18_0_1_0
+ L  link_path_mapping_coordination_1_18_0_2_0
+ L  link_path_mapping_coordination_1_18_0_3_0
+ L  link_path_mapping_coordination_1_18_0_4_0
+ L  link_path_mapping_coordination_1_18_0_5_0
+ L  link_path_mapping_coordination_1_18_0_6_0
+ L  link_path_mapping_coordination_1_18_0_7_0
+ L  link_path_mapping_coordination_2_18_0_0_0
+ L  link_path_mapping_coordination_2_18_0_1_0
+ L  link_path_mapping_coordination_2_18_0_2_0
+ L  link_path_mapping_coordination_2_18_0_3_0
+ L  link_path_mapping_coordination_2_18_0_4_0
+ L  link_path_mapping_coordination_2_18_0_5_0
+ L  link_path_mapping_coordination_2_18_0_6_0
+ L  link_path_mapping_coordination_2_18_0_7_0
+ L  node_path_mapping_coordination_1_18_0_0
+ L  node_path_mapping_coordination_1_18_0_1
+ L  node_path_mapping_coordination_1_18_0_2
+ L  node_path_mapping_coordination_2_18_0_0
+ L  node_path_mapping_coordination_2_18_0_1
+ G  bandwidth_overprovisioning_3_18_0
  L  bandwidth_max_limit_0_0
  L  bandwidth_max_limit_1_0
  L  bandwidth_max_limit_2_0
@@ -1620,36 +1544,36 @@ ROWS
  L  bandwidth_max_limit_5_0
  L  bandwidth_max_limit_6_0
  L  bandwidth_max_limit_7_0
- L  auxiliary_constraints_3_1_19_0_0_0
- L  auxiliary_constraints_3_1_19_0_1_0
- L  auxiliary_constraints_3_1_19_0_2_0
- L  auxiliary_constraints_3_1_19_0_3_0
- L  auxiliary_constraints_3_1_19_0_4_0
- L  auxiliary_constraints_3_1_19_0_5_0
- L  auxiliary_constraints_3_1_19_0_6_0
- L  auxiliary_constraints_3_1_19_0_7_0
- G  auxiliary_constraints_3_2_19_0_0
- G  auxiliary_constraints_3_2_19_0_1
- G  auxiliary_constraints_3_2_19_0_2
- G  auxiliary_constraints_3_2_19_0_3
- G  auxiliary_constraints_3_2_19_0_4
- G  auxiliary_constraints_3_2_19_0_5
- G  auxiliary_constraints_3_2_19_0_6
- G  auxiliary_constraints_3_2_19_0_7
- G  auxiliary_constraints_6_3_19_0_7
- G  auxiliary_constraints_7_19_0
- L  auxiliary_constraints_8_1_19_0
- L  auxiliary_constraints_8_4_19_0_0
- L  auxiliary_constraints_8_4_19_0_1
- L  auxiliary_constraints_8_4_19_0_2
- L  auxiliary_constraints_8_4_19_0_3
- L  auxiliary_constraints_8_4_19_0_4
- L  auxiliary_constraints_8_4_19_0_5
- L  auxiliary_constraints_8_4_19_0_6
- L  auxiliary_constraints_8_4_19_0_7
- G  auxiliary_constraints_8_1_19_0_0
- G  auxiliary_constraints_8_1_19_0_1
- G  auxiliary_constraints_8_1_19_0_2
+ L  auxiliary_constraints_3_1_18_0_0_0
+ L  auxiliary_constraints_3_1_18_0_1_0
+ L  auxiliary_constraints_3_1_18_0_2_0
+ L  auxiliary_constraints_3_1_18_0_3_0
+ L  auxiliary_constraints_3_1_18_0_4_0
+ L  auxiliary_constraints_3_1_18_0_5_0
+ L  auxiliary_constraints_3_1_18_0_6_0
+ L  auxiliary_constraints_3_1_18_0_7_0
+ G  auxiliary_constraints_3_2_18_0_0
+ G  auxiliary_constraints_3_2_18_0_1
+ G  auxiliary_constraints_3_2_18_0_2
+ G  auxiliary_constraints_3_2_18_0_3
+ G  auxiliary_constraints_3_2_18_0_4
+ G  auxiliary_constraints_3_2_18_0_5
+ G  auxiliary_constraints_3_2_18_0_6
+ G  auxiliary_constraints_3_2_18_0_7
+ G  auxiliary_constraints_6_3_18_0_7
+ G  auxiliary_constraints_7_18_0
+ L  auxiliary_constraints_8_1_18_0
+ L  auxiliary_constraints_8_4_18_0_0
+ L  auxiliary_constraints_8_4_18_0_1
+ L  auxiliary_constraints_8_4_18_0_2
+ L  auxiliary_constraints_8_4_18_0_3
+ L  auxiliary_constraints_8_4_18_0_4
+ L  auxiliary_constraints_8_4_18_0_5
+ L  auxiliary_constraints_8_4_18_0_6
+ L  auxiliary_constraints_8_4_18_0_7
+ G  auxiliary_constraints_8_1_18_0_0
+ G  auxiliary_constraints_8_1_18_0_1
+ G  auxiliary_constraints_8_1_18_0_2
  L  auxiliary_constraints_8_2_0
  L  auxiliary_constraints_8_2_1
  L  auxiliary_constraints_8_2_2
@@ -1879,9 +1803,8 @@ COLUMNS
     a_x3_0    auxiliary_constraints_8_1_15_0_0  1
     a_x3_0    auxiliary_constraints_8_1_16_0_0  1
     a_x3_0    auxiliary_constraints_8_1_17_0_0  1
-    a_x3_0    auxiliary_constraints_8_1_18_0_0  1
     a_x3_0    mips_max_limit_1_0  10
-    a_x3_0    auxiliary_constraints_8_1_19_0_0  1
+    a_x3_0    auxiliary_constraints_8_1_18_0_0  1
     a_x3_0    auxiliary_constraints_8_2_0  1
     a_x3_0    minimum_profit  -10
     a_x3_1    OBJ       -10
@@ -1902,9 +1825,8 @@ COLUMNS
     a_x3_1    auxiliary_constraints_8_1_15_0_1  1
     a_x3_1    auxiliary_constraints_8_1_16_0_1  1
     a_x3_1    auxiliary_constraints_8_1_17_0_1  1
-    a_x3_1    auxiliary_constraints_8_1_18_0_1  1
     a_x3_1    mips_max_limit_1_1  10
-    a_x3_1    auxiliary_constraints_8_1_19_0_1  1
+    a_x3_1    auxiliary_constraints_8_1_18_0_1  1
     a_x3_1    auxiliary_constraints_8_2_1  1
     a_x3_1    minimum_profit  -10
     a_x3_2    OBJ       -10
@@ -1925,9 +1847,8 @@ COLUMNS
     a_x3_2    auxiliary_constraints_8_1_15_0_2  1
     a_x3_2    auxiliary_constraints_8_1_16_0_2  1
     a_x3_2    auxiliary_constraints_8_1_17_0_2  1
-    a_x3_2    auxiliary_constraints_8_1_18_0_2  1
     a_x3_2    mips_max_limit_1_2  10
-    a_x3_2    auxiliary_constraints_8_1_19_0_2  1
+    a_x3_2    auxiliary_constraints_8_1_18_0_2  1
     a_x3_2    auxiliary_constraints_8_2_2  1
     a_x3_2    minimum_profit  -10
     x_0_0_0   OBJ       -112.5
@@ -5796,7 +5717,6 @@ COLUMNS
     a_x1_10_0  nf_regular_isolation_limit_16_0_0  1
     a_x1_10_0  nf_regular_isolation_limit_17_0_0  1
     a_x1_10_0  nf_regular_isolation_limit_18_0_0  1
-    a_x1_10_0  nf_regular_isolation_limit_19_0_0  1
     a_x1_10_0  minimum_profit  -20.0109
     a_x1_10_1  OBJ       -20.0109
     a_x1_10_1  auxiliary_constraints_10_1_10_1_0  1
@@ -5820,7 +5740,6 @@ COLUMNS
     a_x1_10_1  nf_regular_isolation_limit_16_0_1  1
     a_x1_10_1  nf_regular_isolation_limit_17_0_1  1
     a_x1_10_1  nf_regular_isolation_limit_18_0_1  1
-    a_x1_10_1  nf_regular_isolation_limit_19_0_1  1
     a_x1_10_1  minimum_profit  -20.0109
     a_x1_10_2  OBJ       -200.109
     a_x1_10_2  auxiliary_constraints_10_1_10_2_0  1
@@ -5844,7 +5763,6 @@ COLUMNS
     a_x1_10_2  nf_regular_isolation_limit_16_0_2  1
     a_x1_10_2  nf_regular_isolation_limit_17_0_2  1
     a_x1_10_2  nf_regular_isolation_limit_18_0_2  1
-    a_x1_10_2  nf_regular_isolation_limit_19_0_2  1
     a_x1_10_2  minimum_profit  -200.109
     a_x4_10_0_0  OBJ       0
     a_x4_10_0_1  OBJ       0
@@ -5871,7 +5789,6 @@ COLUMNS
     a_y1_10_0  ru_regular_isolation_limit_16_0_0  1
     a_y1_10_0  ru_regular_isolation_limit_17_0_0  1
     a_y1_10_0  ru_regular_isolation_limit_18_0_0  1
-    a_y1_10_0  ru_regular_isolation_limit_19_0_0  1
     a_y1_10_0  minimum_profit  -555.6
     a_y1_10_1  OBJ       -555.6
     a_y1_10_1  auxiliary_constraints_11_1_10_1_0_0_1  1
@@ -5895,7 +5812,6 @@ COLUMNS
     a_y1_10_1  ru_regular_isolation_limit_16_0_1  1
     a_y1_10_1  ru_regular_isolation_limit_17_0_1  1
     a_y1_10_1  ru_regular_isolation_limit_18_0_1  1
-    a_y1_10_1  ru_regular_isolation_limit_19_0_1  1
     a_y1_10_1  minimum_profit  -555.6
     a_y2_10_0_0  OBJ       0
     a_y2_10_0_1  OBJ       0
@@ -5908,9 +5824,8 @@ COLUMNS
     a_z1_10_0  link_regular_isolation_limit_15_0_0  1
     a_z1_10_0  link_regular_isolation_limit_16_0_0  1
     a_z1_10_0  link_regular_isolation_limit_17_0_0  1
-    a_z1_10_0  link_regular_isolation_limit_18_0_0  1
     a_z1_10_0  link_max_isolation_limit_0  1
-    a_z1_10_0  link_regular_isolation_limit_19_0_0  1
+    a_z1_10_0  link_regular_isolation_limit_18_0_0  1
     a_z1_10_0  auxiliary_constraints_12_2_10_0  1
     a_z1_10_0  minimum_profit  -96
     a_z1_10_1  OBJ       -96
@@ -5922,9 +5837,8 @@ COLUMNS
     a_z1_10_1  link_regular_isolation_limit_15_0_1  1
     a_z1_10_1  link_regular_isolation_limit_16_0_1  1
     a_z1_10_1  link_regular_isolation_limit_17_0_1  1
-    a_z1_10_1  link_regular_isolation_limit_18_0_1  1
     a_z1_10_1  link_max_isolation_limit_1  1
-    a_z1_10_1  link_regular_isolation_limit_19_0_1  1
+    a_z1_10_1  link_regular_isolation_limit_18_0_1  1
     a_z1_10_1  auxiliary_constraints_12_2_10_1  1
     a_z1_10_1  minimum_profit  -96
     a_z1_10_2  OBJ       -96
@@ -5936,9 +5850,8 @@ COLUMNS
     a_z1_10_2  link_regular_isolation_limit_15_0_2  1
     a_z1_10_2  link_regular_isolation_limit_16_0_2  1
     a_z1_10_2  link_regular_isolation_limit_17_0_2  1
-    a_z1_10_2  link_regular_isolation_limit_18_0_2  1
     a_z1_10_2  link_max_isolation_limit_2  1
-    a_z1_10_2  link_regular_isolation_limit_19_0_2  1
+    a_z1_10_2  link_regular_isolation_limit_18_0_2  1
     a_z1_10_2  auxiliary_constraints_12_2_10_2  1
     a_z1_10_2  minimum_profit  -96
     a_z1_10_3  OBJ       -96
@@ -5950,9 +5863,8 @@ COLUMNS
     a_z1_10_3  link_regular_isolation_limit_15_0_3  1
     a_z1_10_3  link_regular_isolation_limit_16_0_3  1
     a_z1_10_3  link_regular_isolation_limit_17_0_3  1
-    a_z1_10_3  link_regular_isolation_limit_18_0_3  1
     a_z1_10_3  link_max_isolation_limit_3  1
-    a_z1_10_3  link_regular_isolation_limit_19_0_3  1
+    a_z1_10_3  link_regular_isolation_limit_18_0_3  1
     a_z1_10_3  auxiliary_constraints_12_2_10_3  1
     a_z1_10_3  minimum_profit  -96
     a_z1_10_4  OBJ       -96
@@ -5964,9 +5876,8 @@ COLUMNS
     a_z1_10_4  link_regular_isolation_limit_15_0_4  1
     a_z1_10_4  link_regular_isolation_limit_16_0_4  1
     a_z1_10_4  link_regular_isolation_limit_17_0_4  1
-    a_z1_10_4  link_regular_isolation_limit_18_0_4  1
     a_z1_10_4  link_max_isolation_limit_4  1
-    a_z1_10_4  link_regular_isolation_limit_19_0_4  1
+    a_z1_10_4  link_regular_isolation_limit_18_0_4  1
     a_z1_10_4  auxiliary_constraints_12_2_10_4  1
     a_z1_10_4  minimum_profit  -96
     a_z1_10_5  OBJ       -96
@@ -5978,9 +5889,8 @@ COLUMNS
     a_z1_10_5  link_regular_isolation_limit_15_0_5  1
     a_z1_10_5  link_regular_isolation_limit_16_0_5  1
     a_z1_10_5  link_regular_isolation_limit_17_0_5  1
-    a_z1_10_5  link_regular_isolation_limit_18_0_5  1
     a_z1_10_5  link_max_isolation_limit_5  1
-    a_z1_10_5  link_regular_isolation_limit_19_0_5  1
+    a_z1_10_5  link_regular_isolation_limit_18_0_5  1
     a_z1_10_5  auxiliary_constraints_12_2_10_5  1
     a_z1_10_5  minimum_profit  -96
     a_z1_10_6  OBJ       -96
@@ -5992,9 +5902,8 @@ COLUMNS
     a_z1_10_6  link_regular_isolation_limit_15_0_6  1
     a_z1_10_6  link_regular_isolation_limit_16_0_6  1
     a_z1_10_6  link_regular_isolation_limit_17_0_6  1
-    a_z1_10_6  link_regular_isolation_limit_18_0_6  1
     a_z1_10_6  link_max_isolation_limit_6  1
-    a_z1_10_6  link_regular_isolation_limit_19_0_6  1
+    a_z1_10_6  link_regular_isolation_limit_18_0_6  1
     a_z1_10_6  auxiliary_constraints_12_2_10_6  1
     a_z1_10_6  minimum_profit  -96
     a_z1_10_7  OBJ       -96
@@ -6006,9 +5915,8 @@ COLUMNS
     a_z1_10_7  link_regular_isolation_limit_15_0_7  1
     a_z1_10_7  link_regular_isolation_limit_16_0_7  1
     a_z1_10_7  link_regular_isolation_limit_17_0_7  1
-    a_z1_10_7  link_regular_isolation_limit_18_0_7  1
     a_z1_10_7  link_max_isolation_limit_7  1
-    a_z1_10_7  link_regular_isolation_limit_19_0_7  1
+    a_z1_10_7  link_regular_isolation_limit_18_0_7  1
     a_z1_10_7  auxiliary_constraints_12_2_10_7  1
     a_z1_10_7  minimum_profit  -96
     a_z2_10_0_0  vp_unique_mapping_10_0  1
@@ -8699,47 +8607,47 @@ COLUMNS
     b_17_0_7_5_0  OBJ       0
     b_17_0_7_6_0  OBJ       0
     b_17_0_7_7_0  OBJ       0
-    x_18_0_0  OBJ       -1.1363636363636362e+00
+    x_18_0_0  OBJ       -1.3636363636363635e-01
     x_18_0_0  nf_unique_mapping_18_0  1
+    x_18_0_0  nf_regular_isolation_limit_18_0_0  1
     x_18_0_0  mips_limit_1_18_0_0  0.01
     x_18_0_0  mips_limit_2_18_0_0  -0.6
-    x_18_0_0  node_path_mapping_coordination_1_18_0_0  -10000
-    x_18_0_0  auxiliary_constraints_8_1_18_0_0  -1
-    x_18_0_0  nf_regular_isolation_limit_18_0_0  1
     x_18_0_0  mips_max_limit_1_0  1.3636363636363635e-01
     x_18_0_0  mips_max_limit_2_0  2.7272727272727271e-02
+    x_18_0_0  node_path_mapping_coordination_1_18_0_0  -10000
+    x_18_0_0  auxiliary_constraints_8_1_18_0_0  -1
     x_18_0_0  auxiliary_constraints_8_2_0  -1
-    x_18_0_0  minimum_profit  -1.1363636363636362e+00
-    x_18_0_1  OBJ       -1.1363636363636362e+00
+    x_18_0_0  minimum_profit  -1.3636363636363635e-01
+    x_18_0_1  OBJ       -1.3636363636363635e-01
     x_18_0_1  nf_unique_mapping_18_0  1
+    x_18_0_1  nf_regular_isolation_limit_18_0_1  1
     x_18_0_1  mips_limit_1_18_0_1  0.01
     x_18_0_1  mips_limit_2_18_0_1  -0.6
-    x_18_0_1  node_path_mapping_coordination_1_18_0_1  -10000
-    x_18_0_1  auxiliary_constraints_8_1_18_0_1  -1
-    x_18_0_1  nf_regular_isolation_limit_18_0_1  1
     x_18_0_1  mips_max_limit_1_1  1.3636363636363635e-01
     x_18_0_1  mips_max_limit_2_1  2.7272727272727271e-02
+    x_18_0_1  node_path_mapping_coordination_1_18_0_1  -10000
+    x_18_0_1  auxiliary_constraints_8_1_18_0_1  -1
     x_18_0_1  auxiliary_constraints_8_2_1  -1
-    x_18_0_1  minimum_profit  -1.1363636363636362e+00
+    x_18_0_1  minimum_profit  -1.3636363636363635e-01
     x_18_0_2  OBJ       -1.3636363636363637e-02
     x_18_0_2  nf_unique_mapping_18_0  1
+    x_18_0_2  nf_regular_isolation_limit_18_0_2  1
     x_18_0_2  mips_limit_1_18_0_2  0.01
     x_18_0_2  mips_limit_2_18_0_2  -0.6
-    x_18_0_2  node_path_mapping_coordination_1_18_0_2  -10000
-    x_18_0_2  auxiliary_constraints_8_1_18_0_2  -1
-    x_18_0_2  nf_regular_isolation_limit_18_0_2  1
     x_18_0_2  mips_max_limit_1_2  1.3636363636363637e-02
     x_18_0_2  mips_max_limit_2_2  2.7272727272727275e-03
+    x_18_0_2  node_path_mapping_coordination_1_18_0_2  -10000
+    x_18_0_2  auxiliary_constraints_8_1_18_0_2  -1
     x_18_0_2  auxiliary_constraints_8_2_2  -1
     x_18_0_2  minimum_profit  -1.3636363636363637e-02
     y_18_0_0_0_0  OBJ       0
-    y_18_0_0_0_1  OBJ       -1.9
+    y_18_0_0_0_1  OBJ       -0.9
     y_18_0_0_0_1  ru_unique_mapping_18_0  1
-    y_18_0_0_0_1  radio_overprovision_18_0_0  1
-    y_18_0_0_0_1  node_path_mapping_coordination_2_18_0_0  -10000
     y_18_0_0_0_1  ru_regular_isolation_limit_18_0_0  1
+    y_18_0_0_0_1  radio_overprovision_18_0_0  1
     y_18_0_0_0_1  radio_max_limit_0_0  180
-    y_18_0_0_0_1  minimum_profit  -1.9
+    y_18_0_0_0_1  node_path_mapping_coordination_2_18_0_0  -10000
+    y_18_0_0_0_1  minimum_profit  -0.9
     y_18_0_0_0_2  node_path_mapping_coordination_2_18_0_0  -10000
     y_18_0_0_0_3  node_path_mapping_coordination_2_18_0_0  -10000
     y_18_0_0_0_4  node_path_mapping_coordination_2_18_0_0  -10000
@@ -8752,10 +8660,10 @@ COLUMNS
     y_18_0_1_0_0  OBJ       0
     y_18_0_1_0_1  OBJ       -0.9
     y_18_0_1_0_1  ru_unique_mapping_18_0  1
-    y_18_0_1_0_1  radio_overprovision_18_0_1  1
-    y_18_0_1_0_1  node_path_mapping_coordination_2_18_0_1  -10000
     y_18_0_1_0_1  ru_regular_isolation_limit_18_0_1  1
+    y_18_0_1_0_1  radio_overprovision_18_0_1  1
     y_18_0_1_0_1  radio_max_limit_1_0  180
+    y_18_0_1_0_1  node_path_mapping_coordination_2_18_0_1  -10000
     y_18_0_1_0_1  minimum_profit  -0.9
     y_18_0_1_0_2  node_path_mapping_coordination_2_18_0_1  -10000
     y_18_0_1_0_3  node_path_mapping_coordination_2_18_0_1  -10000
@@ -8961,326 +8869,8 @@ COLUMNS
     a_z4_18_0  auxiliary_constraints_8_4_18_0_5  1000
     a_z4_18_0  auxiliary_constraints_8_4_18_0_6  1000
     a_z4_18_0  auxiliary_constraints_8_4_18_0_7  1000
-    b_18_0_0_1_0  OBJ       0
-    b_18_0_0_2_0  OBJ       0
-    b_18_0_0_3_0  OBJ       0
-    b_18_0_0_4_0  OBJ       0
-    b_18_0_0_5_0  OBJ       0
-    b_18_0_0_6_0  OBJ       0
-    b_18_0_0_7_0  OBJ       0
-    b_18_0_1_1_0  OBJ       0
-    b_18_0_1_2_0  OBJ       0
-    b_18_0_1_3_0  OBJ       0
-    b_18_0_1_4_0  OBJ       0
-    b_18_0_1_5_0  OBJ       0
-    b_18_0_1_6_0  OBJ       0
-    b_18_0_1_7_0  OBJ       0
-    b_18_0_2_1_0  OBJ       0
-    b_18_0_2_2_0  OBJ       0
-    b_18_0_2_3_0  OBJ       0
-    b_18_0_2_4_0  OBJ       0
-    b_18_0_2_5_0  OBJ       0
-    b_18_0_2_6_0  OBJ       0
-    b_18_0_2_7_0  OBJ       0
-    b_18_0_3_1_0  OBJ       0
-    b_18_0_3_2_0  OBJ       0
-    b_18_0_3_3_0  OBJ       0
-    b_18_0_3_4_0  OBJ       0
-    b_18_0_3_5_0  OBJ       0
-    b_18_0_3_6_0  OBJ       0
-    b_18_0_3_7_0  OBJ       0
-    b_18_0_4_1_0  OBJ       0
-    b_18_0_4_2_0  OBJ       0
-    b_18_0_4_3_0  OBJ       0
-    b_18_0_4_4_0  OBJ       0
-    b_18_0_4_5_0  OBJ       0
-    b_18_0_4_6_0  OBJ       0
-    b_18_0_4_7_0  OBJ       0
-    b_18_0_5_1_0  OBJ       0
-    b_18_0_5_2_0  OBJ       0
-    b_18_0_5_3_0  OBJ       0
-    b_18_0_5_4_0  OBJ       0
-    b_18_0_5_5_0  OBJ       0
-    b_18_0_5_6_0  OBJ       0
-    b_18_0_5_7_0  OBJ       0
-    b_18_0_6_1_0  OBJ       0
-    b_18_0_6_2_0  OBJ       0
-    b_18_0_6_3_0  OBJ       0
-    b_18_0_6_4_0  OBJ       0
-    b_18_0_6_5_0  OBJ       0
-    b_18_0_6_6_0  OBJ       0
-    b_18_0_6_7_0  OBJ       0
-    b_18_0_7_1_0  OBJ       0
-    b_18_0_7_2_0  OBJ       0
-    b_18_0_7_3_0  OBJ       0
-    b_18_0_7_4_0  OBJ       0
-    b_18_0_7_5_0  OBJ       0
-    b_18_0_7_6_0  OBJ       0
-    b_18_0_7_7_0  OBJ       0
-    x_19_0_0  OBJ       -1.3636363636363635e-01
-    x_19_0_0  nf_unique_mapping_19_0  1
-    x_19_0_0  nf_regular_isolation_limit_19_0_0  1
-    x_19_0_0  mips_limit_1_19_0_0  0.01
-    x_19_0_0  mips_limit_2_19_0_0  -0.6
-    x_19_0_0  mips_max_limit_1_0  1.3636363636363635e-01
-    x_19_0_0  mips_max_limit_2_0  2.7272727272727271e-02
-    x_19_0_0  node_path_mapping_coordination_1_19_0_0  -10000
-    x_19_0_0  auxiliary_constraints_8_1_19_0_0  -1
-    x_19_0_0  auxiliary_constraints_8_2_0  -1
-    x_19_0_0  minimum_profit  -1.3636363636363635e-01
-    x_19_0_1  OBJ       -1.3636363636363635e-01
-    x_19_0_1  nf_unique_mapping_19_0  1
-    x_19_0_1  nf_regular_isolation_limit_19_0_1  1
-    x_19_0_1  mips_limit_1_19_0_1  0.01
-    x_19_0_1  mips_limit_2_19_0_1  -0.6
-    x_19_0_1  mips_max_limit_1_1  1.3636363636363635e-01
-    x_19_0_1  mips_max_limit_2_1  2.7272727272727271e-02
-    x_19_0_1  node_path_mapping_coordination_1_19_0_1  -10000
-    x_19_0_1  auxiliary_constraints_8_1_19_0_1  -1
-    x_19_0_1  auxiliary_constraints_8_2_1  -1
-    x_19_0_1  minimum_profit  -1.3636363636363635e-01
-    x_19_0_2  OBJ       -1.3636363636363637e-02
-    x_19_0_2  nf_unique_mapping_19_0  1
-    x_19_0_2  nf_regular_isolation_limit_19_0_2  1
-    x_19_0_2  mips_limit_1_19_0_2  0.01
-    x_19_0_2  mips_limit_2_19_0_2  -0.6
-    x_19_0_2  mips_max_limit_1_2  1.3636363636363637e-02
-    x_19_0_2  mips_max_limit_2_2  2.7272727272727275e-03
-    x_19_0_2  node_path_mapping_coordination_1_19_0_2  -10000
-    x_19_0_2  auxiliary_constraints_8_1_19_0_2  -1
-    x_19_0_2  auxiliary_constraints_8_2_2  -1
-    x_19_0_2  minimum_profit  -1.3636363636363637e-02
-    y_19_0_0_0_0  OBJ       0
-    y_19_0_0_0_1  OBJ       -0.9
-    y_19_0_0_0_1  ru_unique_mapping_19_0  1
-    y_19_0_0_0_1  ru_regular_isolation_limit_19_0_0  1
-    y_19_0_0_0_1  radio_overprovision_19_0_0  1
-    y_19_0_0_0_1  radio_max_limit_0_0  180
-    y_19_0_0_0_1  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_0_0_1  minimum_profit  -0.9
-    y_19_0_0_0_2  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_0_0_3  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_0_0_4  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_0_0_5  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_0_0_6  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_0_0_7  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_0_0_8  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_0_0_9  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_0_0_10  node_path_mapping_coordination_2_19_0_0  -10000
-    y_19_0_1_0_0  OBJ       0
-    y_19_0_1_0_1  OBJ       -0.9
-    y_19_0_1_0_1  ru_unique_mapping_19_0  1
-    y_19_0_1_0_1  ru_regular_isolation_limit_19_0_1  1
-    y_19_0_1_0_1  radio_overprovision_19_0_1  1
-    y_19_0_1_0_1  radio_max_limit_1_0  180
-    y_19_0_1_0_1  node_path_mapping_coordination_2_19_0_1  -10000
-    y_19_0_1_0_1  minimum_profit  -0.9
-    y_19_0_1_0_2  node_path_mapping_coordination_2_19_0_1  -10000
-    y_19_0_1_0_3  node_path_mapping_coordination_2_19_0_1  -10000
-    y_19_0_1_0_4  node_path_mapping_coordination_2_19_0_1  -10000
-    y_19_0_1_0_5  node_path_mapping_coordination_2_19_0_1  -10000
-    y_19_0_1_0_6  node_path_mapping_coordination_2_19_0_1  -10000
-    y_19_0_1_0_7  node_path_mapping_coordination_2_19_0_1  -10000
-    y_19_0_1_0_8  node_path_mapping_coordination_2_19_0_1  -10000
-    y_19_0_1_0_9  node_path_mapping_coordination_2_19_0_1  -10000
-    y_19_0_1_0_10  node_path_mapping_coordination_2_19_0_1  -10000
-    z_19_0_0_0  link_regular_isolation_limit_19_0_0  1
-    z_19_0_0_0  link_path_mapping_coordination_1_19_0_0_0  0.01
-    z_19_0_0_0  link_path_mapping_coordination_2_19_0_0_0  -10000
-    z_19_0_0_0  auxiliary_constraints_3_1_19_0_0_0  -1
-    z_19_0_0_0  auxiliary_constraints_3_2_19_0_0  -1
-    z_19_0_1_0  link_regular_isolation_limit_19_0_1  1
-    z_19_0_1_0  link_path_mapping_coordination_1_19_0_1_0  0.01
-    z_19_0_1_0  link_path_mapping_coordination_2_19_0_1_0  -10000
-    z_19_0_1_0  auxiliary_constraints_3_1_19_0_1_0  -1
-    z_19_0_1_0  auxiliary_constraints_3_2_19_0_1  -1
-    z_19_0_2_0  link_regular_isolation_limit_19_0_2  1
-    z_19_0_2_0  link_path_mapping_coordination_1_19_0_2_0  0.01
-    z_19_0_2_0  link_path_mapping_coordination_2_19_0_2_0  -10000
-    z_19_0_2_0  auxiliary_constraints_3_1_19_0_2_0  -1
-    z_19_0_2_0  auxiliary_constraints_3_2_19_0_2  -1
-    z_19_0_3_0  link_regular_isolation_limit_19_0_3  1
-    z_19_0_3_0  link_path_mapping_coordination_1_19_0_3_0  0.01
-    z_19_0_3_0  link_path_mapping_coordination_2_19_0_3_0  -10000
-    z_19_0_3_0  auxiliary_constraints_3_1_19_0_3_0  -1
-    z_19_0_3_0  auxiliary_constraints_3_2_19_0_3  -1
-    z_19_0_4_0  link_regular_isolation_limit_19_0_4  1
-    z_19_0_4_0  link_path_mapping_coordination_1_19_0_4_0  0.01
-    z_19_0_4_0  link_path_mapping_coordination_2_19_0_4_0  -10000
-    z_19_0_4_0  auxiliary_constraints_3_1_19_0_4_0  -1
-    z_19_0_4_0  auxiliary_constraints_3_2_19_0_4  -1
-    z_19_0_5_0  link_regular_isolation_limit_19_0_5  1
-    z_19_0_5_0  link_path_mapping_coordination_1_19_0_5_0  0.01
-    z_19_0_5_0  link_path_mapping_coordination_2_19_0_5_0  -10000
-    z_19_0_5_0  auxiliary_constraints_3_1_19_0_5_0  -1
-    z_19_0_5_0  auxiliary_constraints_3_2_19_0_5  -1
-    z_19_0_6_0  link_regular_isolation_limit_19_0_6  1
-    z_19_0_6_0  link_path_mapping_coordination_1_19_0_6_0  0.01
-    z_19_0_6_0  link_path_mapping_coordination_2_19_0_6_0  -10000
-    z_19_0_6_0  auxiliary_constraints_3_1_19_0_6_0  -1
-    z_19_0_6_0  auxiliary_constraints_3_2_19_0_6  -1
-    z_19_0_7_0  link_regular_isolation_limit_19_0_7  1
-    z_19_0_7_0  link_path_mapping_coordination_1_19_0_7_0  0.01
-    z_19_0_7_0  link_path_mapping_coordination_2_19_0_7_0  -10000
-    z_19_0_7_0  auxiliary_constraints_3_1_19_0_7_0  -1
-    z_19_0_7_0  auxiliary_constraints_3_2_19_0_7  -1
-    c_19_0_0  OBJ       99
-    c_19_0_0  mips_limit_1_19_0_0  -1
-    c_19_0_0  mips_limit_2_19_0_0  1
-    c_19_0_0  mips_max_limit_1_0  1
-    c_19_0_0  minimum_profit  99
-    c_19_0_1  OBJ       99
-    c_19_0_1  mips_limit_1_19_0_1  -1
-    c_19_0_1  mips_limit_2_19_0_1  1
-    c_19_0_1  mips_max_limit_1_1  1
-    c_19_0_1  minimum_profit  99
-    c_19_0_2  OBJ       99
-    c_19_0_2  mips_limit_1_19_0_2  -1
-    c_19_0_2  mips_limit_2_19_0_2  1
-    c_19_0_2  mips_max_limit_1_2  1
-    c_19_0_2  minimum_profit  99
-    b_19_0_0_0_0  OBJ       0.0994
-    b_19_0_0_0_0  link_path_mapping_coordination_1_19_0_0_0  -1
-    b_19_0_0_0_0  link_path_mapping_coordination_2_19_0_0_0  0.995
-    b_19_0_0_0_0  node_path_mapping_coordination_1_19_0_0  0.995
-    b_19_0_0_0_0  node_path_mapping_coordination_2_19_0_0  0.995
-    b_19_0_0_0_0  bandwidth_overprovisioning_3_19_0  -0.995
-    b_19_0_0_0_0  bandwidth_max_limit_0_0  1
-    b_19_0_0_0_0  minimum_profit  0.0994
-    b_19_0_1_0_0  OBJ       0.0994
-    b_19_0_1_0_0  link_path_mapping_coordination_1_19_0_1_0  -1
-    b_19_0_1_0_0  link_path_mapping_coordination_2_19_0_1_0  0.995
-    b_19_0_1_0_0  node_path_mapping_coordination_1_19_0_0  0.995
-    b_19_0_1_0_0  node_path_mapping_coordination_2_19_0_1  0.995
-    b_19_0_1_0_0  bandwidth_overprovisioning_3_19_0  -0.995
-    b_19_0_1_0_0  bandwidth_max_limit_1_0  1
-    b_19_0_1_0_0  minimum_profit  0.0994
-    b_19_0_2_0_0  OBJ       0.0994
-    b_19_0_2_0_0  link_path_mapping_coordination_1_19_0_2_0  -1
-    b_19_0_2_0_0  link_path_mapping_coordination_2_19_0_2_0  0.995
-    b_19_0_2_0_0  node_path_mapping_coordination_1_19_0_1  0.995
-    b_19_0_2_0_0  node_path_mapping_coordination_2_19_0_0  0.995
-    b_19_0_2_0_0  bandwidth_overprovisioning_3_19_0  -0.995
-    b_19_0_2_0_0  bandwidth_max_limit_2_0  1
-    b_19_0_2_0_0  minimum_profit  0.0994
-    b_19_0_3_0_0  OBJ       0.0994
-    b_19_0_3_0_0  link_path_mapping_coordination_1_19_0_3_0  -1
-    b_19_0_3_0_0  link_path_mapping_coordination_2_19_0_3_0  0.995
-    b_19_0_3_0_0  node_path_mapping_coordination_1_19_0_1  0.995
-    b_19_0_3_0_0  node_path_mapping_coordination_2_19_0_1  0.995
-    b_19_0_3_0_0  bandwidth_overprovisioning_3_19_0  -0.995
-    b_19_0_3_0_0  bandwidth_max_limit_3_0  1
-    b_19_0_3_0_0  minimum_profit  0.0994
-    b_19_0_4_0_0  OBJ       0.0994
-    b_19_0_4_0_0  link_path_mapping_coordination_1_19_0_4_0  -1
-    b_19_0_4_0_0  link_path_mapping_coordination_2_19_0_4_0  0.995
-    b_19_0_4_0_0  node_path_mapping_coordination_1_19_0_2  0.995
-    b_19_0_4_0_0  node_path_mapping_coordination_2_19_0_0  0.995
-    b_19_0_4_0_0  bandwidth_overprovisioning_3_19_0  -0.995
-    b_19_0_4_0_0  bandwidth_max_limit_4_0  1
-    b_19_0_4_0_0  minimum_profit  0.0994
-    b_19_0_5_0_0  OBJ       0.0994
-    b_19_0_5_0_0  link_path_mapping_coordination_1_19_0_5_0  -1
-    b_19_0_5_0_0  link_path_mapping_coordination_2_19_0_5_0  0.995
-    b_19_0_5_0_0  node_path_mapping_coordination_1_19_0_2  0.995
-    b_19_0_5_0_0  node_path_mapping_coordination_2_19_0_1  0.995
-    b_19_0_5_0_0  bandwidth_overprovisioning_3_19_0  -0.995
-    b_19_0_5_0_0  bandwidth_max_limit_5_0  1
-    b_19_0_5_0_0  minimum_profit  0.0994
-    b_19_0_6_0_0  OBJ       -0.0001
-    b_19_0_6_0_0  link_path_mapping_coordination_1_19_0_6_0  -1
-    b_19_0_6_0_0  link_path_mapping_coordination_2_19_0_6_0  0.995
-    b_19_0_6_0_0  node_path_mapping_coordination_1_19_0_0  0.995
-    b_19_0_6_0_0  bandwidth_max_limit_6_0  1
-    b_19_0_6_0_0  minimum_profit  -0.0001
-    b_19_0_7_0_0  OBJ       -0.0001
-    b_19_0_7_0_0  link_path_mapping_coordination_1_19_0_7_0  -1
-    b_19_0_7_0_0  link_path_mapping_coordination_2_19_0_7_0  0.995
-    b_19_0_7_0_0  node_path_mapping_coordination_1_19_0_1  0.995
-    b_19_0_7_0_0  bandwidth_max_limit_7_0  1
-    b_19_0_7_0_0  minimum_profit  -0.0001
-    a_x1_19_0  OBJ       0
-    a_x1_19_1  OBJ       0
-    a_x1_19_2  OBJ       0
-    a_x4_19_0_0  OBJ       0
-    a_x4_19_0_1  OBJ       0
-    a_x4_19_0_2  OBJ       0
-    a_y1_19_0  OBJ       0
-    a_y1_19_1  OBJ       0
-    a_y2_19_0_0  OBJ       0
-    a_y2_19_0_1  OBJ       0
-    a_z1_19_0  OBJ       0
-    a_z1_19_1  OBJ       0
-    a_z1_19_2  OBJ       0
-    a_z1_19_3  OBJ       0
-    a_z1_19_4  OBJ       0
-    a_z1_19_5  OBJ       0
-    a_z1_19_6  OBJ       0
-    a_z1_19_7  OBJ       0
-    a_z2_19_0_0  vp_unique_mapping_19_0  1
-    a_z2_19_0_0  auxiliary_constraints_3_1_19_0_0_0  1
-    a_z2_19_0_0  auxiliary_constraints_3_2_19_0_0  1
-    a_z2_19_0_0  auxiliary_constraints_6_3_19_0_7  -1
-    a_z2_19_0_0  auxiliary_constraints_8_4_19_0_0  -1
-    a_z2_19_0_1  vp_unique_mapping_19_0  1
-    a_z2_19_0_1  auxiliary_constraints_3_1_19_0_1_0  1
-    a_z2_19_0_1  auxiliary_constraints_3_2_19_0_1  1
-    a_z2_19_0_1  auxiliary_constraints_6_3_19_0_7  -1
-    a_z2_19_0_1  auxiliary_constraints_8_4_19_0_1  -1
-    a_z2_19_0_2  vp_unique_mapping_19_0  1
-    a_z2_19_0_2  auxiliary_constraints_3_1_19_0_2_0  1
-    a_z2_19_0_2  auxiliary_constraints_3_2_19_0_2  1
-    a_z2_19_0_2  auxiliary_constraints_6_3_19_0_7  -0.02
-    a_z2_19_0_2  auxiliary_constraints_8_4_19_0_2  -0.02
-    a_z2_19_0_3  vp_unique_mapping_19_0  1
-    a_z2_19_0_3  auxiliary_constraints_3_1_19_0_3_0  1
-    a_z2_19_0_3  auxiliary_constraints_3_2_19_0_3  1
-    a_z2_19_0_3  auxiliary_constraints_6_3_19_0_7  -0.02
-    a_z2_19_0_3  auxiliary_constraints_8_4_19_0_3  -0.02
-    a_z2_19_0_4  vp_unique_mapping_19_0  1
-    a_z2_19_0_4  auxiliary_constraints_3_1_19_0_4_0  1
-    a_z2_19_0_4  auxiliary_constraints_3_2_19_0_4  1
-    a_z2_19_0_4  auxiliary_constraints_6_3_19_0_7  -10
-    a_z2_19_0_4  auxiliary_constraints_8_4_19_0_4  -10
-    a_z2_19_0_5  vp_unique_mapping_19_0  1
-    a_z2_19_0_5  auxiliary_constraints_3_1_19_0_5_0  1
-    a_z2_19_0_5  auxiliary_constraints_3_2_19_0_5  1
-    a_z2_19_0_5  auxiliary_constraints_6_3_19_0_7  -10
-    a_z2_19_0_5  auxiliary_constraints_8_4_19_0_5  -10
-    a_z2_19_0_6  vp_unique_mapping_19_0  1
-    a_z2_19_0_6  auxiliary_constraints_3_1_19_0_6_0  1
-    a_z2_19_0_6  auxiliary_constraints_3_2_19_0_6  1
-    a_z2_19_0_6  auxiliary_constraints_6_3_19_0_7  -10
-    a_z2_19_0_6  auxiliary_constraints_8_4_19_0_6  -10
-    a_z2_19_0_7  vp_unique_mapping_19_0  1
-    a_z2_19_0_7  auxiliary_constraints_3_1_19_0_7_0  1
-    a_z2_19_0_7  auxiliary_constraints_3_2_19_0_7  1
-    a_z2_19_0_7  auxiliary_constraints_6_3_19_0_7  -10
-    a_z2_19_0_7  auxiliary_constraints_8_4_19_0_7  -10
-    a_z3_19_0  OBJ       -0.001
-    a_z3_19_0  auxiliary_constraints_6_3_19_0_7  1
-    a_z3_19_0  auxiliary_constraints_7_19_0  1
-    a_z3_19_0  auxiliary_constraints_8_1_19_0  1
-    a_z3_19_0  auxiliary_constraints_8_4_19_0_0  1
-    a_z3_19_0  auxiliary_constraints_8_4_19_0_1  1
-    a_z3_19_0  auxiliary_constraints_8_4_19_0_2  1
-    a_z3_19_0  auxiliary_constraints_8_4_19_0_3  1
-    a_z3_19_0  auxiliary_constraints_8_4_19_0_4  1
-    a_z3_19_0  auxiliary_constraints_8_4_19_0_5  1
-    a_z3_19_0  auxiliary_constraints_8_4_19_0_6  1
-    a_z3_19_0  auxiliary_constraints_8_4_19_0_7  1
-    a_z3_19_0  minimum_profit  -0.001
-    a_z4_19_0  auxiliary_constraints_8_1_19_0  -1000
-    a_z4_19_0  auxiliary_constraints_8_4_19_0_0  1000
-    a_z4_19_0  auxiliary_constraints_8_4_19_0_1  1000
-    a_z4_19_0  auxiliary_constraints_8_4_19_0_2  1000
-    a_z4_19_0  auxiliary_constraints_8_4_19_0_3  1000
-    a_z4_19_0  auxiliary_constraints_8_4_19_0_4  1000
-    a_z4_19_0  auxiliary_constraints_8_4_19_0_5  1000
-    a_z4_19_0  auxiliary_constraints_8_4_19_0_6  1000
-    a_z4_19_0  auxiliary_constraints_8_4_19_0_7  1000
 RHS
-    RHS1      OBJ       100135787.2
+    RHS1      OBJ       100134740.1
     RHS1      nf_unique_mapping_0_0  1
     RHS1      ru_unique_mapping_0_0  1
     RHS1      radio_overprovision_0_0_0  10
@@ -9841,37 +9431,6 @@ RHS
     RHS1      auxiliary_constraints_8_4_17_0_7  990
     RHS1      nf_unique_mapping_18_0  1
     RHS1      ru_unique_mapping_18_0  1
-    RHS1      radio_overprovision_18_0_0  1
-    RHS1      radio_overprovision_18_0_1  1
-    RHS1      vp_unique_mapping_18_0  1
-    RHS1      link_regular_isolation_limit_18_0_0  1
-    RHS1      link_regular_isolation_limit_18_0_1  1
-    RHS1      link_regular_isolation_limit_18_0_2  1
-    RHS1      link_regular_isolation_limit_18_0_3  1
-    RHS1      link_regular_isolation_limit_18_0_4  1
-    RHS1      link_regular_isolation_limit_18_0_5  1
-    RHS1      link_regular_isolation_limit_18_0_6  1
-    RHS1      link_regular_isolation_limit_18_0_7  1
-    RHS1      bandwidth_overprovisioning_3_18_0  -10000
-    RHS1      auxiliary_constraints_3_2_18_0_0  -7
-    RHS1      auxiliary_constraints_3_2_18_0_1  -7
-    RHS1      auxiliary_constraints_3_2_18_0_2  -7
-    RHS1      auxiliary_constraints_3_2_18_0_3  -7
-    RHS1      auxiliary_constraints_3_2_18_0_4  -7
-    RHS1      auxiliary_constraints_3_2_18_0_5  -7
-    RHS1      auxiliary_constraints_3_2_18_0_6  -7
-    RHS1      auxiliary_constraints_3_2_18_0_7  -7
-    RHS1      auxiliary_constraints_6_3_18_0_7  -10
-    RHS1      auxiliary_constraints_8_4_18_0_0  990
-    RHS1      auxiliary_constraints_8_4_18_0_1  990
-    RHS1      auxiliary_constraints_8_4_18_0_2  990
-    RHS1      auxiliary_constraints_8_4_18_0_3  990
-    RHS1      auxiliary_constraints_8_4_18_0_4  990
-    RHS1      auxiliary_constraints_8_4_18_0_5  990
-    RHS1      auxiliary_constraints_8_4_18_0_6  990
-    RHS1      auxiliary_constraints_8_4_18_0_7  990
-    RHS1      nf_unique_mapping_19_0  1
-    RHS1      ru_unique_mapping_19_0  1
     RHS1      nf_max_isolation_limit_0  1
     RHS1      nf_max_isolation_limit_1  1
     RHS1      nf_max_isolation_limit_2  1
@@ -9934,9 +9493,6 @@ RHS
     RHS1      nf_regular_isolation_limit_18_0_0  1
     RHS1      nf_regular_isolation_limit_18_0_1  1
     RHS1      nf_regular_isolation_limit_18_0_2  1
-    RHS1      nf_regular_isolation_limit_19_0_0  1
-    RHS1      nf_regular_isolation_limit_19_0_1  1
-    RHS1      nf_regular_isolation_limit_19_0_2  1
     RHS1      ru_regular_isolation_limit_0_0_0  1
     RHS1      ru_regular_isolation_limit_0_0_1  1
     RHS1      ru_regular_isolation_limit_1_0_0  1
@@ -9975,10 +9531,8 @@ RHS
     RHS1      ru_regular_isolation_limit_17_0_1  1
     RHS1      ru_regular_isolation_limit_18_0_0  1
     RHS1      ru_regular_isolation_limit_18_0_1  1
-    RHS1      ru_regular_isolation_limit_19_0_0  1
-    RHS1      ru_regular_isolation_limit_19_0_1  1
-    RHS1      radio_overprovision_19_0_0  1
-    RHS1      radio_overprovision_19_0_1  1
+    RHS1      radio_overprovision_18_0_0  1
+    RHS1      radio_overprovision_18_0_1  1
     RHS1      mips_max_limit_1_0  15.0109
     RHS1      mips_max_limit_1_1  15.0109
     RHS1      mips_max_limit_1_2  195.109
@@ -9987,7 +9541,7 @@ RHS
     RHS1      mips_max_limit_2_2  599
     RHS1      radio_max_limit_0_0  100008
     RHS1      radio_max_limit_1_0  100008
-    RHS1      vp_unique_mapping_19_0  1
+    RHS1      vp_unique_mapping_18_0  1
     RHS1      link_max_isolation_limit_0  1
     RHS1      link_max_isolation_limit_1  1
     RHS1      link_max_isolation_limit_2  1
@@ -9996,15 +9550,15 @@ RHS
     RHS1      link_max_isolation_limit_5  1
     RHS1      link_max_isolation_limit_6  1
     RHS1      link_max_isolation_limit_7  1
-    RHS1      link_regular_isolation_limit_19_0_0  1
-    RHS1      link_regular_isolation_limit_19_0_1  1
-    RHS1      link_regular_isolation_limit_19_0_2  1
-    RHS1      link_regular_isolation_limit_19_0_3  1
-    RHS1      link_regular_isolation_limit_19_0_4  1
-    RHS1      link_regular_isolation_limit_19_0_5  1
-    RHS1      link_regular_isolation_limit_19_0_6  1
-    RHS1      link_regular_isolation_limit_19_0_7  1
-    RHS1      bandwidth_overprovisioning_3_19_0  -10000
+    RHS1      link_regular_isolation_limit_18_0_0  1
+    RHS1      link_regular_isolation_limit_18_0_1  1
+    RHS1      link_regular_isolation_limit_18_0_2  1
+    RHS1      link_regular_isolation_limit_18_0_3  1
+    RHS1      link_regular_isolation_limit_18_0_4  1
+    RHS1      link_regular_isolation_limit_18_0_5  1
+    RHS1      link_regular_isolation_limit_18_0_6  1
+    RHS1      link_regular_isolation_limit_18_0_7  1
+    RHS1      bandwidth_overprovisioning_3_18_0  -10000
     RHS1      bandwidth_max_limit_0_0  960000
     RHS1      bandwidth_max_limit_1_0  960000
     RHS1      bandwidth_max_limit_2_0  960000
@@ -10013,24 +9567,24 @@ RHS
     RHS1      bandwidth_max_limit_5_0  960000
     RHS1      bandwidth_max_limit_6_0  960000
     RHS1      bandwidth_max_limit_7_0  960000
-    RHS1      auxiliary_constraints_3_2_19_0_0  -7
-    RHS1      auxiliary_constraints_3_2_19_0_1  -7
-    RHS1      auxiliary_constraints_3_2_19_0_2  -7
-    RHS1      auxiliary_constraints_3_2_19_0_3  -7
-    RHS1      auxiliary_constraints_3_2_19_0_4  -7
-    RHS1      auxiliary_constraints_3_2_19_0_5  -7
-    RHS1      auxiliary_constraints_3_2_19_0_6  -7
-    RHS1      auxiliary_constraints_3_2_19_0_7  -7
-    RHS1      auxiliary_constraints_6_3_19_0_7  -10
-    RHS1      auxiliary_constraints_8_4_19_0_0  990
-    RHS1      auxiliary_constraints_8_4_19_0_1  990
-    RHS1      auxiliary_constraints_8_4_19_0_2  990
-    RHS1      auxiliary_constraints_8_4_19_0_3  990
-    RHS1      auxiliary_constraints_8_4_19_0_4  990
-    RHS1      auxiliary_constraints_8_4_19_0_5  990
-    RHS1      auxiliary_constraints_8_4_19_0_6  990
-    RHS1      auxiliary_constraints_8_4_19_0_7  990
-    RHS1      minimum_profit  1.0014330933378342e+08
+    RHS1      auxiliary_constraints_3_2_18_0_0  -7
+    RHS1      auxiliary_constraints_3_2_18_0_1  -7
+    RHS1      auxiliary_constraints_3_2_18_0_2  -7
+    RHS1      auxiliary_constraints_3_2_18_0_3  -7
+    RHS1      auxiliary_constraints_3_2_18_0_4  -7
+    RHS1      auxiliary_constraints_3_2_18_0_5  -7
+    RHS1      auxiliary_constraints_3_2_18_0_6  -7
+    RHS1      auxiliary_constraints_3_2_18_0_7  -7
+    RHS1      auxiliary_constraints_6_3_18_0_7  -10
+    RHS1      auxiliary_constraints_8_4_18_0_0  990
+    RHS1      auxiliary_constraints_8_4_18_0_1  990
+    RHS1      auxiliary_constraints_8_4_18_0_2  990
+    RHS1      auxiliary_constraints_8_4_18_0_3  990
+    RHS1      auxiliary_constraints_8_4_18_0_4  990
+    RHS1      auxiliary_constraints_8_4_18_0_5  990
+    RHS1      auxiliary_constraints_8_4_18_0_6  990
+    RHS1      auxiliary_constraints_8_4_18_0_7  990
+    RHS1      minimum_profit  1.0014225183880854e+08
 BOUNDS
  UP BND1      a_x2_0_0  1
  UP BND1      a_x2_0_1  1
@@ -11196,64 +10750,4 @@ BOUNDS
  UP BND1      a_z2_18_0_6  1
  UP BND1      a_z2_18_0_7  1
  UP BND1      a_z4_18_0  1
- UP BND1      x_19_0_0  1
- UP BND1      x_19_0_1  1
- UP BND1      x_19_0_2  1
- UP BND1      y_19_0_0_0_0  1
- UP BND1      y_19_0_0_0_1  1
- UP BND1      y_19_0_0_0_2  1
- UP BND1      y_19_0_0_0_3  1
- UP BND1      y_19_0_0_0_4  1
- UP BND1      y_19_0_0_0_5  1
- UP BND1      y_19_0_0_0_6  1
- UP BND1      y_19_0_0_0_7  1
- UP BND1      y_19_0_0_0_8  1
- UP BND1      y_19_0_0_0_9  1
- UP BND1      y_19_0_0_0_10  1
- UP BND1      y_19_0_1_0_0  1
- UP BND1      y_19_0_1_0_1  1
- UP BND1      y_19_0_1_0_2  1
- UP BND1      y_19_0_1_0_3  1
- UP BND1      y_19_0_1_0_4  1
- UP BND1      y_19_0_1_0_5  1
- UP BND1      y_19_0_1_0_6  1
- UP BND1      y_19_0_1_0_7  1
- UP BND1      y_19_0_1_0_8  1
- UP BND1      y_19_0_1_0_9  1
- UP BND1      y_19_0_1_0_10  1
- UP BND1      z_19_0_0_0  1
- UP BND1      z_19_0_1_0  1
- UP BND1      z_19_0_2_0  1
- UP BND1      z_19_0_3_0  1
- UP BND1      z_19_0_4_0  1
- UP BND1      z_19_0_5_0  1
- UP BND1      z_19_0_6_0  1
- UP BND1      z_19_0_7_0  1
- UP BND1      a_x1_19_0  1
- UP BND1      a_x1_19_1  1
- UP BND1      a_x1_19_2  1
- UP BND1      a_x4_19_0_0  1
- UP BND1      a_x4_19_0_1  1
- UP BND1      a_x4_19_0_2  1
- UP BND1      a_y1_19_0  1
- UP BND1      a_y1_19_1  1
- UP BND1      a_y2_19_0_0  1
- UP BND1      a_y2_19_0_1  1
- UP BND1      a_z1_19_0  1
- UP BND1      a_z1_19_1  1
- UP BND1      a_z1_19_2  1
- UP BND1      a_z1_19_3  1
- UP BND1      a_z1_19_4  1
- UP BND1      a_z1_19_5  1
- UP BND1      a_z1_19_6  1
- UP BND1      a_z1_19_7  1
- UP BND1      a_z2_19_0_0  1
- UP BND1      a_z2_19_0_1  1
- UP BND1      a_z2_19_0_2  1
- UP BND1      a_z2_19_0_3  1
- UP BND1      a_z2_19_0_4  1
- UP BND1      a_z2_19_0_5  1
- UP BND1      a_z2_19_0_6  1
- UP BND1      a_z2_19_0_7  1
- UP BND1      a_z4_19_0  1
 ENDATA

@@ -34,10 +34,6 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     len_V_S  = max((len(r.V_S) for idx_r, r in enumerate(reqs)), default=0)
     len_V_R  = max((len(r.V_R) for idx_r, r in enumerate(reqs)), default=0)
 
-    K_MAX = 101
-    F_MAX = 1
-    S_MAX = 1
-
     profit_opt = 0
     violat_opt = np.zeros(5) ## 5 for Total, Radio, Bandwidth, MIPS, and Delay
     migrat_opt = 0
@@ -934,17 +930,6 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                        for idx_r, r in enumerate(reqs)
                       ]
 
-            h_B_h_3_tmp = [[sum(vars_opt["b_{}_{}_{}_{}_{}".format(idx_r,idx_e,idx_e_p,0,s)]
-                                 for idx_e_p, e_p in enumerate(E_P)
-                                 if  (e_p.p in V_P_S) and (e_p.q in V_P_R)
-                                 for s            in range(S_MAX)
-                                )
-                        for idx_e, e in enumerate(r.E)
-                        #if  (e.v in r.V_S) and (e.w in r.V_R)
-                       ]
-                       for idx_r, r in enumerate(reqs)
-                      ]
-
             g_B_1_opt = sum(r.rho_B * h_B_h_1[idx_r][idx_e]
                             for idx_r, r in enumerate(reqs)
                             for idx_e, e in enumerate(r.E)
@@ -956,7 +941,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             for idx_e, e in enumerate(r.E)
                             if (e.v in r.V_R) and (e.w in r.V_R)
                            )
-            g_B_3_opt = sum(h_B_h_3[idx_r][idx_e]
+            g_B_3_opt = sum(r.rho_B * h_B_h_3[idx_r][idx_e]
                             for idx_r, r in enumerate(reqs)
                             for idx_e, e in enumerate(r.E)
                             if (e.v in r.V_S) and (e.w in r.V_R)
@@ -1231,38 +1216,38 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 m = gp.read(f'saved_model/model_backup_iar_{iter}.mps')
             m.update()
 
-    # if f_fgr == 0:
-    #     if feasible:
-    #         data = [
-    #             ["Algorithm", "IAR"],
-    #             ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
-    #             ["Profit", profit],
-    #             ["Allocation Time", time_opt],
-    #         ]
-    #         if g_D_opt:
-    #             data.append(["Delay Cost", g_D_opt])
-    #         if g_K_opt:
-    #             data.append(["Radio Violation Cost", g_K_opt])
-    #         if g_C_opt:
-    #             data.append(["MIPS Violation Cost", g_C_opt])
-    #         if g_B_1_opt or g_B_2_opt or g_B_3_opt:
-    #             data.append(["Bandwidth Violation Costs", f"{g_B_1_opt}, {g_B_2_opt}, {g_B_3_opt}"])
-    #         if g_mig_opt:
-    #             data.append(["Migration Cost", g_mig_opt])
-    #         if g_ovh_opt:
-    #             data.append(["Overhead Cost", g_ovh_opt])
+    if f_fgr == 0:
+        if feasible:
+            data = [
+                ["Algorithm", "IAR"],
+                ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
+                ["Profit", profit],
+                ["Allocation Time", time_opt],
+            ]
+            if g_D_opt:
+                data.append(["Delay Cost", g_D_opt])
+            if g_K_opt:
+                data.append(["Radio Violation Cost", g_K_opt])
+            if g_C_opt:
+                data.append(["MIPS Violation Cost", g_C_opt])
+            if g_B_1_opt or g_B_2_opt or g_B_3_opt:
+                data.append(["Bandwidth Violation Costs", f"{g_B_1_opt}, {g_B_2_opt}, {g_B_3_opt}"])
+            if g_mig_opt:
+                data.append(["Migration Cost", g_mig_opt])
+            if g_ovh_opt:
+                data.append(["Overhead Cost", g_ovh_opt])
 
-    #         data.append(["Deployment Cost", g_dep_opt])
-    #     else:
-    #         data = [
-    #             ["Algorithm", "IAR"],
-    #             ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
-    #             ["Allocation Time", time_opt],
-    #             ["Feasible", feasible],
-    #             ["Timeout", timeout]
-    #         ]
+            data.append(["Deployment Cost", g_dep_opt])
+        else:
+            data = [
+                ["Algorithm", "IAR"],
+                ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
+                ["Allocation Time", time_opt],
+                ["Feasible", feasible],
+                ["Timeout", timeout]
+            ]
     
-    #     print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
+        print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
 
     m.update()
     if f_fgr:
