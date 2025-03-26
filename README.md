@@ -9,13 +9,9 @@
 > The source code for simulating 5Guard framework as a 5G isolation-aware network slicing solution.
 
 ## Usage
-
-```sh
 You need a valid GurobiPy license to be able to compile and run the code in the Jupyter notebook.
-```
 
 ## Author
-
 👤 **Mehdi Bolourian**
 
 * Website: https://orcid.org/0000-0002-8237-2734
