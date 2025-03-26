@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to 5Guard's Project Repository</h1>
+<h1>5Guard</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/mehdibolourian/5Guard" target="_blank">
