@@ -8,10 +8,6 @@
 
 > The source code for simulating 5Guard framework as a 5G isolation-aware network slicing solution.
 
-### 🏠 [Homepage](https://github.com/mehdibolourian/5Guard)
-
-### ✨ [Demo](https://github.com/mehdibolourian/5Guard)
-
 ## Usage
 
 ```sh
