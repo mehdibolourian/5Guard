@@ -21,6 +21,8 @@ from   gurobipy              import GRB
 from   collections           import Counter
 from   matplotlib.ticker     import ScalarFormatter
 from   tabulate              import tabulate
+import matplotlib.ticker     as     ticker
+from   itertools             import product
 
 ## Project library files
 from data  import *

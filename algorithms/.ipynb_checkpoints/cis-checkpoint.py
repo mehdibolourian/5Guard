@@ -1,20 +1,5 @@
 from libraries import *
 
-# class TimeoutException(Exception):
-#     pass
-
-# def timeout_optimize(model):
-#     model.optimize()
-#     return model
-
-# def run_with_timeout(timeout, func, *args, **kwargs):
-#     with concurrent.futures.ThreadPoolExecutor() as executor:
-#         future = executor.submit(func, *args, **kwargs)
-#         try:
-#             return future.result(timeout=timeout)
-#         except concurrent.futures.TimeoutError:
-#             raise TimeoutException("Timeout reached!")
-
 def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr, X_t, Y_t):
     offset = 0
     scale  = 5
@@ -536,7 +521,7 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -551,7 +536,7 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -682,7 +667,7 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_1_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -692,7 +677,7 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -702,11 +687,11 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] >= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 )
                         + gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                     for f in range(len(q.Pi_MAX))
-                                    for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                    for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                     ) - 1,
                         name=f"auxiliary_constraints_2_3_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -840,16 +825,25 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     name=f"auxiliary_constraints_12_1_{idx_r}_{idx_l}_{idx_e}_{s}"
                 )
 
-    for idx_r, r in enumerate(reqs):
-        for idx_l, l in enumerate(L):
-            if len_R >= 2:
-                constraint_to_remove = m.getConstrByName(f"auxiliary_constraints_12_2_{idx_r}_{idx_l}")
-                if constraint_to_remove is not None:
-                    m.remove(constraint_to_remove)
+    # for idx_r, r in enumerate(reqs):
+    #     for idx_l, l in enumerate(L):
+    #         if len_R >= 2:
+    #             constraint_to_remove = m.getConstrByName(f"auxiliary_constraints_12_2_{idx_r}_{idx_l}")
+    #             if constraint_to_remove is not None:
+    #                 m.remove(constraint_to_remove)
             
+    #         m.addConstr(
+    #             a_z1[idx_r][idx_l] <= gp.quicksum(z[idx_r][idx_e][idx_l][s]
+    #                                               for idx_e, e in enumerate(r.E)
+    #                                               for s in range(S_MAX)
+    #                                              ),
+    #             name=f"auxiliary_constraints_12_2_{idx_r}_{idx_l}"
+    #         )
+    for idx_r in R_miss:
+        for idx_l, l in enumerate(L):
             m.addConstr(
                 a_z1[idx_r][idx_l] <= gp.quicksum(z[idx_r][idx_e][idx_l][s]
-                                                  for idx_e, e in enumerate(r.E)
+                                                  for idx_e, e in enumerate(reqs[idx_r].E)
                                                   for s in range(S_MAX)
                                                  ),
                 name=f"auxiliary_constraints_12_2_{idx_r}_{idx_l}"
@@ -894,7 +888,7 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     g_K = gp.quicksum(1e4 * (K_REQ_EFF[idx_r][idx_w] - gp.quicksum(k * y[idx_r][idx_w][idx_q][f][k]
                                                        for idx_q, q in enumerate(V_P_R)
                                                        for f in range(len(q.Pi_MAX))
-                                                       for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                       for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                       )
                                 )
                       for idx_r, r in enumerate(reqs)
@@ -947,9 +941,9 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                          )
             )
 
-    cost = ( sys.Theta  * sum(4.8e12 * BANDWIDTH_SCALE for r in reqs for idx_e, e in enumerate(r.E))
-            + sys.Omega * sum(1000545/5 * MIPS_SCALE for r in reqs for idx_v, v in enumerate(r.V_S))
-            + sys.Phi   * sum(500040/5/sys.Pi_PRB for r in reqs for idx_w, w in enumerate(r.V_R))
+    cost = ( sys.Theta  * sum(B_MAX_BRAIN * BANDWIDTH_SCALE for r in reqs for idx_e, e in enumerate(r.E))
+            + sys.Omega * sum(C_MAX_MEC_BRAIN * MIPS_SCALE for r in reqs for idx_v, v in enumerate(r.V_S))
+            + sys.Phi   * sum(Pi_MAX_BRAIN/sys.Pi_PRB for r in reqs for idx_w, w in enumerate(r.V_R))
            )
     revenue = int(cost * scale + offset)
 
@@ -1024,7 +1018,7 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         g_K_opt = sum((1e4 * K_REQ_EFF[idx_r][idx_w]) - (1e4 * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                            for idx_q, q in enumerate(V_P_R)
                                                            for f in range(len(q.Pi_MAX))
-                                                           for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                           for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                           )
                                             )
                       for idx_r, r in enumerate(reqs)
@@ -1275,4 +1269,4 @@ def cis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     m.update()
     m.write(f'saved_model/model_backup_cis_{iter}.mps')
 
-    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs], X_t, Y_t
+    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, feasible, timeout, reqs], X_t, Y_t

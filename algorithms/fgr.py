@@ -19,6 +19,9 @@ def fgr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     algs   = ["opt", "iar", "dtr", "rnr"]
     result = {}
 
+    X_t_copy = [copy.deepcopy(X_t) for _ in range(4)]
+    Y_t_copy = [copy.deepcopy(Y_t) for _ in range(4)]
+
     ################ Multi-processing only works on Linux ################
 
     # manager = multiprocessing.Manager()
@@ -26,10 +29,10 @@ def fgr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
 
     # # Create processes
     # processes = [
-    #     multiprocessing.Process(target=run_opt, args=(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t, Y_t)),
-    #     multiprocessing.Process(target=run_iar, args=(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t, Y_t)),
-    #     multiprocessing.Process(target=run_dtr, args=(result, LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t, Y_t)),
-    #     multiprocessing.Process(target=run_rnr, args=(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t, Y_t))
+    #     multiprocessing.Process(target=run_opt, args=(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[0], Y_t_copy[0])),
+    #     multiprocessing.Process(target=run_iar, args=(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[1], Y_t_copy[1])),
+    #     multiprocessing.Process(target=run_dtr, args=(result, LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, X_t_copy[2], Y_t_copy[2])),
+    #     multiprocessing.Process(target=run_rnr, args=(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[3], Y_t_copy[3]))
     # ]
 
     # # Start processes
@@ -42,6 +45,8 @@ def fgr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     #     remaining_time = r_t.timeout - (time.perf_counter() - start_time)
     #     if remaining_time > 0:
     #         process.join(timeout=remaining_time)
+    # end_time = time.perf_counter()
+    # print(end_time-start_time)
 
     # # Ensure processes are terminated if they exceed timeout
     # for process in processes:
@@ -49,22 +54,26 @@ def fgr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     #         process.terminate()
     #         process.join()
 
-    X_t_copy = [copy.deepcopy(X_t) for _ in range(4)]
-    Y_t_copy = [copy.deepcopy(Y_t) for _ in range(4)]
-
     ## For the sake of simulation
-    run_opt(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[0], Y_t_copy[0])
-    run_iar(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[1], Y_t_copy[1])
+    run_opt(result, profit_prev,        iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[0], Y_t_copy[0])
+    run_iar(result, profit_prev,        iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[1], Y_t_copy[1])
     run_dtr(result, LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[2], Y_t_copy[2])
-    run_rnr(result, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[3], Y_t_copy[3])
+    run_rnr(result, profit_prev,        iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, X_t_copy[3], Y_t_copy[3])
         
     ## Profit considering feasibility
-    arr = np.array([result["opt"][0][0] if result["opt"][0][9] else -math.inf,
-                    result["iar"][0][0] if result["iar"][0][9] else -math.inf,
-                    result["dtr"][0][0] if result["dtr"][0][9] else -math.inf,
-                    result["rnr"][0][0] if result["rnr"][0][9] else -math.inf])
+    # arr = np.array([result["opt"][0][0],
+    #                 result["iar"][0][0],
+    #                 result["dtr"][0][0],
+    #                 result["rnr"][0][0]])
+    arr = np.array([result["opt"][0][0] if result["opt"][0][9]==0 else -math.inf,
+                    result["iar"][0][0] if result["iar"][0][9]==0 else -math.inf,
+                    result["dtr"][0][0] if result["dtr"][0][9]==0 else -math.inf,
+                    result["rnr"][0][0] if result["rnr"][0][9]==0 else -math.inf])
 
     arr = np.round(arr, 4)  # Round each element to 4 decimal places to avoid numerical errors
+
+    print(f"arr:{arr}")
+    print(f"timeout:{result['opt'][0][9]}")
     
     # Create the preference list
     preference_order = [0, 1, 2, 3] #[sorted_indices[val] for val in time_list]
@@ -72,7 +81,7 @@ def fgr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     max_value = np.max(arr)
     max_indices = np.where(arr == max_value)[0]  # Find all indices with max value
 
-    if result["opt"][0][0] != -math.inf: ## OPT reached a feasible solution
+    if result['opt'][0][9] == 0: ## OPT hasn't timedout
         alg_idx = 0
         alg     = "opt"
     else:
@@ -80,7 +89,11 @@ def fgr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
         alg_idx = min(max_indices, key=lambda x: preference_order[x])
         alg     = algs[alg_idx]
 
-    if result[alg][0][9]: # Feasible
+    print(f"arr:{arr}")
+
+    result[alg][0][7] = max(result[a][0][7] for a in algs) ## 5Guard should wait for all solutions to become available.
+
+    if result[alg][0][8]: # Feasible
         data = [
             ["Algorithm", alg],
             ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
@@ -94,7 +107,7 @@ def fgr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
         if any(result[alg][0][4]):
             data.append(["Overhead Cost",  f"{result[alg][0][4][0]}, {result[alg][0][4][1]}, {result[alg][0][4][2]}, {result[alg][0][4][3]}"])
 
-        data.append(["Deployment Cost", result[alg][0][3][0]])
+        data.append(["Deployment Cost", f"{result[alg][0][3][0]}, {result[alg][0][3][1]}, {result[alg][0][3][2]}, {result[alg][0][3][3]}"])
         data.append(["Revenue", r_t.R])
 
         ## We wait until all the algorithms reach the results (which is bounded by the timeout in their algorithm implementation for 5Guard)
@@ -104,8 +117,8 @@ def fgr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
             ["Algorithm", alg],
             ["Request Isolation Level", f"({r_t.gamma}, {r_t.kappa})"],
             ["Allocation Time", result[alg][0][7]],
-            ["Feasible", result[alg][0][9]],
-            ["Timeout", result[alg][0][10]]
+            ["Feasible", result[alg][0][8]],
+            ["Timeout", result[alg][0][9]]
         ]
 
     print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))

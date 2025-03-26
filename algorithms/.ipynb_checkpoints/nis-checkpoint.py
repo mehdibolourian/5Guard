@@ -1,20 +1,5 @@
 from libraries import *
 
-# class TimeoutException(Exception):
-#     pass
-
-# def timeout_optimize(model):
-#     model.optimize()
-#     return model
-
-# def run_with_timeout(timeout, func, *args, **kwargs):
-#     with concurrent.futures.ThreadPoolExecutor() as executor:
-#         future = executor.submit(func, *args, **kwargs)
-#         try:
-#             return future.result(timeout=timeout)
-#         except concurrent.futures.TimeoutError:
-#             raise TimeoutException("Timeout reached!")
-
 def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi, f_fgr, X_t, Y_t):
     offset = 0
     scale  = 5
@@ -34,10 +19,6 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     len_E    = max((len(r.E)   for idx_r, r in enumerate(reqs)), default=0)
     len_V_S  = max((len(r.V_S) for idx_r, r in enumerate(reqs)), default=0)
     len_V_R  = max((len(r.V_R) for idx_r, r in enumerate(reqs)), default=0)
-
-    K_MAX = 101
-    F_MAX = 1
-    S_MAX = 1
 
     profit_opt = 0
     violat_opt = np.zeros(5) ## 5 for Total, Radio, Bandwidth, MIPS, and Delay
@@ -438,7 +419,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -454,7 +435,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -588,7 +569,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_1_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -598,7 +579,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -608,11 +589,11 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] >= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 )
                         + gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                     for f in range(len(q.Pi_MAX))
-                                    for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                    for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                     ) - 1,
                         name=f"auxiliary_constraints_2_3_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -786,7 +767,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     g_K = gp.quicksum(r.rho_K * (K_REQ_EFF[idx_r][idx_w] - gp.quicksum(k * y[idx_r][idx_w][idx_q][f][k]
                                                        for idx_q, q in enumerate(V_P_R)
                                                        for f in range(len(q.Pi_MAX))
-                                                       for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                       for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                       )
                                 )
                       for idx_r, r in enumerate(reqs)
@@ -814,7 +795,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
             )
 
@@ -853,19 +834,33 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
     cost = ( sys.Theta  * sum(e.B_REQ for r in reqs for idx_e, e in enumerate(r.E))
             + sys.Omega * sum(v.C_REQ + (sys.C_K8S + sys.C_GOS)*v.Xi_REQ/110 + sys.C_HHO*v.Xi_REQ/110/60 for r in reqs for idx_v, v in enumerate(r.V_S))
-            + sys.Phi   * sum(w.K_REQ for r in reqs for idx_w, w in enumerate(r.V_R))
+            + sys.Phi   * sum(K_REQ_EFF[idx_r][idx_w] for idx_r, r in enumerate(reqs) for idx_w, w in enumerate(r.V_R))
            )
     revenue = int(cost * scale) + offset
 
     if len_R >= 2:
-        constraint_to_remove = m.getConstrByName(f"minimum_profit")
+        constraint_to_remove = m.getConstrByName(f"minimum_profit_1")
         if constraint_to_remove is not None:
             m.remove(constraint_to_remove)
+
+    VM_OFF_ERR = ((sys.C_GOS + sys.C_K8S) * sys.Omega) * len_V_P_S
     # Eq. 38
     m.addConstr(
         (
-            (revenue - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
-        ), name="minimum_profit"
+            (revenue - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min - VM_OFF_ERR
+        ), name="minimum_profit_1"
+    )
+
+    if len_R >= 2:
+        constraint_to_remove = m.getConstrByName(f"minimum_profit_2")
+        if constraint_to_remove is not None:
+            m.remove(constraint_to_remove)
+
+    # Eq. 38
+    m.addConstr(
+        (
+            (revenue - g_dep - g_vio - g_mig - profit_prev) >= P_min
+        ), name="minimum_profit_2"
     )
     
     m.setObjective(revenue - g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
@@ -877,6 +872,10 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     m.optimize()
     if time.perf_counter() - start_time > r_t.timeout:
         timeout = 1
+
+    # Stop the timer
+    end_time = time.perf_counter()
+    time_opt = end_time - start_time
 
     status = m.status
 
@@ -891,7 +890,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
                     )
 
@@ -937,7 +936,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         g_K_opt = sum((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                            for idx_q, q in enumerate(V_P_R)
                                                            for f in range(len(q.Pi_MAX))
-                                                           for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                           for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                           )
                                             )
                       for idx_r, r in enumerate(reqs)
@@ -1118,7 +1117,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                  for idx_q, q in enumerate(V_P_R)]
                 for idx_w, w in enumerate(r.V_R)]
                for idx_r, r in enumerate(reqs)]
-        
+
         profit_opt    = profit
         
         violat_opt[0] = g_vio_opt
@@ -1152,11 +1151,7 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
         m = gp.read(f'saved_model/model_backup_nis_{iter}.mps')
         m.update()
-
-    # Stop the timer
-    end_time = time.perf_counter()
-    time_opt = end_time - start_time
-
+        
     if time_opt > r_t.timeout:
         timeout  = 1
         feasible = 0
@@ -1204,4 +1199,4 @@ def nis_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     m.update()
     m.write(f'saved_model/model_backup_nis_{iter}.mps')
 
-    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs], X_t, Y_t
+    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, feasible, timeout, reqs], X_t, Y_t

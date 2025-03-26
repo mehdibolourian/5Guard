@@ -585,7 +585,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -601,7 +601,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -742,7 +742,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_1_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -752,7 +752,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -762,11 +762,11 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] >= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 )
                         + gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                     for f in range(len(q.Pi_MAX))
-                                    for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                    for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                     ) - 1,
                         name=f"auxiliary_constraints_2_3_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -959,17 +959,27 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         name=f"auxiliary_constraints_12_1_{idx_r}_{idx_l}_{idx_e}_{s}"
                     )
 
-    for idx_r, r in enumerate(reqs):
-        if r.gamma == 2:
-            for idx_l, l in enumerate(L):
-                if len_R >= 2:
-                    constraint_to_remove = m.getConstrByName(f"auxiliary_constraints_12_2_{idx_r}_{idx_l}")
-                    if constraint_to_remove is not None:
-                        m.remove(constraint_to_remove)
+    # for idx_r, r in enumerate(reqs):
+    #     if r.gamma == 2:
+    #         for idx_l, l in enumerate(L):
+    #             if len_R >= 2:
+    #                 constraint_to_remove = m.getConstrByName(f"auxiliary_constraints_12_2_{idx_r}_{idx_l}")
+    #                 if constraint_to_remove is not None:
+    #                     m.remove(constraint_to_remove)
                 
+    #             m.addConstr(
+    #                 a_z1[idx_r][idx_l] <= gp.quicksum(z[idx_r][idx_e][idx_l][s]
+    #                                                   for idx_e, e in enumerate(r.E)
+    #                                                   for s in range(S_MAX)
+    #                                                  ),
+    #                 name=f"auxiliary_constraints_12_2_{idx_r}_{idx_l}"
+    #             )
+    for idx_r in R_miss:
+        if reqs[idx_r].gamma == 2:
+            for idx_l, l in enumerate(L):
                 m.addConstr(
                     a_z1[idx_r][idx_l] <= gp.quicksum(z[idx_r][idx_e][idx_l][s]
-                                                      for idx_e, e in enumerate(r.E)
+                                                      for idx_e, e in enumerate(reqs[idx_r].E)
                                                       for s in range(S_MAX)
                                                      ),
                     name=f"auxiliary_constraints_12_2_{idx_r}_{idx_l}"
@@ -1014,7 +1024,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     g_K = gp.quicksum(r.rho_K * (K_REQ_EFF[idx_r][idx_w] - gp.quicksum(k * y[idx_r][idx_w][idx_q][f][k]
                                                        for idx_q, q in enumerate(V_P_R)
                                                        for f in range(len(q.Pi_MAX))
-                                                       for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                       for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                       )
                                 )
                       for idx_r, r in enumerate(reqs)
@@ -1045,7 +1055,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
             + sys.Theta * gp.quicksum(l.B_MAX[0] * a_z1[idx_r][idx_l]
                                       for idx_r, r     in enumerate(reqs)
@@ -1087,7 +1097,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
             )
 
@@ -1117,15 +1127,28 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             )
 
     if len_R >= 2:
-        constraint_to_remove = m.getConstrByName(f"minimum_profit")
+        constraint_to_remove = m.getConstrByName(f"minimum_profit_1")
         if constraint_to_remove is not None:
             m.remove(constraint_to_remove)
-            
+
+    VM_OFF_ERR = ((sys.C_GOS + sys.C_K8S) * sys.Omega) * len_V_P_S
     # Eq. 38
     m.addConstr(
         (
-            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
-        ), name="minimum_profit"
+            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min - VM_OFF_ERR
+        ), name="minimum_profit_1"
+    )
+
+    if len_R >= 2:
+        constraint_to_remove = m.getConstrByName(f"minimum_profit_2")
+        if constraint_to_remove is not None:
+            m.remove(constraint_to_remove)
+
+    # Eq. 38
+    m.addConstr(
+        (
+            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - profit_prev) >= P_min
+        ), name="minimum_profit_2"
     )
 
     m.update()
@@ -1175,19 +1198,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         c_opt    = [[[0 for idx_p, p in enumerate(V_P_S)]
                      for idx_v, v in enumerate(r.V_S)]
                     for idx_r,r in enumerate(reqs)]
-        
-        for idx_r,r in enumerate(reqs):
-            for idx_v, v in enumerate(r.V_S):
-                idx_p_sel = random.choices(range(len(x_opt_lp[idx_r][idx_v])), weights=x_opt_lp[idx_r][idx_v], k=1)[0]
-                x_opt[idx_r][idx_v][idx_p_sel] = 1
-                c_opt[idx_r][idx_v][idx_p_sel] = c_opt_lp[idx_r][idx_v][idx_p_sel]/x_opt_lp[idx_r][idx_v][idx_p_sel]
-                
-        for idx_r,r in enumerate(reqs):
-            for idx_v, v in enumerate(r.V_S):
-                for idx_p, p in enumerate(V_P_S):
-                    vars_opt["c_{}_{}_{}".format(idx_r,idx_v,idx_p)] = c_opt[idx_r][idx_v][idx_p]
-                    vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)] = x_opt[idx_r][idx_v][idx_p]
-        
+
         y_opt_lp = [[[[[vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                         for k in range(K_REQ_EFF[idx_r][idx_w] + 1)]
                        for f in range(len(q.Pi_MAX))]
@@ -1199,25 +1210,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                       for idx_q, q in enumerate(V_P_R)]
                      for idx_w, w in enumerate(r.V_R)]
                     for idx_r,r in enumerate(reqs)]
-        
-        for idx_r,r in enumerate(reqs):
-            for idx_w, w in enumerate(r.V_R):
-                list_tmp = [item for sublist1 in y_opt_lp[idx_r][idx_w] for sublist2 in sublist1 for item in sublist2]
-                qfk_sel  = random.choices(range(len(list_tmp)), weights=list_tmp, k=1)[0]
-                q_sel    = int(qfk_sel / (K_REQ_EFF[idx_r][idx_w]+1) // F_MAX)
-                fk_sel   = int(qfk_sel - q_sel * (K_REQ_EFF[idx_r][idx_w]+1) * F_MAX)
-                f_sel    = int(fk_sel // K_MAX)
-                k_sel    = K_REQ_EFF[idx_r][idx_w] if r.beta >= 1e6 else fk_sel - int(f_sel*(K_REQ_EFF[idx_r][idx_w]+1))
-                
-                y_opt[idx_r][idx_w][q_sel][f_sel][k_sel] = 1
-                
-        for idx_r, r in enumerate(reqs):
-            for idx_w, w in enumerate(r.V_R):
-                for idx_q, q in enumerate(V_P_R):
-                    for f in range(len(q.Pi_MAX)):
-                        for k in range(K_REQ_EFF[idx_r][idx_w] + 1):
-                            vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)] = y_opt[idx_r][idx_w][idx_q][f][k]
-        
+
         z_opt_lp = [[[[vars_opt["z_{}_{}_{}_{}".format(idx_r,idx_e,idx_l,s)]
                        for s in range(S_MAX)]
                       for idx_l, l in enumerate(L)]
@@ -1239,6 +1232,24 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                       for idx_e_p, e_p in enumerate(E_P)]
                      for idx_e, e in enumerate(r.E)]
                     for idx_r,r in enumerate(reqs)]
+
+        start_time2 = time.perf_counter()
+        for idx_r,r in enumerate(reqs):
+            for idx_v, v in enumerate(r.V_S):
+                idx_p_sel = random.choices(range(len(x_opt_lp[idx_r][idx_v])), weights=x_opt_lp[idx_r][idx_v], k=1)[0]
+                x_opt[idx_r][idx_v][idx_p_sel] = 1
+                c_opt[idx_r][idx_v][idx_p_sel] = c_opt_lp[idx_r][idx_v][idx_p_sel]/x_opt_lp[idx_r][idx_v][idx_p_sel]
+        
+        for idx_r,r in enumerate(reqs):
+            for idx_w, w in enumerate(r.V_R):
+                list_tmp = [item for sublist1 in y_opt_lp[idx_r][idx_w] for sublist2 in sublist1 for item in sublist2]
+                qfk_sel  = random.choices(range(len(list_tmp)), weights=list_tmp, k=1)[0]
+                q_sel    = int(qfk_sel / (K_REQ_EFF[idx_r][idx_w]+1) // F_MAX)
+                fk_sel   = int(qfk_sel - q_sel * (K_REQ_EFF[idx_r][idx_w]+1) * F_MAX)
+                f_sel    = int(fk_sel // K_MAX)
+                k_sel    = K_REQ_EFF[idx_r][idx_w] if r.beta >= 1e6 else fk_sel - int(f_sel*(K_REQ_EFF[idx_r][idx_w]+1))
+                
+                y_opt[idx_r][idx_w][q_sel][f_sel][k_sel] = 1
         
         for idx_r,r in enumerate(reqs):
             for idx_e, e in enumerate(r.E):
@@ -1249,6 +1260,20 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     s_sel    = int(ls_sel - l_sel * S_MAX)
                     
                     z_opt[idx_r][idx_e][l_sel][s_sel] = 1
+        end_time2   = time.perf_counter()
+
+        for idx_r,r in enumerate(reqs):
+            for idx_v, v in enumerate(r.V_S):
+                for idx_p, p in enumerate(V_P_S):
+                    vars_opt["c_{}_{}_{}".format(idx_r,idx_v,idx_p)] = c_opt[idx_r][idx_v][idx_p]
+                    vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)] = x_opt[idx_r][idx_v][idx_p]
+
+        for idx_r, r in enumerate(reqs):
+            for idx_w, w in enumerate(r.V_R):
+                for idx_q, q in enumerate(V_P_R):
+                    for f in range(len(q.Pi_MAX)):
+                        for k in range(K_REQ_EFF[idx_r][idx_w] + 1):
+                            vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)] = y_opt[idx_r][idx_w][idx_q][f][k]
 
         for idx_r,r in enumerate(reqs):
             for idx_e, e in enumerate(r.E):
@@ -1334,11 +1359,11 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     for idx_q, q in enumerate(V_P_R):
                         a_y2_opt[idx_r][idx_e][idx_q] = min(sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,(r.V_R).index(e.v),idx_q,f,k)]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(K_REQ_EFF[idx_r][r.V_R.index(e.v)] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(e.v)] + 1)
                                                                ),
                                                             sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,(r.V_R).index(e.w),idx_q,f,k)]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1,K_REQ_EFF[idx_r][r.V_R.index(e.w)] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(e.w)] + 1)
                                                                )
                                                            )
                         vars_opt["a_y2_{}_{}_{}".format(idx_r,idx_e,idx_q)] = a_y2_opt[idx_r][idx_e][idx_q]
@@ -1572,7 +1597,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                           for idx_w, w in enumerate(r.V_R)
                                           for idx_q, q in enumerate(V_P_R)
                                           for f in range(len(q.Pi_MAX))
-                                          for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                          for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                          )
                         + sys.Phi   * sum(q.Pi_MAX[0] / sys.Pi_PRB * vars_opt["a_y1_{}_{}".format(idx_r,idx_q)]
                                           for idx_r, r in enumerate(reqs)
@@ -1637,7 +1662,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             g_K_opt = sum((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                                for idx_q, q in enumerate(V_P_R)
                                                                for f in range(len(q.Pi_MAX))
-                                                               for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                               for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                               )
                                                 )
                           for idx_r, r in enumerate(reqs)
@@ -1740,7 +1765,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                           for idx_w, w in enumerate(r.V_R)
                                           for idx_q, q in enumerate(V_P_R)
                                           for f in range(len(q.Pi_MAX))
-                                          for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                          for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                          )
                         )
     
@@ -1856,7 +1881,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     for idx_w, w in enumerate(r.V_R)]
                    for idx_r, r in enumerate(reqs)]
             
-            if profit - profit_prev < P_min:
+            if profit - profit_prev < P_min - VM_OFF_ERR:
                 feasible = 0
                 reject_opt[r_t.gamma] = 1
 
@@ -1908,7 +1933,7 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
 
         feasible = 0
 
-    time_opt  = (end_time2 - start_time2) + (end_time1 - start_time1)
+    time_opt  = 0*(end_time2 - start_time2) + (end_time1 - start_time1)
     
     if time_opt > r_t.timeout:
         if f_fgr:
@@ -1966,4 +1991,4 @@ def rnr_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     else:
         m.write(f'saved_model/model_backup_rnr_{iter}.mps')
 
-    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs], X_t, Y_t
+    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, feasible, timeout, reqs], X_t, Y_t

@@ -138,21 +138,18 @@ def plot_brain(V_P_S, V_P_R, E_P):
             node_colors.append('skyblue')
             node_sizes.append(node_size)
             
-    
-    
     # Draw the graph
     # Get the positions for the bipartite graph
     plt.figure(figsize=(4, 4))
     plt.subplots_adjust(left=0, right=1, top=1, bottom=0)  # Adjust margins
-    
-    # Alternative layouts:
+
     pos = nx.kamada_kawai_layout(G)
     
     # Draw the nodes with border (larger size)
     nx.draw_networkx_nodes(
         G, pos,
         node_color=border_colors,
-        node_size=25,
+        node_size=55,
         edgecolors='black'  # Set border color
     )
     
@@ -160,7 +157,7 @@ def plot_brain(V_P_S, V_P_R, E_P):
     nx.draw_networkx_nodes(
         G, pos,
         node_color=node_colors,
-        node_size=20
+        node_size=50
     )
     
     # Draw the edges

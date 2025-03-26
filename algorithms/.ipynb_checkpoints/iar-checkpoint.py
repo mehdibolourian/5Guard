@@ -106,21 +106,6 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
          for r in reqs]
     
     ############## Greedy decisions ##############
-    # Start the timer
-    start_time1 = time.perf_counter()
-
-    ## Keep previous mappings for HP SRs
-    for r in reqs_hp_t:
-        for idx_v, v in enumerate(r.V_S):
-            for idx_p, p in enumerate(V_P_S):
-                x[reqs.index(r)][idx_v][idx_p] = X_t[reqs.index(r)][idx_v][idx_p]
-
-        for idx_w, w in enumerate(r.V_R):
-            for idx_q, q in enumerate(V_P_R):
-                for f in range(len(q.Pi_MAX)):
-                    for k in range(1, K_REQ_EFF[reqs.index(r)][idx_w] + 1):
-                        y[reqs.index(r)][idx_w][idx_q][f][k] = Y_t[reqs.index(r)][idx_w][idx_q][f][k]
-
     reqs_rem = reqs.copy()
     
     V_P_S_REM = V_P_S.copy()
@@ -128,41 +113,72 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     
     V_P_R_REM = V_P_R.copy()
     V_P_R_DEL = []
+    
+    E_P_REM = E_P.copy()
+    E_P_DEL = []
+    
+    # Start the timer
+    start_time1 = time.perf_counter()
+    ## Keep previous mappings for HP SRs
+    for r in reqs_hp_t:
+        for idx_v, v in enumerate(r.V_S):
+            for idx_p, p in enumerate(V_P_S):
+                x[reqs.index(r)][idx_v][idx_p] = X_t[reqs.index(r)][idx_v][idx_p]
+                if (x[reqs.index(r)][idx_v][idx_p] == 1) and (r.gamma == 2):
+                    V_P_S_DEL.append(p)
+    
+        for idx_w, w in enumerate(r.V_R):
+            for idx_q, q in enumerate(V_P_R):
+                for f in range(len(q.Pi_MAX)):
+                    for k in range(1, K_REQ_EFF[reqs.index(r)][idx_w] + 1):
+                        y[reqs.index(r)][idx_w][idx_q][f][k] = Y_t[reqs.index(r)][idx_w][idx_q][f][k]
+                        if (y[reqs.index(r)][idx_w][idx_q][f][k] == 1) and (r.gamma == 2):
+                            V_P_R_DEL.append(q)
+    
+    V_P_S_REM = [p for p in V_P_S_REM if p not in V_P_S_DEL]
+    V_P_R_REM = [q for q in V_P_R_REM if q not in V_P_R_DEL]
+    
+    #print(f"X_t:{X_t}")
+    #print(f"V_P_S_DEL:{V_P_S_DEL}")
+    #print(f"V_P_R_DEL:{V_P_R_DEL}")
+    
     while len(reqs_rem):
         if len(reqs_rem) == 0 or feasible == 0:
             break
-
+    
         r_sel = max(reqs_rem, key=lambda request: request.R * (request.gamma + 1) * (request.beta + 1))
-
+    
         index_pop = reqs_rem.index(r_sel)
         reqs_rem.pop(index_pop)
-
+    
         idx_r_sel = reqs.index(r_sel)
-
-        if (reqs[idx_r_sel].beta < 1e4) or (reqs[idx_r_sel] == r_t):
+    
+        if r_sel not in reqs_hp_t:
             V_R_REM   = r_sel.V_R.copy()
             for w in V_R_REM:
                 V_P_R_REM_TMP = V_P_R_REM.copy() ## Avoiding unintended behavior by making a copy of the remaining list
                 w_sel = max(V_R_REM, key=lambda ru: K_REQ_EFF[idx_r_sel][r_sel.V_R.index(ru)])
     
                 idx_w_sel = r_sel.V_R.index(w_sel)
+
+                #print(f"y:{y}")
     
                 if r_sel.gamma == 2: ## Complete Isolation
                     V_P_R_REM_TMP = [q for q in V_P_R_REM_TMP 
-                                     if sum(y[idx_r][idx_w][V_P_R.index(q)][f][k]
-                                            for idx_r,r in enumerate(reqs)
-                                            if idx_r != reqs.index(r_sel)
-                                            for idx_w,w in enumerate(r.V_R)
-                                            for f in range(F_MAX)
-                                            for k in range(K_MAX)) == 0]
+                                    if sum(y[idx_r][idx_w][V_P_R.index(q)][f][k]
+                                        for idx_r,r in enumerate(reqs)
+                                        if idx_r != reqs.index(r_sel)
+                                        for idx_w,w in enumerate(r.V_R)
+                                        for f in range(F_MAX)
+                                        for k in range(1, K_MAX)) == 0]
                 else: ## Other isolation levels
                     V_P_R_REM_TMP = [q for q in V_P_R_REM_TMP 
-                                     if sum(y[idx_r][idx_w][V_P_R.index(q)][f][k]
-                                            for idx_r,r in enumerate(reqs)
-                                            if idx_r != reqs.index(r_sel) and r.gamma == 2
-                                            for idx_w,w in enumerate(r.V_R)
-                                            for f in range(F_MAX)
-                                            for k in range(K_MAX)) == 0]
+                                    if sum(y[idx_r][idx_w][V_P_R.index(q)][f][k]
+                                        for idx_r,r in enumerate(reqs)
+                                        if idx_r != reqs.index(r_sel) and r.gamma == 2
+                                        for idx_w,w in enumerate(r.V_R)
+                                        for f in range(F_MAX)
+                                        for k in range(1, K_MAX)) == 0]
                 
                 if len(V_P_R_REM_TMP) == 0:
                     print(f"infeasible: No remaining NR-BS for mapping RU {w_sel} of SR {r_sel}")
@@ -173,44 +189,64 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 q_sel = 0
                 f_sel = 0
                 k_sel = 0
+    
+                # Initialize minimum value and best combination
+                max_pi_avai = -math.inf
+                best_combination = None
+                # Iterate over all possible combinations of q and f
+                for q, f in product(V_P_R_REM_TMP, range(F_MAX)):
+                    # Compute pi_used for this combination
+                    pi_avai = (q.Pi_MAX[f] 
+                        - sum(K_REQ_EFF[idx_r1][idx_w1] * y[idx_r1][idx_w1][V_P_R.index(q)][f][k1]
+                                for idx_r1, r1 in enumerate(reqs)
+                                for idx_w1, w1 in enumerate(r1.V_R)
+                                for k1 in range(1, K_REQ_EFF[idx_r1][idx_w1] + 1)
+                                ) * sys.Pi_PRB
+                        - sum(y[idx_r1][idx_w1][V_P_R.index(q)][f][k1]
+                                for idx_r1, r1 in enumerate(reqs)
+                                if (r1.gamma == 1)
+                                for idx_w1, w1 in enumerate(r1.V_R)
+                                for k1 in range(1, K_REQ_EFF[idx_r1][idx_w1] + 1)
+                                ) * sys.Pi_FGB
+                        - K_REQ_EFF[idx_r_sel][idx_w_sel] * sys.Pi_PRB
+                        - (r_sel.gamma == 1) * sys.Pi_FGB
+                    )
                 
-                found = 0
-                for q in V_P_R_REM_TMP:
-                    for f in range(len(q.Pi_MAX)):
-                        for k in range(K_REQ_EFF[idx_r_sel][idx_w_sel], 0, -1):
-                            pi_used = (sum(k1 * y[idx_r1][idx_w1][V_P_R.index(q)][f][k1]
+                    # Check if this combination minimizes pi_used
+                    if pi_avai > max_pi_avai:
+                        max_pi_avai = pi_avai
+                        best_combination = (q, f)
+    
+                (q_sel, f_sel) = best_combination
+                if max_pi_avai >= 0:
+                    k_sel = K_REQ_EFF[idx_r_sel][idx_w_sel]
+                else:
+                    for k in range(K_REQ_EFF[idx_r_sel][idx_w_sel], 0, -1):
+                        pi_avai = (q_sel.Pi_MAX[f_sel]
+                                    - sum(K_REQ_EFF[idx_r1][idx_w1] * y[idx_r1][idx_w1][V_P_R.index(q_sel)][f_sel][k1]
                                             for idx_r1, r1 in enumerate(reqs)
                                             for idx_w1, w1 in enumerate(r1.V_R)
-                                            for k1 in range(1, K_REQ_EFF[idx_r1][r1.V_R.index(w1)] + 1)
-                                           ) * sys.Pi_PRB
-                                      + sum(y[idx_r1][idx_w1][V_P_R.index(q)][f][k1]
+                                            for k1 in range(1, K_REQ_EFF[idx_r1][idx_w1] + 1)
+                                            ) * sys.Pi_PRB
+                                    - sum(y[idx_r1][idx_w1][V_P_R.index(q_sel)][f_sel][k1]
                                             for idx_r1, r1 in enumerate(reqs)
                                             if (r1.gamma == 1)
                                             for idx_w1, w1 in enumerate(r1.V_R)
-                                            for k1 in range(1, K_REQ_EFF[idx_r1][r1.V_R.index(w1)] + 1)
-                                           ) * sys.Pi_FGB
-                                       + k * sys.Pi_PRB
-                                       + (r_sel.gamma == 1) * sys.Pi_FGB
-                                      )
-                            if pi_used <= q.Pi_MAX[f]:
-                                q_sel = q
-                                f_sel = f
-                                k_sel = k
-    
-                                if r_sel.gamma == 2:
-                                    V_P_R_DEL.append(q_sel)
-    
-                                found = 1
-                                break
-                            elif (q_sel == 0) and (k == 1) and (V_P_R_REM_TMP.index(q) == (len(V_P_R_REM_TMP) - 1)) and (f == (len(q.Pi_MAX) - 1)):
-                                print(f"infeasible: Checked all possible NR-BSs. No remaining NR-BS for mapping RU {w_sel} of SR {r_sel}")
-                                feasible = 0
-                                reject_opt[r_t.gamma] = 1
-                                break
-                        if found:
+                                            for k1 in range(1, K_REQ_EFF[idx_r1][idx_w1] + 1)
+                                            ) * sys.Pi_FGB
+                                    - K_REQ_EFF[idx_r_sel][idx_w_sel] * sys.Pi_PRB
+                                    - (r_sel.gamma == 1) * sys.Pi_FGB
+                                )
+                        
+                        if k == 0:
+                            print(f"infeasible: Checked all possible NR-BSs. No remaining NR-BS for mapping RU {w_sel} of SR {r_sel}")
+                            feasible              = 0
+                            reject_opt[r_t.gamma] = 1
+                        elif pi_avai >= 0:
+                            k_sel = k
+                            if r_sel.gamma == 2:
+                                V_P_R_DEL.append(q_sel)
                             break
-                    if found:
-                        break
                                 
                 V_R_REM = [w for w in V_R_REM if (r_sel.V_R).index(w) != (r_sel.V_R).index(w_sel)]    
                 V_P_R_REM = [w for w in V_P_R_REM if w not in V_P_R_DEL]
@@ -224,10 +260,12 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 for v in V_S_REM:
                     V_P_S_REM_TMP = V_P_S_REM.copy()
                     v_sel         = max(V_S_REM, key=lambda nf: nf.C_REQ)
+    
+                    idx_v_sel = r_sel.V_S.index(v_sel)
                     
                     if r_sel.gamma == 2: ## Complete Isolation
                         V_P_S_REM_TMP = [p for p in V_P_S_REM
-                                         if sum(x[idx_r][idx_v][V_P_S.index(p)]
+                                            if sum(x[idx_r][idx_v][V_P_S.index(p)]
                                                 for idx_r,r in enumerate(reqs)
                                                 if idx_r != reqs.index(r_sel)
                                                 for idx_v,v in enumerate(r.V_S)) == 0]
@@ -237,46 +275,68 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         feasible = 0
                         reject_opt[r_t.gamma] = 1
                         break
-                        
-                    P_list = [e_p.p for e_p in E_P
-                              if e_p.q in V_P_R
-                              if V_P_R.index(e_p.q) == V_P_R.index(q_sel)]
     
-                    V_P_S_REM_TMP = [p for p in P_list if p in V_P_S_REM_TMP]
-                    p_sel = max(V_P_S_REM_TMP, key=lambda ps: ps.C_MAX)
+                    for e in r_sel.E:
+                        if (e.v == v_sel) and (e.w in r_sel.V_R):
+                            # Search for q that satisfies the condition
+                            for idx_q, q in enumerate(V_P_R):                        
+                                # Compute the sum over f and k
+                                sum_y = sum(
+                                    y[idx_r_sel][r_sel.V_R.index(e.w)][idx_q][f][k] 
+                                    for f in range(F_MAX) 
+                                    for k in range(1, K_REQ_EFF[idx_r_sel][r_sel.V_R.index(e.w)] + 1)                            
+                                )
+                            
+                                if sum_y == 1:
+                                    break
     
-                    x[reqs.index(r_sel)][(r_sel.V_S).index(v_sel)][V_P_S.index(p_sel)] = 1
+                            if sum_y == 1:
+                                P_list = [e_p.p for e_p in E_P
+                                            if e_p.q in V_P_R
+                                            if V_P_R.index(e_p.q) == V_P_R.index(q)]
+    
+                                V_P_S_REM_TMP = [p for p in P_list if p in V_P_S_REM_TMP]
+                            break
+    
+                    p_sel = max((ps for ps in V_P_S_REM_TMP if ps.C_MAX != C_MAX_CLD_BRAIN * MIPS_SCALE) ## Because BRAIN topology is not fully connected
+                                , key=lambda ps: ps.C_MAX - sum(x[idx_r][idx_v][V_P_S.index(ps)]*v.C_REQ
+                                                                for idx_r,r in enumerate(reqs)
+                                                                for idx_v, v in enumerate(r.V_S)
+                                                                )
+                                )
+                    idx_p_sel = V_P_S.index(p_sel)
+    
+                    x[idx_r_sel][idx_v_sel][idx_p_sel] = 1
     
                     if r_sel.gamma == 2:
                         V_P_S_DEL.append(p_sel)
-                    V_S_REM = [v for v in V_S_REM if (r_sel.V_S).index(v) != (r_sel.V_S).index(v_sel)]
+                    V_S_REM = [v for v in V_S_REM if (r_sel.V_S).index(v) != idx_v_sel]
                 
                 ## Remove that server for other slice requests
-                V_P_S_REM = [p for p in V_P_S_REM if (p in V_P_S_DEL) == 0]
+                V_P_S_REM = [p for p in V_P_S_REM if p not in V_P_S_DEL]
         else:
             v_sel = idx_r_sel
-
+    
         ### Continue with mapping VPs if the previous step was successful
         if feasible:
             E_REM   = r_sel.E.copy()
-            E_P_REM = E_P
-            E_P_DEL = []
             for e in E_REM:
                 e_sel   = max(r_sel.E, key=lambda vpath: B_REQ_EFF[idx_r_sel][r_sel.E.index(vpath)])
                 
                 v_e_sel = e_sel.v
                 w_e_sel = e_sel.w
-
+    
                 p_e_sel = V_P_S[x[idx_r_sel][r_sel.V_S.index(e_sel.v)].index(1)]
-
+    
                 y_array = np.array(y[idx_r_sel][r_sel.V_R.index(e_sel.w)])
                 index   = np.argwhere(y_array == 1)[0]
                 q_e_sel = V_P_R[index[0]]
                 
                 E_P_REM_SEARCH = [e_p for e_p in E_P_REM
-                                  if (e_p.p in V_P_S) and (e_p.q in V_P_R)]
+                                    if (e_p.p in V_P_S) and (e_p.q in V_P_R)]
+                # print(f"E_P_REM_SEARCH1:{E_P_REM_SEARCH}")
                 E_P_REM_SEARCH = [e_p for e_p in E_P_REM_SEARCH
-                                  if (V_P_S.index(e_p.p) == V_P_S.index(p_e_sel)) and (V_P_R.index(e_p.q) == V_P_R.index(q_e_sel))]
+                                    if (V_P_S.index(e_p.p) == V_P_S.index(p_e_sel)) and (V_P_R.index(e_p.q) == V_P_R.index(q_e_sel))]
                 
                 if len(E_P_REM_SEARCH) == 0:
                     print(f"infeasible: No remaining PP for mapping VP {v_e_sel} of SR {r_sel}")
@@ -284,6 +344,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     reject_opt[r_t.gamma] = 1
                     break
 
+                ## Revisitation
                 if feasible:
                     if e_sel.v in r_sel.V_S and e_sel.w in r_sel.V_S:
                         for p in V_P_S:
@@ -293,12 +354,12 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                     continue
                     elif e_sel.v in r_sel.V_R and e_sel.w in r_sel.V_R:
                         for q in V_P_R:
-                            if(sum(y[reqs.index(r_sel)][(r_sel.V_R).index(e_sel.v)][V_P_R.index(q)][f][k]
-                                   for f in range(len(q.Pi_MAX))
-                                   for k in range(K_REQ_EFF[idx_r_sel][r_sel.V_R.index(e.v)] + 1)) == 1):
-                                if(sum(y[reqs.index(r_sel)][(r_sel.V_R).index(e_sel.v)][V_P_R.index(q)][f][k]
-                                       for f in range(len(q.Pi_MAX))
-                                       for k in range(K_REQ_EFF[idx_r_sel][r_sel.V_R.index(e.v)] + 1)) == 1):
+                            if(sum(y[idx_r_sel][(r_sel.V_R).index(e_sel.v)][V_P_R.index(q)][f][k]
+                                    for f in range(len(q.Pi_MAX))
+                                    for k in range(1, K_REQ_EFF[idx_r_sel][(r_sel.V_R).index(e_sel.w)] + 1)) == 1):
+                                if(sum(y[idx_r_sel][(r_sel.V_R).index(e_sel.w)][V_P_R.index(q)][f][k]
+                                        for f in range(len(q.Pi_MAX))
+                                        for k in range(1, K_REQ_EFF[idx_r_sel][(r_sel.V_R).index(e_sel.w)] + 1)) == 1):
                                     E_REM = [e1 for e1 in E_REM if (r_sel.E).index(e1) != (r_sel.E).index(e_sel)]
                                     continue
     
@@ -315,14 +376,35 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     
                     if r_sel.gamma == 2:
                         E_P_DEL.append(e_p_sel)
+    
                     E_REM = [e for e in E_REM if (r_sel.E).index(e) != (r_sel.E).index(e_sel)]
                 E_P_REM = [e_p for e_p in E_P_REM if (e_p in E_P_DEL) == 0]
-
     end_time1 = time.perf_counter()
     
-    #print(f"x={x}")
-    #print(f"y={y}")
-    #print(f"z={z}")
+    # print(f"x={x}")
+    # print(f"y={y}")
+    # print(f"z={z}")
+    if feasible:
+        for idx_r, r in enumerate(reqs):
+            for idx_w, w in enumerate(r.V_R):
+                summ1 = sum(y[idx_r][idx_w][idx_q][f][k]
+                            for idx_q, q in enumerate(V_P_R)
+                            for f in range(len(q.Pi_MAX))
+                            for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                           )
+                # if summ1 != 1:
+                #     print("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY")
+                #     print(f"summ1:{summ1}")
+    
+        for idx_r, r in enumerate(reqs):
+            for idx_v, v in enumerate(r.V_S):
+                for idx_q, q in enumerate(V_P_S):
+                    summ2 = sum(x[idx_r][idx_v][idx_p]
+                                for idx_p, p in enumerate(V_P_S)
+                               )
+                    # if summ2 != 1:
+                    #     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+                    #     print(f"summ2:{summ2}")
 
     if feasible:
     ############# 5G-INS ##############
@@ -348,7 +430,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                       for idx_r, r in enumerate(reqs)
                       for idx_v, v in enumerate(r.V_S)
                       for xi       in range(1,v.Xi_REQ)
-                      if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX - 1))
+                      if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
                      ) / p.Xi_MAX[0]
                   + sum(max(((v.Chi_REQ[xi] == chi) * x[idx_r][idx_v][idx_p]
                             for idx_r, r in enumerate(reqs)
@@ -435,13 +517,13 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                 for idx_r, r in enumerate(reqs)
                                 if r.beta < 1e6
                                 for idx_w, w in enumerate(r.V_R)
-                                for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                ) * sys.Pi_PRB
                     + gp.quicksum(y[idx_r][idx_w][idx_q][f][k]
                                   for idx_r, r in enumerate(reqs)
                                   if  r.gamma == 1
                                   for idx_w, w in enumerate(r.V_R)
-                                  for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                  for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                  ) * sys.Pi_FGB
                     <= q.Pi_MAX[f],
                     name=f"radio_max_limit_{idx_q}_{f}"
@@ -459,11 +541,11 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                 ]
         h_REV_2 = [[1 - sum(min(sum(y[idx_r][(r.V_R).index(e.v)][idx_q][f][k]
                                   for f in range(len(q.Pi_MAX))
-                                  for k in range(K_REQ_EFF[idx_r][r.V_R.index(e.v)] + 1)
+                                  for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(e.v)] + 1)
                                  ),
                               sum(y[idx_r][r.V_R.index(e.w)][idx_q][f][k]
                                   for f in range(len(q.Pi_MAX))
-                                  for k in range(1,K_REQ_EFF[idx_r][r.V_R.index(e.w)] + 1)
+                                  for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(e.w)] + 1)
                                  )
                              )
                           for idx_q, q in enumerate(V_P_R)
@@ -604,7 +686,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             )
                             <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                 for f in range(len(q.Pi_MAX))
-                                for k in range(1, K_MAX)
+                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                             ),
                             name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                         )
@@ -620,7 +702,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                             )
                             <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                 for f in range(len(q.Pi_MAX))
-                                for k in range(1, K_MAX)
+                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                             ),
                             name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                         )
@@ -735,10 +817,10 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                          )
 
         # Eq. 36
-        g_K = sum(r.rho_K * (K_REQ_EFF[idx_r][r.V_R.index(w)] - sum(k * y[idx_r][idx_w][idx_q][f][k]
+        g_K = sum(r.rho_K * (K_REQ_EFF[idx_r][idx_w] - sum(k * y[idx_r][idx_w][idx_q][f][k]
                                            for idx_q, q in enumerate(V_P_R)
                                            for f in range(len(q.Pi_MAX))
-                                           for k in range(K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                           for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                           )
                             )
                   for idx_r, r in enumerate(reqs)
@@ -769,7 +851,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                   for idx_w, w in enumerate(r.V_R)
                                   for idx_q, q in enumerate(V_P_R)
                                   for f in range(len(q.Pi_MAX))
-                                  for k in range(K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                  for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                  )
                 + sys.Theta * sum(l.B_MAX[0] * max((sum(z[idx_r][idx_e][idx_l][s]
                                                         for s in range(S_MAX))
@@ -789,7 +871,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                  )
                 + sys.Phi * sum(q.Pi_MAX[0] / sys.Pi_PRB * max((sum(y[idx_r][idx_w][idx_q][f][k]
                                                                    for f in range(len(q.Pi_MAX))
-                                                                   for k in range(K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                                                   for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                                   )
                                                                for idx_w, w in enumerate(r.V_R))
                                                               , default=0)
@@ -810,13 +892,13 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     )
                 + sum(sum(r.beta * sum(y[idx_r][idx_w][idx_q][f][k]
                                        for f in range(len(q.Pi_MAX))
-                                       for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                       for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                       )
                           for idx_q, q in enumerate(V_P_R)
                           if(len(Y_t))
                           if(sum(Y_t[idx_r][idx_w][idx_q][f][k]
                                  for f in range(len(q.Pi_MAX))
-                                 for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                 for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                 ) == 0)
                          )
                       for idx_r, r in enumerate(R_t)
@@ -850,20 +932,33 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                   for idx_w, w in enumerate(r.V_R)
                                   for idx_q, q in enumerate(V_P_R)
                                   for f in range(len(q.Pi_MAX))
-                                  for k in range(K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                  for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                  )
                 )
 
         if len_R >= 2:
-            constraint_to_remove = m.getConstrByName(f"minimum_profit")
+            constraint_to_remove = m.getConstrByName(f"minimum_profit_1")
+            if constraint_to_remove is not None:
+                m.remove(constraint_to_remove)
+
+        VM_OFF_ERR = ((sys.C_GOS + sys.C_K8S) * sys.Omega) * len_V_P_S
+        # Eq. 38
+        m.addConstr(
+            (
+                (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min - VM_OFF_ERR
+            ), name="minimum_profit_1"
+        )
+
+        if len_R >= 2:
+            constraint_to_remove = m.getConstrByName(f"minimum_profit_2")
             if constraint_to_remove is not None:
                 m.remove(constraint_to_remove)
 
         # Eq. 38
         m.addConstr(
             (
-                (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
-            ), name="minimum_profit"
+                (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - profit_prev) >= P_min
+            ), name="minimum_profit_2"
         )
     
         m.update()
@@ -886,7 +981,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         
         # Stop the timer
         end_time2 = time.perf_counter()
-        timer = (end_time2 - start_time2) + (end_time1 - start_time1)
+        timer = (end_time2 - start_time2) + 0*(end_time1 - start_time1)
     
         status = m.status
 
@@ -972,11 +1067,11 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                         for idx_w, w in enumerate(r.V_R)
                                         for idx_q, q in enumerate(V_P_R)
                                         for f in range(len(q.Pi_MAX))
-                                        for k in range(K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                        for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                        )
                         + sys.Phi * sum(q.Pi_MAX[0] / sys.Pi_PRB * max((sum(y[idx_r][idx_w][idx_q][f][k]
                                                                             for f in range(len(q.Pi_MAX))
-                                                                            for k in range(K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                                                            for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                                            )
                                                                        for idx_w, w in enumerate(r.V_R))
                                                                       , default=0)
@@ -1027,8 +1122,8 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             h_VM_L0 = [math.ceil(sum(x[idx_r][idx_v][idx_p]
                           for idx_r, r in enumerate(reqs)
                           for idx_v, v in enumerate(r.V_S)
-                          for xi       in range(1,v.Xi_REQ)
-                          if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX - 1))
+                          for xi       in range(v.Xi_REQ)
+                          if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
                          ) / p.Xi_MAX[0]
                       + sum(max(((v.Chi_REQ[xi] == chi) * x[idx_r][idx_v][idx_p]
                                 for idx_r, r in enumerate(reqs)
@@ -1045,6 +1140,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                            ) / p.Xi_MAX[0]) 
                       for idx_p, p in enumerate(V_P_S)
                      ]
+            #print(f"IAR:h_VM_L0:{h_VM_L0}")
     
             g_ovh_K_opt = (sys.Phi   * sum(sys.Pi_FGB * y[idx_r][idx_w][idx_q][f][k]
                                           for idx_r, r in enumerate(reqs)
@@ -1052,7 +1148,7 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                           for idx_w, w in enumerate(r.V_R)
                                           for idx_q, q in enumerate(V_P_R)
                                           for f in range(len(q.Pi_MAX))
-                                          for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                          for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                          )
                         )
     
@@ -1078,6 +1174,27 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                           for idx_p, p in enumerate(V_P_S)
                                          )
                          )
+
+            g_ovh_C_opt1 = sum( sys.Omega * (sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
+                             for idx_p, p in enumerate(V_P_S)
+                            )
+            g_ovh_C_opt2 = sum( sys.Omega * sys.C_HHO * max((x[idx_r][idx_v][idx_p] * (r.gamma <= 1)
+                                                             for idx_r, r in enumerate(reqs)
+                                                             for idx_v, v in enumerate(r.V_S))
+                                                            , default=0)
+                                 for idx_p, p in enumerate(V_P_S)
+                                )
+            g_ovh_C_opt3 = sum( sys.Omega * sys.C_GOS * sum(v.Xi_REQ * x[idx_r][idx_v][idx_p]
+                                                             for idx_r, r in enumerate(reqs)
+                                                             if r.gamma == 1
+                                                             for idx_v, v in enumerate(r.V_S)
+                                                            )
+                                 for idx_p, p in enumerate(V_P_S)
+                                )
+    
+            print(f"IAR:g_ovh_C_opt1:{g_ovh_C_opt1}, g_ovh_C_opt2:{g_ovh_C_opt2}, g_ovh_C_opt3:{g_ovh_C_opt3}")
+            # list_gamma = [r.gamma for r in reqs]
+            # print(f"IAR:list_gamma:{list_gamma}")
     
             g_ovh_opt = g_ovh_K_opt + g_ovh_B_opt + g_ovh_C_opt
     
@@ -1119,13 +1236,13 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                            )
                         + sum(sum(sum(y[idx_r][idx_w][idx_q][f][k]
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                       )
                                        for idx_q, q in enumerate(V_P_R)
                                        if(len(Y_t))
                                        if(sum(Y_t[idx_r][idx_w][idx_q][f][k]
                                               for f in range(len(q.Pi_MAX))
-                                              for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(w)] + 1)
+                                              for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                              ) == 0
                                          )
                                       )
@@ -1235,9 +1352,9 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             if g_mig_opt:
                 data.append(["Migration Cost", g_mig_opt])
             if g_ovh_opt:
-                data.append(["Overhead Cost", g_ovh_opt])
-
-            data.append(["Deployment Cost", g_dep_opt])
+                data.append(["Overhead Cost", f"{g_ovh_opt}, {g_ovh_K_opt}, {g_ovh_B_opt}, {g_ovh_C_opt}"])
+    
+            data.append(["Deployment Cost", f"{g_dep_opt}, {g_dep_K_opt}, {g_dep_B_opt}, {g_dep_C_opt}"])
         else:
             data = [
                 ["Algorithm", "IAR"],
@@ -1255,4 +1372,4 @@ def iar_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     else:
         m.write(f'saved_model/model_backup_iar_{iter}.mps')
     
-    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs], X_t, Y_t
+    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, feasible, timeout, reqs], X_t, Y_t

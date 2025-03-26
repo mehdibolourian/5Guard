@@ -1,7 +1,0 @@
-NAME e2esliceiso
-ROWS
- N  OBJ
-COLUMNS
-RHS
-BOUNDS
-ENDATA

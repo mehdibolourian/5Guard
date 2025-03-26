@@ -375,7 +375,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                               if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
                           ) / p.Xi_MAX[0]
                + gp.quicksum(a_x2[idx_p][chi]
-                                for chi in range(sys.CHI_MAX)
+                                for chi in range(sys.CHI_MAX + 1)
                             ) / p.Xi_MAX[0]
                + gp.quicksum(v.Xi_REQ * x[idx_r][idx_v][idx_p]
                                 for idx_r, r in enumerate(reqs)
@@ -588,7 +588,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -604,7 +604,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -745,7 +745,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_1_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -755,7 +755,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -765,11 +765,11 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] >= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 )
                         + gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                     for f in range(len(q.Pi_MAX))
-                                    for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                    for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                     ) - 1,
                         name=f"auxiliary_constraints_2_3_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -962,17 +962,27 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                         name=f"auxiliary_constraints_12_1_{idx_r}_{idx_l}_{idx_e}_{s}"
                     )
 
-    for idx_r, r in enumerate(reqs):
-        if r.gamma == 2:
-            for idx_l, l in enumerate(L):
-                if len_R >= 2:
-                    constraint_to_remove = m.getConstrByName(f"auxiliary_constraints_12_2_{idx_r}_{idx_l}")
-                    if constraint_to_remove is not None:
-                        m.remove(constraint_to_remove)
+    # for idx_r, r in enumerate(reqs):
+    #     if r.gamma == 2:
+    #         for idx_l, l in enumerate(L):
+    #             if len_R >= 2:
+    #                 constraint_to_remove = m.getConstrByName(f"auxiliary_constraints_12_2_{idx_r}_{idx_l}")
+    #                 if constraint_to_remove is not None:
+    #                     m.remove(constraint_to_remove)
                 
+    #             m.addConstr(
+    #                 a_z1[idx_r][idx_l] <= gp.quicksum(z[idx_r][idx_e][idx_l][s]
+    #                                                   for idx_e, e in enumerate(r.E)
+    #                                                   for s in range(S_MAX)
+    #                                                  ),
+    #                 name=f"auxiliary_constraints_12_2_{idx_r}_{idx_l}"
+    #             )
+    for idx_r in R_miss:
+        if reqs[idx_r].gamma == 2:
+            for idx_l, l in enumerate(L):
                 m.addConstr(
                     a_z1[idx_r][idx_l] <= gp.quicksum(z[idx_r][idx_e][idx_l][s]
-                                                      for idx_e, e in enumerate(r.E)
+                                                      for idx_e, e in enumerate(reqs[idx_r].E)
                                                       for s in range(S_MAX)
                                                      ),
                     name=f"auxiliary_constraints_12_2_{idx_r}_{idx_l}"
@@ -1017,7 +1027,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
     g_K = gp.quicksum(r.rho_K * (K_REQ_EFF[idx_r][idx_w] - gp.quicksum(k * y[idx_r][idx_w][idx_q][f][k]
                                                        for idx_q, q in enumerate(V_P_R)
                                                        for f in range(len(q.Pi_MAX))
-                                                       for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                       for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                       )
                                 )
                       for idx_r, r in enumerate(reqs)
@@ -1048,7 +1058,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
             + sys.Theta * gp.quicksum(l.B_MAX[0] * a_z1[idx_r][idx_l]
                                       for idx_r, r     in enumerate(reqs)
@@ -1090,7 +1100,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
             )
 
@@ -1120,15 +1130,28 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             )
 
     if len_R >= 2:
-        constraint_to_remove = m.getConstrByName(f"minimum_profit")
+        constraint_to_remove = m.getConstrByName(f"minimum_profit_1")
+        if constraint_to_remove is not None:
+            m.remove(constraint_to_remove)
+
+    VM_OFF_ERR = ((sys.C_GOS + sys.C_K8S) * sys.Omega) * len_V_P_S
+    # Eq. 38
+    m.addConstr(
+        (
+            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min - VM_OFF_ERR
+        ), name="minimum_profit_1"
+    )
+
+    if len_R >= 2:
+        constraint_to_remove = m.getConstrByName(f"minimum_profit_2")
         if constraint_to_remove is not None:
             m.remove(constraint_to_remove)
 
     # Eq. 38
     m.addConstr(
         (
-            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
-        ), name="minimum_profit"
+            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - profit_prev) >= P_min
+        ), name="minimum_profit_2"
     )
     
     m.setObjective(sum(r.R for r in reqs)- g_dep - g_vio - g_mig - g_ovh, GRB.MAXIMIZE)
@@ -1164,7 +1187,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
                     + sys.Phi   * sum(q.Pi_MAX[0] / sys.Pi_PRB * vars_opt["a_y1_{}_{}".format(idx_r,idx_q)]
                                       for idx_r, r in enumerate(reqs)
@@ -1200,18 +1223,6 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_p, p in enumerate(V_P_S)
                                      )
                     )
-
-        mips_cons = sum(vars_opt["c_{}_{}_{}".format(idx_r,idx_v,idx_p)]
-                      for idx_r, r in enumerate(reqs)
-                      if  r.gamma < 2
-                      for idx_v, v in enumerate(r.V_S)
-                      for idx_p, p in enumerate(V_P_S)
-                   )
-        mips_reqs = sum(v.C_REQ
-                      for idx_r, r in enumerate(reqs)
-                      if  r.gamma < 2
-                      for idx_v, v in enumerate(r.V_S)
-                   )
         
         g_dep_opt = g_dep_K_opt + g_dep_B_opt + g_dep_C_opt
         
@@ -1229,7 +1240,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         g_K_opt = sum((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                            for idx_q, q in enumerate(V_P_R)
                                                            for f in range(len(q.Pi_MAX))
-                                                           for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                           for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                           )
                                             )
                       for idx_r, r in enumerate(reqs)
@@ -1343,23 +1354,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                   for idx_p, p in enumerate(V_P_S)
                  ]
 
-        h_VM_L0tmp = [sum(vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
-                       for idx_r, r in enumerate(reqs)
-                       for idx_v, v in enumerate(r.V_S)
-                       for xi       in range(v.Xi_REQ)
-                       if  (r.gamma == 0) and (r.kappa == 0) and (v.Chi_REQ[xi] == (sys.CHI_MAX + 1))
-                      ) / p.Xi_MAX[0]
-                 + sum(vars_opt["a_x2_{}_{}".format(idx_p,chi)]
-                       for chi in range(sys.CHI_MAX)
-                      ) / p.Xi_MAX[0]
-                 + sum(v.Xi_REQ * vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
-                       for idx_r, r in enumerate(reqs)
-                       for idx_v, v in enumerate(r.V_S)
-                       if (r.gamma == 0) and (r.kappa == 1)
-                      ) / p.Xi_MAX[0]
-                  ## Plus 1 is the approximation of the ceiling function
-                  for idx_p, p in enumerate(V_P_S)
-                 ]
+        #print(f"OPT:h_VM_L0:{h_VM_L0}")
 
         g_ovh_K_opt = (sys.Phi   * sum(sys.Pi_FGB * vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                       for idx_r, r in enumerate(reqs)
@@ -1367,7 +1362,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
                     )
 
@@ -1390,6 +1385,24 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                                           )
                              for idx_p, p in enumerate(V_P_S)
                             )
+
+        g_ovh_C_opt1 = sum( sys.Omega * (sys.C_K8S + sys.C_GOS) * h_VM_L0[idx_p]
+                             for idx_p, p in enumerate(V_P_S)
+                            )
+        g_ovh_C_opt2 = sum( sys.Omega * sys.C_HHO * vars_opt["a_x3_{}".format(idx_p)]
+                             for idx_p, p in enumerate(V_P_S)
+                            )
+        g_ovh_C_opt3 = sum( sys.Omega * sys.C_GOS * sum(v.Xi_REQ * vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
+                                                             for idx_r, r in enumerate(reqs)
+                                                             if  r.gamma == 1
+                                                             for idx_v, v in enumerate(r.V_S)
+                                                            )
+                             for idx_p, p in enumerate(V_P_S)
+                            )
+
+        print(f"OPT:g_ovh_C_opt1:{g_ovh_C_opt1}, g_ovh_C_opt2:{g_ovh_C_opt2}, g_ovh_C_opt3:{g_ovh_C_opt3}")
+        # list_gamma = [r.gamma for r in reqs]
+        # print(f"OPT:list_gamma:{list_gamma}")
 
         g_ovh_opt = g_ovh_K_opt + g_ovh_B_opt + g_ovh_C_opt
 
@@ -1453,7 +1466,7 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
                  for idx_q, q in enumerate(V_P_R)]
                 for idx_w, w in enumerate(r.V_R)]
                for idx_r, r in enumerate(reqs)]
-        
+
         profit_opt    = profit
         
         violat_opt[0] = g_vio_opt
@@ -1468,20 +1481,6 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
         deploy_opt[1] = g_dep_K_opt
         deploy_opt[2] = g_dep_B_opt
         deploy_opt[3] = g_dep_C_opt
-
-        k_alloc = sum(k * vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
-                      for idx_r, r in enumerate(reqs)
-                      if  r.gamma < 2
-                      for idx_w, w in enumerate(r.V_R)
-                      for idx_q, q in enumerate(V_P_R)
-                      for f in range(len(q.Pi_MAX))
-                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
-                     )
-        k_req = sum(K_REQ_EFF[idx_r][idx_w]
-                      for idx_r, r in enumerate(reqs)
-                      if  r.gamma < 2
-                      for idx_w, w in enumerate(r.V_R)
-                     )
         
         overhe_opt[0] = g_ovh_opt
         overhe_opt[1] = g_ovh_K_opt
@@ -1554,11 +1553,11 @@ def opt_iter(profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L, L_pqi,
             ]
 
         print(tabulate(data, headers=["Category", "Value"], tablefmt="grid"))
-
+        
     m.update()
     if f_fgr:
         m.write(f'saved_model/model_backup_fgr_opt_{iter}.mps')
     else:
         m.write(f'saved_model/model_backup_opt_{iter}.mps')
 
-    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs], X_t, Y_t
+    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, feasible, timeout, reqs], X_t, Y_t

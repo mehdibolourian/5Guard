@@ -587,7 +587,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -603,7 +603,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                         )
                         <= B_REQ_EFF[idx_r][idx_e] * gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                             for f in range(len(q.Pi_MAX))
-                            for k in range(1, K_MAX)
+                            for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                         ),
                         name=f"node_path_mapping_coordination_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -744,7 +744,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_1_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -754,7 +754,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] <= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                                                 ),
                         name=f"auxiliary_constraints_2_2_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -764,11 +764,11 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                     m.addConstr(
                         a_y2[idx_r][idx_e][idx_q] >= gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.v)][idx_q][f][k]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.v)] + 1)
                                                                 )
                         + gp.quicksum(y[idx_r][reqs[idx_r].V_R.index(e.w)][idx_q][f][k]
                                     for f in range(len(q.Pi_MAX))
-                                    for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
+                                    for k in range(1, K_REQ_EFF[idx_r][reqs[idx_r].V_R.index(e.w)] + 1)
                                     ) - 1,
                         name=f"auxiliary_constraints_2_3_{idx_r}_{idx_e}_{idx_q}"
                     )
@@ -961,17 +961,27 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                         name=f"auxiliary_constraints_12_1_{idx_r}_{idx_l}_{idx_e}_{s}"
                     )
 
-    for idx_r, r in enumerate(reqs):
-        if r.gamma == 2:
-            for idx_l, l in enumerate(L):
-                if len_R >= 2:
-                    constraint_to_remove = m.getConstrByName(f"auxiliary_constraints_12_2_{idx_r}_{idx_l}")
-                    if constraint_to_remove is not None:
-                        m.remove(constraint_to_remove)
+    # for idx_r, r in enumerate(reqs):
+    #     if r.gamma == 2:
+    #         for idx_l, l in enumerate(L):
+    #             if len_R >= 2:
+    #                 constraint_to_remove = m.getConstrByName(f"auxiliary_constraints_12_2_{idx_r}_{idx_l}")
+    #                 if constraint_to_remove is not None:
+    #                     m.remove(constraint_to_remove)
                 
+    #             m.addConstr(
+    #                 a_z1[idx_r][idx_l] <= gp.quicksum(z[idx_r][idx_e][idx_l][s]
+    #                                                   for idx_e, e in enumerate(r.E)
+    #                                                   for s in range(S_MAX)
+    #                                                  ),
+    #                 name=f"auxiliary_constraints_12_2_{idx_r}_{idx_l}"
+    #             )
+    for idx_r in R_miss:
+        if reqs[idx_r].gamma == 2:
+            for idx_l, l in enumerate(L):
                 m.addConstr(
                     a_z1[idx_r][idx_l] <= gp.quicksum(z[idx_r][idx_e][idx_l][s]
-                                                      for idx_e, e in enumerate(r.E)
+                                                      for idx_e, e in enumerate(reqs[idx_r].E)
                                                       for s in range(S_MAX)
                                                      ),
                     name=f"auxiliary_constraints_12_2_{idx_r}_{idx_l}"
@@ -1016,7 +1026,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     g_K = gp.quicksum(r.rho_K * (K_REQ_EFF[idx_r][idx_w] - gp.quicksum(k * y[idx_r][idx_w][idx_q][f][k]
                                                        for idx_q, q in enumerate(V_P_R)
                                                        for f in range(len(q.Pi_MAX))
-                                                       for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                       for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                       )
                                 )
                       for idx_r, r in enumerate(reqs)
@@ -1047,7 +1057,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
             + sys.Theta * gp.quicksum(l.B_MAX[0] * a_z1[idx_r][idx_l]
                                       for idx_r, r     in enumerate(reqs)
@@ -1089,7 +1099,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                                       for idx_w, w in enumerate(r.V_R)
                                       for idx_q, q in enumerate(V_P_R)
                                       for f in range(len(q.Pi_MAX))
-                                      for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                      for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                      )
             )
 
@@ -1119,15 +1129,28 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
             )
 
     if len_R >= 2:
-        constraint_to_remove = m.getConstrByName(f"minimum_profit")
+        constraint_to_remove = m.getConstrByName(f"minimum_profit_1")
         if constraint_to_remove is not None:
             m.remove(constraint_to_remove)
-            
+
+    VM_OFF_ERR = ((sys.C_GOS + sys.C_K8S) * sys.Omega) * len_V_P_S
     # Eq. 38
     m.addConstr(
         (
-            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min
-        ), name="minimum_profit"
+            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - g_ovh - profit_prev) >= P_min - VM_OFF_ERR
+        ), name="minimum_profit_1"
+    )
+
+    if len_R >= 2:
+        constraint_to_remove = m.getConstrByName(f"minimum_profit_2")
+        if constraint_to_remove is not None:
+            m.remove(constraint_to_remove)
+
+    # Eq. 38
+    m.addConstr(
+        (
+            (sum(r.R for r in reqs) - g_dep - g_vio - g_mig - profit_prev) >= P_min
+        ), name="minimum_profit_2"
     )
 
     m.update()
@@ -1162,7 +1185,6 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
         vars_opt_relax = copy.deepcopy(vars_opt)
 
         ################################## Deterministic Rounding ##################################
-        start_time2 = time.perf_counter()
         x_opt_lp = [[[vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)]
                       for idx_p, p in enumerate(V_P_S)]
                      for idx_v, v in enumerate(r.V_S)]
@@ -1179,20 +1201,6 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                      for idx_v, v in enumerate(r.V_S)]
                     for idx_r, r in enumerate(reqs)]
 
-        for idx_r,r in enumerate(reqs):
-            for idx_v, v in enumerate(r.V_S):
-                for idx_p, p in enumerate(V_P_S):
-                    if (x_opt_lp[idx_r][idx_v][idx_p] > LIMIT):
-                        x_opt[idx_r][idx_v][idx_p] = 1
-                        c_opt[idx_r][idx_v][idx_p] = c_opt_lp[idx_r][idx_v][idx_p] / x_opt_lp[idx_r][idx_v][idx_p]
-                        break
-        
-        for idx_r,r in enumerate(reqs):
-            for idx_v, v in enumerate(r.V_S):
-                for idx_p, p in enumerate(V_P_S):
-                    vars_opt["c_{}_{}_{}".format(idx_r,idx_v,idx_p)] = c_opt[idx_r][idx_v][idx_p]
-                    vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)] = x_opt[idx_r][idx_v][idx_p]
-
         y_opt_lp = [[[[[vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                         for k in range(K_REQ_EFF[idx_r][idx_w] + 1)]
                        for f in range(len(q.Pi_MAX))]
@@ -1204,22 +1212,6 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                       for idx_q, q in enumerate(V_P_R)]
                      for idx_w, w in enumerate(r.V_R)]
                     for idx_r, r in enumerate(reqs)]
-
-        for idx_r,r in enumerate(reqs):
-            for idx_w, w in enumerate(r.V_R):
-                for idx_q, q in enumerate(V_P_R):
-                    for f in range(len(q.Pi_MAX)):
-                        for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1):
-                            if (y_opt_lp[idx_r][idx_w][idx_q][f][k] > LIMIT) and (sum(sum(sum(r) for r in row) for row in y_opt[idx_r][idx_w]) == 0):
-                                y_opt[idx_r][idx_w][idx_q][f][k] = 1
-                                break
-                                
-        for idx_r, r in enumerate(reqs):
-            for idx_w, w in enumerate(r.V_R):
-                for idx_q, q in enumerate(V_P_R):
-                    for f in range(len(q.Pi_MAX)):
-                        for k in range(K_REQ_EFF[idx_r][idx_w] + 1):
-                            vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)] = y_opt[idx_r][idx_w][idx_q][f][k]
 
         z_opt_lp = [[[[vars_opt["z_{}_{}_{}_{}".format(idx_r,idx_e,idx_l,s)]
                        for s in range(S_MAX)]
@@ -1243,6 +1235,24 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                      for idx_e, e in enumerate(r.E)]
                     for idx_r,r in enumerate(reqs)]
 
+        start_time2 = time.perf_counter()
+        for idx_r,r in enumerate(reqs):
+            for idx_v, v in enumerate(r.V_S):
+                for idx_p, p in enumerate(V_P_S):
+                    if (x_opt_lp[idx_r][idx_v][idx_p] > LIMIT):
+                        x_opt[idx_r][idx_v][idx_p] = 1
+                        c_opt[idx_r][idx_v][idx_p] = c_opt_lp[idx_r][idx_v][idx_p] / x_opt_lp[idx_r][idx_v][idx_p]
+                        break
+
+        for idx_r,r in enumerate(reqs):
+            for idx_w, w in enumerate(r.V_R):
+                for idx_q, q in enumerate(V_P_R):
+                    for f in range(len(q.Pi_MAX)):
+                        for k in range(K_REQ_EFF[idx_r][idx_w] + 1):
+                            if (y_opt_lp[idx_r][idx_w][idx_q][f][k] > LIMIT) and (sum(sum(sum(r) for r in row) for row in y_opt[idx_r][idx_w]) == 0):
+                                y_opt[idx_r][idx_w][idx_q][f][k] = 1
+                                break
+
         for idx_r,r in enumerate(reqs):
             for idx_e, e in enumerate(r.E):
                 for idx_l, l in enumerate(L):
@@ -1250,6 +1260,20 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                         if (z_opt_lp[idx_r][idx_e][idx_l][s] > LIMIT) and (sum(z_opt[idx_r][idx_e][idx_l]) == 0):
                             z_opt[idx_r][idx_e][idx_l][s] = 1
                             break
+        end_time2 = time.perf_counter()
+
+        for idx_r,r in enumerate(reqs):
+            for idx_v, v in enumerate(r.V_S):
+                for idx_p, p in enumerate(V_P_S):
+                    vars_opt["c_{}_{}_{}".format(idx_r,idx_v,idx_p)] = c_opt[idx_r][idx_v][idx_p]
+                    vars_opt["x_{}_{}_{}".format(idx_r,idx_v,idx_p)] = x_opt[idx_r][idx_v][idx_p]
+
+        for idx_r, r in enumerate(reqs):
+            for idx_w, w in enumerate(r.V_R):
+                for idx_q, q in enumerate(V_P_R):
+                    for f in range(len(q.Pi_MAX)):
+                        for k in range(K_REQ_EFF[idx_r][idx_w] + 1):
+                            vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)] = y_opt[idx_r][idx_w][idx_q][f][k]
 
         for idx_r,r in enumerate(reqs):
             for idx_e, e in enumerate(r.E):
@@ -1334,11 +1358,11 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                     for idx_q, q in enumerate(V_P_R):
                         a_y2_opt[idx_r][idx_e][idx_q] = min(sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,(r.V_R).index(e.v),idx_q,f,k)]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(K_REQ_EFF[idx_r][r.V_R.index(e.v)] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(e.v)] + 1)
                                                                ),
                                                             sum(vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,(r.V_R).index(e.w),idx_q,f,k)]
                                                                 for f in range(len(q.Pi_MAX))
-                                                                for k in range(1,K_REQ_EFF[idx_r][r.V_R.index(e.w)] + 1)
+                                                                for k in range(1, K_REQ_EFF[idx_r][r.V_R.index(e.w)] + 1)
                                                                )
                                                            )
                         vars_opt["a_y2_{}_{}_{}".format(idx_r,idx_e,idx_q)] = a_y2_opt[idx_r][idx_e][idx_q]
@@ -1398,8 +1422,6 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                                                       for idx_e_p, e_p in enumerate(E_P)
                                                      ), 0)
                 vars_opt["a_z3_{}_{}".format(idx_r,idx_e)] = a_z3_opt[idx_r][idx_e]
-
-        end_time2 = time.perf_counter()
         ##############################################################################
 
         ############################## Rechecking constraints ########################
@@ -1571,7 +1593,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                                           for idx_w, w in enumerate(r.V_R)
                                           for idx_q, q in enumerate(V_P_R)
                                           for f in range(len(q.Pi_MAX))
-                                          for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                          for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                          )
                         + sys.Phi   * sum(q.Pi_MAX[0] / sys.Pi_PRB * vars_opt["a_y1_{}_{}".format(idx_r,idx_q)]
                                           for idx_r, r in enumerate(reqs)
@@ -1636,7 +1658,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
             g_K_opt = sum((r.rho_K * K_REQ_EFF[idx_r][idx_w]) - (r.rho_K * sum(k*vars_opt["y_{}_{}_{}_{}_{}".format(idx_r,idx_w,idx_q,f,k)]
                                                                for idx_q, q in enumerate(V_P_R)
                                                                for f in range(len(q.Pi_MAX))
-                                                               for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                                               for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                                               )
                                                 )
                           for idx_r, r in enumerate(reqs)
@@ -1756,7 +1778,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                                           for idx_w, w in enumerate(r.V_R)
                                           for idx_q, q in enumerate(V_P_R)
                                           for f in range(len(q.Pi_MAX))
-                                          for k in range(K_REQ_EFF[idx_r][idx_w] + 1)
+                                          for k in range(1, K_REQ_EFF[idx_r][idx_w] + 1)
                                          )
                         )
     
@@ -1843,7 +1865,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
                     for idx_w, w in enumerate(r.V_R)]
                    for idx_r, r in enumerate(reqs)]
             
-            if profit - profit_prev < P_min:
+            if profit - profit_prev < P_min - VM_OFF_ERR:
                 feasible = 0
                 reject_opt[r_t.gamma] = 1
 
@@ -1893,7 +1915,7 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
             m = gp.read(f'saved_model/model_backup_dtr_{iter}.mps')
         m.update()
 
-    time_opt  = (end_time2 - start_time2) + (end_time1 - start_time1)
+    time_opt  = 0*(end_time2 - start_time2) + (end_time1 - start_time1)
 
     if time_opt > r_t.timeout:
         if f_fgr:
@@ -1951,4 +1973,4 @@ def dtr_iter(LIMIT, profit_prev, iter, t, r_t, R_t, V_P_S, V_P_R, E_P, E_P_l, L,
     else:
         m.write(f'saved_model/model_backup_dtr_{iter}.mps')
 
-    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, vars_opt, feasible, timeout, reqs], X_t, Y_t
+    return [profit_opt, violat_opt, migrat_opt, deploy_opt, overhe_opt, reseff_opt, reject_opt.T, time_opt, feasible, timeout, reqs], X_t, Y_t
