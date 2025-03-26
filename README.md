@@ -19,4 +19,4 @@ You need a valid GurobiPy license to be able to compile and run the code in the 
 * LinkedIn: [@https:\/\/www.linkedin.com\/in\/mehdibolourian\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/mehdibolourian\/)
 
 ## Show your support
-Give a ⭐️ if this project helped you!
+Please give a ⭐️ if you found the project helpful.
